@@ -11,6 +11,21 @@ author: 'm-finder'
 language: 'zh-CN'
 timezone: 'Asia/Shanghai'
 
+#rss
+feed:
+  enable: true
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
+  icon: icon.png
+  autodiscovery: true
+  template:
+
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://m-finder.github.io
