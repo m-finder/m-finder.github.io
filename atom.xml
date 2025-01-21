@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>M-finder</title>
+  <icon>https://m-finder.github.io/icon.png</icon>
+  <subtitle>删繁就简，发现更多</subtitle>
+  <link href="https://m-finder.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://m-finder.github.io/"/>
+  <updated>2025-01-21T07:43:47.247Z</updated>
+  <id>https://m-finder.github.io/</id>
+  
+  <author>
+    <name>m-finder</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2025 年计划清单</title>
+    <link href="https://m-finder.github.io/2025-to-do-list/"/>
+    <id>https://m-finder.github.io/2025-to-do-list/</id>
+    <published>2025-01-21T07:43:47.247Z</published>
+    <updated>2025-01-21T07:43:47.247Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 活着&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 挣钱&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="闲言赘语" scheme="https://m-finder.github.io/categories/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"/>
+    
+    <category term="计划清单" scheme="https://m-finder.github.io/categories/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/%E8%AE%A1%E5%88%92%E6%B8%85%E5%8D%95/"/>
+    
+    
+    <category term="闲言赘语" scheme="https://m-finder.github.io/tags/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"/>
+    
+    <category term="计划清单" scheme="https://m-finder.github.io/tags/%E8%AE%A1%E5%88%92%E6%B8%85%E5%8D%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2024 年计划清单</title>
+    <link href="https://m-finder.github.io/2024-to-do-list/"/>
+    <id>https://m-finder.github.io/2024-to-do-list/</id>
+    <published>2024-12-10T16:00:00.000Z</published>
+    <updated>2025-01-21T07:43:47.247Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 找份好工作&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 家具家电购置&lt;/li&gt;
+&lt;li&gt;&lt;input</summary>
+        
+      
+    
+    
+    
+    <category term="闲言赘语" scheme="https://m-finder.github.io/categories/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"/>
+    
+    <category term="计划清单" scheme="https://m-finder.github.io/categories/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/%E8%AE%A1%E5%88%92%E6%B8%85%E5%8D%95/"/>
+    
+    
+    <category term="闲言赘语" scheme="https://m-finder.github.io/tags/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"/>
+    
+    <category term="计划清单" scheme="https://m-finder.github.io/tags/%E8%AE%A1%E5%88%92%E6%B8%85%E5%8D%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Mac m1 编译安装 Aseprite</title>
+    <link href="https://m-finder.github.io/2024-09-28-cmake-aseprite/"/>
+    <id>https://m-finder.github.io/2024-09-28-cmake-aseprite/</id>
+    <published>2024-09-28T01:51:13.000Z</published>
+    <updated>2025-01-21T07:43:47.247Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;!!!需要用到 &lt;code&gt;brew&lt;/code&gt; 和 &lt;code&gt;xcode&lt;/code&gt;，如果没安装要先装好。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;克隆源码&quot;&gt;&lt;a href=&quot;#克隆源码&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="码不能停" scheme="https://m-finder.github.io/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
+    
+    
+    <category term="码不能停" scheme="https://m-finder.github.io/tags/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Mac 用 Brew 安装旧版本 PHP</title>
+    <link href="https://m-finder.github.io/2024-09-19-brew-php-version/"/>
+    <id>https://m-finder.github.io/2024-09-19-brew-php-version/</id>
+    <published>2024-09-19T15:41:13.000Z</published>
+    <updated>2025-01-21T07:43:47.247Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;最近又用到 php7.4，奈何本地早就已经升到了 8，想搞回来，发现一个简单好用爽歪歪的三方库，需要的可以试一下，5.6 - 8.4 都有。&lt;a href=&quot;https://github.com/shivammathur/homebrew-php&quot;&gt;[</summary>
+        
+      
+    
+    
+    
+    <category term="码不能停" scheme="https://m-finder.github.io/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
+    
+    <category term="php" scheme="https://m-finder.github.io/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/php/"/>
+    
+    
+    <category term="码不能停" scheme="https://m-finder.github.io/tags/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
+    
+    <category term="php" scheme="https://m-finder.github.io/tags/php/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>水篇流水账，记下最近的情况</title>
+    <link href="https://m-finder.github.io/2024-09-19-boring-in-home/"/>
+    <id>https://m-finder.github.io/2024-09-19-boring-in-home/</id>
+    <published>2024-09-19T15:33:00.000Z</published>
+    <updated>2025-01-21T07:43:47.247Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;最近不知道是感冒还是过敏，每天一睡醒就开始流鼻子打喷嚏，要了命了，神烦。&lt;/p&gt;
+&lt;p&gt;在番茄发了一本 10 万字的灵异小说，共收益 16.7</summary>
+        
+      
+    
+    
+    
+    <category term="闲言赘语" scheme="https://m-finder.github.io/categories/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"/>
+    
+    
+    <category term="闲言赘语" scheme="https://m-finder.github.io/tags/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>职业生涯知识回顾-关于抽象类和接口的思考</title>
+    <link href="https://m-finder.github.io/2024-03-03-abstract-and-interface/"/>
+    <id>https://m-finder.github.io/2024-03-03-abstract-and-interface/</id>
+    <published>2024-03-02T17:54:00.000Z</published>
+    <updated>2025-01-21T07:43:47.247Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;抽象类和接口是两个很容易产生疑惑的概念，分不清它们的使用场景，其实只要记住两点就比较好理解：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;接口是对行为的抽象&lt;/li&gt;
+&lt;li&gt;抽象类是对子类有哪些属性和行为的抽象&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;当你需要对一个类有哪些行为进行约束时，使用接口；需</summary>
+        
+      
+    
+    
+    
+    <category term="码不能停" scheme="https://m-finder.github.io/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
+    
+    
+    <category term="码不能停" scheme="https://m-finder.github.io/tags/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>职业生涯知识回顾-基础篇之网络传输协议</title>
+    <link href="https://m-finder.github.io/2024-02-29-review-http/"/>
+    <id>https://m-finder.github.io/2024-02-29-review-http/</id>
+    <published>2024-03-02T14:00:00.000Z</published>
+    <updated>2025-01-21T07:43:47.247Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;协议的本质也就是彼此之间的约定和规则。&lt;/p&gt;
+&lt;h1 id=&quot;HTTP&quot;&gt;&lt;a href=&quot;#HTTP&quot; class=&quot;headerlink&quot; title=&quot;HTTP&quot;&gt;&lt;/a&gt;HTTP&lt;/h1&gt;&lt;p&gt;HTTP 是一个承载于 TCP</summary>
+        
+      
+    
+    
+    
+    <category term="码不能停" scheme="https://m-finder.github.io/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
+    
+    
+    <category term="码不能停" scheme="https://m-finder.github.io/tags/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Laravel Octane 和 Swoole 协程的使用分析二</title>
+    <link href="https://m-finder.github.io/2024-03-01-swoole-and-octane2/"/>
+    <id>https://m-finder.github.io/2024-03-01-swoole-and-octane2/</id>
+    <published>2024-03-01T14:53:00.000Z</published>
+    <updated>2025-01-21T07:43:47.247Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/swoole_process.png&quot;&gt;&lt;br&gt;又仔细研究了下 Octane 源码和 Swoole 的文档，关于前几天 Laravel Octane 和 Swoole 协程的使用分析中的猜想，得到进一步验证：&lt;/p&gt;
+&lt;p&gt;Swoole</summary>
+        
+      
+    
+    
+    
+    <category term="码不能停" scheme="https://m-finder.github.io/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
+    
+    <category term="php" scheme="https://m-finder.github.io/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/php/"/>
+    
+    
+    <category term="码不能停" scheme="https://m-finder.github.io/tags/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
+    
+    <category term="php" scheme="https://m-finder.github.io/tags/php/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>职业生涯知识回顾-基础篇之面向对象</title>
+    <link href="https://m-finder.github.io/2024-02-25-review-base/"/>
+    <id>https://m-finder.github.io/2024-02-25-review-base/</id>
+    <published>2024-03-01T10:45:00.000Z</published>
+    <updated>2025-01-21T07:43:47.247Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;时间飞逝，一眨眼已经工作7年。趁着最近赋闲在家，对职业生涯做个回顾和总结，避免浮躁和焦虑。&lt;/p&gt;
+&lt;p&gt;将代码写好是一件难事，我见过刚入行就能把代码写成诗的，也见过工作十年还把代码写成屎的，无论是刚入行的小白，还是工作多年的大佬，都要对面向对象有一个清晰的认知。因为到后边</summary>
+        
+      
+    
+    
+    
+    <category term="码不能停" scheme="https://m-finder.github.io/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
+    
+    
+    <category term="码不能停" scheme="https://m-finder.github.io/tags/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Laravel Octane 和 Swoole 协程的使用分析</title>
+    <link href="https://m-finder.github.io/2024-02-28-swoole-and-octane/"/>
+    <id>https://m-finder.github.io/2024-02-28-swoole-and-octane/</id>
+    <published>2024-02-28T12:37:00.000Z</published>
+    <updated>2025-01-21T07:43:47.247Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;之前在工作中使用 Laravel Octane 的 concurrently 处理并发时，发现在队列和定时任务中不会触发并发效果。经过分析，作了如下猜测：队列定时任务都属于一个独立的进程，与 Octane 服务无关，而 Octane conturrently 恰恰需要在</summary>
+        
+      
+    
+    
+    
+    <category term="码不能停" scheme="https://m-finder.github.io/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
+    
+    <category term="php" scheme="https://m-finder.github.io/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/php/"/>
+    
+    
+    <category term="码不能停" scheme="https://m-finder.github.io/tags/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
+    
+    <category term="php" scheme="https://m-finder.github.io/tags/php/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>为你的 Laravel 应用添加一个基于 Swoole 的 WebSocket 服务</title>
+    <link href="https://m-finder.github.io/2023-11-20-laravel-swoole-socket/"/>
+    <id>https://m-finder.github.io/2023-11-20-laravel-swoole-socket/</id>
+    <published>2023-11-20T14:45:00.000Z</published>
+    <updated>2025-01-21T07:43:47.247Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;做了一个基于 Swoole 的 WebSocket 扩展包，可以用来做实时状态推送，或者自定义消息处理实现 im，有需要的可以看看: &lt;a href=&quot;https://github.com/m-finder/giorgio-socket&quot;&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="码不能停" scheme="https://m-finder.github.io/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
+    
+    <category term="php" scheme="https://m-finder.github.io/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/php/"/>
+    
+    
+    <category term="码不能停" scheme="https://m-finder.github.io/tags/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
+    
+    <category term="php" scheme="https://m-finder.github.io/tags/php/"/>
+    
+    <category term="laravel" scheme="https://m-finder.github.io/tags/laravel/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2023年9月流水账</title>
+    <link href="https://m-finder.github.io/2023-09-23-swift/"/>
+    <id>https://m-finder.github.io/2023-09-23-swift/</id>
+    <published>2023-09-30T12:00:00.000Z</published>
+    <updated>2025-01-21T07:43:47.247Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;最近沉迷 swift，忙里抽闲做了几个菜单栏小工具，外加一个小工具合集，高产似母猪，啊哈哈哈……&lt;/p&gt;
+&lt;p&gt;看看后续能不能再多做几个，到时候搞个开发者账号发到苹果商店去。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/gallery/world/family.jpg&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="闲言赘语" scheme="https://m-finder.github.io/categories/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"/>
+    
+    
+    <category term="闲言赘语" scheme="https://m-finder.github.io/tags/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>php 国密 sm2 sm3 sm4 完整测试类</title>
+    <link href="https://m-finder.github.io/2023-05-11-gm/"/>
+    <id>https://m-finder.github.io/2023-05-11-gm/</id>
+    <published>2023-05-11T09:53:00.000Z</published>
+    <updated>2025-01-21T07:43:47.247Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;应用范围及描述&quot;&gt;&lt;a href=&quot;#应用范围及描述&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="码不能停" scheme="https://m-finder.github.io/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
+    
+    <category term="php" scheme="https://m-finder.github.io/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/php/"/>
+    
+    
+    <category term="码不能停" scheme="https://m-finder.github.io/tags/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
+    
+    <category term="php" scheme="https://m-finder.github.io/tags/php/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2023 年计划清单</title>
+    <link href="https://m-finder.github.io/2023-to-do-list/"/>
+    <id>https://m-finder.github.io/2023-to-do-list/</id>
+    <published>2022-12-31T16:00:00.000Z</published>
+    <updated>2025-01-21T07:43:47.247Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 继续减肥&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="闲言赘语" scheme="https://m-finder.github.io/categories/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"/>
+    
+    <category term="计划清单" scheme="https://m-finder.github.io/categories/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/%E8%AE%A1%E5%88%92%E6%B8%85%E5%8D%95/"/>
+    
+    
+    <category term="闲言赘语" scheme="https://m-finder.github.io/tags/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"/>
+    
+    <category term="计划清单" scheme="https://m-finder.github.io/tags/%E8%AE%A1%E5%88%92%E6%B8%85%E5%8D%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>向我的小电驴致敬</title>
+    <link href="https://m-finder.github.io/2022-12-12-for-my-yadea/"/>
+    <id>https://m-finder.github.io/2022-12-12-for-my-yadea/</id>
+    <published>2022-12-12T14:45:00.000Z</published>
+    <updated>2025-01-21T07:43:47.247Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;最近天冷了，骑车上下班又多了些痛苦。&lt;/p&gt;
+&lt;p&gt;每年的这个时候，我都会出现一些对小电驴命运的担忧，它还能陪我多久呢？即使它才买了两年，但也已经伤痕累累。&lt;/p&gt;
+&lt;p&gt;截止到今天，我一共丢了两个头盔，都是因为放在车筐然后被人拿走；摔倒三次，都是因为刹车太急导致侧翻；后座</summary>
+        
+      
+    
+    
+    
+    <category term="闲言赘语" scheme="https://m-finder.github.io/categories/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"/>
+    
+    
+    <category term="闲言赘语" scheme="https://m-finder.github.io/tags/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>The Fucked 2022</title>
+    <link href="https://m-finder.github.io/at-the-end-of-2022/"/>
+    <id>https://m-finder.github.io/at-the-end-of-2022/</id>
+    <published>2022-11-30T01:26:00.000Z</published>
+    <updated>2025-01-21T07:43:47.247Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;为了应对拖延，2022 年 11 月 25</summary>
+        
+      
+    
+    
+    
+    <category term="闲言赘语" scheme="https://m-finder.github.io/categories/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"/>
+    
+    
+    <category term="闲言赘语" scheme="https://m-finder.github.io/tags/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>碎碎念</title>
+    <link href="https://m-finder.github.io/2022-05-13/"/>
+    <id>https://m-finder.github.io/2022-05-13/</id>
+    <published>2022-05-13T12:28:00.000Z</published>
+    <updated>2025-01-21T07:43:47.247Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;今天周五，白天躺在床上&lt;del&gt;干活&lt;/del&gt;（摸鱼）时掰手指算了一下，今天应该是被封控在家的第 49 天。&lt;/p&gt;
+&lt;p&gt;未来还要继续封多久？这个我也不知道。可能快解放了吧。&lt;/p&gt;
+&lt;p&gt;我已经脱下了冬装换上了短袖，从 150 瘦到了</summary>
+        
+      
+    
+    
+    
+    <category term="闲言赘语" scheme="https://m-finder.github.io/categories/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"/>
+    
+    
+    <category term="闲言赘语" scheme="https://m-finder.github.io/tags/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>书单</title>
+    <link href="https://m-finder.github.io/books/"/>
+    <id>https://m-finder.github.io/books/</id>
+    <published>2022-01-04T15:59:59.000Z</published>
+    <updated>2025-01-21T07:43:47.248Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 龙族&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 一句顶一万句&lt;/li&gt;
+&lt;li&gt;&lt;input</summary>
+        
+      
+    
+    
+    
+    <category term="书单" scheme="https://m-finder.github.io/categories/%E4%B9%A6%E5%8D%95/"/>
+    
+    
+    <category term="书单" scheme="https://m-finder.github.io/tags/%E4%B9%A6%E5%8D%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2022 年计划清单</title>
+    <link href="https://m-finder.github.io/2022-to-do-list/"/>
+    <id>https://m-finder.github.io/2022-to-do-list/</id>
+    <published>2022-01-01T15:59:59.000Z</published>
+    <updated>2025-01-21T07:43:47.247Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 减肥&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="闲言赘语" scheme="https://m-finder.github.io/categories/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"/>
+    
+    <category term="计划清单" scheme="https://m-finder.github.io/categories/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/%E8%AE%A1%E5%88%92%E6%B8%85%E5%8D%95/"/>
+    
+    
+    <category term="闲言赘语" scheme="https://m-finder.github.io/tags/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"/>
+    
+    <category term="计划清单" scheme="https://m-finder.github.io/tags/%E8%AE%A1%E5%88%92%E6%B8%85%E5%8D%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>redis 系列 - 1</title>
+    <link href="https://m-finder.github.io/redis-learning-1/"/>
+    <id>https://m-finder.github.io/redis-learning-1/</id>
+    <published>2021-07-19T02:25:59.000Z</published>
+    <updated>2025-01-21T07:43:47.251Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;一-什么是-redis&quot;&gt;&lt;a href=&quot;#一-什么是-redis&quot; class=&quot;headerlink&quot; title=&quot;一. 什么是 redis&quot;&gt;&lt;/a&gt;一. 什么是 redis&lt;/h4&gt;&lt;p&gt;redis 全称 remote dictionary</summary>
+        
+      
+    
+    
+    
+    <category term="redis" scheme="https://m-finder.github.io/categories/redis/"/>
+    
+    
+    <category term="redis" scheme="https://m-finder.github.io/tags/redis/"/>
+    
+  </entry>
+  
+</feed>
