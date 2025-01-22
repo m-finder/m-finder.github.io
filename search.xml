@@ -33,6 +33,35 @@
     
     
     <entry>
+      <title>mac m1 安装 swoole 报错问题记录</title>
+      <link href="/2025-01-22-mac-m1-install-swoole-pcre2-error/"/>
+      <url>/2025-01-22-mac-m1-install-swoole-pcre2-error/</url>
+      
+        <content type="html"><![CDATA[<p>今天切本地环境的时候发现 swoole 还没装，装的时候又报了错：<code>pcre2.h file not found</code>，鉴于我这个记性越来越差，还是写条笔记记录一下解决办法。</p><ol><li><code>brew install pcre2</code>，如果本机已经安装，就直接进行第二步</li><li><code>ln -s /opt/homebrew/include/pcre2.h /opt/homebrew/Cellar/php@8.1/8.1.31/include/php/ext/pcre/pcre2.h</code>，正常安装 pcre2 之后，需要软连接对应目录，注意这里要把目录切换成你实际的目录</li><li><code>pecl install swoole</code>，再次运行安装</li><li><code>php -m | grep swoole</code>，运行验证</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 码不能停 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 码不能停 </tag>
+            
+            <tag> php </tag>
+            
+            <tag> swoole </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>2024 年计划清单</title>
       <link href="/2024-to-do-list/"/>
       <url>/2024-to-do-list/</url>
@@ -2700,9 +2729,9 @@
             
             <tag> php </tag>
             
-            <tag> openssl </tag>
-            
             <tag> swoole </tag>
+            
+            <tag> openssl </tag>
             
         </tags>
       

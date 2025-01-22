@@ -6,7 +6,7 @@
   <link href="https://m-finder.github.io/atom.xml" rel="self"/>
   
   <link href="https://m-finder.github.io/"/>
-  <updated>2025-01-21T07:43:47.247Z</updated>
+  <updated>2025-01-22T06:17:39.645Z</updated>
   <id>https://m-finder.github.io/</id>
   
   <author>
@@ -20,8 +20,8 @@
     <title>2025 年计划清单</title>
     <link href="https://m-finder.github.io/2025-to-do-list/"/>
     <id>https://m-finder.github.io/2025-to-do-list/</id>
-    <published>2025-01-21T07:43:47.247Z</published>
-    <updated>2025-01-21T07:43:47.247Z</updated>
+    <published>2025-01-22T06:17:39.645Z</published>
+    <updated>2025-01-22T06:17:39.645Z</updated>
     
     
       
@@ -49,11 +49,42 @@
   </entry>
   
   <entry>
+    <title>mac m1 安装 swoole 报错问题记录</title>
+    <link href="https://m-finder.github.io/2025-01-22-mac-m1-install-swoole-pcre2-error/"/>
+    <id>https://m-finder.github.io/2025-01-22-mac-m1-install-swoole-pcre2-error/</id>
+    <published>2025-01-22T05:36:00.000Z</published>
+    <updated>2025-01-22T06:17:39.645Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;今天切本地环境的时候发现 swoole 还没装，装的时候又报了错：&lt;code&gt;pcre2.h file not found&lt;/code&gt;，鉴于我这个记性越来越差，还是写条笔记记录一下解决办法。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;brew install</summary>
+        
+      
+    
+    
+    
+    <category term="码不能停" scheme="https://m-finder.github.io/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
+    
+    
+    <category term="码不能停" scheme="https://m-finder.github.io/tags/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
+    
+    <category term="php" scheme="https://m-finder.github.io/tags/php/"/>
+    
+    <category term="swoole" scheme="https://m-finder.github.io/tags/swoole/"/>
+    
+  </entry>
+  
+  <entry>
     <title>2024 年计划清单</title>
     <link href="https://m-finder.github.io/2024-to-do-list/"/>
     <id>https://m-finder.github.io/2024-to-do-list/</id>
     <published>2024-12-10T16:00:00.000Z</published>
-    <updated>2025-01-21T07:43:47.247Z</updated>
+    <updated>2025-01-22T06:17:39.645Z</updated>
     
     
       
@@ -85,7 +116,7 @@
     <link href="https://m-finder.github.io/2024-09-28-cmake-aseprite/"/>
     <id>https://m-finder.github.io/2024-09-28-cmake-aseprite/</id>
     <published>2024-09-28T01:51:13.000Z</published>
-    <updated>2025-01-21T07:43:47.247Z</updated>
+    <updated>2025-01-22T06:17:39.645Z</updated>
     
     
       
@@ -113,7 +144,7 @@
     <link href="https://m-finder.github.io/2024-09-19-brew-php-version/"/>
     <id>https://m-finder.github.io/2024-09-19-brew-php-version/</id>
     <published>2024-09-19T15:41:13.000Z</published>
-    <updated>2025-01-21T07:43:47.247Z</updated>
+    <updated>2025-01-22T06:17:39.645Z</updated>
     
     
       
@@ -142,7 +173,7 @@
     <link href="https://m-finder.github.io/2024-09-19-boring-in-home/"/>
     <id>https://m-finder.github.io/2024-09-19-boring-in-home/</id>
     <published>2024-09-19T15:33:00.000Z</published>
-    <updated>2025-01-21T07:43:47.247Z</updated>
+    <updated>2025-01-22T06:17:39.645Z</updated>
     
     
       
@@ -168,7 +199,7 @@
     <link href="https://m-finder.github.io/2024-03-03-abstract-and-interface/"/>
     <id>https://m-finder.github.io/2024-03-03-abstract-and-interface/</id>
     <published>2024-03-02T17:54:00.000Z</published>
-    <updated>2025-01-21T07:43:47.247Z</updated>
+    <updated>2025-01-22T06:17:39.645Z</updated>
     
     
       
@@ -198,7 +229,7 @@
     <link href="https://m-finder.github.io/2024-02-29-review-http/"/>
     <id>https://m-finder.github.io/2024-02-29-review-http/</id>
     <published>2024-03-02T14:00:00.000Z</published>
-    <updated>2025-01-21T07:43:47.247Z</updated>
+    <updated>2025-01-22T06:17:39.645Z</updated>
     
     
       
@@ -224,7 +255,7 @@
     <link href="https://m-finder.github.io/2024-03-01-swoole-and-octane2/"/>
     <id>https://m-finder.github.io/2024-03-01-swoole-and-octane2/</id>
     <published>2024-03-01T14:53:00.000Z</published>
-    <updated>2025-01-21T07:43:47.247Z</updated>
+    <updated>2025-01-22T06:17:39.645Z</updated>
     
     
       
@@ -254,7 +285,7 @@
     <link href="https://m-finder.github.io/2024-02-25-review-base/"/>
     <id>https://m-finder.github.io/2024-02-25-review-base/</id>
     <published>2024-03-01T10:45:00.000Z</published>
-    <updated>2025-01-21T07:43:47.247Z</updated>
+    <updated>2025-01-22T06:17:39.645Z</updated>
     
     
       
@@ -280,7 +311,7 @@
     <link href="https://m-finder.github.io/2024-02-28-swoole-and-octane/"/>
     <id>https://m-finder.github.io/2024-02-28-swoole-and-octane/</id>
     <published>2024-02-28T12:37:00.000Z</published>
-    <updated>2025-01-21T07:43:47.247Z</updated>
+    <updated>2025-01-22T06:17:39.645Z</updated>
     
     
       
@@ -309,7 +340,7 @@
     <link href="https://m-finder.github.io/2023-11-20-laravel-swoole-socket/"/>
     <id>https://m-finder.github.io/2023-11-20-laravel-swoole-socket/</id>
     <published>2023-11-20T14:45:00.000Z</published>
-    <updated>2025-01-21T07:43:47.247Z</updated>
+    <updated>2025-01-22T06:17:39.645Z</updated>
     
     
       
@@ -340,7 +371,7 @@
     <link href="https://m-finder.github.io/2023-09-23-swift/"/>
     <id>https://m-finder.github.io/2023-09-23-swift/</id>
     <published>2023-09-30T12:00:00.000Z</published>
-    <updated>2025-01-21T07:43:47.247Z</updated>
+    <updated>2025-01-22T06:17:39.645Z</updated>
     
     
       
@@ -367,7 +398,7 @@
     <link href="https://m-finder.github.io/2023-05-11-gm/"/>
     <id>https://m-finder.github.io/2023-05-11-gm/</id>
     <published>2023-05-11T09:53:00.000Z</published>
-    <updated>2025-01-21T07:43:47.247Z</updated>
+    <updated>2025-01-22T06:17:39.645Z</updated>
     
     
       
@@ -396,7 +427,7 @@
     <link href="https://m-finder.github.io/2023-to-do-list/"/>
     <id>https://m-finder.github.io/2023-to-do-list/</id>
     <published>2022-12-31T16:00:00.000Z</published>
-    <updated>2025-01-21T07:43:47.247Z</updated>
+    <updated>2025-01-22T06:17:39.645Z</updated>
     
     
       
@@ -427,7 +458,7 @@
     <link href="https://m-finder.github.io/2022-12-12-for-my-yadea/"/>
     <id>https://m-finder.github.io/2022-12-12-for-my-yadea/</id>
     <published>2022-12-12T14:45:00.000Z</published>
-    <updated>2025-01-21T07:43:47.247Z</updated>
+    <updated>2025-01-22T06:17:39.645Z</updated>
     
     
       
@@ -454,7 +485,7 @@
     <link href="https://m-finder.github.io/at-the-end-of-2022/"/>
     <id>https://m-finder.github.io/at-the-end-of-2022/</id>
     <published>2022-11-30T01:26:00.000Z</published>
-    <updated>2025-01-21T07:43:47.247Z</updated>
+    <updated>2025-01-22T06:17:39.646Z</updated>
     
     
       
@@ -479,7 +510,7 @@
     <link href="https://m-finder.github.io/2022-05-13/"/>
     <id>https://m-finder.github.io/2022-05-13/</id>
     <published>2022-05-13T12:28:00.000Z</published>
-    <updated>2025-01-21T07:43:47.247Z</updated>
+    <updated>2025-01-22T06:17:39.645Z</updated>
     
     
       
@@ -506,7 +537,7 @@
     <link href="https://m-finder.github.io/books/"/>
     <id>https://m-finder.github.io/books/</id>
     <published>2022-01-04T15:59:59.000Z</published>
-    <updated>2025-01-21T07:43:47.248Z</updated>
+    <updated>2025-01-22T06:17:39.646Z</updated>
     
     
       
@@ -534,7 +565,7 @@
     <link href="https://m-finder.github.io/2022-to-do-list/"/>
     <id>https://m-finder.github.io/2022-to-do-list/</id>
     <published>2022-01-01T15:59:59.000Z</published>
-    <updated>2025-01-21T07:43:47.247Z</updated>
+    <updated>2025-01-22T06:17:39.645Z</updated>
     
     
       
@@ -557,31 +588,6 @@
     <category term="闲言赘语" scheme="https://m-finder.github.io/tags/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"/>
     
     <category term="计划清单" scheme="https://m-finder.github.io/tags/%E8%AE%A1%E5%88%92%E6%B8%85%E5%8D%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>redis 系列 - 1</title>
-    <link href="https://m-finder.github.io/redis-learning-1/"/>
-    <id>https://m-finder.github.io/redis-learning-1/</id>
-    <published>2021-07-19T02:25:59.000Z</published>
-    <updated>2025-01-21T07:43:47.251Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;一-什么是-redis&quot;&gt;&lt;a href=&quot;#一-什么是-redis&quot; class=&quot;headerlink&quot; title=&quot;一. 什么是 redis&quot;&gt;&lt;/a&gt;一. 什么是 redis&lt;/h4&gt;&lt;p&gt;redis 全称 remote dictionary</summary>
-        
-      
-    
-    
-    
-    <category term="redis" scheme="https://m-finder.github.io/categories/redis/"/>
-    
-    
-    <category term="redis" scheme="https://m-finder.github.io/tags/redis/"/>
     
   </entry>
   
