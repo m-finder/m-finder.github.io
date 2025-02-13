@@ -40,6 +40,7 @@ jobs:
           npm install hexo-butterfly-artitalk --save
           npm install hexo-generator-feed --save
           npm install hexo-douban --save
+          npm install hexo-butterfly-extjs --save
       - name: Build
         run: npm run build
       - name: Deploy
