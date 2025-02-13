@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>M-finder</title>
-  <icon>https://m-finder.github.io/icon.png</icon>
+  <icon>https://m-finder.alon.wang/icon.png</icon>
   <subtitle>删繁就简，发现更多</subtitle>
-  <link href="https://m-finder.github.io/atom.xml" rel="self"/>
+  <link href="https://m-finder.alon.wang/atom.xml" rel="self"/>
   
-  <link href="https://m-finder.github.io/"/>
-  <updated>2025-01-24T09:31:35.259Z</updated>
-  <id>https://m-finder.github.io/</id>
+  <link href="https://m-finder.alon.wang/"/>
+  <updated>2025-02-13T02:20:35.838Z</updated>
+  <id>https://m-finder.alon.wang/</id>
   
   <author>
     <name>m-finder</name>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>2025 年计划清单</title>
-    <link href="https://m-finder.github.io/2025-to-do-list/"/>
-    <id>https://m-finder.github.io/2025-to-do-list/</id>
-    <published>2025-01-24T09:31:35.259Z</published>
-    <updated>2025-01-24T09:31:35.259Z</updated>
+    <link href="https://m-finder.alon.wang/2025-to-do-list/"/>
+    <id>https://m-finder.alon.wang/2025-to-do-list/</id>
+    <published>2025-02-13T02:20:35.838Z</published>
+    <updated>2025-02-13T02:20:35.838Z</updated>
     
     
       
@@ -38,23 +38,23 @@
     
     
     
-    <category term="闲言赘语" scheme="https://m-finder.github.io/categories/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"/>
+    <category term="闲言赘语" scheme="https://m-finder.alon.wang/categories/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"/>
     
-    <category term="计划清单" scheme="https://m-finder.github.io/categories/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/%E8%AE%A1%E5%88%92%E6%B8%85%E5%8D%95/"/>
+    <category term="计划清单" scheme="https://m-finder.alon.wang/categories/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/%E8%AE%A1%E5%88%92%E6%B8%85%E5%8D%95/"/>
     
     
-    <category term="闲言赘语" scheme="https://m-finder.github.io/tags/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"/>
+    <category term="闲言赘语" scheme="https://m-finder.alon.wang/tags/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"/>
     
-    <category term="计划清单" scheme="https://m-finder.github.io/tags/%E8%AE%A1%E5%88%92%E6%B8%85%E5%8D%95/"/>
+    <category term="计划清单" scheme="https://m-finder.alon.wang/tags/%E8%AE%A1%E5%88%92%E6%B8%85%E5%8D%95/"/>
     
   </entry>
   
   <entry>
     <title>系统异常崩溃实录</title>
-    <link href="https://m-finder.github.io/2025-01-21-system-error-record/"/>
-    <id>https://m-finder.github.io/2025-01-21-system-error-record/</id>
+    <link href="https://m-finder.alon.wang/2025-01-21-system-error-record/"/>
+    <id>https://m-finder.alon.wang/2025-01-21-system-error-record/</id>
     <published>2025-01-24T02:00:00.000Z</published>
-    <updated>2025-01-24T09:31:35.259Z</updated>
+    <updated>2025-02-13T02:20:35.838Z</updated>
     
     
       
@@ -131,23 +131,23 @@
     
     
     
-    <category term="码不能停" scheme="https://m-finder.github.io/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
+    <category term="码不能停" scheme="https://m-finder.alon.wang/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
     
     
-    <category term="码不能停" scheme="https://m-finder.github.io/tags/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
+    <category term="码不能停" scheme="https://m-finder.alon.wang/tags/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
     
-    <category term="php" scheme="https://m-finder.github.io/tags/php/"/>
+    <category term="php" scheme="https://m-finder.alon.wang/tags/php/"/>
     
-    <category term="服务器调优" scheme="https://m-finder.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%B0%83%E4%BC%98/"/>
+    <category term="服务器调优" scheme="https://m-finder.alon.wang/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%B0%83%E4%BC%98/"/>
     
   </entry>
   
   <entry>
     <title>mac m1 安装 swoole 报错问题记录</title>
-    <link href="https://m-finder.github.io/2025-01-22-mac-m1-install-swoole-pcre2-error/"/>
-    <id>https://m-finder.github.io/2025-01-22-mac-m1-install-swoole-pcre2-error/</id>
+    <link href="https://m-finder.alon.wang/2025-01-22-mac-m1-install-swoole-pcre2-error/"/>
+    <id>https://m-finder.alon.wang/2025-01-22-mac-m1-install-swoole-pcre2-error/</id>
     <published>2025-01-22T05:36:00.000Z</published>
-    <updated>2025-01-24T09:31:35.259Z</updated>
+    <updated>2025-02-13T02:20:35.838Z</updated>
     
     
       
@@ -165,23 +165,23 @@
     
     
     
-    <category term="码不能停" scheme="https://m-finder.github.io/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
+    <category term="码不能停" scheme="https://m-finder.alon.wang/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
     
     
-    <category term="码不能停" scheme="https://m-finder.github.io/tags/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
+    <category term="码不能停" scheme="https://m-finder.alon.wang/tags/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
     
-    <category term="php" scheme="https://m-finder.github.io/tags/php/"/>
+    <category term="php" scheme="https://m-finder.alon.wang/tags/php/"/>
     
-    <category term="swoole" scheme="https://m-finder.github.io/tags/swoole/"/>
+    <category term="swoole" scheme="https://m-finder.alon.wang/tags/swoole/"/>
     
   </entry>
   
   <entry>
     <title>2024 年计划清单</title>
-    <link href="https://m-finder.github.io/2024-to-do-list/"/>
-    <id>https://m-finder.github.io/2024-to-do-list/</id>
+    <link href="https://m-finder.alon.wang/2024-to-do-list/"/>
+    <id>https://m-finder.alon.wang/2024-to-do-list/</id>
     <published>2024-12-10T16:00:00.000Z</published>
-    <updated>2025-01-24T09:31:35.259Z</updated>
+    <updated>2025-02-13T02:20:35.837Z</updated>
     
     
       
@@ -199,23 +199,23 @@
     
     
     
-    <category term="闲言赘语" scheme="https://m-finder.github.io/categories/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"/>
+    <category term="闲言赘语" scheme="https://m-finder.alon.wang/categories/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"/>
     
-    <category term="计划清单" scheme="https://m-finder.github.io/categories/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/%E8%AE%A1%E5%88%92%E6%B8%85%E5%8D%95/"/>
+    <category term="计划清单" scheme="https://m-finder.alon.wang/categories/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/%E8%AE%A1%E5%88%92%E6%B8%85%E5%8D%95/"/>
     
     
-    <category term="闲言赘语" scheme="https://m-finder.github.io/tags/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"/>
+    <category term="闲言赘语" scheme="https://m-finder.alon.wang/tags/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"/>
     
-    <category term="计划清单" scheme="https://m-finder.github.io/tags/%E8%AE%A1%E5%88%92%E6%B8%85%E5%8D%95/"/>
+    <category term="计划清单" scheme="https://m-finder.alon.wang/tags/%E8%AE%A1%E5%88%92%E6%B8%85%E5%8D%95/"/>
     
   </entry>
   
   <entry>
     <title>Mac m1 编译安装 Aseprite</title>
-    <link href="https://m-finder.github.io/2024-09-28-cmake-aseprite/"/>
-    <id>https://m-finder.github.io/2024-09-28-cmake-aseprite/</id>
+    <link href="https://m-finder.alon.wang/2024-09-28-cmake-aseprite/"/>
+    <id>https://m-finder.alon.wang/2024-09-28-cmake-aseprite/</id>
     <published>2024-09-28T01:51:13.000Z</published>
-    <updated>2025-01-24T09:31:35.258Z</updated>
+    <updated>2025-02-13T02:20:35.837Z</updated>
     
     
       
@@ -248,19 +248,19 @@
     
     
     
-    <category term="码不能停" scheme="https://m-finder.github.io/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
+    <category term="码不能停" scheme="https://m-finder.alon.wang/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
     
     
-    <category term="码不能停" scheme="https://m-finder.github.io/tags/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
+    <category term="码不能停" scheme="https://m-finder.alon.wang/tags/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
     
   </entry>
   
   <entry>
     <title>Mac 用 Brew 安装旧版本 PHP</title>
-    <link href="https://m-finder.github.io/2024-09-19-brew-php-version/"/>
-    <id>https://m-finder.github.io/2024-09-19-brew-php-version/</id>
+    <link href="https://m-finder.alon.wang/2024-09-19-brew-php-version/"/>
+    <id>https://m-finder.alon.wang/2024-09-19-brew-php-version/</id>
     <published>2024-09-19T15:41:13.000Z</published>
-    <updated>2025-01-24T09:31:35.258Z</updated>
+    <updated>2025-02-13T02:20:35.837Z</updated>
     
     
       
@@ -281,23 +281,23 @@
     
     
     
-    <category term="码不能停" scheme="https://m-finder.github.io/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
+    <category term="码不能停" scheme="https://m-finder.alon.wang/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
     
-    <category term="php" scheme="https://m-finder.github.io/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/php/"/>
+    <category term="php" scheme="https://m-finder.alon.wang/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/php/"/>
     
     
-    <category term="码不能停" scheme="https://m-finder.github.io/tags/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
+    <category term="码不能停" scheme="https://m-finder.alon.wang/tags/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
     
-    <category term="php" scheme="https://m-finder.github.io/tags/php/"/>
+    <category term="php" scheme="https://m-finder.alon.wang/tags/php/"/>
     
   </entry>
   
   <entry>
     <title>水篇流水账，记下最近的情况</title>
-    <link href="https://m-finder.github.io/2024-09-19-boring-in-home/"/>
-    <id>https://m-finder.github.io/2024-09-19-boring-in-home/</id>
+    <link href="https://m-finder.alon.wang/2024-09-19-boring-in-home/"/>
+    <id>https://m-finder.alon.wang/2024-09-19-boring-in-home/</id>
     <published>2024-09-19T15:33:00.000Z</published>
-    <updated>2025-01-24T09:31:35.258Z</updated>
+    <updated>2025-02-13T02:20:35.837Z</updated>
     
     
       
@@ -311,19 +311,19 @@
     
     
     
-    <category term="闲言赘语" scheme="https://m-finder.github.io/categories/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"/>
+    <category term="闲言赘语" scheme="https://m-finder.alon.wang/categories/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"/>
     
     
-    <category term="闲言赘语" scheme="https://m-finder.github.io/tags/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"/>
+    <category term="闲言赘语" scheme="https://m-finder.alon.wang/tags/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"/>
     
   </entry>
   
   <entry>
     <title>职业生涯知识回顾-关于抽象类和接口的思考</title>
-    <link href="https://m-finder.github.io/2024-03-03-abstract-and-interface/"/>
-    <id>https://m-finder.github.io/2024-03-03-abstract-and-interface/</id>
+    <link href="https://m-finder.alon.wang/2024-03-03-abstract-and-interface/"/>
+    <id>https://m-finder.alon.wang/2024-03-03-abstract-and-interface/</id>
     <published>2024-03-02T17:54:00.000Z</published>
-    <updated>2025-01-24T09:31:35.258Z</updated>
+    <updated>2025-02-13T02:20:35.837Z</updated>
     
     
       
@@ -344,19 +344,19 @@
     
     
     
-    <category term="码不能停" scheme="https://m-finder.github.io/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
+    <category term="码不能停" scheme="https://m-finder.alon.wang/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
     
     
-    <category term="码不能停" scheme="https://m-finder.github.io/tags/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
+    <category term="码不能停" scheme="https://m-finder.alon.wang/tags/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
     
   </entry>
   
   <entry>
     <title>职业生涯知识回顾-基础篇之网络传输协议</title>
-    <link href="https://m-finder.github.io/2024-02-29-review-http/"/>
-    <id>https://m-finder.github.io/2024-02-29-review-http/</id>
+    <link href="https://m-finder.alon.wang/2024-02-29-review-http/"/>
+    <id>https://m-finder.alon.wang/2024-02-29-review-http/</id>
     <published>2024-03-02T14:00:00.000Z</published>
-    <updated>2025-01-24T09:31:35.258Z</updated>
+    <updated>2025-02-13T02:20:35.837Z</updated>
     
     
       
@@ -421,19 +421,19 @@
     
     
     
-    <category term="码不能停" scheme="https://m-finder.github.io/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
+    <category term="码不能停" scheme="https://m-finder.alon.wang/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
     
     
-    <category term="码不能停" scheme="https://m-finder.github.io/tags/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
+    <category term="码不能停" scheme="https://m-finder.alon.wang/tags/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
     
   </entry>
   
   <entry>
     <title>Laravel Octane 和 Swoole 协程的使用分析二</title>
-    <link href="https://m-finder.github.io/2024-03-01-swoole-and-octane2/"/>
-    <id>https://m-finder.github.io/2024-03-01-swoole-and-octane2/</id>
+    <link href="https://m-finder.alon.wang/2024-03-01-swoole-and-octane2/"/>
+    <id>https://m-finder.alon.wang/2024-03-01-swoole-and-octane2/</id>
     <published>2024-03-01T14:53:00.000Z</published>
-    <updated>2025-01-24T09:31:35.258Z</updated>
+    <updated>2025-02-13T02:20:35.837Z</updated>
     
     
       
@@ -449,23 +449,23 @@
     
     
     
-    <category term="码不能停" scheme="https://m-finder.github.io/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
+    <category term="码不能停" scheme="https://m-finder.alon.wang/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
     
-    <category term="php" scheme="https://m-finder.github.io/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/php/"/>
+    <category term="php" scheme="https://m-finder.alon.wang/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/php/"/>
     
     
-    <category term="码不能停" scheme="https://m-finder.github.io/tags/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
+    <category term="码不能停" scheme="https://m-finder.alon.wang/tags/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
     
-    <category term="php" scheme="https://m-finder.github.io/tags/php/"/>
+    <category term="php" scheme="https://m-finder.alon.wang/tags/php/"/>
     
   </entry>
   
   <entry>
     <title>职业生涯知识回顾-基础篇之面向对象</title>
-    <link href="https://m-finder.github.io/2024-02-25-review-base/"/>
-    <id>https://m-finder.github.io/2024-02-25-review-base/</id>
+    <link href="https://m-finder.alon.wang/2024-02-25-review-base/"/>
+    <id>https://m-finder.alon.wang/2024-02-25-review-base/</id>
     <published>2024-03-01T10:45:00.000Z</published>
-    <updated>2025-01-24T09:31:35.258Z</updated>
+    <updated>2025-02-13T02:20:35.837Z</updated>
     
     
       
@@ -538,19 +538,19 @@
     
     
     
-    <category term="码不能停" scheme="https://m-finder.github.io/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
+    <category term="码不能停" scheme="https://m-finder.alon.wang/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
     
     
-    <category term="码不能停" scheme="https://m-finder.github.io/tags/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
+    <category term="码不能停" scheme="https://m-finder.alon.wang/tags/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
     
   </entry>
   
   <entry>
     <title>Laravel Octane 和 Swoole 协程的使用分析</title>
-    <link href="https://m-finder.github.io/2024-02-28-swoole-and-octane/"/>
-    <id>https://m-finder.github.io/2024-02-28-swoole-and-octane/</id>
+    <link href="https://m-finder.alon.wang/2024-02-28-swoole-and-octane/"/>
+    <id>https://m-finder.alon.wang/2024-02-28-swoole-and-octane/</id>
     <published>2024-02-28T12:37:00.000Z</published>
-    <updated>2025-01-24T09:31:35.258Z</updated>
+    <updated>2025-02-13T02:20:35.837Z</updated>
     
     
       
@@ -581,23 +581,23 @@
     
     
     
-    <category term="码不能停" scheme="https://m-finder.github.io/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
+    <category term="码不能停" scheme="https://m-finder.alon.wang/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
     
-    <category term="php" scheme="https://m-finder.github.io/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/php/"/>
+    <category term="php" scheme="https://m-finder.alon.wang/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/php/"/>
     
     
-    <category term="码不能停" scheme="https://m-finder.github.io/tags/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
+    <category term="码不能停" scheme="https://m-finder.alon.wang/tags/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
     
-    <category term="php" scheme="https://m-finder.github.io/tags/php/"/>
+    <category term="php" scheme="https://m-finder.alon.wang/tags/php/"/>
     
   </entry>
   
   <entry>
     <title>为你的 Laravel 应用添加一个基于 Swoole 的 WebSocket 服务</title>
-    <link href="https://m-finder.github.io/2023-11-20-laravel-swoole-socket/"/>
-    <id>https://m-finder.github.io/2023-11-20-laravel-swoole-socket/</id>
+    <link href="https://m-finder.alon.wang/2023-11-20-laravel-swoole-socket/"/>
+    <id>https://m-finder.alon.wang/2023-11-20-laravel-swoole-socket/</id>
     <published>2023-11-20T14:45:00.000Z</published>
-    <updated>2025-01-24T09:31:35.258Z</updated>
+    <updated>2025-02-13T02:20:35.837Z</updated>
     
     
       
@@ -630,25 +630,25 @@
     
     
     
-    <category term="码不能停" scheme="https://m-finder.github.io/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
+    <category term="码不能停" scheme="https://m-finder.alon.wang/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
     
-    <category term="php" scheme="https://m-finder.github.io/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/php/"/>
+    <category term="php" scheme="https://m-finder.alon.wang/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/php/"/>
     
     
-    <category term="码不能停" scheme="https://m-finder.github.io/tags/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
+    <category term="码不能停" scheme="https://m-finder.alon.wang/tags/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
     
-    <category term="php" scheme="https://m-finder.github.io/tags/php/"/>
+    <category term="php" scheme="https://m-finder.alon.wang/tags/php/"/>
     
-    <category term="laravel" scheme="https://m-finder.github.io/tags/laravel/"/>
+    <category term="laravel" scheme="https://m-finder.alon.wang/tags/laravel/"/>
     
   </entry>
   
   <entry>
     <title>2023年9月流水账</title>
-    <link href="https://m-finder.github.io/2023-09-23-swift/"/>
-    <id>https://m-finder.github.io/2023-09-23-swift/</id>
+    <link href="https://m-finder.alon.wang/2023-09-23-swift/"/>
+    <id>https://m-finder.alon.wang/2023-09-23-swift/</id>
     <published>2023-09-30T12:00:00.000Z</published>
-    <updated>2025-01-24T09:31:35.258Z</updated>
+    <updated>2025-02-13T02:20:35.837Z</updated>
     
     
       
@@ -663,19 +663,19 @@
     
     
     
-    <category term="闲言赘语" scheme="https://m-finder.github.io/categories/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"/>
+    <category term="闲言赘语" scheme="https://m-finder.alon.wang/categories/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"/>
     
     
-    <category term="闲言赘语" scheme="https://m-finder.github.io/tags/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"/>
+    <category term="闲言赘语" scheme="https://m-finder.alon.wang/tags/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"/>
     
   </entry>
   
   <entry>
     <title>php 国密 sm2 sm3 sm4 完整测试类</title>
-    <link href="https://m-finder.github.io/2023-05-11-gm/"/>
-    <id>https://m-finder.github.io/2023-05-11-gm/</id>
+    <link href="https://m-finder.alon.wang/2023-05-11-gm/"/>
+    <id>https://m-finder.alon.wang/2023-05-11-gm/</id>
     <published>2023-05-11T09:53:00.000Z</published>
-    <updated>2025-01-24T09:31:35.258Z</updated>
+    <updated>2025-02-13T02:20:35.837Z</updated>
     
     
       
@@ -721,23 +721,23 @@
     
     
     
-    <category term="码不能停" scheme="https://m-finder.github.io/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
+    <category term="码不能停" scheme="https://m-finder.alon.wang/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
     
-    <category term="php" scheme="https://m-finder.github.io/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/php/"/>
+    <category term="php" scheme="https://m-finder.alon.wang/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/php/"/>
     
     
-    <category term="码不能停" scheme="https://m-finder.github.io/tags/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
+    <category term="码不能停" scheme="https://m-finder.alon.wang/tags/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
     
-    <category term="php" scheme="https://m-finder.github.io/tags/php/"/>
+    <category term="php" scheme="https://m-finder.alon.wang/tags/php/"/>
     
   </entry>
   
   <entry>
     <title>2023 年计划清单</title>
-    <link href="https://m-finder.github.io/2023-to-do-list/"/>
-    <id>https://m-finder.github.io/2023-to-do-list/</id>
+    <link href="https://m-finder.alon.wang/2023-to-do-list/"/>
+    <id>https://m-finder.alon.wang/2023-to-do-list/</id>
     <published>2022-12-31T16:00:00.000Z</published>
-    <updated>2025-01-24T09:31:35.258Z</updated>
+    <updated>2025-02-13T02:20:35.837Z</updated>
     
     
       
@@ -753,23 +753,23 @@
     
     
     
-    <category term="闲言赘语" scheme="https://m-finder.github.io/categories/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"/>
+    <category term="闲言赘语" scheme="https://m-finder.alon.wang/categories/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"/>
     
-    <category term="计划清单" scheme="https://m-finder.github.io/categories/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/%E8%AE%A1%E5%88%92%E6%B8%85%E5%8D%95/"/>
+    <category term="计划清单" scheme="https://m-finder.alon.wang/categories/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/%E8%AE%A1%E5%88%92%E6%B8%85%E5%8D%95/"/>
     
     
-    <category term="闲言赘语" scheme="https://m-finder.github.io/tags/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"/>
+    <category term="闲言赘语" scheme="https://m-finder.alon.wang/tags/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"/>
     
-    <category term="计划清单" scheme="https://m-finder.github.io/tags/%E8%AE%A1%E5%88%92%E6%B8%85%E5%8D%95/"/>
+    <category term="计划清单" scheme="https://m-finder.alon.wang/tags/%E8%AE%A1%E5%88%92%E6%B8%85%E5%8D%95/"/>
     
   </entry>
   
   <entry>
     <title>向我的小电驴致敬</title>
-    <link href="https://m-finder.github.io/2022-12-12-for-my-yadea/"/>
-    <id>https://m-finder.github.io/2022-12-12-for-my-yadea/</id>
+    <link href="https://m-finder.alon.wang/2022-12-12-for-my-yadea/"/>
+    <id>https://m-finder.alon.wang/2022-12-12-for-my-yadea/</id>
     <published>2022-12-12T14:45:00.000Z</published>
-    <updated>2025-01-24T09:31:35.258Z</updated>
+    <updated>2025-02-13T02:20:35.837Z</updated>
     
     
       
@@ -787,19 +787,19 @@
     
     
     
-    <category term="闲言赘语" scheme="https://m-finder.github.io/categories/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"/>
+    <category term="闲言赘语" scheme="https://m-finder.alon.wang/categories/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"/>
     
     
-    <category term="闲言赘语" scheme="https://m-finder.github.io/tags/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"/>
+    <category term="闲言赘语" scheme="https://m-finder.alon.wang/tags/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"/>
     
   </entry>
   
   <entry>
     <title>The Fucked 2022</title>
-    <link href="https://m-finder.github.io/at-the-end-of-2022/"/>
-    <id>https://m-finder.github.io/at-the-end-of-2022/</id>
+    <link href="https://m-finder.alon.wang/at-the-end-of-2022/"/>
+    <id>https://m-finder.alon.wang/at-the-end-of-2022/</id>
     <published>2022-11-30T01:26:00.000Z</published>
-    <updated>2025-01-24T09:31:35.259Z</updated>
+    <updated>2025-02-13T02:20:35.838Z</updated>
     
     
       
@@ -823,19 +823,19 @@
     
     
     
-    <category term="闲言赘语" scheme="https://m-finder.github.io/categories/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"/>
+    <category term="闲言赘语" scheme="https://m-finder.alon.wang/categories/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"/>
     
     
-    <category term="闲言赘语" scheme="https://m-finder.github.io/tags/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"/>
+    <category term="闲言赘语" scheme="https://m-finder.alon.wang/tags/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"/>
     
   </entry>
   
   <entry>
     <title>碎碎念</title>
-    <link href="https://m-finder.github.io/2022-05-13/"/>
-    <id>https://m-finder.github.io/2022-05-13/</id>
+    <link href="https://m-finder.alon.wang/2022-05-13/"/>
+    <id>https://m-finder.alon.wang/2022-05-13/</id>
     <published>2022-05-13T12:28:00.000Z</published>
-    <updated>2025-01-24T09:31:35.258Z</updated>
+    <updated>2025-02-13T02:20:35.837Z</updated>
     
     
       
@@ -850,19 +850,19 @@
     
     
     
-    <category term="闲言赘语" scheme="https://m-finder.github.io/categories/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"/>
+    <category term="闲言赘语" scheme="https://m-finder.alon.wang/categories/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"/>
     
     
-    <category term="闲言赘语" scheme="https://m-finder.github.io/tags/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"/>
+    <category term="闲言赘语" scheme="https://m-finder.alon.wang/tags/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"/>
     
   </entry>
   
   <entry>
     <title>书单</title>
-    <link href="https://m-finder.github.io/books/"/>
-    <id>https://m-finder.github.io/books/</id>
+    <link href="https://m-finder.alon.wang/books/"/>
+    <id>https://m-finder.alon.wang/books/</id>
     <published>2022-01-04T15:59:59.000Z</published>
-    <updated>2025-01-24T09:31:35.259Z</updated>
+    <updated>2025-02-13T02:20:35.838Z</updated>
     
     
       
@@ -897,10 +897,10 @@
     
     
     
-    <category term="书单" scheme="https://m-finder.github.io/categories/%E4%B9%A6%E5%8D%95/"/>
+    <category term="书单" scheme="https://m-finder.alon.wang/categories/%E4%B9%A6%E5%8D%95/"/>
     
     
-    <category term="书单" scheme="https://m-finder.github.io/tags/%E4%B9%A6%E5%8D%95/"/>
+    <category term="书单" scheme="https://m-finder.alon.wang/tags/%E4%B9%A6%E5%8D%95/"/>
     
   </entry>
   
