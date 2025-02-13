@@ -33,6 +33,31 @@
     
     
     <entry>
+      <title>follow 认证</title>
+      <link href="/rss-verify/"/>
+      <url>/rss-verify/</url>
+      
+        <content type="html"><![CDATA[<p>This message is used to verify that this feed (feedId:104434909303929856) belongs to me (userId:68900854292651008). Join me in enjoying the next generation information browser <a href="https://follow.is/">https://follow.is</a>.</p><blockquote><p>ps. 需要邀请码的可以联系.</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 码不能停 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 码不能停 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>系统异常崩溃实录</title>
       <link href="/2025-01-21-system-error-record/"/>
       <url>/2025-01-21-system-error-record/</url>
@@ -352,9 +377,9 @@
             
             <tag> 码不能停 </tag>
             
-            <tag> php </tag>
-            
             <tag> laravel </tag>
+            
+            <tag> php </tag>
             
         </tags>
       
@@ -1965,9 +1990,9 @@
       
         <tags>
             
-            <tag> php </tag>
-            
             <tag> laravel </tag>
+            
+            <tag> php </tag>
             
         </tags>
       
@@ -1992,9 +2017,9 @@
       
         <tags>
             
-            <tag> php </tag>
-            
             <tag> laravel </tag>
+            
+            <tag> php </tag>
             
         </tags>
       
@@ -2046,9 +2071,9 @@
       
         <tags>
             
-            <tag> php </tag>
-            
             <tag> laravel </tag>
+            
+            <tag> php </tag>
             
             <tag> docker </tag>
             
@@ -2127,9 +2152,9 @@
       
         <tags>
             
-            <tag> php </tag>
-            
             <tag> laravel </tag>
+            
+            <tag> php </tag>
             
         </tags>
       
@@ -2154,9 +2179,9 @@
       
         <tags>
             
-            <tag> php </tag>
-            
             <tag> laravel </tag>
+            
+            <tag> php </tag>
             
         </tags>
       
@@ -2181,9 +2206,9 @@
       
         <tags>
             
-            <tag> php </tag>
-            
             <tag> laravel </tag>
+            
+            <tag> php </tag>
             
         </tags>
       
@@ -2208,9 +2233,9 @@
       
         <tags>
             
-            <tag> php </tag>
-            
             <tag> laravel </tag>
+            
+            <tag> php </tag>
             
         </tags>
       
@@ -2425,9 +2450,9 @@
       
         <tags>
             
-            <tag> php </tag>
-            
             <tag> laravel </tag>
+            
+            <tag> php </tag>
             
         </tags>
       
@@ -2452,9 +2477,9 @@
       
         <tags>
             
-            <tag> php </tag>
-            
             <tag> laravel </tag>
+            
+            <tag> php </tag>
             
         </tags>
       
@@ -2785,9 +2810,9 @@
       
         <tags>
             
-            <tag> php </tag>
-            
             <tag> laravel </tag>
+            
+            <tag> php </tag>
             
         </tags>
       
@@ -2895,9 +2920,9 @@
       
         <tags>
             
-            <tag> php </tag>
-            
             <tag> laravel </tag>
+            
+            <tag> php </tag>
             
         </tags>
       
