@@ -19,7 +19,7 @@ feed:
   limit: 20
   hub:
   content:
-  content_limit: 50000
+  content_limit: 80000
   content_limit_delim: ' '
   order_by: -date
   icon: icon.png
