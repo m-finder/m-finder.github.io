@@ -28,7 +28,7 @@ feed:
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://m-finder.github.io
+url: https://m-finder.alon.wang
 permalink: :title/
 permalink_defaults:
 pretty_urls:
