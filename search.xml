@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>闲来有感</title>
+      <link href="/2025-02-25-something/"/>
+      <url>/2025-02-25-something/</url>
+      
+        <content type="html"><![CDATA[<p>刚才整理邮箱时突然看到一封 24 年由一个外国友人发来的推广，当时可能大概瞄了一眼。</p><p>然后就把它忘在了脑后。</p><p>外国友人说看到我在博客里推荐的图片转 ico 工具很好用，但是有一些限制，他有一个更好用的工具，并希望我能放进该博文进行展示。</p><p>刚才试用完准备去贴链接的时候，看到了一个很久没去访问的博客：<a href="http://litten.me/">litten</a></p><p>域名已经挂了，再看看大佬 github 的推送记录，似乎也停在了 17 年。</p><p>8年了。</p><p>那一瞬间的鼻头一酸似乎有点过于矫情，但还是忍不住想要感慨一句：时间过得可真特喵的快啊。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 闲言赘语 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 闲言赘语 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>2025 年计划清单</title>
       <link href="/2025-to-do-list/"/>
       <url>/2025-to-do-list/</url>
@@ -2325,7 +2350,7 @@
       <link href="/web-tool/"/>
       <url>/web-tool/</url>
       
-        <content type="html"><![CDATA[<h4 id="图片处理类工具"><a href="#图片处理类工具" class="headerlink" title="图片处理类工具"></a>图片处理类工具</h4><ul><li><a href="https://aiviewer.com/ConvertAiToJpg.aspx">Ai转常用图片格式</a></li><li><a href="http://www.faviconico.org/">图片转favicon</a></li><li><a href="http://www.qt86.com/">艺术字生成</a></li><li><a href="https://www.logaster.com/">logo设计2（国外网站，可能会慢）</a></li><li><a href="https://www.asqql.com/gifzip/">图片压缩</a></li></ul><h4 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具"></a>开发工具</h4><ul><li><a href="http://www.bejson.com/">代码转换</a></li><li><a href="https://www.ascii-art-generator.org/">ascii文字生成</a></li><li><a href="https://greasyfork.org/zh-CN/scripts">油猴脚本中心</a></li><li><a href="https://www.seniverse.com/">天气api</a></li><li><a href="https://ngrok.com/download">生成外网可访问的本机域名</a></li><li><a href="https://www.leangoo.com/">leangoo-团队协作工具</a></li></ul><h4 id="我喜欢的几个博客"><a href="#我喜欢的几个博客" class="headerlink" title="我喜欢的几个博客"></a>我喜欢的几个博客</h4><ul><li><a href="http://litten.me/">litten</a></li><li><a href="https://blog.keep.moe/">Makito’s Notebook</a></li><li><a href="https://primitivetechnology.wordpress.com/">澳洲小哥原始技术</a></li><li><a href="https://molunerfinn.com/">MARKSZのBlog</a></li><li><a href="https://blog.fishlee.net/">魚·后花园</a></li></ul>]]></content>
+        <content type="html"><![CDATA[<h4 id="图片处理类工具"><a href="#图片处理类工具" class="headerlink" title="图片处理类工具"></a>图片处理类工具</h4><ul><li><a href="https://aiviewer.com/ConvertAiToJpg.aspx">Ai转常用图片格式</a></li><li><a href="http://www.faviconico.org/">图片转favicon</a></li><li><a href="https://www.websiteplanet.com/webtools/favicon-generator/">图片转favicon2</a></li><li><a href="http://www.qt86.com/">艺术字生成</a></li></ul><h4 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具"></a>开发工具</h4><ul><li><a href="http://www.bejson.com/">代码转换</a></li><li><a href="https://www.ascii-art-generator.org/">ascii文字生成</a></li><li><a href="https://www.leangoo.com/">leangoo-团队协作工具</a></li></ul><h4 id="我喜欢的几个博客"><a href="#我喜欢的几个博客" class="headerlink" title="我喜欢的几个博客"></a>我喜欢的几个博客</h4><ul><li><a href="http://litten.me/">litten</a></li><li><a href="https://blog.keep.moe/">Makito’s Notebook</a></li><li><a href="https://primitivetechnology.wordpress.com/">澳洲小哥原始技术</a></li><li><a href="https://molunerfinn.com/">MARKSZのBlog</a></li><li><a href="https://blog.fishlee.net/">魚·后花园</a></li></ul>]]></content>
       
       
       <categories>
