@@ -4,31 +4,6 @@
   
     
     <entry>
-      <title>闲来有感</title>
-      <link href="/2025-02-25-something/"/>
-      <url>/2025-02-25-something/</url>
-      
-        <content type="html"><![CDATA[<p>刚才整理邮箱时突然看到一封 24 年由一个外国友人发来的推广，当时可能大概瞄了一眼。</p><p>然后就把它忘在了脑后。</p><p>外国友人说看到我在博客里推荐的图片转 ico 工具很好用，但是有一些限制，他有一个更好用的工具，并希望我能放进该博文进行展示。</p><p>刚才试用完准备去贴链接的时候，看到了一个很久没去访问的博客：<a href="http://litten.me/">litten</a></p><p>域名已经挂了，再看看大佬 github 的推送记录，似乎也停在了 17 年。</p><p>8年了。</p><p>那一瞬间的鼻头一酸似乎有点过于矫情，但还是忍不住想要感慨一句：时间过得可真特喵的快啊。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 闲言赘语 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 闲言赘语 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>2025 年计划清单</title>
       <link href="/2025-to-do-list/"/>
       <url>/2025-to-do-list/</url>
@@ -75,6 +50,31 @@
         <tags>
             
             <tag> echarts </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>闲来有感</title>
+      <link href="/2025-02-25-something/"/>
+      <url>/2025-02-25-something/</url>
+      
+        <content type="html"><![CDATA[<p>刚才整理邮箱时突然看到一封 24 年由一个外国友人发来的推广，当时可能大概瞄了一眼。</p><p>然后就把它忘在了脑后。</p><p>外国友人说看到我在博客里推荐的图片转 ico 工具很好用，但是有一些限制，他有一个更好用的工具，并希望我能放进该博文进行展示。</p><p>刚才试用完准备去贴链接的时候，看到了一个很久没去访问的博客：<a href="http://litten.me/">litten</a></p><p>域名已经挂了，再看看大佬 github 的推送记录，似乎也停在了 17 年。</p><p>8年了。</p><p>那一瞬间的鼻头一酸似乎有点过于矫情，但还是忍不住想要感慨一句：时间过得可真特喵的快啊。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 闲言赘语 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 闲言赘语 </tag>
             
         </tags>
       
