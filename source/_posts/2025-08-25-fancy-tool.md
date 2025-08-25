@@ -1,6 +1,6 @@
 ---
 title: Mac 菜单栏多合一工具自荐：FancyTool
-date: 2025-06-09 09:45:00
+date: 2025-08-25 09:26:00
 tags:
 - 码不能停
 - swift
