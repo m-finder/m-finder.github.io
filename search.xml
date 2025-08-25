@@ -33,31 +33,6 @@
     
     
     <entry>
-      <title>php、java 和我</title>
-      <link href="/2025-06-07/"/>
-      <url>/2025-06-07/</url>
-      
-        <content type="html"><![CDATA[<p>前几天 java 30 了，今天看到 php 也 30 了。</p><p>我就不一样了，我 30 多了。</p><p><img src="/images/java-30.png"><br><img src="/images/php-30.png"></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 闲言赘语 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 闲言赘语 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Mac 菜单栏多合一工具自荐：FancyTool</title>
       <link href="/2025-08-25-fancy-tool/"/>
       <url>/2025-08-25-fancy-tool/</url>
@@ -79,6 +54,31 @@
             <tag> 码不能停 </tag>
             
             <tag> swift </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>php、java 和我</title>
+      <link href="/2025-06-07/"/>
+      <url>/2025-06-07/</url>
+      
+        <content type="html"><![CDATA[<p>前几天 java 30 了，今天看到 php 也 30 了。</p><p>我就不一样了，我 30 多了。</p><p><img src="/images/java-30.png"><br><img src="/images/php-30.png"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 闲言赘语 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 闲言赘语 </tag>
             
         </tags>
       
