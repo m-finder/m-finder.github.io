@@ -58,12 +58,15 @@ categories:
 * 轻量级设计，资源占用极低
 * 直观易用的界面，无需学习成本
 * 定期更新，持续改进功能和体验
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/68d8312a24234334a6496c65cfcc5da3.png#pic_center)
+<p align="center">
+<img src="/images/FancyTool/4.png">
+<img src="/images/FancyTool/menu.png">
+<img src="/images/FancyTool/2.png">
+<img src="/images/FancyTool/3.png">
+<img src="/images/FancyTool/1.gif">
+<img src="/images/FancyTool/2.gif">
+<img src="/images/FancyTool/3.gif">
+</p>
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/4c51f7cd6b224e5d91b2242079c7831a.png#pic_center)
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/598574d1f0aa4aed89bf8d1155014ab5.png#pic_center)
-
-![炫彩文字](https://i-blog.csdnimg.cn/direct/f73dcc73584043669832c69821277adf.png#pic_center)
-![剪切板](https://i-blog.csdnimg.cn/direct/526611b1eb2a472b92ae9638b7295201.png#pic_center)
 
 如果有好的建议或者使用时遇到任何问题欢迎随时反馈👏
