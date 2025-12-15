@@ -1,6 +1,6 @@
 ---
 title: 飞牛 NAS + Tailscale 组网踩坑实录
-date: 2025-12-10 09:306:00
+date: 2025-12-10 09:30:00
 tags:
 - 码不能停
 categories:
