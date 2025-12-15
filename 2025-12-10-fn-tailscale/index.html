@@ -1,0 +1,256 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>飞牛 NAS + Tailscale 组网踩坑实录 | M-finder</title><meta name="author" content="m-finder"><meta name="copyright" content="m-finder"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="废废的话多多的说家里有台用了很多年的笔记本, 型号是联想小新 700, i7 的 CPU, 8G 内存, 硬盘是买来时我自己换的一块固态 256. 这台笔记本购于 17 年 10 月, 陪我度过了刚毕业时的懵懂, 也陪大美丽度过了研究僧苦修的日常. 进可敲代码, 退可搞学术, 进过水, 也换过屏, 可以说是功高劳苦, 遍体鳞伤. 不忍心让它就这么丢在家里吃灰, 前段时间我一个没忍住, 买了一块 2">
+<meta property="og:type" content="article">
+<meta property="og:title" content="飞牛 NAS + Tailscale 组网踩坑实录">
+<meta property="og:url" content="https://m-finder.alon.wang/2025-12-10-fn-tailscale/index.html">
+<meta property="og:site_name" content="M-finder">
+<meta property="og:description" content="废废的话多多的说家里有台用了很多年的笔记本, 型号是联想小新 700, i7 的 CPU, 8G 内存, 硬盘是买来时我自己换的一块固态 256. 这台笔记本购于 17 年 10 月, 陪我度过了刚毕业时的懵懂, 也陪大美丽度过了研究僧苦修的日常. 进可敲代码, 退可搞学术, 进过水, 也换过屏, 可以说是功高劳苦, 遍体鳞伤. 不忍心让它就这么丢在家里吃灰, 前段时间我一个没忍住, 买了一块 2">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://m-finder.alon.wang/images/top.jpg">
+<meta property="article:published_time" content="2025-12-15T03:33:05.769Z">
+<meta property="article:modified_time" content="2025-12-15T03:33:05.769Z">
+<meta property="article:author" content="m-finder">
+<meta property="article:tag" content="码不能停">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://m-finder.alon.wang/images/top.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "飞牛 NAS + Tailscale 组网踩坑实录",
+  "url": "https://m-finder.alon.wang/2025-12-10-fn-tailscale/",
+  "image": "https://m-finder.alon.wang/images/top.jpg",
+  "datePublished": "2025-12-15T03:33:05.769Z",
+  "dateModified": "2025-12-15T03:33:05.769Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "m-finder",
+      "url": "https://m-finder.alon.wang"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/images/favicon.ico"><link rel="canonical" href="https://m-finder.alon.wang/2025-12-10-fn-tailscale/index.html"><link rel="preconnect"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="/pluginsSrc/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":true,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: '/pluginsSrc/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '飞牛 NAS + Tailscale 组网踩坑实录',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="preconnect" href="https://jsd.012700.xyz"><link href="/self/btf.css" rel="stylesheet"><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="M-finder" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/images/avatar.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">121</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">24</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间线</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 更多</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/artitalk/"><i class="fa-fw fas fa-comment-dots"></i><span> 说说</span></a></li><li><a class="site-page child" href="/gallery/"><i class="fa-fw fas fa-images"></i><span> 相册</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book"></i><span> 书单</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/games/"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/images/top.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">M-finder</span></a><a class="nav-page-title" href="/"><span class="site-name">飞牛 NAS + Tailscale 组网踩坑实录</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间线</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 更多</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/artitalk/"><i class="fa-fw fas fa-comment-dots"></i><span> 说说</span></a></li><li><a class="site-page child" href="/gallery/"><i class="fa-fw fas fa-images"></i><span> 相册</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book"></i><span> 书单</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/games/"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">飞牛 NAS + Tailscale 组网踩坑实录</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-12-15T03:33:05.769Z" title="发表于 2025-12-15 11:33:05">2025-12-15</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-12-15T03:33:05.769Z" title="更新于 2025-12-15 11:33:05">2025-12-15</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/">码不能停</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">1.4k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>4分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/2025-12-10-fn-tailscale/#post-comment" itemprop="discussionUrl"><span class="valine-comment-count" data-xid="/2025-12-10-fn-tailscale/" itemprop="commentCount"><i class="fa-solid fa-spinner fa-spin"></i></span></a></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h4 id="废废的话多多的说"><a href="#废废的话多多的说" class="headerlink" title="废废的话多多的说"></a>废废的话多多的说</h4><p>家里有台用了很多年的笔记本, 型号是联想小新 700, i7 的 CPU, 8G 内存, 硬盘是买来时我自己换的一块固态 256.</p>
+<p>这台笔记本购于 17 年 10 月, 陪我度过了刚毕业时的懵懂, 也陪大美丽度过了研究僧苦修的日常.</p>
+<p>进可敲代码, 退可搞学术, 进过水, 也换过屏, 可以说是功高劳苦, 遍体鳞伤.</p>
+<p>不忍心让它就这么丢在家里吃灰, 前段时间我一个没忍住, 买了一块 2T 的机械, 一块 1T 的固态, 还有一根 16G 的内存条.</p>
+<p>换上以后, 大黑满血复活.</p>
+<p>当时有个老登整天找我念叨要组装小主机, 搞 NAS, 我被折磨久了, 心里也有火苗在跳.</p>
+<p>心动完我先整理了一下需求, 然后丢给 AI 帮我整理方案:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">我有一台闲置的联想小新700电竞版笔记本，i7的cpu，16+8g内存，GTX905m显卡，1t固态硬盘，2t机械硬盘，想安装飞牛OS作为影音nas，win10用来打steam游戏，linux和macOS用来写代码开发php/java/qt/swift，现在了解到可以通过hyper-v, vm等虚拟机，也可以通过pve，ESXi等虚拟化平台满足我的需求，我对开发和游戏可能有一定的性能要求，帮我分析下用哪种方案最优</span><br></pre></td></tr></table></figure>
+
+<p>AI 说我这个需求 PVE 是首选. </p>
+<p>那还说啥, 搞呗.</p>
+<p>趁着周末, 我一口气折腾到半夜, 然后发现 GG 了.</p>
+<p>大黑不支持一个什么 Bios 直通, 给 Bios 升完级依然找不到对应选项.</p>
+<p>我特么心里哇凉啊, 头发咔咔掉一地. 裤子都脱了就给我看这个?</p>
+<p>第二天一早我还是老老实实地装了 Windows, 然后又通过 Hyper-V 装了飞牛 NAS.</p>
+<p>我给飞牛绑了局域网内的固定 IP, 然后把 2T 的机械盘从 windows 禁用掉, 专门给飞牛做存储, 最后又通过 SMB 把硬盘挂载回了大黑, 方便我在不开浏览器的时候也能随时查看飞牛里的文件. </p>
+<p>说实话, 用着是真的爽啊, 自带的远程连接虽然只有 2M 带宽, 但是也足够我在公司上传下载文件用, 比之前玩黑群晖的体验强到没话说!</p>
+<p>玩了几天以后, 我又喊上老登一块儿联机我的世界, 当时龙猫的启动器正在小范围试用联机功能, 老登刚好就有, 分享完我们畅玩了一天.</p>
+<p>结果第二天就看到龙猫发了篇声明, 联机功能没了, 组网的需求嗷一下就上来了.</p>
+<p>鉴于龙猫用的 EasyTier, 我也先尝试了一下, 发现功能确实好用, 但碍于我不喜欢他们那套 UI, 我又放弃了.</p>
+<p>没错, 颜控就是这么离谱. </p>
+<p>挑来选去, 最后还是选了 Tailscale.</p>
+<h4 id="踩坑过程"><a href="#踩坑过程" class="headerlink" title="踩坑过程"></a>踩坑过程</h4><p>虽然 Tailscale 下载安装后登录下账号就能用, 但是最开始我没搞明白, 也不知道它其实需要客户端和命令行结合使用.</p>
+<p>我只发现两台设备都安装登录后, 互相访问似乎是没什么反应.</p>
+<p>拉上老登又陪我折腾一圈, 发现登录完设备之间确实是通了, 我当时不通是因为访问了飞牛的内网 IP, 而我, 跟本就没给它配置子网路由. 😭</p>
+<p>首先, Windows 安装后, 可以直接在命令行使用 tailscale 的各项命令, Mac 安装后, 需要手动添加一个环境变量:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export PATH=&quot;$PATH:/Applications/Tailscale.app/Contents/MacOS&quot;</span><br></pre></td></tr></table></figure>
+
+<p>然后才能在命令行愉快地玩耍, 比如通过 <code>tailscale status</code> 查看各台设备的连接状态, 再或者通过 <code>tailscale ping ip</code> 来查看当前设备到对应设备的连通状态.</p>
+<p>也就是这个时候, 我和老登都发现设备之间虽然通了, 但是延迟有点高. </p>
+<p>AI 说, 应该是没能打洞成功, 再一看 status 的结果, 果然都是中转.</p>
+<p>它让我先把 41641 端口在防火墙放开, 但是我没开防火墙, emmm🤔… 那问题就只剩一个, 网络层给我拦了!</p>
+<p>登上光猫后台, 没找到什么 UPnP,  但是有个端口映射, 我给配了一下, 再运行 <code>tailscale status</code>, 连接状态果然变成了直连, 快多了.</p>
+<p>当天晚上又拉老登联机一个了游戏, 结果游戏内时不时弹起的网络延迟过高让我有点蛋疼. </p>
+<p>打开测速网一跑: 73 Mbs, 我千兆的光纤 FTTR, 可以说是拉了一裤兜.</p>
+<p>把 Tailscale 关了, 再跑能到 230, 大黑的无线网卡是 400 多, 也算能说得过去.</p>
+<p>初步怀疑运营商对大端口的 UDP 做了主动丢包, 尝试查找怎么给 Tailscale 配个端口, 强制所有流量去走 443, 安装目录添加配置<code>C:\ProgramData\Tailscale\config.json</code>：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;ForceTCP&quot;: true,</span><br><span class="line">  &quot;Socks5Server&quot;: &quot;localhost:443&quot;,</span><br><span class="line">  &quot;TunMode&quot;: &quot;userspace&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>配置后重启，似乎没啥作用.</p>
+<p>微软服务内添加 <code>--port=443</code> 后重启, 依然没啥作用.</p>
+<p>正跟 AI 较劲到底该怎么配的时候, 我突然看到之前配置子网路由时的命令, 似乎带了一句 <code>--accept-routes</code>, 去掉以后再测速, 又回到 200+.</p>
+<p>总结, 不知道是哪个傻逼在博客里提了一嘴改 443, 被 AI 抓取到以为 Tailscale 是可以配端口的, 特么误我啊!</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://m-finder.alon.wang">m-finder</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://m-finder.alon.wang/2025-12-10-fn-tailscale/">https://m-finder.alon.wang/2025-12-10-fn-tailscale/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://m-finder.alon.wang" target="_blank">M-finder</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/">码不能停</a></div><div class="post-share"><div class="social-share" data-image="/images/top.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="/pluginsSrc/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="/pluginsSrc/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026-to-do-list/" title="2026 年计划清单"><img class="cover" src="/images/top.jpg" onerror="onerror=null;src='https://i.loli.net/2020/05/19/aKOcLiyPl2JQdFD.png'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">2026 年计划清单</div></div><div class="info-2"><div class="info-item-1">  活着  练背  练肩  练腿  多搞点钱  </div></div></div></a><a class="pagination-related" href="/2025-to-do-list/" title="2025 年计划清单"><img class="cover" src="/images/top.jpg" onerror="onerror=null;src='https://i.loli.net/2020/05/19/aKOcLiyPl2JQdFD.png'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">2025 年计划清单</div></div><div class="info-2"><div class="info-item-1">  活着  挣钱  减肥  冲俩软考高级证  这一年. 现代诗人 南瓜. 活得还好, 钱没挣着.体重没掉, 肥肉渐少.软考没过, 再接再厉.   </div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/rss-verify/" title="follow 认证"><img class="cover" src="/images/top.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-02-13</div><div class="info-item-2">follow 认证</div></div><div class="info-2"><div class="info-item-1">This message is used to verify that this feed (feedId:104434909303929856) belongs to me (userId:68900854292651008). Join me in enjoying the next generation information browser https://follow.is.  ps. 需要邀请码的可以联系.  </div></div></div></a><a class="pagination-related" href="/2025-09-12-fancy-tool/" title="Mac 菜单栏多合一工具 FancyTool 更新啦！"><img class="cover" src="/images/top.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-09-12</div><div class="info-item-2">Mac 菜单栏多合一工具 FancyTool 更新啦！</div></div><div class="info-2"><div class="info-item-1">本次更新聚焦「轻量体验」深度优化：不仅重构了 CPU 占用逻辑与系统唤醒机制，让后台运行更高效；更让动画交互全程保持丝滑流畅，资源消耗却低到近乎无感 —— 哪怕它常驻菜单栏，你也几乎察觉不到它的存在，既不拖慢系统，又能随时响应需求～ 下载地址： [ github ]   [ gitee ]  目前软件主要包含以下功能：  🚀 智能CPU动态图标  让性能可视化  将任何GIF图片设置为你的菜单栏图标，它的播放速度会实时响应你的CPU使用率  空闲时悠然自得，高负荷时急速狂飙，用最酷的方式监控系统状态  支持完全自定义上传，打造你的专属动画   🌈 渐变彩色心情签名  用美丽的渐变色彩表达每日心情状态  完全可自定义的颜色和文字，展现独特个性  为您的菜单栏增添一抹艺术气息   📋 高效剪切板管理  记录多次复制历史，随时找回需要的内容  智能分类整理，快速定位所需片段  支持文本、图片等多种格式，提高工作效率   🖥️ 屏幕圆角美化  为Mac屏幕添加优雅圆角，提升视觉美感  智能适配多显示器设置，每块屏幕完美呈现  无性能影响的背景运行，细腻改善视觉体验   📎 菜单...</div></div></div></a><a class="pagination-related" href="/2024-03-03-abstract-and-interface/" title="职业生涯知识回顾-关于抽象类和接口的思考"><img class="cover" src="/images/top.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2024-03-03</div><div class="info-item-2">职业生涯知识回顾-关于抽象类和接口的思考</div></div><div class="info-2"><div class="info-item-1">抽象类和接口是两个很容易产生疑惑的概念，分不清它们的使用场景，其实只要记住两点就比较好理解：  接口是对行为的抽象 抽象类是对子类有哪些属性和行为的抽象  当你需要对一个类有哪些行为进行约束时，使用接口；需要为其他类提供一个模板以及一些通用的属性和行为，使用抽象类。 在理解什么是抽象类和接口的前提下，延伸出一些思考：在一定程度上，接口似乎是比抽象类更底层的存在，是否可以理解为先有行为，对行为进行组合才能有类？ 那么下面代码中，抽象类对接口的实现有没有实际意义？ 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061&lt;?phpinterface IAnimal&#123;    public function move(): void;    public function sleep(): void;    public function eat(): void;&#125;interface Wag&#...</div></div></div></a><a class="pagination-related" href="/2024-02-29-review-http/" title="职业生涯知识回顾-基础篇之网络传输协议"><img class="cover" src="/images/top.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2024-03-02</div><div class="info-item-2">职业生涯知识回顾-基础篇之网络传输协议</div></div><div class="info-2"><div class="info-item-1">协议的本质也就是彼此之间的约定和规则。 HTTPHTTP 是一个承载于 TCP 协议上的超文本传输协议，明文，无状态。由客户端发起请求，服务器返回响应。 无状态是指协议对于事务处理没有记忆，不会保留之前请求的任何信息，也不会对后续请求进行关联。 为了弥补无状态带来的不便，产生了 Cookie 和 Session 技术。 CookieCookie 是服务器发送到用户浏览器并保存在本地的一小块数据，它会在浏览器下次向服务器请求资源时携带并发送到服务器上，通常用于告知服务端两个请求是否来自同一浏览器，比如用户的登录状态。 Cookie 一般用于以下方面：  会话状态管理（用户登录状态等） 个性化设置（主题、自定义设置等） 浏览器行为跟踪（跟踪分析用户行为等）  SessionSession 是基于 Cookie 实现的，在服务器进行存储，也是一种会话跟踪技术。 一个 Session 独占一个浏览器，在浏览器关闭前，Session 一直存在。 Session 的使用场景：  用户身份验证 购物车功能 长表单或多步骤操作缓存  HTTP 的三次握手和四次挥手三次挥手是指建立一个 TCP 连...</div></div></div></a><a class="pagination-related" href="/2024-02-25-review-base/" title="职业生涯知识回顾-基础篇之面向对象"><img class="cover" src="/images/top.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2024-03-01</div><div class="info-item-2">职业生涯知识回顾-基础篇之面向对象</div></div><div class="info-2"><div class="info-item-1">时间飞逝，一眨眼已经工作7年。趁着最近赋闲在家，对职业生涯做个回顾和总结，避免浮躁和焦虑。 将代码写好是一件难事，我见过刚入行就能把代码写成诗的，也见过工作十年还把代码写成屎的，无论是刚入行的小白，还是工作多年的大佬，都要对面向对象有一个清晰的认知。因为到后边你会发现，我们常说的高内聚、低耦合，三大特性五大原则，甚至是设计模式，都是对面向对象编程思想的补充和扩展，这玩意儿将贯穿我们整个职业生涯，是我们写好代码的关键。 上古时代，很多人对于好代码的评判标准往往是能运行、不出错。但是随着技术的日益更替，优雅，才是我们如今更高的追求。 面向对象一千个人中有一千个哈姆雷特，每个人对面向对象的看法都不完全相同，我自己每隔一段时间进行回顾，也都会有一些不一样的收获。 首先面向对象是一种软件开发方式，核心思想是将具体事物看作是一个对象，然后对其行为和属性进行封装。 例如：我有一只小狗，将小狗看作是一个对象，那么它的年龄、性别、名字都是它的属性，狗会跑、会叫、会吃东西，都是其行为。 我有一只小狗，你也有一只小狗，当我们对大家的小狗进行共性抽取，也就形成了类：狗。 狗的年龄、性别这些属性，就是类中...</div></div></div></a><a class="pagination-related" href="/2025-01-21-system-error-record/" title="系统异常崩溃实录"><img class="cover" src="/images/top.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-01-24</div><div class="info-item-2">系统异常崩溃实录</div></div><div class="info-2"><div class="info-item-1">前言众所周不知，我在 24 年底入职了某连锁品牌的美甲公司，负责相关小程序和后台的开发与维护。 入职前了解到该项目最初由外包团队开发，并使用外包三件套：宝塔、TP、Mysql 进行部署和搭建，当时我心里就对它有了一个大概的印象，但是等我真正接手这个项目时，还是忍不住地两眼一黑，心头有一万头草泥马奔腾而过。 项目结构之混乱，方法定义之奇葩，没有一项不在挑战我认知的下限，我只能说，用屎山来形容这套代码都是在夸它，项目能平稳运行简直就是个奇迹。 哦，也不能算奇迹，因为这勾八玩意儿就没有一天是平稳的。 在告别了手动替换服务器代码并用 git 管理之后，我又先后经历了 CDN 欠费，小程序图片无法正常显示；SSL 证书过期，所有服务全部宕机；以及子项目域名过期却拿不到平台账号，最后只能换绑域名这样的种种混乱…… 在此之后，系统总算平稳运行了几天。 屎山的崩塌正当我撸起袖子，准备奋力重构这坨屎山时，年底到了，我又迎来了新一波的挑战。 1 月 16 号早上 10 点，我把手里刚开发完的小程序推送到正式版，之所以选在这个时间更新，是因为有些门店会营业到凌晨5点，10 前的使用量相对还少一些。 本...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/images/avatar.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">m-finder</div><div class="author-info-description">happy coding</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">121</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">24</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/m-finder"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/m-finder" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:m@m-finder.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BA%9F%E5%BA%9F%E7%9A%84%E8%AF%9D%E5%A4%9A%E5%A4%9A%E7%9A%84%E8%AF%B4"><span class="toc-number">1.</span> <span class="toc-text">废废的话多多的说</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B8%A9%E5%9D%91%E8%BF%87%E7%A8%8B"><span class="toc-number">2.</span> <span class="toc-text">踩坑过程</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025-12-10-fn-tailscale/" title="飞牛 NAS + Tailscale 组网踩坑实录"><img src="/images/top.jpg" onerror="this.onerror=null;this.src='https://i.loli.net/2020/05/19/aKOcLiyPl2JQdFD.png'" alt="飞牛 NAS + Tailscale 组网踩坑实录"/></a><div class="content"><a class="title" href="/2025-12-10-fn-tailscale/" title="飞牛 NAS + Tailscale 组网踩坑实录">飞牛 NAS + Tailscale 组网踩坑实录</a><time datetime="2025-12-15T03:33:05.769Z" title="发表于 2025-12-15 11:33:05">2025-12-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026-to-do-list/" title="2026 年计划清单"><img src="/images/top.jpg" onerror="this.onerror=null;this.src='https://i.loli.net/2020/05/19/aKOcLiyPl2JQdFD.png'" alt="2026 年计划清单"/></a><div class="content"><a class="title" href="/2026-to-do-list/" title="2026 年计划清单">2026 年计划清单</a><time datetime="2025-12-15T03:33:05.769Z" title="发表于 2025-12-15 11:33:05">2025-12-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025-to-do-list/" title="2025 年计划清单"><img src="/images/top.jpg" onerror="this.onerror=null;this.src='https://i.loli.net/2020/05/19/aKOcLiyPl2JQdFD.png'" alt="2025 年计划清单"/></a><div class="content"><a class="title" href="/2025-to-do-list/" title="2025 年计划清单">2025 年计划清单</a><time datetime="2025-12-14T16:00:00.000Z" title="发表于 2025-12-15 00:00:00">2025-12-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025-09-12-fancy-tool/" title="Mac 菜单栏多合一工具 FancyTool 更新啦！"><img src="/images/top.jpg" onerror="this.onerror=null;this.src='https://i.loli.net/2020/05/19/aKOcLiyPl2JQdFD.png'" alt="Mac 菜单栏多合一工具 FancyTool 更新啦！"/></a><div class="content"><a class="title" href="/2025-09-12-fancy-tool/" title="Mac 菜单栏多合一工具 FancyTool 更新啦！">Mac 菜单栏多合一工具 FancyTool 更新啦！</a><time datetime="2025-09-12T01:26:00.000Z" title="发表于 2025-09-12 09:26:00">2025-09-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025-08-25-fancy-tool/" title="Mac 菜单栏多合一工具自荐：FancyTool"><img src="/images/top.jpg" onerror="this.onerror=null;this.src='https://i.loli.net/2020/05/19/aKOcLiyPl2JQdFD.png'" alt="Mac 菜单栏多合一工具自荐：FancyTool"/></a><div class="content"><a class="title" href="/2025-08-25-fancy-tool/" title="Mac 菜单栏多合一工具自荐：FancyTool">Mac 菜单栏多合一工具自荐：FancyTool</a><time datetime="2025-08-25T01:26:00.000Z" title="发表于 2025-08-25 09:26:00">2025-08-25</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2016 - 2025 By m-finder</span></div><div class="footer_custom_text">感谢 <a href="https://alon.wang" target="_blank">along</a> 借一个二级域名给我开蹭 <span style="color:pink">❤</span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+
+  const initValine = (el, path) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyValine = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+
+    const valineConfig = {
+      el: '#vcomment',
+      appId: 'oOiybpJc2or7SPhTu2v9YUvq-gzGzoHsz',
+      appKey: 'h0W2X6C4C7qOovTn9VM06Ql2',
+      avatar: 'monsterid',
+      serverURLs: 'https://ooiybpjc.lc-cn-n1-shared.com',
+      emojiMaps: "",
+      visitor: false,
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || window.location.pathname
+    }
+
+    new Valine(valineConfig)
+  }
+
+  const loadValine = async (el, path) => {
+    if (typeof Valine === 'function') {
+      initValine(el, path)
+    } else {
+      await btf.getScript('/pluginsSrc/valine/dist/Valine.min.js')
+      initValine(el, path)
+    }
+  }
+
+  if (isShuoshuo) {
+    'Valine' === 'Valine'
+      ? window.shuoshuoComment = { loadComment: loadValine }
+      : window.loadOtherComment = loadValine
+    return
+  }
+
+  if ('Valine' === 'Valine' || !false) {
+    if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+    else setTimeout(loadValine, 0)
+  } else {
+    window.loadOtherComment = loadValine
+  }
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
