@@ -4,31 +4,6 @@
   
     
     <entry>
-      <title>飞牛 NAS + Tailscale 组网踩坑实录</title>
-      <link href="/2025-12-10-fn-tailscale/"/>
-      <url>/2025-12-10-fn-tailscale/</url>
-      
-        <content type="html"><![CDATA[<h4 id="废废的话多多的说"><a href="#废废的话多多的说" class="headerlink" title="废废的话多多的说"></a>废废的话多多的说</h4><p>家里有台用了很多年的笔记本, 型号是联想小新 700, i7 的 CPU, 8G 内存, 硬盘是买来时我自己换的一块固态 256.</p><p>这台笔记本购于 17 年 10 月, 陪我度过了刚毕业时的懵懂, 也陪大美丽度过了研究僧苦修的日常.</p><p>进可敲代码, 退可搞学术, 进过水, 也换过屏, 可以说是功高劳苦, 遍体鳞伤.</p><p>不忍心让它就这么丢在家里吃灰, 前段时间我一个没忍住, 买了一块 2T 的机械, 一块 1T 的固态, 还有一根 16G 的内存条.</p><p>换上以后, 大黑满血复活.</p><p>当时有个老登整天找我念叨要组装小主机, 搞 NAS, 我被折磨久了, 心里也有火苗在跳.</p><p>心动完我先整理了一下需求, 然后丢给 AI 帮我整理方案:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">我有一台闲置的联想小新700电竞版笔记本，i7的cpu，16+8g内存，GTX905m显卡，1t固态硬盘，2t机械硬盘，想安装飞牛OS作为影音nas，win10用来打steam游戏，linux和macOS用来写代码开发php/java/qt/swift，现在了解到可以通过hyper-v, vm等虚拟机，也可以通过pve，ESXi等虚拟化平台满足我的需求，我对开发和游戏可能有一定的性能要求，帮我分析下用哪种方案最优</span><br></pre></td></tr></table></figure><p>AI 说我这个需求 PVE 是首选. </p><p>那还说啥, 搞呗.</p><p>趁着周末, 我一口气折腾到半夜, 然后发现 GG 了.</p><p>大黑不支持一个什么 Bios 直通, 给 Bios 升完级依然找不到对应选项.</p><p>我特么心里哇凉啊, 头发咔咔掉一地. 裤子都脱了就给我看这个?</p><p>第二天一早我还是老老实实地装了 Windows, 然后又通过 Hyper-V 装了飞牛 NAS.</p><p>我给飞牛绑了局域网内的固定 IP, 然后把 2T 的机械盘从 windows 禁用掉, 专门给飞牛做存储, 最后又通过 SMB 把硬盘挂载回了大黑, 方便我在不开浏览器的时候也能随时查看飞牛里的文件. </p><p>说实话, 用着是真的爽啊, 自带的远程连接虽然只有 2M 带宽, 但是也足够我在公司上传下载文件用, 比之前玩黑群晖的体验强到没话说!</p><p>玩了几天以后, 我又喊上老登一块儿联机我的世界, 当时龙猫的启动器正在小范围试用联机功能, 老登刚好就有, 分享完我们畅玩了一天.</p><p>结果第二天就看到龙猫发了篇声明, 联机功能没了, 组网的需求嗷一下就上来了.</p><p>鉴于龙猫用的 EasyTier, 我也先尝试了一下, 发现功能确实好用, 但碍于我不喜欢他们那套 UI, 我又放弃了.</p><p>没错, 颜控就是这么离谱. </p><p>挑来选去, 最后还是选了 Tailscale.</p><h4 id="踩坑过程"><a href="#踩坑过程" class="headerlink" title="踩坑过程"></a>踩坑过程</h4><p>虽然 Tailscale 下载安装后登录下账号就能用, 但是最开始我没搞明白, 也不知道它其实需要客户端和命令行结合使用.</p><p>我只发现两台设备都安装登录后, 互相访问似乎是没什么反应.</p><p>拉上老登又陪我折腾一圈, 发现登录完设备之间确实是通了, 我当时不通是因为访问了飞牛的内网 IP, 而我, 跟本就没给它配置子网路由. 😭</p><p>首先, Windows 安装后, 可以直接在命令行使用 tailscale 的各项命令, Mac 安装后, 需要手动添加一个环境变量:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export PATH=&quot;$PATH:/Applications/Tailscale.app/Contents/MacOS&quot;</span><br></pre></td></tr></table></figure><p>然后才能在命令行愉快地玩耍, 比如通过 <code>tailscale status</code> 查看各台设备的连接状态, 再或者通过 <code>tailscale ping ip</code> 来查看当前设备到对应设备的连通状态.</p><p>也就是这个时候, 我和老登都发现设备之间虽然通了, 但是延迟有点高. </p><p>AI 说, 应该是没能打洞成功, 再一看 status 的结果, 果然都是中转.</p><p>它让我先把 41641 端口在防火墙放开, 但是我没开防火墙, emmm🤔… 那问题就只剩一个, 网络层给我拦了!</p><p>登上光猫后台, 没找到什么 UPnP,  但是有个端口映射, 我给配了一下, 再运行 <code>tailscale status</code>, 连接状态果然变成了直连, 快多了.</p><p>当天晚上又拉老登联机一个了游戏, 结果游戏内时不时弹起的网络延迟过高让我有点蛋疼. </p><p>打开测速网一跑: 73 Mbs, 我千兆的光纤 FTTR, 可以说是拉了一裤兜.</p><p>把 Tailscale 关了, 再跑能到 230, 大黑的无线网卡是 400 多, 也算能说得过去.</p><p>初步怀疑运营商对大端口的 UDP 做了主动丢包, 尝试查找怎么给 Tailscale 配个端口, 强制所有流量去走 443, 安装目录添加配置<code>C:\ProgramData\Tailscale\config.json</code>：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;ForceTCP&quot;: true,</span><br><span class="line">  &quot;Socks5Server&quot;: &quot;localhost:443&quot;,</span><br><span class="line">  &quot;TunMode&quot;: &quot;userspace&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>配置后重启，似乎没啥作用.</p><p>微软服务内添加 <code>--port=443</code> 后重启, 依然没啥作用.</p><p>正跟 AI 较劲到底该怎么配的时候, 我突然看到之前配置子网路由时的命令, 似乎带了一句 <code>--accept-routes</code>, 去掉以后再测速, 又回到 200+.</p><p>总结, 不知道是哪个傻逼在博客里提了一嘴改 443, 被 AI 抓取到以为 Tailscale 是可以配端口的, 特么误我啊!</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 码不能停 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 码不能停 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>2026 年计划清单</title>
       <link href="/2026-to-do-list/"/>
       <url>/2026-to-do-list/</url>
@@ -79,6 +54,31 @@
             <tag> 闲言赘语 </tag>
             
             <tag> 计划清单 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>飞牛 NAS + Tailscale 组网踩坑实录</title>
+      <link href="/2025-12-10-fn-tailscale/"/>
+      <url>/2025-12-10-fn-tailscale/</url>
+      
+        <content type="html"><![CDATA[<h4 id="废废的话多多的说"><a href="#废废的话多多的说" class="headerlink" title="废废的话多多的说"></a>废废的话多多的说</h4><p>家里有台用了很多年的笔记本, 型号是联想小新 700, i7 的 CPU, 8G 内存, 硬盘是买来时我自己换的一块固态 256.</p><p>这台笔记本购于 17 年 10 月, 陪我度过了刚毕业时的懵懂, 也陪大美丽度过了研究僧苦修的日常.</p><p>进可敲代码, 退可搞学术, 进过水, 也换过屏, 可以说是功高劳苦, 遍体鳞伤.</p><p>不忍心让它就这么丢在家里吃灰, 前段时间我一个没忍住, 买了一块 2T 的机械, 一块 1T 的固态, 还有一根 16G 的内存条.</p><p>换上以后, 大黑满血复活.</p><p>当时有个老登整天找我念叨要组装小主机, 搞 NAS, 我被折磨久了, 心里也有火苗在跳.</p><p>心动完我先整理了一下需求, 然后丢给 AI 帮我整理方案:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">我有一台闲置的联想小新700电竞版笔记本，i7的cpu，16+8g内存，GTX905m显卡，1t固态硬盘，2t机械硬盘，想安装飞牛OS作为影音nas，win10用来打steam游戏，linux和macOS用来写代码开发php/java/qt/swift，现在了解到可以通过hyper-v, vm等虚拟机，也可以通过pve，ESXi等虚拟化平台满足我的需求，我对开发和游戏可能有一定的性能要求，帮我分析下用哪种方案最优</span><br></pre></td></tr></table></figure><p>AI 说我这个需求 PVE 是首选. </p><p>那还说啥, 搞呗.</p><p>趁着周末, 我一口气折腾到半夜, 然后发现 GG 了.</p><p>大黑不支持一个什么 Bios 直通, 给 Bios 升完级依然找不到对应选项.</p><p>我特么心里哇凉啊, 头发咔咔掉一地. 裤子都脱了就给我看这个?</p><p>第二天一早我还是老老实实地装了 Windows, 然后又通过 Hyper-V 装了飞牛 NAS.</p><p>我给飞牛绑了局域网内的固定 IP, 然后把 2T 的机械盘从 windows 禁用掉, 专门给飞牛做存储, 最后又通过 SMB 把硬盘挂载回了大黑, 方便我在不开浏览器的时候也能随时查看飞牛里的文件. </p><p>说实话, 用着是真的爽啊, 自带的远程连接虽然只有 2M 带宽, 但是也足够我在公司上传下载文件用, 比之前玩黑群晖的体验强到没话说!</p><p>玩了几天以后, 我又喊上老登一块儿联机我的世界, 当时龙猫的启动器正在小范围试用联机功能, 老登刚好就有, 分享完我们畅玩了一天.</p><p>结果第二天就看到龙猫发了篇声明, 联机功能没了, 组网的需求嗷一下就上来了.</p><p>鉴于龙猫用的 EasyTier, 我也先尝试了一下, 发现功能确实好用, 但碍于我不喜欢他们那套 UI, 我又放弃了.</p><p>没错, 颜控就是这么离谱. </p><p>挑来选去, 最后还是选了 Tailscale.</p><h4 id="踩坑过程"><a href="#踩坑过程" class="headerlink" title="踩坑过程"></a>踩坑过程</h4><p>虽然 Tailscale 下载安装后登录下账号就能用, 但是最开始我没搞明白, 也不知道它其实需要客户端和命令行结合使用.</p><p>我只发现两台设备都安装登录后, 互相访问似乎是没什么反应.</p><p>拉上老登又陪我折腾一圈, 发现登录完设备之间确实是通了, 我当时不通是因为访问了飞牛的内网 IP, 而我, 跟本就没给它配置子网路由. 😭</p><p>首先, Windows 安装后, 可以直接在命令行使用 tailscale 的各项命令, Mac 安装后, 需要手动添加一个环境变量:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export PATH=&quot;$PATH:/Applications/Tailscale.app/Contents/MacOS&quot;</span><br></pre></td></tr></table></figure><p>然后才能在命令行愉快地玩耍, 比如通过 <code>tailscale status</code> 查看各台设备的连接状态, 再或者通过 <code>tailscale ping ip</code> 来查看当前设备到对应设备的连通状态.</p><p>也就是这个时候, 我和老登都发现设备之间虽然通了, 但是延迟有点高. </p><p>AI 说, 应该是没能打洞成功, 再一看 status 的结果, 果然都是中转.</p><p>它让我先把 41641 端口在防火墙放开, 但是我没开防火墙, emmm🤔… 那问题就只剩一个, 网络层给我拦了!</p><p>登上光猫后台, 没找到什么 UPnP,  但是有个端口映射, 我给配了一下, 再运行 <code>tailscale status</code>, 连接状态果然变成了直连, 快多了.</p><p>当天晚上又拉老登联机一个了游戏, 结果游戏内时不时弹起的网络延迟过高让我有点蛋疼. </p><p>打开测速网一跑: 73 Mbs, 我千兆的光纤 FTTR, 可以说是拉了一裤兜.</p><p>把 Tailscale 关了, 再跑能到 230, 大黑的无线网卡是 400 多, 也算能说得过去.</p><p>初步怀疑运营商对大端口的 UDP 做了主动丢包, 尝试查找怎么给 Tailscale 配个端口, 强制所有流量去走 443, 安装目录添加配置<code>C:\ProgramData\Tailscale\config.json</code>：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;ForceTCP&quot;: true,</span><br><span class="line">  &quot;Socks5Server&quot;: &quot;localhost:443&quot;,</span><br><span class="line">  &quot;TunMode&quot;: &quot;userspace&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>配置后重启，似乎没啥作用.</p><p>微软服务内添加 <code>--port=443</code> 后重启, 依然没啥作用.</p><p>正跟 AI 较劲到底该怎么配的时候, 我突然看到之前配置子网路由时的命令, 似乎带了一句 <code>--accept-routes</code>, 去掉以后再测速, 又回到 200+.</p><p>总结, 不知道是哪个傻逼在博客里提了一嘴改 443, 被 AI 抓取到以为 Tailscale 是可以配端口的, 特么误我啊!</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 码不能停 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 码不能停 </tag>
             
         </tags>
       
