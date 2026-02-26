@@ -11,6 +11,10 @@
     - name: AprilBlank
       link: https://www.cnblogs.com/AprilBlank
       descr: 一个在大洛阳孤军奋战的程序猿
+    - name: linux.do
+      link: https://linux.do/
+      avatar: https://linux.do/uploads/default/optimized/4X/6/a/6/6a6affc7b1ce8140279e959d32671304db06d5ab_2_180x180.png
+      descr: 来玩啊佬
 - class_name: 实用工具
   class_desc: 工具在手，烦恼全走
   link_list:
