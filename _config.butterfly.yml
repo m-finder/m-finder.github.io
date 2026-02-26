@@ -21,6 +21,7 @@ menu:
  时间线: /archives/ || fas fa-archive
  标签: /tags/ || fas fa-tags
  分类: /categories/ || fas fa-folder-open
+ 说说: /shuo/ || fas fa-comment-dots
  更多||fas fa-list:
   说说: /artitalk/ || fas fa-comment-dots
   相册: /gallery/ || fas fa-images
@@ -524,7 +525,7 @@ comments:
  # Leave it empty if you don't need comments
  # Choose: Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo/Giscus/Remark42/Artalk
  # Format of two comments system : Disqus,Waline
- use: Valine
+ use: Disqusjs
  # Display the comment name next to the button
  text: true
  # Lazyload: The comment system will be load when comment element enters the browser's viewport.
@@ -545,8 +546,8 @@ disqus:
 # Alternative Disqus - Render comments with Disqus API
 # https://github.com/SukkaW/DisqusJS
 disqusjs:
- shortname:
- apikey:
+ shortname: m-finder
+ apikey: R2qcYi744AQB6JcDzAxSpQKFMn3DC49WL0UPLlZcvEw1NHKfGAbqrU8XJx3PoBFu
  option:
 
 # Livere
@@ -719,7 +720,7 @@ ad:
  # Insert ads in the index (every three posts)
  index:
  # Insert ads in aside
- aside: <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="3280933721783945" data-ad-client="ca-pub-3280933721783945" data-ad-slot="3280933721783945"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script>
+ aside: <ins class="adsbygoogle" style="display:inline-block;width:241px;height:90px" data-ad-client="ca-pub-3280933721783945" data-ad-slot="7800464206"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script>
   # Insert ads in the post (before pagination)
  post:
 
