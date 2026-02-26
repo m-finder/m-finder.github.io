@@ -1033,6 +1033,7 @@ css_prefix: true
 inject:
  head:
   - <link rel="preconnect" href="https://jsd.012700.xyz">
+  - <meta name="google-site-verification" content="OPPs3YwY1EkKeHiSwKpEaVvKheGIdfGrMgTxJHCM_7c" />
  bottom:
  # - <script src="xxxx"></script>
 
