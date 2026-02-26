@@ -32,6 +32,6 @@
 ![](/gallery/world/M-tools.jpg)
 ![](/gallery/world/20240715.png)
 ![](/gallery/world/sd.jpg)
-![](/gallery/world/2025-04-25.jpg)
+![](/gallery/world/2025-04-25.png)
 ![](/images/FancyTool/coffee.png)
 {% endgallery %}
