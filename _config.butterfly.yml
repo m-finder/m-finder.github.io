@@ -23,7 +23,6 @@ menu:
  分类: /categories/ || fas fa-folder-open
  说说: /shuo/ || fas fa-comment-dots
  更多||fas fa-list:
-  说说: /artitalk/ || fas fa-comment-dots
   相册: /gallery/ || fas fa-images
   书单: /books/ || fas fa-book
   电影: /movies/ || fas fa-video
