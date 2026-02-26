@@ -7,13 +7,10 @@
       descr: 后青春期的诗
     - name: D-107
       link: http://d-107.github.io/
-      avatar: https://d-107.github.io/images/d-107.png
       descr: 3wly 项目开发组自留地
     - name: AprilBlank
       link: https://www.cnblogs.com/AprilBlank
-      avatar: https://www.aprilblank.top/img/icon.png
       descr: 一个在大洛阳孤军奋战的程序猿
-
 - class_name: 实用工具
   class_desc: 工具在手，烦恼全走
   link_list:
