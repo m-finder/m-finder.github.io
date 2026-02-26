@@ -3,13 +3,26 @@
   link_list:
     - name: Alon
       link: https://alon.wang/
-      avatar: https://ashin33.github.io/img/namikaze_minato_2.png
+      avatar: https://alon-image-1305333140.cos.ap-shanghai.myqcloud.com/lsky/1/2024/03/13/65f16d0adb94f.png
       descr: 后青春期的诗
     - name: D-107
       link: http://d-107.github.io/
-      avatar: https://www.m-finder.com/images/favicon.ico
+      avatar: https://d-107.github.io/images/d-107.png
       descr: 3wly 项目开发组自留地
     - name: AprilBlank
-      link: https://www.aprilblank.top/
+      link: https://www.cnblogs.com/AprilBlank
       avatar: https://www.aprilblank.top/img/icon.png
       descr: 一个在大洛阳孤军奋战的程序猿
+
+- class_name: 实用工具
+  class_desc: 工具在手，烦恼全走
+  link_list:
+    - name: 永久免费日历订阅
+      link: https://kyzsalist.cn/appleics/
+      descr: 苹果日历增强
+    - name: ASCII 艺术字生成
+      link: https://tool.cccyun.cc/ascii_art
+      descr: ASCII 艺术字生成
+    - name: JSON 格式化
+      link: https://www.bejson.com/json/format/
+      descr: JSON 格式化
