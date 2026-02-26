@@ -708,7 +708,7 @@ umami_analytics:
 # Google Adsense
 google_adsense:
  enable: true
- auto_ads: true
+ auto_ads: false
  js: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js
  client: ca-pub-3280933721783945
  enable_page_level_ads: true
@@ -719,8 +719,8 @@ ad:
  # Insert ads in the index (every three posts)
  index:
  # Insert ads in aside
- aside:
- # Insert ads in the post (before pagination)
+ aside: <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="3280933721783945" data-ad-client="ca-pub-3280933721783945" data-ad-slot="3280933721783945"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script>
+  # Insert ads in the post (before pagination)
  post:
 
 # --------------------------------------
