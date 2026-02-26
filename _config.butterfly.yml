@@ -1033,7 +1033,6 @@ css_prefix: true
 inject:
  head:
   - <link rel="preconnect" href="https://jsd.012700.xyz">
-  - <link href="/self/btf.css" rel="stylesheet">
  bottom:
  # - <script src="xxxx"></script>
 
