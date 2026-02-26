@@ -717,11 +717,11 @@ google_adsense:
 # Leave it empty if you don't need ads
 ad:
  # Insert ads in the index (every three posts)
- index:
+ index: <ins class="adsbygoogle"style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-3280933721783945" data-ad-slot="4988216029"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
  # Insert ads in aside
- aside: <ins class="adsbygoogle" style="display:inline-block;width:241px;height:90px" data-ad-client="ca-pub-3280933721783945" data-ad-slot="7800464206"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script>
+ aside: <ins class="adsbygoogle" style="display:inline-block;width:241px;height:400px" data-ad-client="ca-pub-3280933721783945" data-ad-slot="7800464206"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script>
   # Insert ads in the post (before pagination)
- post:
+ post: <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-3280933721783945" data-ad-slot="9510273759"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
 # --------------------------------------
 # Verification
