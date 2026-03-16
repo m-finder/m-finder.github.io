@@ -190,7 +190,7 @@ index_layout: 3
 index_post_content:
  method: 3
  # If you set method to 2 or 3, the length need to config
- length: 500
+ length: 5000000
 
 # --------------------------------------
 # Post Settings
