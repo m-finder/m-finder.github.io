@@ -29,7 +29,7 @@
 ![](/gallery/world/laravel.png)
 ![](/gallery/world/zz.jpeg)
 ![](/gallery/world/20230731.jpg)
-![](/gallery/world/M-tools.jpg)
+![](/gallery/world/M-tools.png)
 ![](/gallery/world/20240715.png)
 ![](/gallery/world/sd.jpg)
 ![](/gallery/world/2025-04-25.png)
