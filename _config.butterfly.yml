@@ -707,7 +707,7 @@ umami_analytics:
 
 # Google Adsense
 google_adsense:
- enable: true
+ enable: false
  auto_ads: false
  js: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js
  client: ca-pub-3280933721783945
