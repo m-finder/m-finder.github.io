@@ -34,4 +34,7 @@
 ![](/gallery/world/sd.jpg)
 ![](/gallery/world/2025-04-25.png)
 ![](/images/FancyTool/coffee.png)
+![](/gallery/world/vm01.png)
+![](/gallery/world/vm02.JPG)
+![](/gallery/world/vm03.JPG)
 {% endgallery %}
