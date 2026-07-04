@@ -37,4 +37,5 @@
 ![](/gallery/world/vm01.png)
 ![](/gallery/world/vm02.JPG)
 ![](/gallery/world/vm03.JPG)
+![](/gallery/world/fenqiyu.jpg)
 {% endgallery %}
