@@ -1,209 +1,220 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>laravel5.4疑难杂症 | M-finder</title><meta name="author" content="m-finder"><meta name="copyright" content="m-finder"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="公司项目最近翻新了页面，把 bootstrap 完全改成了 layui 。 按照惯例，上线之前先在测试环境跑几天，结果在搭建测试环境的时候，问题就出来了： laravel 版本是 5.4.63 ，服务器的 php 版本是 5.6 ，执行 composer install 时，提示我需要 php7.1 。 吓得我一阵懵逼，难道是什么时候装错扩展了？ 把 composer.json 里没什么用的扩展完">
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="referrer" content="no-referrer">
+
+<title>laravel5.4疑难杂症 | M-finder</title>
+
+
+<meta name="description" content="happy coding">
+
+
+<meta name="author" content="m-finder">
+
+
+<meta name="keywords" content="m-finder,php,laravel">
+
+
+<!-- Canonical -->
+<link rel="canonical" href="/laravel-5-4-bug/">
+
+<!-- Favicon -->
+<link rel="icon" href="/images/favicon.ico">
+
+<!-- RSS -->
+
+<link rel="alternate" type="application/rss+xml" title="M-finder" href="/atom.xml">
+
+
+<!-- Open Graph -->
 <meta property="og:type" content="article">
 <meta property="og:title" content="laravel5.4疑难杂症">
-<meta property="og:url" content="https://m-finder.alon.wang/laravel-5-4-bug/index.html">
+<meta property="og:url" content="/laravel-5-4-bug/">
 <meta property="og:site_name" content="M-finder">
-<meta property="og:description" content="公司项目最近翻新了页面，把 bootstrap 完全改成了 layui 。 按照惯例，上线之前先在测试环境跑几天，结果在搭建测试环境的时候，问题就出来了： laravel 版本是 5.4.63 ，服务器的 php 版本是 5.6 ，执行 composer install 时，提示我需要 php7.1 。 吓得我一阵懵逼，难道是什么时候装错扩展了？ 把 composer.json 里没什么用的扩展完">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://m-finder.alon.wang/images/top.jpg">
-<meta property="article:published_time" content="2018-01-04T19:05:12.000Z">
-<meta property="article:modified_time" content="2026-07-21T08:45:34.387Z">
-<meta property="article:author" content="m-finder">
-<meta property="article:tag" content="php">
-<meta property="article:tag" content="laravel">
+
+<meta property="og:description" content="happy coding">
+
+
+<!-- Twitter Card -->
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://m-finder.alon.wang/images/top.jpg"><script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "laravel5.4疑难杂症",
-  "url": "https://m-finder.alon.wang/laravel-5-4-bug/",
-  "image": "https://m-finder.alon.wang/images/top.jpg",
-  "datePublished": "2018-01-04T19:05:12.000Z",
-  "dateModified": "2026-07-21T08:45:34.387Z",
-  "author": [
-    {
-      "@type": "Person",
-      "name": "m-finder",
-      "url": "https://m-finder.alon.wang"
-    }
-  ]
-}</script><link rel="shortcut icon" href="/images/favicon.ico"><link rel="canonical" href="https://m-finder.alon.wang/laravel-5-4-bug/index.html"><link rel="preconnect"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="/pluginsSrc/@fortawesome/fontawesome-free/css/all.min.css"><script>
-    (() => {
+<meta name="twitter:title" content="laravel5.4疑难杂症">
+
+<meta name="twitter:description" content="happy coding">
+
+
+<!-- Theme Color -->
+<meta name="theme-color" content="#1d1f21">
+<meta name="msapplication-TileColor" content="#1d1f21">
+
+<!-- Stylesheets -->
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+<!-- Custom Layout Variables -->
+
+<style>
+:root {
+  --page-width: 60rem;
+  --content-width: 900px;
+  --mobile-padding: 12px;
+}
+</style>
+
+<!-- Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-133464311-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-133464311-1');
+</script>
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body class="theme-dark">
+  <div class="container">
+    <header class="header">
+  <div class="header-inner">
+    <div class="header-brand">
       
-    const saveToLocal = {
-      set: (key, value, ttl) => {
-        const data = { value }
+      <a href="/" class="site-title">
+        M-finder
+      </a>
+    </div>
 
-        if (ttl != null) {
-          data.expiry = Date.now() + ttl * 86400000
-        }
+    <nav class="nav">
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
 
-        localStorage.setItem(key, JSON.stringify(data))
-      },
-      get: key => {
-        const itemStr = localStorage.getItem(key)
-        if (!itemStr) return
-
-        try {
-          const data = JSON.parse(itemStr)
-
-          if (data.expiry && Date.now() > data.expiry) {
-            localStorage.removeItem(key)
-            return
-          }
-
-          return data.value
-        } catch {
-          localStorage.removeItem(key)
-        }
-      }
-    }
-
-    const scriptCache = new Map()
-    const cssCache = new Map()
-    window.btf = {
-      saveToLocal,
-      getScript: (url, attr = {}) => {
-        if (scriptCache.has(url)) {
-          return scriptCache.get(url)
-        }
-
-        const promise = new Promise((resolve, reject) => {
-          const script = document.createElement('script')
-
-          script.src = url
-          script.async = true
-
-          for (const key in attr) {
-            script.setAttribute(key, attr[key])
-          }
-
-          script.onload = resolve
-          script.onerror = reject
-
-          document.head.appendChild(script)
-        })
-
-        scriptCache.set(url, promise)
-
-        return promise
-      },
-      getCSS: (url, id) => {
-        if (cssCache.has(url)) {
-          return cssCache.get(url)
-        }
-
-        const promise = new Promise((resolve, reject) => {
-          const link = document.createElement('link')
-
-          link.rel = 'stylesheet'
-          link.href = url
-
-          if (id) {
-            link.id = id
-          }
-
-          link.onload = resolve
-          link.onerror = reject
-
-          document.head.appendChild(link)
-        })
-
-        cssCache.set(url, promise)
-
-        return promise
-      },
-      addGlobalFn: (key, fn, name = false, parent = window) => {
-        if (!false && key.startsWith('pjax')) return
-        const globalFn = parent.globalFn || {}
-        globalFn[key] = globalFn[key] || {}
-        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
-        parent.globalFn = globalFn
-      }
-    }
-  
-      
-      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
-      const activateDarkMode = () => {
-        document.documentElement.dataset.theme = 'dark'
-        if (metaThemeColor !== null) {
-          metaThemeColor.setAttribute('content', '#0d0d0d')
-        }
-      }
-      const activateLightMode = () => {
-        document.documentElement.dataset.theme = 'light'
-        if (metaThemeColor !== null) {
-          metaThemeColor.setAttribute('content', '#ffffff')
-        }
-      }
-
-      btf.activateDarkMode = activateDarkMode
-      btf.activateLightMode = activateLightMode
-
-      const theme = saveToLocal.get('theme')
-    
-          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+      <ul class="nav-menu" id="nav-menu">
         
+          
+          
+            
+            <li class="nav-item">
+              <a href="/"
+                 class="nav-link"
+                 >
+                Home
+              </a>
+            </li>
+            
+              <li class="nav-divider">|</li>
+            
+          
+            
+            <li class="nav-item">
+              <a href="/about/"
+                 class="nav-link"
+                 >
+                About
+              </a>
+            </li>
+            
+              <li class="nav-divider">|</li>
+            
+          
+            
+            <li class="nav-item">
+              <a href="/archives/"
+                 class="nav-link"
+                 >
+                Articles
+              </a>
+            </li>
+            
+              <li class="nav-divider">|</li>
+            
+          
+            
+            <li class="nav-item">
+              <a href="/atom.xml"
+                 class="nav-link"
+                 >
+                RSS
+              </a>
+            </li>
+            
+              <li class="nav-divider">|</li>
+            
+          
+            
+            <li class="nav-item">
+              <a href="/categories/"
+                 class="nav-link"
+                 >
+                Categories
+              </a>
+            </li>
+            
+              <li class="nav-divider">|</li>
+            
+          
+            
+            <li class="nav-item">
+              <a href="/link"
+                 class="nav-link"
+                 >
+                Links
+              </a>
+            </li>
+            
+          
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main class="main">
       
-      const asideStatus = saveToLocal.get('aside-status')
-      if (asideStatus !== undefined) {
-        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
-      }
+        <div class="page-layout">
+          <article class="post">
+  <header class="post-header">
+  <h1 class="post-title">laravel5.4疑难杂症</h1>
+
+  <div class="post-meta">
+    <span class="meta-item">
+      <svg viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11zM9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2z"/></svg>
+      <time datetime="2018-01-05">
+        2018-01-05
+      </time>
+    </span>
+
     
-      
-    const detectApple = () => {
-      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
-        document.documentElement.classList.add('apple')
-      }
-    }
-    detectApple()
+      <span class="meta-item">
+        <svg viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M21 10.12h-6.78l2.74-2.82c-2.73-2.7-7.15-2.8-9.88-.1-2.73 2.71-2.73 7.08 0 9.79s7.15 2.71 9.88 0C18.32 15.65 19 14.08 19 12.1h2c0 1.98-.88 4.55-2.64 6.29-3.51 3.48-9.21 3.48-12.72 0-3.5-3.47-3.53-9.11-.02-12.58s9.14-3.47 12.65 0L21 3v7.12z"/></svg>
+        <time datetime="2026-10-16">
+          更新于 2026-10-16
+        </time>
+      </span>
+    
+
+    
+      <span class="meta-item">
+        <svg viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/></svg>
+        
+          <a href="/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/">码不能停</a>
+        
+      </span>
+    
+  </div>
+</header>
+
+
   
-    })()
-  </script><script>const GLOBAL_CONFIG = {
-  root: '/',
-  algolia: undefined,
-  localSearch: undefined,
-  translate: undefined,
-  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":true,"highlightMacStyle":true},
-  copy: {
-    success: '复制成功',
-    error: '复制失败',
-    noSupport: '浏览器不支持'
-  },
-  relativeDate: {
-    homepage: false,
-    post: false
-  },
-  runtime: '天',
-  dateSuffix: {
-    just: '刚刚',
-    min: '分钟前',
-    hour: '小时前',
-    day: '天前',
-    month: '个月前'
-  },
-  copyright: undefined,
-  lightbox: 'null',
-  Snackbar: undefined,
-  infinitegrid: {
-    js: '/pluginsSrc/@egjs/infinitegrid/dist/infinitegrid.min.js',
-    buttonText: '加载更多'
-  },
-  isPhotoFigcaption: false,
-  islazyloadPlugin: false,
-  isAnchor: false,
-  percent: {
-    toc: true,
-    rightside: false,
-  },
-  autoDarkmode: false
-}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
-  title: 'laravel5.4疑难杂症',
-  isHighlightShrink: false,
-  isToc: false,
-  pageType: 'post'
-}</script><link rel="preconnect" href="https://jsd.012700.xyz"><meta name="google-site-verification" content="OPPs3YwY1EkKeHiSwKpEaVvKheGIdfGrMgTxJHCM_7c" /><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="M-finder" type="application/atom+xml">
-</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/images/avatar.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">122</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">24</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间线</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/shuo/"><i class="fa-fw fas fa-comment-dots"></i><span> 说说</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 更多</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/gallery/"><i class="fa-fw fas fa-images"></i><span> 相册</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book"></i><span> 书单</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/games/"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/images/top.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">M-finder</span></a><a class="nav-page-title" href="/"><span class="site-name">laravel5.4疑难杂症</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间线</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/shuo/"><i class="fa-fw fas fa-comment-dots"></i><span> 说说</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 更多</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/gallery/"><i class="fa-fw fas fa-images"></i><span> 相册</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book"></i><span> 书单</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/games/"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">laravel5.4疑难杂症</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2018-01-04T19:05:12.000Z" title="发表于 2018-01-05 03:05:12">2018-01-05</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-07-21T08:45:34.387Z" title="更新于 2026-07-21 16:45:34">2026-07-21</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/">码不能停</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">293</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>1分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p>公司项目最近翻新了页面，把 bootstrap 完全改成了 layui 。</p>
+
+  <div class="post-content">
+  <p>公司项目最近翻新了页面，把 bootstrap 完全改成了 layui 。</p>
 <p><img src="/images/laravel.jpg"><br>按照惯例，上线之前先在测试环境跑几天，结果在搭建测试环境的时候，问题就出来了：</p>
 <p>laravel 版本是 5.4.63 ，服务器的 php 版本是 5.6 ，执行 composer install 时，提示我需要 php7.1 。</p>
 <p>吓得我一阵懵逼，难道是什么时候装错扩展了？</p>
@@ -217,4 +228,149 @@
 <p>出错的代码比之前正常的代码多了个 “，”，丫的，太粗糙了！</p>
 <p>去掉，再次执行 update ，果然一路畅通无阻。</p>
 <p>但是那个该死的 install 是再也没回来。</p>
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://m-finder.alon.wang">m-finder</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://m-finder.alon.wang/laravel-5-4-bug/">https://m-finder.alon.wang/laravel-5-4-bug/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://m-finder.alon.wang" target="_blank">M-finder</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/php/">php</a><a class="post-meta__tags" href="/tags/laravel/">laravel</a></div><div class="post-share"><div class="social-share" data-image="/images/top.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="/pluginsSrc/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="/pluginsSrc/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/openssl-pkey-get-private/" title="openssl_pkey_get_private 内存泄漏"><img class="cover" src="/images/top.jpg" onerror="onerror=null;src='https://i.loli.net/2020/05/19/aKOcLiyPl2JQdFD.png'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">openssl_pkey_get_private 内存泄漏</div></div><div class="info-2"><div class="info-item-1">从前，有一块使用 swoole_process 做多线程处理的程序，这个程序有一个奇怪的问题：每运行一个星期左右都会因为内存爆表而停掉。 因为爆表的时间关系，开发的小伙伴们都认为是这段使用 swoole_process 的程序有问题，几经更新改版，代码已经趋于完美，平稳的运行了几天后，小伙伴们终于都松了一口气，终于解决了这个问题。 然而，伴随着百年难遇的血月，这块程序还是在一个意想不到的时间又爆了一次，小伙伴们终于意识到，问题的根本并不在这里，想要找出并改掉这个问题，是何等艰难！但是他们知道，真相只有一个！ 又经过几天的排查，凶手终于浮出水面！ 呐，就是这孙子：openssl_pkey_get_private 抽出的测试代码： 123456789while(true)&#123;    $key = file_get_contents(&#x27;mock_A.pem&#x27;);	echo $m=memory_get_usage(),PHP_EOL;	$getkey = openssl_pkey_get_private($key, &#x27;&#x27;);	openssl...</div></div></div></a><a class="pagination-related" href="/Layim-contextmenu/" title="Layim模块化右键菜单"><img class="cover" src="/images/top.jpg" onerror="onerror=null;src='https://i.loli.net/2020/05/19/aKOcLiyPl2JQdFD.png'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">Layim模块化右键菜单</div></div><div class="info-2"><div class="info-item-1">一直觉得社区那群“先驱”搞的右键菜单要么太丑，要么风格不统一，很难受。 这两天仔细看了看心姐的源码，把历史消息里的右键菜单揪出来改了一把，感觉很良好。 演示地址已挂，请在本地搭建后测试。 调用方法，先引用上边暴露出来的方法，然后： 1234567891011121314151617181920212223242526layim.on(&#x27;ready&#x27;, function (options) &#123;    $(&quot;.layim-list-friend &gt;li &gt; ul &gt; li&quot;).menu(&#123;        menu: [&#123;                text: &quot;新增&quot;,                callback: function () &#123;                    alert(&quot;新增&quot;);                &#125;            &#125;, &#123;                text:...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/laravel-container/" title="Laravel 服务容器"><img class="cover" src="/images/top.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2019-03-15</div><div class="info-item-2">Laravel 服务容器</div></div><div class="info-2"><div class="info-item-1">在 Laravel 生命周期中，我们了解到框架运行过程中，会通过创建应用实例来完成很多事情，这个应用实例，也就是我们今天的主角，服务容器。 Laravel 的服务容器，是用于管理类的依赖和执行依赖注入的工具。    依赖注入 DI开始之前，需要我们先了解一下，什么是依赖注入。 简单来说，就是将类的依赖通过参数或其他方式注入。 比如： 12345678910111213141516171819202122232425262728293031323334interface Storage&#123;  public function set($key, $value);  public function get($key);&#125;class SessionStorage implements Storage&#123;    function __construct($cookieName=&#x27;PHPSESSID&#x27;)&#123;        session_name($cookieName);        session_start();    &#125...</div></div></div></a><a class="pagination-related" href="/laravel-broadcasting/" title="laravel 广播系统学习"><img class="cover" src="/images/top.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2019-04-12</div><div class="info-item-2">laravel 广播系统学习</div></div><div class="info-2"><div class="info-item-1">看到广播系统，先想起了曾经虐过我的即时通讯。 虽然都是对 websocket 的应用，但是好像又有点区别，这里好好学习一下。    laravel 的广播与事件紧密相关，广播即对事件进行广播，因此在学习广播之前，要先阅读事件和监听器的相关文档。 配置老规矩，先来看配置文件 config/broadcasting.php 里边的配置选项： 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960&lt;?phpreturn [    /*    |--------------------------------------------------------------------------    | Default Broadcaster    |--------------------------------------------------------------------------    |    | ...</div></div></div></a><a class="pagination-related" href="/laravel-life-cycle/" title="Laravel 生命周期"><img class="cover" src="/images/top.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2019-03-15</div><div class="info-item-2">Laravel 生命周期</div></div><div class="info-2"><div class="info-item-1">Laravel 的生命周期主要分为四个阶段：  加载依赖 创建应用实例 接收请求并响应 请求结束进行回调     这四个阶段都在 index.php 中完成： 1234567891011121314151617181920&lt;?php// 加载依赖require __DIR__.&#x27;/../vendor/autoload.php&#x27;;// 创建应用实例$app = require_once __DIR__.&#x27;/../bootstrap/app.php&#x27;;// 实例化 HTTP 内核$kernel = $app-&gt;make(Illuminate\Contracts\Http\Kernel::class);// 接收请求，生成响应$response = $kernel-&gt;handle(    $request = Illuminate\Http\Request::capture());// 发送响应$response-&gt;send();// 请求结束，进行回调$kernel-&gt;terminate($request, $re...</div></div></div></a><a class="pagination-related" href="/laravel-vue/" title="laravel 内置 vue 的使用"><img class="cover" src="/images/top.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2019-03-14</div><div class="info-item-2">laravel 内置 vue 的使用</div></div><div class="info-2"><div class="info-item-1">从 5.3 版本开始，用 Vue.js 作为默认 JavaScript 前端框架。 从刚接触 laravel 到现在已经又过去了四个版本，种种原因，还是一直没能用上 vue.js 来做开发，现在刚好因为公司项目用到了 vue，对 vue 有了一定的了解，所以顺便就研究下 vue 在 laravel 中的使用吧。   安装laravel操作均在 laradock 的环境中进行。进入 workspace 容器，执行以下命令安装 laravel 1composer create-project laravel/laravel study  配置mysqldocker-compose up -d nginx mysql phpmyadmin 启动容器配置 nginx、hosts 并重启 nginx进入 mysql 容器执行以下命令： 123456mysql -uroot -prootALTER USER root IDENTIFIED WITH mysql_native_password BY &#x27;PASSWORD&#x27;;exit;exit  访问 phpmyadmin： ...</div></div></div></a><a class="pagination-related" href="/laravel-mix/" title="使用 laravel mix 编译资源"><img class="cover" src="/images/top.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2019-03-15</div><div class="info-item-2">使用 laravel mix 编译资源</div></div><div class="info-2"><div class="info-item-1">学习下如何在 laravel 框架中，用 laravel mix 编译前端资源。    使用本次操作的环境依然是 laradock，如果没用特殊说明，以后应该默认 laradock。 workspace 容器中，已经提前装好了 node 环境，而在项目根目录中，package.json 和 webpack.mix.js 也已经为我们预设好了，所以laravel 项目建好后，直接在根目录安装即可： 1npm install  在 webpack.mix.js 中，已经加载了两个默认的文件： 12mix.js(&#x27;resources/js/app.js&#x27;, &#x27;public/js&#x27;)   .sass(&#x27;resources/sass/app.scss&#x27;, &#x27;public/css&#x27;);  我们只需要把自己的资源文件，按照同样的格式写入进去，然后开始运行，就可以生成编译后的资源了。 虽然示例中只写了 sass 一种样式文件，但是其实可以支持常见的以及不常见的很多中格式，只需要调用对应的接口即可。而且还可以把多个资源...</div></div></div></a><a class="pagination-related" href="/Laravel-ftp/" title="Laravel使用ftp传输文件时报错ftp_put() No data connection的解决"><img class="cover" src="/images/top.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2018-06-12</div><div class="info-item-2">Laravel使用ftp传输文件时报错ftp_put() No data connection的解决</div></div><div class="info-2"><div class="info-item-1">代码： 123456789101112131415161718192021222324252627282930313233&lt;?php$file = &quot;test.dat&quot;;$ftp_server=&quot;ftp.server.com&quot;;$ftp_user = &quot;myname&quot;;$ftp_pass = &quot;mypass&quot;;$destination_file = &quot;test.dat&quot;;$cid=ftp_connect($ftp_server);if(!$cid) &#123;    exit(&quot;Could not connect to server: $ftp_server\n&quot;);&#125;$login_result = ftp_login($cid, $ftp_user, $ftp_pass);if (!$login_result) &#123;    echo &quot;FTP connection has failed!&quot;;    echo &qu...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/images/avatar.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">m-finder</div><div class="author-info-description">happy coding</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">122</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">24</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/m-finder"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/m-finder" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:yf-wu@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026-to-do-list/" title="2026 年计划清单"><img src="/images/top.jpg" onerror="this.onerror=null;this.src='https://i.loli.net/2020/05/19/aKOcLiyPl2JQdFD.png'" alt="2026 年计划清单"/></a><div class="content"><a class="title" href="/2026-to-do-list/" title="2026 年计划清单">2026 年计划清单</a><time datetime="2026-07-21T08:45:34.384Z" title="发表于 2026-07-21 16:45:34">2026-07-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026-07-21-one-day-in-26/" title="碎碎念"><img src="/images/top.jpg" onerror="this.onerror=null;this.src='https://i.loli.net/2020/05/19/aKOcLiyPl2JQdFD.png'" alt="碎碎念"/></a><div class="content"><a class="title" href="/2026-07-21-one-day-in-26/" title="碎碎念">碎碎念</a><time datetime="2026-07-21T08:16:00.000Z" title="发表于 2026-07-21 16:16:00">2026-07-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025-to-do-list/" title="2025 年计划清单"><img src="/images/top.jpg" onerror="this.onerror=null;this.src='https://i.loli.net/2020/05/19/aKOcLiyPl2JQdFD.png'" alt="2025 年计划清单"/></a><div class="content"><a class="title" href="/2025-to-do-list/" title="2025 年计划清单">2025 年计划清单</a><time datetime="2025-12-14T16:00:00.000Z" title="发表于 2025-12-15 00:00:00">2025-12-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025-12-10-fn-tailscale/" title="飞牛 NAS + Tailscale 组网踩坑实录"><img src="/images/top.jpg" onerror="this.onerror=null;this.src='https://i.loli.net/2020/05/19/aKOcLiyPl2JQdFD.png'" alt="飞牛 NAS + Tailscale 组网踩坑实录"/></a><div class="content"><a class="title" href="/2025-12-10-fn-tailscale/" title="飞牛 NAS + Tailscale 组网踩坑实录">飞牛 NAS + Tailscale 组网踩坑实录</a><time datetime="2025-12-10T01:30:00.000Z" title="发表于 2025-12-10 09:30:00">2025-12-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025-09-12-fancy-tool/" title="Mac 菜单栏多合一工具 FancyTool 更新啦！"><img src="/images/top.jpg" onerror="this.onerror=null;this.src='https://i.loli.net/2020/05/19/aKOcLiyPl2JQdFD.png'" alt="Mac 菜单栏多合一工具 FancyTool 更新啦！"/></a><div class="content"><a class="title" href="/2025-09-12-fancy-tool/" title="Mac 菜单栏多合一工具 FancyTool 更新啦！">Mac 菜单栏多合一工具 FancyTool 更新啦！</a><time datetime="2025-09-12T01:26:00.000Z" title="发表于 2025-09-12 09:26:00">2025-09-12</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2016 - 2026 By m-finder</span></div><div class="footer_custom_text">感谢 <a href="https://alon.wang" target="_blank">along</a> 借一个二级域名给我开蹭 <span style="color:pink">❤</span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+
+</div>
+
+
+  <footer class="post-footer">
+  
+    <div class="post-categories">
+      <span class="meta-label">分类: </span>
+      
+        <a href="/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/" class="category">码不能停</a>
+      
+    </div>
+  
+  
+    <div class="post-tags">
+      <span class="meta-label">标签: </span>
+      
+        <a href="/tags/php/" class="tag">php</a>
+      
+        <a href="/tags/laravel/" class="tag">laravel</a>
+      
+    </div>
+  
+</footer>
+
+
+  
+<nav class="post-nav">
+  
+    <div class="post-nav-item prev">
+      <span class="post-nav-label">&larr; 上一页</span>
+      <a href="/openssl-pkey-get-private/" class="post-nav-title">
+        openssl_pkey_get_private 内存泄漏
+      </a>
+    </div>
+  
+
+  
+    <div class="post-nav-item next">
+      <span class="post-nav-label">下一页 &rarr;</span>
+      <a href="/Layim-contextmenu/" class="post-nav-title">
+        Layim模块化右键菜单
+      </a>
+    </div>
+  
+</nav>
+
+
+
+  
+    <section class="comments-section">
+  <h3 class="comments-title">评论</h3>
+
+  
+
+  
+
+  
+</section>
+
+  
+</article>
+
+        </div>
+      
+    </main>
+
+    <footer class="footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      
+      <span class="copyright">
+        &copy; 2024 - 2026 m-finder
+      </span>
+    </div>
+
+    <div class="footer-right">
+      
+        <span class="powered">
+          由 Hexo 驱动 <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>
+        </span>
+      
+      
+        <span class="theme-info">
+          主题 <a href="https://github.com/WinMin/hexo-theme-Bloom" target="_blank" rel="noopener">Bloom</a>
+        </span>
+      
+    </div>
+  </div>
+
+  
+    <div class="footer-social">
+      
+        <a href="https://github.com/WinMin" class="social-link" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+      
+      
+        <a href="https://twitter.com/bestswngs" class="social-link" target="_blank" rel="noopener" aria-label="Twitter">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+      
+      
+      
+        <a href="mailto:ask@mail.exp.sh" class="social-link" aria-label="Email">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </a>
+      
+      
+        <a href="/atom.xml" class="social-link" aria-label="RSS">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20C5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1z"/></svg>
+        </a>
+      
+    </div>
+  
+</footer>
+
+  </div>
+
+  <!-- Main Script -->
+
+<script src="/js/main.js"></script>
+
+
+<!-- Search -->
+
+
+<script src="/js/search.js"></script>
+
+
+
+<!-- Baidu Analytics -->
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?2e6da3c375c8a87f5b664cea6d4cb29c";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+</body>
+</html>

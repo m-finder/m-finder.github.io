@@ -1,540 +1,273 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>说说 | M-finder</title><meta name="author" content="m-finder"><meta name="copyright" content="m-finder"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="happy coding">
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="referrer" content="no-referrer">
+
+<title>说说 | M-finder</title>
+
+
+<meta name="description" content="happy coding">
+
+
+<meta name="author" content="m-finder">
+
+
+<meta name="keywords" content="m-finder,php,laravel">
+
+
+<!-- Canonical -->
+<link rel="canonical" href="/shuo/index.html">
+
+<!-- Favicon -->
+<link rel="icon" href="/images/favicon.ico">
+
+<!-- RSS -->
+
+<link rel="alternate" type="application/rss+xml" title="M-finder" href="/atom.xml">
+
+
+<!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="说说">
-<meta property="og:url" content="https://m-finder.alon.wang/shuo/index.html">
+<meta property="og:url" content="/shuo/index.html">
 <meta property="og:site_name" content="M-finder">
+
 <meta property="og:description" content="happy coding">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://m-finder.alon.wang/images/avatar.jpeg">
-<meta property="article:published_time" content="2025-02-26T07:57:00.000Z">
-<meta property="article:modified_time" content="2026-07-21T08:45:34.638Z">
-<meta property="article:author" content="m-finder">
-<meta property="article:tag" content="m-finder">
-<meta property="article:tag" content="php">
-<meta property="article:tag" content="laravel">
+
+
+<!-- Twitter Card -->
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://m-finder.alon.wang/images/avatar.jpeg"><script type="application/ld+json"></script><link rel="shortcut icon" href="/images/favicon.ico"><link rel="canonical" href="https://m-finder.alon.wang/shuo/index.html"><link rel="preconnect"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="/pluginsSrc/@fortawesome/fontawesome-free/css/all.min.css"><script>
-    (() => {
+<meta name="twitter:title" content="说说">
+
+<meta name="twitter:description" content="happy coding">
+
+
+<!-- Theme Color -->
+<meta name="theme-color" content="#1d1f21">
+<meta name="msapplication-TileColor" content="#1d1f21">
+
+<!-- Stylesheets -->
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+<!-- Custom Layout Variables -->
+
+<style>
+:root {
+  --page-width: 60rem;
+  --content-width: 900px;
+  --mobile-padding: 12px;
+}
+</style>
+
+<!-- Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-133464311-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-133464311-1');
+</script>
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body class="theme-dark">
+  <div class="container">
+    <header class="header">
+  <div class="header-inner">
+    <div class="header-brand">
       
-    const saveToLocal = {
-      set: (key, value, ttl) => {
-        const data = { value }
+      <a href="/" class="site-title">
+        M-finder
+      </a>
+    </div>
 
-        if (ttl != null) {
-          data.expiry = Date.now() + ttl * 86400000
-        }
+    <nav class="nav">
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
 
-        localStorage.setItem(key, JSON.stringify(data))
-      },
-      get: key => {
-        const itemStr = localStorage.getItem(key)
-        if (!itemStr) return
-
-        try {
-          const data = JSON.parse(itemStr)
-
-          if (data.expiry && Date.now() > data.expiry) {
-            localStorage.removeItem(key)
-            return
-          }
-
-          return data.value
-        } catch {
-          localStorage.removeItem(key)
-        }
-      }
-    }
-
-    const scriptCache = new Map()
-    const cssCache = new Map()
-    window.btf = {
-      saveToLocal,
-      getScript: (url, attr = {}) => {
-        if (scriptCache.has(url)) {
-          return scriptCache.get(url)
-        }
-
-        const promise = new Promise((resolve, reject) => {
-          const script = document.createElement('script')
-
-          script.src = url
-          script.async = true
-
-          for (const key in attr) {
-            script.setAttribute(key, attr[key])
-          }
-
-          script.onload = resolve
-          script.onerror = reject
-
-          document.head.appendChild(script)
-        })
-
-        scriptCache.set(url, promise)
-
-        return promise
-      },
-      getCSS: (url, id) => {
-        if (cssCache.has(url)) {
-          return cssCache.get(url)
-        }
-
-        const promise = new Promise((resolve, reject) => {
-          const link = document.createElement('link')
-
-          link.rel = 'stylesheet'
-          link.href = url
-
-          if (id) {
-            link.id = id
-          }
-
-          link.onload = resolve
-          link.onerror = reject
-
-          document.head.appendChild(link)
-        })
-
-        cssCache.set(url, promise)
-
-        return promise
-      },
-      addGlobalFn: (key, fn, name = false, parent = window) => {
-        if (!false && key.startsWith('pjax')) return
-        const globalFn = parent.globalFn || {}
-        globalFn[key] = globalFn[key] || {}
-        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
-        parent.globalFn = globalFn
-      }
-    }
-  
-      
-      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
-      const activateDarkMode = () => {
-        document.documentElement.dataset.theme = 'dark'
-        if (metaThemeColor !== null) {
-          metaThemeColor.setAttribute('content', '#0d0d0d')
-        }
-      }
-      const activateLightMode = () => {
-        document.documentElement.dataset.theme = 'light'
-        if (metaThemeColor !== null) {
-          metaThemeColor.setAttribute('content', '#ffffff')
-        }
-      }
-
-      btf.activateDarkMode = activateDarkMode
-      btf.activateLightMode = activateLightMode
-
-      const theme = saveToLocal.get('theme')
-    
-          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+      <ul class="nav-menu" id="nav-menu">
         
+          
+          
+            
+            <li class="nav-item">
+              <a href="/"
+                 class="nav-link"
+                 >
+                Home
+              </a>
+            </li>
+            
+              <li class="nav-divider">|</li>
+            
+          
+            
+            <li class="nav-item">
+              <a href="/about/"
+                 class="nav-link"
+                 >
+                About
+              </a>
+            </li>
+            
+              <li class="nav-divider">|</li>
+            
+          
+            
+            <li class="nav-item">
+              <a href="/archives/"
+                 class="nav-link"
+                 >
+                Articles
+              </a>
+            </li>
+            
+              <li class="nav-divider">|</li>
+            
+          
+            
+            <li class="nav-item">
+              <a href="/atom.xml"
+                 class="nav-link"
+                 >
+                RSS
+              </a>
+            </li>
+            
+              <li class="nav-divider">|</li>
+            
+          
+            
+            <li class="nav-item">
+              <a href="/categories/"
+                 class="nav-link"
+                 >
+                Categories
+              </a>
+            </li>
+            
+              <li class="nav-divider">|</li>
+            
+          
+            
+            <li class="nav-item">
+              <a href="/link"
+                 class="nav-link"
+                 >
+                Links
+              </a>
+            </li>
+            
+          
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main class="main">
       
-      const asideStatus = saveToLocal.get('aside-status')
-      if (asideStatus !== undefined) {
-        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
-      }
+        <div class="page-layout">
+          <article class="page">
+  <header class="page-header">
+    <h1 class="page-title">说说</h1>
+  </header>
+
+  <div class="page-content">
     
+  </div>
+</article>
+
+        </div>
       
-    const detectApple = () => {
-      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
-        document.documentElement.classList.add('apple')
-      }
-    }
-    detectApple()
+    </main>
+
+    <footer class="footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      
+      <span class="copyright">
+        &copy; 2024 - 2026 m-finder
+      </span>
+    </div>
+
+    <div class="footer-right">
+      
+        <span class="powered">
+          由 Hexo 驱动 <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>
+        </span>
+      
+      
+        <span class="theme-info">
+          主题 <a href="https://github.com/WinMin/hexo-theme-Bloom" target="_blank" rel="noopener">Bloom</a>
+        </span>
+      
+    </div>
+  </div>
+
   
-    })()
-  </script><script>const GLOBAL_CONFIG = {
-  root: '/',
-  algolia: undefined,
-  localSearch: undefined,
-  translate: undefined,
-  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":true,"highlightMacStyle":true},
-  copy: {
-    success: '复制成功',
-    error: '复制失败',
-    noSupport: '浏览器不支持'
-  },
-  relativeDate: {
-    homepage: false,
-    post: false
-  },
-  runtime: '天',
-  dateSuffix: {
-    just: '刚刚',
-    min: '分钟前',
-    hour: '小时前',
-    day: '天前',
-    month: '个月前'
-  },
-  copyright: undefined,
-  lightbox: 'null',
-  Snackbar: undefined,
-  infinitegrid: {
-    js: '/pluginsSrc/@egjs/infinitegrid/dist/infinitegrid.min.js',
-    buttonText: '加载更多'
-  },
-  isPhotoFigcaption: false,
-  islazyloadPlugin: false,
-  isAnchor: false,
-  percent: {
-    toc: true,
-    rightside: false,
-  },
-  autoDarkmode: false
-}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
-  title: '说说',
-  isHighlightShrink: false,
-  isToc: false,
-  pageType: 'shuoshuo'
-}</script><link rel="preconnect" href="https://jsd.012700.xyz"><meta name="google-site-verification" content="OPPs3YwY1EkKeHiSwKpEaVvKheGIdfGrMgTxJHCM_7c" /><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="M-finder" type="application/atom+xml">
-</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/images/avatar.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">122</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">24</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间线</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/shuo/"><i class="fa-fw fas fa-comment-dots"></i><span> 说说</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 更多</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/gallery/"><i class="fa-fw fas fa-images"></i><span> 相册</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book"></i><span> 书单</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/games/"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page type-shuoshuo" id="body-wrap"><header class="not-home-page" id="page-header" style="background-image: url(/images/top.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">M-finder</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间线</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/shuo/"><i class="fa-fw fas fa-comment-dots"></i><span> 说说</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 更多</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/gallery/"><i class="fa-fw fas fa-images"></i><span> 相册</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book"></i><span> 书单</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/games/"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="page-site-info"><h1 id="site-title">说说</h1></div></header><main class="layout" id="content-inner"><div class="nc" id="page"><div id="article-container"><script type="application/json" id="shuoshuo-data">[{"author":"M-finder","avatar":"https://m-finder.github.io/images/avatar.jpeg","date":"2026-07-20 21:26:03","content":"\u003cp\u003e瘦 10 多斤了, 还需要继续努力🏋️.\u003c/p\u003e\n"},{"author":"M-finder","avatar":"https://m-finder.github.io/images/avatar.jpeg","date":"2026-07-11 09:26:03","content":"\u003cp\u003e大学生放假了, 重新续上了健身卡, 他喵的居然 20 也拉不动了.\u003c/p\u003e\n"},{"author":"M-finder","avatar":"https://m-finder.github.io/images/avatar.jpeg","date":"2026-07-11 09:26:02","content":"\u003cp\u003e我宣布, 粉旗鱼秋海棠是我所有花花里第二好养的, 第一是铜钱草.\u003c/p\u003e\n"},{"author":"M-finder","avatar":"https://m-finder.github.io/images/avatar.jpeg","date":"2026-07-11 09:26:01","content":"\u003cp\u003e小黄油美式全冰去水乃仙品🍻\u003c/p\u003e\n"},{"author":"M-finder","avatar":"https://m-finder.github.io/images/avatar.jpeg","date":"2026-07-11 09:26:00","content":"\u003cp\u003e飞牛变得更好用以后, 我的日常就变成了找片, 下片, 看片 (我最近都在看些什么玩意儿😅)…\u003c/p\u003e\n"},{"author":"M-finder","avatar":"https://m-finder.github.io/images/avatar.jpeg","date":"2026-07-04 10:26:00","content":"\u003cp\u003e想起来昨天刷到易方达全球关门, 可喜可贺!!!!\u003c/p\u003e\n"},{"author":"M-finder","avatar":"https://m-finder.github.io/images/avatar.jpeg","date":"2026-07-04 10:16:00","content":"\u003cp\u003e竹节秋海棠是真好养, 小鼻嘎也能开大花, 爱了.\u003c/p\u003e\n"},{"author":"M-finder","avatar":"https://m-finder.github.io/images/avatar.jpeg","date":"2026-06-01 14:16:00","content":"\u003cp\u003e阿龙同学的小棉袄计划失败, 下一把看我的了😏.\u003c/p\u003e\n"},{"author":"M-finder","avatar":"https://m-finder.github.io/images/avatar.jpeg","date":"2026-05-30 16:01:00","content":"\u003cp\u003e盘点一下, 现在家里有:\u003cbr\u003e玉树 * 2, 乌木 * 1, 钱串 * 1, 长寿花 * n\u003cbr\u003e栀子花 * 1, 百合 * 1, 绣球 * 1, 蝴蝶兰 * 1\u003cbr\u003e绿宝树 * 1, 发财树 * 1, 鸭脚木 * 1\u003cbr\u003e铜钱草 * 3, 青叶吊兰 * 1, 袖珍椰子 * 2, 春羽 * 1, 白掌 * 2\u003c/p\u003e\n"},{"author":"M-finder","avatar":"https://m-finder.github.io/images/avatar.jpeg","date":"2026-05-30 16:00:00","content":"\u003cp\u003e易方达什么蓝筹精选给我挖的坑已经被纳指填了三分之一, 得劲儿.\u003c/p\u003e\n"},{"author":"M-finder","avatar":"https://m-finder.github.io/images/avatar.jpeg","date":"2026-05-28 16:00:00","content":"\u003cp\u003e豪掷百金, 让我的花花们都住上了大别墅, 慈祥的老父亲盼它们好.\u003c/p\u003e\n"},{"author":"M-finder","avatar":"https://m-finder.github.io/images/avatar.jpeg","date":"2026-04-18 16:00:00","content":"\u003cp\u003e挺好的, 下次还来.\u003c/p\u003e\n"},{"author":"M-finder","avatar":"https://m-finder.github.io/images/avatar.jpeg","date":"2026-04-13 16:00:00","content":"\u003cp\u003e鬼天气, 闷得有点透不过气.\u003c/p\u003e\n"},{"author":"M-finder","avatar":"https://m-finder.github.io/images/avatar.jpeg","date":"2026-04-07 15:40:00","content":"\u003cp\u003e黄金真贵, 得多攒点儿.\u003c/p\u003e\n"},{"author":"M-finder","avatar":"https://m-finder.github.io/images/avatar.jpeg","date":"2026-04-07 15:40:00","content":"\u003cp\u003e刚才发现大哈家的老二跟老大小时候长一毛一样.\u003c/p\u003e\n"},{"author":"M-finder","avatar":"https://m-finder.github.io/images/avatar.jpeg","date":"2026-04-05 23:00:00","content":"\u003cp\u003e赵老师是有真东西的, 我通透了.\u003c/p\u003e\n"},{"author":"M-finder","avatar":"https://m-finder.github.io/images/avatar.jpeg","date":"2026-03-30 13:58:00","content":"\u003cp\u003e人生的一半是向往, 另一半是绝望.\u003c/p\u003e\n"},{"author":"M-finder","avatar":"https://m-finder.github.io/images/avatar.jpeg","date":"2026-03-30 11:58:00","content":"\u003cp\u003e大哈也要生二胎了, 希望他生个儿子, 未来再生 8 个儿子.\u003c/p\u003e\n"},{"author":"M-finder","avatar":"https://m-finder.github.io/images/avatar.jpeg","date":"2026-02-26 15:58:00","content":"\u003cp\u003e惊闻 LeanCloud 明年要停止服务, 可惜了这么好用的工具, 也可惜了我的评论和说说…\u003c/p\u003e\n"}]</script><script>(() => {
-  const limitConfig = {}
-
-  const escapeHtml = str => String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;')
-
-  const sortDataByDate = data => data.sort((a, b) => new Date(b.date) - new Date(a.date))
-
-  const filterDataByLimit = (data, limit) => {
-    if (!limit || !limit.type) return data
-    if (limit.type === 'num') return data.slice(0, limit.value)
-    if (limit.type === 'date') {
-      const limitDate = new Date(limit.value)
-      return data.filter(item => new Date(item.date) >= limitDate)
-    }
-    return data
-  }
-
-  const dateFormatter = new Intl.DateTimeFormat('en-GB', {
-    timeZone: "Asia/Shanghai" || Intl.DateTimeFormat().resolvedOptions().timeZone,
-    year: 'numeric',
-    month: '2-digit',
-    day: '2-digit',
-    hour: '2-digit',
-    minute: '2-digit',
-    second: '2-digit',
-    hour12: false
-  })
-
-  const formatToTimeZone = (date) => {
-    const fullDate = date.length === 10 ? `${date} 00:00:00` : date
-    const [day, month, year, hour, minute, second] = dateFormatter.format(new Date(fullDate)).match(/\d+/g)
-    return `${year}-${month}-${day} ${hour}:${minute}:${second}`
-  }
-
-  const addLazyload = str => {
-    const lazyConfig = {
-      enable: false,
-      native: false,
-      field: "site",
-      placeholder: "/null",
-    }
-
-    if (!lazyConfig.enable || lazyConfig.field !== 'site' || str.indexOf('<img') === -1) return str
-    const parser = new DOMParser()
-    const doc = parser.parseFromString(str, 'text/html')
-    const images = doc.querySelectorAll('img')
-
-    images.forEach(img => {
-      if (lazyConfig.native) {
-        img.setAttribute('loading', 'lazy')
-      } else {
-        const src = img.getAttribute('src')
-        img.setAttribute('data-lazy-src', src)
-
-        if (lazyConfig.placeholder) {
-          img.setAttribute('src', lazyConfig.placeholder)
-        } else {
-          img.removeAttribute('src')
-        }
-      }
-    })
-    return doc.body.innerHTML
-  }
-
-  let currentPage = 1
-  const itemsPerPage = 8
-  let totalPages = 0
-  let data = []
-
-  const renderData = (dataSlice) => {
-    const content = dataSlice.map(item => {
-      const formattedDate = formatToTimeZone(item.date)
-      const tags = item.tags && item.tags.map(tag => `<span class="shuoshuo-tag">${escapeHtml(tag)}</span>`).join('') || ''
-      const commentButton = item.key && false
-        ? `<div class="shuoshuo-comment-btn" onclick="addCommentToShuoshuo(event)">
-            <i class="fa-solid fa-comments"></i>
-          </div>`
-        : ''
-      const commentContainer = item.key
-        ? `<div class="shuoshuo-comment no-comment" data-key="${escapeHtml(item.key)}"></div>`
-        : ''
-
-      return `
-        <div class="shuoshuo-item">
-          <div class="container">
-            <div class="shuoshuo-item-header">
-              <div class="shuoshuo-avatar">
-                <img class="no-lightbox" src="${item.avatar ? escapeHtml(item.avatar) : "/images/avatar.jpeg"}">
-              </div>
-              <div class="shuoshuo-info">
-                <div class="shuoshuo-author">${item.author ? escapeHtml(item.author) : "m-finder"}</div>
-                <time class="shuoshuo-date" title="${formattedDate}">
-                  ${btf.diffDate(formattedDate, true)}
-                </time>
-              </div>
-            </div>
-            <div class="shuoshuo-content">${addLazyload(item.content)}</div>
-            <div class="shuoshuo-footer ${tags ? 'flex-between' : 'flex-end'}">
-              ${tags ? `<div class="shuoshuo-tags">${tags}</div>` : ''}
-              ${commentButton}
-            </div>
-          </div>
-          ${commentContainer}
-        </div>`
-    }).join('')
-
-    const container = document.getElementById('article-container')
-    container.innerHTML = content
-
-    window.lazyLoadInstance && window.lazyLoadInstance.update()
-    btf.loadLightbox(document.querySelectorAll('#article-container img:not(.no-lightbox)'))
-  }
-
-  const setupNavEvents = (nav) => {
-    nav.querySelector('.shuoshuo-prev-btn').addEventListener('click', () => {
-      if (currentPage > 1) { currentPage--; renderPage(currentPage) }
-    })
-    nav.querySelector('.shuoshuo-next-btn').addEventListener('click', () => {
-      if (currentPage < totalPages) { currentPage++; renderPage(currentPage) }
-    })
-
-    const input = nav.querySelector('.shuoshuo-page-input')
-
-    input.addEventListener('focus', e => { e.target.placeholder = '' })
-    input.addEventListener('blur', e => {
-      if (!e.target.value.trim()) e.target.placeholder = currentPage
-    })
-
-    input.addEventListener('input', e => {
-      const value = parseInt(e.target.value) || 0
-      let wasInvalid = false
-
-      if (value > totalPages) { e.target.value = totalPages; wasInvalid = true }
-      else if (value < 1 && e.target.value !== '') { e.target.value = 1; wasInvalid = true }
-
-      if (wasInvalid) {
-        e.target.classList.add('invalid')
-        setTimeout(() => e.target.classList.remove('invalid'), 500)
-      }
-    })
-
-    input.addEventListener('keydown', e => {
-      const value = e.target.value + e.key
-
-      if (e.key === 'Enter' || e.key === 'Backspace' || e.key === 'Delete' ||
-          e.key === 'ArrowLeft' || e.key === 'ArrowRight' ||
-          e.key === 'Tab' || e.ctrlKey || e.metaKey) {
-        if (e.key === 'Enter') {
-          const inputValue = e.target.value.trim()
-          const inputPage = inputValue === '' ? currentPage : parseInt(inputValue)
-          if (inputPage >= 1 && inputPage <= totalPages && inputPage !== currentPage) {
-            currentPage = inputPage
-            renderPage(currentPage)
-          } else if (inputValue === '') {
-            renderPage(currentPage)
-          }
-        }
-        return
-      }
-
-      if (!/^\d$/.test(e.key)) {
-        e.preventDefault()
-        return
-      }
-
-      const newValue = parseInt(value) || 0
-      if (newValue > totalPages || (value.length > 1 && newValue === 0)) {
-        e.preventDefault()
-        e.target.classList.add('invalid')
-        setTimeout(() => e.target.classList.remove('invalid'), 500)
-      }
-    })
-  }
-
-  const renderNavigation = () => {
-    const container = document.getElementById('article-container')
-    let nav = container.nextElementSibling
-    const pageInfoTemplate = '第 ${current} 页 / 共 ${total} 页'
-    const pageInfoText = pageInfoTemplate
-      .replace(/\$\{current}/g, currentPage)
-      .replace(/\$\{total}/g, totalPages)
-
-    if (!nav || !nav.classList.contains('shuoshuo-navigation')) {
-      nav = document.createElement('div')
-      nav.className = 'shuoshuo-navigation'
-      nav.innerHTML = `
-        <button class="shuoshuo-prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
-        <span class="shuoshuo-page-info"></span>
-        <input type="number" class="shuoshuo-page-input" min="1">
-        <button class="shuoshuo-next-btn"><i class="fa-solid fa-chevron-right"></i></button>
-      `
-      container.insertAdjacentElement('afterend', nav)
-      setupNavEvents(nav)
-    }
-
-    nav.querySelector('.shuoshuo-page-info').textContent = pageInfoText
-    nav.querySelector('.shuoshuo-prev-btn').disabled = currentPage === 1
-    nav.querySelector('.shuoshuo-next-btn').disabled = currentPage === totalPages
-    const input = nav.querySelector('.shuoshuo-page-input')
-    input.max = totalPages
-    input.placeholder = currentPage
-  }
-
-  const renderPage = (page) => {
-    const start = (page - 1) * itemsPerPage
-    const end = start + itemsPerPage
-    const pageData = data.slice(start, end)
-    renderData(pageData)
-    renderNavigation()
-  }
-
-  const loadShuoshuo = async () => {
-    const container = document.getElementById('article-container')
-    try {
-      let originData = []
-      if (false) {
-        container.innerHTML = '<div class="shuoshuo-loading"><i class="fa-solid fa-circle-notch fa-spin"></i></div>'
-        const response = await fetch('/')
-        if (!response.ok) throw new Error(`HTTP ${response.status}`)
-        originData = await response.json()
-      } else {
-        const dataElement = document.getElementById('shuoshuo-data')
-        originData = dataElement ? JSON.parse(dataElement.textContent) : []
-      }
-
-      data = filterDataByLimit(sortDataByDate(originData), limitConfig)
-      totalPages = Math.ceil(data.length / itemsPerPage)
-
-      if (data.length === 0) {
-        container.innerHTML = '<div class="shuoshuo-empty"></div>'
-        return
-      }
-
-      renderPage(currentPage)
-    } catch (error) {
-      console.error(error)
-      container.innerHTML = '<div class="shuoshuo-error"><i class="fa-solid fa-circle-exclamation"></i></div>'
-    }
-  }
-
-  const pjaxCleanup = () => {
-    const container = document.getElementById('article-container')
-    if (container) {
-      const nav = container.nextElementSibling
-      if (nav && nav.classList.contains('shuoshuo-navigation')) nav.remove()
-    }
-    document.removeEventListener('pjax:send', pjaxCleanup)
-  }
-
-  if (window.pjax) {
-    document.addEventListener('pjax:send', pjaxCleanup)
-    loadShuoshuo()
-  } else {
-    window.addEventListener('load', loadShuoshuo)
-  }
-})()</script></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/images/avatar.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">m-finder</div><div class="author-info-description">happy coding</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">122</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">24</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/m-finder"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/m-finder" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:yf-wu@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026-to-do-list/" title="2026 年计划清单"><img src="/images/top.jpg" onerror="this.onerror=null;this.src='https://i.loli.net/2020/05/19/aKOcLiyPl2JQdFD.png'" alt="2026 年计划清单"/></a><div class="content"><a class="title" href="/2026-to-do-list/" title="2026 年计划清单">2026 年计划清单</a><time datetime="2026-07-21T08:45:34.384Z" title="发表于 2026-07-21 16:45:34">2026-07-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026-07-21-one-day-in-26/" title="碎碎念"><img src="/images/top.jpg" onerror="this.onerror=null;this.src='https://i.loli.net/2020/05/19/aKOcLiyPl2JQdFD.png'" alt="碎碎念"/></a><div class="content"><a class="title" href="/2026-07-21-one-day-in-26/" title="碎碎念">碎碎念</a><time datetime="2026-07-21T08:16:00.000Z" title="发表于 2026-07-21 16:16:00">2026-07-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025-to-do-list/" title="2025 年计划清单"><img src="/images/top.jpg" onerror="this.onerror=null;this.src='https://i.loli.net/2020/05/19/aKOcLiyPl2JQdFD.png'" alt="2025 年计划清单"/></a><div class="content"><a class="title" href="/2025-to-do-list/" title="2025 年计划清单">2025 年计划清单</a><time datetime="2025-12-14T16:00:00.000Z" title="发表于 2025-12-15 00:00:00">2025-12-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025-12-10-fn-tailscale/" title="飞牛 NAS + Tailscale 组网踩坑实录"><img src="/images/top.jpg" onerror="this.onerror=null;this.src='https://i.loli.net/2020/05/19/aKOcLiyPl2JQdFD.png'" alt="飞牛 NAS + Tailscale 组网踩坑实录"/></a><div class="content"><a class="title" href="/2025-12-10-fn-tailscale/" title="飞牛 NAS + Tailscale 组网踩坑实录">飞牛 NAS + Tailscale 组网踩坑实录</a><time datetime="2025-12-10T01:30:00.000Z" title="发表于 2025-12-10 09:30:00">2025-12-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025-09-12-fancy-tool/" title="Mac 菜单栏多合一工具 FancyTool 更新啦！"><img src="/images/top.jpg" onerror="this.onerror=null;this.src='https://i.loli.net/2020/05/19/aKOcLiyPl2JQdFD.png'" alt="Mac 菜单栏多合一工具 FancyTool 更新啦！"/></a><div class="content"><a class="title" href="/2025-09-12-fancy-tool/" title="Mac 菜单栏多合一工具 FancyTool 更新啦！">Mac 菜单栏多合一工具 FancyTool 更新啦！</a><time datetime="2025-09-12T01:26:00.000Z" title="发表于 2025-09-12 09:26:00">2025-09-12</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
-            <i class="fas fa-folder-open"></i>
-            <span>分类</span>
-            <a class="card-more-btn" href="/categories/" title="查看更多">
-      <i class="fas fa-angle-right"></i></a>
-          </div>
-          <ul class="card-category-list" id="aside-cat-list">
-            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/laravel/"><span class="card-category-list-name">laravel</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/redis/"><span class="card-category-list-name">redis</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E4%B9%A6%E5%8D%95/"><span class="card-category-list-name">书单</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%B5%8B%E8%AF%95%E5%8C%BA/"><span class="card-category-list-name">测试区</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"><span class="card-category-list-name">码不能停</span><span class="card-category-list-count">61</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/hexo/"><span class="card-category-list-name">hexo</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/php/"><span class="card-category-list-name">php</span><span class="card-category-list-count">8</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/swift/"><span class="card-category-list-name">swift</span><span class="card-category-list-count">2</span></a></li></ul></li>
-          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/terminal/" style="font-size: 1.1em; color: #999">terminal</a> <a href="/tags/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/" style="font-size: 1.38em; color: #99a4b4">码不能停</a> <a href="/tags/openssl/" style="font-size: 1.1em; color: #999">openssl</a> <a href="/tags/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/" style="font-size: 1.46em; color: #99a7bb">闲言赘语</a> <a href="/tags/keras/" style="font-size: 1.14em; color: #999b9d">keras</a> <a href="/tags/echarts/" style="font-size: 1.1em; color: #999">echarts</a> <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" style="font-size: 1.5em; color: #99a9bf">设计模式</a> <a href="/tags/%E4%B9%A6%E5%8D%95/" style="font-size: 1.1em; color: #999">书单</a> <a href="/tags/js/" style="font-size: 1.26em; color: #999fa8">js</a> <a href="/tags/redis/" style="font-size: 1.1em; color: #999">redis</a> <a href="/tags/hexo/" style="font-size: 1.18em; color: #999ca1">hexo</a> <a href="/tags/docker/" style="font-size: 1.34em; color: #99a3b0">docker</a> <a href="/tags/test/" style="font-size: 1.22em; color: #999ea4">test</a> <a href="/tags/php/" style="font-size: 1.46em; color: #99a7bb">php</a> <a href="/tags/python/" style="font-size: 1.18em; color: #999ca1">python</a> <a href="/tags/%E8%AE%A1%E5%88%92%E6%B8%85%E5%8D%95/" style="font-size: 1.3em; color: #99a1ac">计划清单</a> <a href="/tags/vue/" style="font-size: 1.1em; color: #999">vue</a> <a href="/tags/ssh/" style="font-size: 1.1em; color: #999">ssh</a> <a href="/tags/laravel/" style="font-size: 1.42em; color: #99a6b7">laravel</a> <a href="/tags/swift/" style="font-size: 1.14em; color: #999b9d">swift</a> <a href="/tags/layui/" style="font-size: 1.18em; color: #999ca1">layui</a> <a href="/tags/swoole/" style="font-size: 1.14em; color: #999b9d">swoole</a> <a href="/tags/layim/" style="font-size: 1.1em; color: #999">layim</a> <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%B0%83%E4%BC%98/" style="font-size: 1.1em; color: #999">服务器调优</a></div></div><div class="card-widget card-archives">
-    <div class="item-headline">
-      <i class="fas fa-archive"></i>
-      <span>归档</span>
-      <a class="card-more-btn" href="/archives/"
-            title="查看更多">
-            <i class="fas fa-angle-right"></i>
-          </a>
+    <div class="footer-social">
+      
+        <a href="https://github.com/WinMin" class="social-link" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+      
+      
+        <a href="https://twitter.com/bestswngs" class="social-link" target="_blank" rel="noopener" aria-label="Twitter">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+      
+      
+      
+        <a href="mailto:ask@mail.exp.sh" class="social-link" aria-label="Email">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </a>
+      
+      
+        <a href="/atom.xml" class="social-link" aria-label="RSS">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20C5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1z"/></svg>
+        </a>
+      
     </div>
   
-    <ul class="card-archive-list">
-      
-        <li class="card-archive-list-item">
-          <a class="card-archive-list-link" href="/archives/2026/07/">
-            <span class="card-archive-list-date">
-              七月 2026
-            </span>
-            <span class="card-archive-list-count">2</span>
-          </a>
-        </li>
-      
-        <li class="card-archive-list-item">
-          <a class="card-archive-list-link" href="/archives/2025/12/">
-            <span class="card-archive-list-date">
-              十二月 2025
-            </span>
-            <span class="card-archive-list-count">2</span>
-          </a>
-        </li>
-      
-        <li class="card-archive-list-item">
-          <a class="card-archive-list-link" href="/archives/2025/09/">
-            <span class="card-archive-list-date">
-              九月 2025
-            </span>
-            <span class="card-archive-list-count">1</span>
-          </a>
-        </li>
-      
-        <li class="card-archive-list-item">
-          <a class="card-archive-list-link" href="/archives/2025/08/">
-            <span class="card-archive-list-date">
-              八月 2025
-            </span>
-            <span class="card-archive-list-count">1</span>
-          </a>
-        </li>
-      
-        <li class="card-archive-list-item">
-          <a class="card-archive-list-link" href="/archives/2025/06/">
-            <span class="card-archive-list-date">
-              六月 2025
-            </span>
-            <span class="card-archive-list-count">1</span>
-          </a>
-        </li>
-      
-        <li class="card-archive-list-item">
-          <a class="card-archive-list-link" href="/archives/2025/04/">
-            <span class="card-archive-list-date">
-              四月 2025
-            </span>
-            <span class="card-archive-list-count">1</span>
-          </a>
-        </li>
-      
-        <li class="card-archive-list-item">
-          <a class="card-archive-list-link" href="/archives/2025/02/">
-            <span class="card-archive-list-date">
-              二月 2025
-            </span>
-            <span class="card-archive-list-count">2</span>
-          </a>
-        </li>
-      
-        <li class="card-archive-list-item">
-          <a class="card-archive-list-link" href="/archives/2025/01/">
-            <span class="card-archive-list-date">
-              一月 2025
-            </span>
-            <span class="card-archive-list-count">2</span>
-          </a>
-        </li>
-      
-    </ul>
-  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">122</div></div><div class="webinfo-item"><div class="item-name">运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2016-06-09T00:00:00.000Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">59.4k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-07-21T08:46:34.097Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2016 - 2026 By m-finder</span></div><div class="footer_custom_text">感谢 <a href="https://alon.wang" target="_blank">along</a> 借一个二级域名给我开蹭 <span style="color:pink">❤</span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+</footer>
+
+  </div>
+
+  <!-- Main Script -->
+
+<script src="/js/main.js"></script>
+
+
+<!-- Search -->
+
+
+<script src="/js/search.js"></script>
+
+
+
+<!-- Baidu Analytics -->
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?2e6da3c375c8a87f5b664cea6d4cb29c";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+</body>
+</html>
