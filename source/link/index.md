@@ -10,7 +10,7 @@ links:
     description: 后青春期的诗
   - name: AprilBlank
     url: https://blog.aprilblank.top
-    avatar: https://alon-image-1305333140.cos.ap-shanghai.myqcloud.com/lsky/1/2024/03/13/65f16d0adb94f.png
+    avatar: https://blog.aprilblank.top/img/icon.png
     description: 一个在大洛阳孤军奋战的程序猿
   - name: linux.do
     url: https://linux.do/
