@@ -2,15 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://m-finder.alon.wang/link/index.html</loc>
-    
-    <lastmod>2026-10-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://m-finder.alon.wang/shuo/index.html</loc>
     
     <lastmod>2026-10-16</lastmod>
@@ -20,7 +11,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.alon.wang/tags/index.html</loc>
+    <loc>https://m-finder.alon.wang/link/index.html</loc>
     
     <lastmod>2026-10-16</lastmod>
     
@@ -29,7 +20,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.alon.wang/gallery/world.html</loc>
+    <loc>https://m-finder.alon.wang/tags/index.html</loc>
     
     <lastmod>2026-10-16</lastmod>
     
@@ -65,133 +56,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.alon.wang/rss-verify/</loc>
-    
-    <lastmod>2026-10-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.alon.wang/table-test/</loc>
-    
-    <lastmod>2026-10-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.alon.wang/use-laravel-permission-can-tag-in-vue/</loc>
-    
-    <lastmod>2026-10-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.alon.wang/travis-ci-test/</loc>
-    
-    <lastmod>2026-10-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.alon.wang/web-tool/</loc>
-    
-    <lastmod>2026-10-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.alon.wang/wsl-laradock/</loc>
-    
-    <lastmod>2026-10-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.alon.wang/wsl2-laradock/</loc>
-    
-    <lastmod>2026-10-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.alon.wang/year-of-dog/</loc>
-    
-    <lastmod>2026-10-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.alon.wang/about/index.html</loc>
-    
-    <lastmod>2026-10-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.alon.wang/laravel-swoole-in-laradock/</loc>
-    
-    <lastmod>2026-10-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.alon.wang/laravel-swoole-socket-in-laradock/</loc>
-    
-    <lastmod>2026-10-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.alon.wang/laravel-testing/</loc>
-    
-    <lastmod>2026-10-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.alon.wang/laravel-vue-svg/</loc>
-    
-    <lastmod>2026-10-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.alon.wang/laravel-vue/</loc>
-    
-    <lastmod>2026-10-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.alon.wang/layui-waterfall/</loc>
+    <loc>https://m-finder.alon.wang/gallery/world.html</loc>
     
     <lastmod>2026-10-16</lastmod>
     
@@ -245,15 +110,6 @@
   </url>
   
   <url>
-    <loc>https://m-finder.alon.wang/my-hobbies/</loc>
-    
-    <lastmod>2026-10-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://m-finder.alon.wang/mweb-hexo-setting/</loc>
     
     <lastmod>2026-10-16</lastmod>
@@ -264,6 +120,24 @@
   
   <url>
     <loc>https://m-finder.alon.wang/notes/</loc>
+    
+    <lastmod>2026-10-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.alon.wang/my-hobbies/</loc>
+    
+    <lastmod>2026-10-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.alon.wang/nothing-to-say/</loc>
     
     <lastmod>2026-10-16</lastmod>
     
@@ -290,7 +164,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.alon.wang/nothing-to-say/</loc>
+    <loc>https://m-finder.alon.wang/pjax/</loc>
     
     <lastmod>2026-10-16</lastmod>
     
@@ -299,7 +173,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.alon.wang/pjax/</loc>
+    <loc>https://m-finder.alon.wang/rss-verify/</loc>
     
     <lastmod>2026-10-16</lastmod>
     
@@ -326,7 +200,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.alon.wang/eat-more/</loc>
+    <loc>https://m-finder.alon.wang/travis-ci-test/</loc>
     
     <lastmod>2026-10-16</lastmod>
     
@@ -335,7 +209,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.alon.wang/happy-2019/</loc>
+    <loc>https://m-finder.alon.wang/table-test/</loc>
     
     <lastmod>2026-10-16</lastmod>
     
@@ -344,7 +218,52 @@
   </url>
   
   <url>
-    <loc>https://m-finder.alon.wang/hello-world/</loc>
+    <loc>https://m-finder.alon.wang/use-laravel-permission-can-tag-in-vue/</loc>
+    
+    <lastmod>2026-10-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.alon.wang/web-tool/</loc>
+    
+    <lastmod>2026-10-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.alon.wang/wsl-laradock/</loc>
+    
+    <lastmod>2026-10-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.alon.wang/wsl2-laradock/</loc>
+    
+    <lastmod>2026-10-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.alon.wang/year-of-dog/</loc>
+    
+    <lastmod>2026-10-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.alon.wang/about/index.html</loc>
     
     <lastmod>2026-10-16</lastmod>
     
@@ -354,6 +273,15 @@
   
   <url>
     <loc>https://m-finder.alon.wang/happy-birthday/</loc>
+    
+    <lastmod>2026-10-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.alon.wang/hello-world/</loc>
     
     <lastmod>2026-10-16</lastmod>
     
@@ -470,7 +398,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.alon.wang/laravel-excel-import-bug/</loc>
+    <loc>https://m-finder.alon.wang/laravel-life-cycle/</loc>
     
     <lastmod>2026-10-16</lastmod>
     
@@ -479,7 +407,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.alon.wang/laravel-life-cycle/</loc>
+    <loc>https://m-finder.alon.wang/laravel-excel-import-bug/</loc>
     
     <lastmod>2026-10-16</lastmod>
     
@@ -507,6 +435,105 @@
   
   <url>
     <loc>https://m-finder.alon.wang/laravel-queues/</loc>
+    
+    <lastmod>2026-10-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.alon.wang/laravel-swoole-in-laradock/</loc>
+    
+    <lastmod>2026-10-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.alon.wang/laravel-swoole-socket-in-laradock/</loc>
+    
+    <lastmod>2026-10-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.alon.wang/laravel-testing/</loc>
+    
+    <lastmod>2026-10-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.alon.wang/laravel-vue-svg/</loc>
+    
+    <lastmod>2026-10-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.alon.wang/laravel-vue/</loc>
+    
+    <lastmod>2026-10-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.alon.wang/layui-waterfall/</loc>
+    
+    <lastmod>2026-10-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.alon.wang/design-pattern-di/</loc>
+    
+    <lastmod>2026-10-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.alon.wang/design-pattern-facade/</loc>
+    
+    <lastmod>2026-10-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.alon.wang/design-pattern-factory/</loc>
+    
+    <lastmod>2026-10-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.alon.wang/design-pattern-fi/</loc>
+    
+    <lastmod>2026-10-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.alon.wang/design-pattern-flyweight/</loc>
     
     <lastmod>2026-10-16</lastmod>
     
@@ -578,15 +605,6 @@
   </url>
   
   <url>
-    <loc>https://m-finder.alon.wang/design-pattern-proxy/</loc>
-    
-    <lastmod>2026-10-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://m-finder.alon.wang/design-pattern-registry/</loc>
     
     <lastmod>2026-10-16</lastmod>
@@ -597,6 +615,15 @@
   
   <url>
     <loc>https://m-finder.alon.wang/design-pattern-singleton/</loc>
+    
+    <lastmod>2026-10-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.alon.wang/design-pattern-proxy/</loc>
     
     <lastmod>2026-10-16</lastmod>
     
@@ -695,7 +722,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.alon.wang/Docker-images/</loc>
+    <loc>https://m-finder.alon.wang/eat-more/</loc>
     
     <lastmod>2026-10-16</lastmod>
     
@@ -704,196 +731,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.alon.wang/Laravel-chunk/</loc>
-    
-    <lastmod>2026-10-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.alon.wang/Laravel-ftp/</loc>
-    
-    <lastmod>2026-10-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.alon.wang/Laravel-time-change/</loc>
-    
-    <lastmod>2026-10-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.alon.wang/Layim-contextmenu/</loc>
-    
-    <lastmod>2026-10-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.alon.wang/Layui-notes/</loc>
-    
-    <lastmod>2026-10-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.alon.wang/at-the-end-of-2022/</loc>
-    
-    <lastmod>2026-10-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.alon.wang/books/</loc>
-    
-    <lastmod>2026-10-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.alon.wang/centos-php74/</loc>
-    
-    <lastmod>2026-10-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.alon.wang/convnet-learn/</loc>
-    
-    <lastmod>2026-10-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.alon.wang/design-pattern-adapter/</loc>
-    
-    <lastmod>2026-10-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.alon.wang/design-pattern-bridge/</loc>
-    
-    <lastmod>2026-10-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.alon.wang/design-pattern-builder/</loc>
-    
-    <lastmod>2026-10-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.alon.wang/design-pattern-category/</loc>
-    
-    <lastmod>2026-10-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.alon.wang/design-pattern-command/</loc>
-    
-    <lastmod>2026-10-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.alon.wang/design-pattern-composite/</loc>
-    
-    <lastmod>2026-10-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.alon.wang/design-pattern-cor/</loc>
-    
-    <lastmod>2026-10-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.alon.wang/design-pattern-decorator/</loc>
-    
-    <lastmod>2026-10-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.alon.wang/design-pattern-di/</loc>
-    
-    <lastmod>2026-10-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.alon.wang/design-pattern-facade/</loc>
-    
-    <lastmod>2026-10-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.alon.wang/design-pattern-fi/</loc>
-    
-    <lastmod>2026-10-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.alon.wang/design-pattern-factory/</loc>
-    
-    <lastmod>2026-10-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.alon.wang/design-pattern-flyweight/</loc>
+    <loc>https://m-finder.alon.wang/happy-2019/</loc>
     
     <lastmod>2026-10-16</lastmod>
     
@@ -983,15 +821,6 @@
   </url>
   
   <url>
-    <loc>https://m-finder.alon.wang/2023-to-do-list/</loc>
-    
-    <lastmod>2026-10-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://m-finder.alon.wang/2024-02-25-review-base/</loc>
     
     <lastmod>2026-10-16</lastmod>
@@ -1002,6 +831,15 @@
   
   <url>
     <loc>https://m-finder.alon.wang/2024-02-28-swoole-and-octane/</loc>
+    
+    <lastmod>2026-10-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.alon.wang/2023-to-do-list/</loc>
     
     <lastmod>2026-10-16</lastmod>
     
@@ -1037,7 +875,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.alon.wang/2024-09-19-boring-in-home/</loc>
+    <loc>https://m-finder.alon.wang/2024-09-19-brew-php-version/</loc>
     
     <lastmod>2026-10-16</lastmod>
     
@@ -1046,7 +884,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.alon.wang/2024-09-19-brew-php-version/</loc>
+    <loc>https://m-finder.alon.wang/2024-09-19-boring-in-home/</loc>
     
     <lastmod>2026-10-16</lastmod>
     
@@ -1091,6 +929,15 @@
   </url>
   
   <url>
+    <loc>https://m-finder.alon.wang/2025-06-07/</loc>
+    
+    <lastmod>2026-10-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://m-finder.alon.wang/2025-02-25-something/</loc>
     
     <lastmod>2026-10-16</lastmod>
@@ -1110,15 +957,6 @@
   
   <url>
     <loc>https://m-finder.alon.wang/2025-08-25-fancy-tool/</loc>
-    
-    <lastmod>2026-10-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.alon.wang/2025-06-07/</loc>
     
     <lastmod>2026-10-16</lastmod>
     
@@ -1164,6 +1002,168 @@
   
   <url>
     <loc>https://m-finder.alon.wang/2026-to-do-list/</loc>
+    
+    <lastmod>2026-10-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.alon.wang/Docker-images/</loc>
+    
+    <lastmod>2026-10-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.alon.wang/Laravel-chunk/</loc>
+    
+    <lastmod>2026-10-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.alon.wang/Laravel-ftp/</loc>
+    
+    <lastmod>2026-10-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.alon.wang/Laravel-time-change/</loc>
+    
+    <lastmod>2026-10-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.alon.wang/Layim-contextmenu/</loc>
+    
+    <lastmod>2026-10-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.alon.wang/Layui-notes/</loc>
+    
+    <lastmod>2026-10-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.alon.wang/books/</loc>
+    
+    <lastmod>2026-10-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.alon.wang/at-the-end-of-2022/</loc>
+    
+    <lastmod>2026-10-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.alon.wang/centos-php74/</loc>
+    
+    <lastmod>2026-10-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.alon.wang/convnet-learn/</loc>
+    
+    <lastmod>2026-10-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.alon.wang/design-pattern-adapter/</loc>
+    
+    <lastmod>2026-10-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.alon.wang/design-pattern-bridge/</loc>
+    
+    <lastmod>2026-10-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.alon.wang/design-pattern-builder/</loc>
+    
+    <lastmod>2026-10-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.alon.wang/design-pattern-category/</loc>
+    
+    <lastmod>2026-10-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.alon.wang/design-pattern-command/</loc>
+    
+    <lastmod>2026-10-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.alon.wang/design-pattern-cor/</loc>
+    
+    <lastmod>2026-10-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.alon.wang/design-pattern-composite/</loc>
+    
+    <lastmod>2026-10-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.alon.wang/design-pattern-decorator/</loc>
     
     <lastmod>2026-10-16</lastmod>
     
