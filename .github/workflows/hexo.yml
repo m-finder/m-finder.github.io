@@ -36,7 +36,7 @@ jobs:
           npm update hexo --save
           npm install hexo-deployer-git hexo-renderer-ejs hexo-renderer-stylus hexo-generator-searchdb --save
           npm install hexo-asset-image  hexo-wordcount --save
-          npm install hexo-butterfly-artitalk --save
+          npm install hexo-butterfly-artitalk hexo-butterfly-tag-plugins --save
           npm install hexo-generator-feed  hexo-douban  hexo-adsense --save
 #          npm install hexo-butterfly-extjs --save
       - name: Build
