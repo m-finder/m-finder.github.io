@@ -93,23 +93,23 @@ highlight:
 
 # ---- Comments ----
 comments:
-  enabled: false
-  provider: ""                 # disqus | utterances | giscus
+  enabled: true
+  provider: "giscus"                 # disqus | utterances | giscus
   disqus:
     shortname: "swing"
   utterances:
     repo: ""
     issue_term: pathname
   giscus:
-    repo: ""
-    repo_id: ""
-    category: ""
-    category_id: ""
+    repo: "m-finder/m-finder.github.io"
+    repo_id: "MDEwOlJlcG9zaXRvcnkxMjEzNzU5NTc="
+    category: "Announcements"
+    category_id: "DIC_kwDOBzwM1c4DIlfb"
 
 # ---- Analytics ----
-#analytics:
-#  google: "UA-133464311-1"
-#  baidu: "2e6da3c375c8a87f5b664cea6d4cb29c"
+analytics:
+  google: ""
+  baidu: ""
 
 # ---- 404 Page ----
 error_404:
