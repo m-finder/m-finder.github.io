@@ -1,0 +1,119 @@
+# ==========================================
+# Bloom Theme Configuration
+# ==========================================
+
+# ---- Navigation Menu ----
+nav:
+  首页: /
+  时间线: /archives/
+  标签: /tags/
+  分类: /categories/
+  相册: /gallery/
+  友情链接: /link/
+  关于: /about/
+  RSS: /atom.xml
+
+# ---- Profile / Intro ----
+profile:
+  enabled: true
+  avatar: /images/avatar.jpeg
+  gravatar_email: ""
+  #title: "Swing"
+  subtitle: "删繁就简，发现更多"
+  description: |
+    Know it then hack it!
+
+# ---- Homepage Columns (Core Feature) ----
+# Enable categorized columns on homepage
+# Max 2 columns supported
+columns:
+  enabled: false
+  layout: two-column           # single-column | two-column
+  items:
+    - name: Security           # Display name
+      category: Writeup       # Category slug
+      limit: 20                # Number of posts to show
+      show_date: true
+    - name: Note
+      category: Note
+      limit: 20
+      show_date: true
+
+# Fallback when columns disabled
+default_list:
+  title: "Recent Posts"
+  limit: 20
+  show_date: true
+
+# ---- Search ----
+search:
+  enabled: true
+  path: search.xml
+  placeholder: "Search..."
+
+# ---- Social Links ----
+social:
+  github: "https://github.com/m-finder"
+  email: "mailto:yf-wu@qq.com"
+  rss: /atom.xml
+
+# ---- Footer ----
+footer:
+  copyright_since: 2016
+  powered_by: true
+  theme_info: true
+
+# ---- Appearance ----
+colorscheme: dark
+
+# ---- Layout Width ----
+layout:
+  page_width: 60          # 整体页面最大宽度 (rem)
+  content_width: 900      # 文章内容区宽度 (px)
+  mobile_padding: 12      # 移动端两侧边距 (px)
+
+# ---- Logo ----
+logo:
+  enabled: false
+  image: /images/logo.png
+  width: 100
+  height: 100
+
+# ---- Post Settings ----
+post:
+  show_updated: true
+  show_wordcount: true
+  show_readtime: true
+  excerpt_link: "Read More"
+  toc: true
+
+# ---- Code Highlight ----
+highlight:
+  theme: tomorrow-night
+  copy_button: true
+
+# ---- Comments ----
+comments:
+  enabled: true
+  provider: ""                 # disqus | utterances | giscus
+  disqus:
+    shortname: "swing"
+  utterances:
+    repo: ""
+    issue_term: pathname
+  giscus:
+    repo: ""
+    repo_id: ""
+    category: ""
+    category_id: ""
+
+# ---- Analytics ----
+#analytics:
+#  google: "UA-133464311-1"
+#  baidu: "2e6da3c375c8a87f5b664cea6d4cb29c"
+
+# ---- 404 Page ----
+error_404:
+  enabled: true
+  title: "Page Not Found"
+  description: "The page you're looking for doesn't exist."

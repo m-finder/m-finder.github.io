@@ -19,9 +19,9 @@ jobs:
       - name: Checkout theme repo
         uses: actions/checkout@v3
         with:
-          repository: jerryc127/hexo-theme-butterfly
+          repository: winmin/hexo-theme-Bloom
           ref: master
-          path: themes/butterfly
+          path: themes/Bloom
       - name: Cache NPM dependencies
         uses: actions/cache@v3
         with:
@@ -34,13 +34,11 @@ jobs:
           npm install
           npm install hexo-cli
           npm update hexo --save
-          npm install hexo-deployer-git --save
-          npm install hexo-asset-image --save
-          npm install hexo-wordcount --save
+          npm install hexo-deployer-git hexo-renderer-ejs hexo-renderer-stylus hexo-generator-searchdb --save
+          npm install hexo-asset-image  hexo-wordcount --save
           npm install hexo-butterfly-artitalk --save
-          npm install hexo-generator-feed --save
-          npm install hexo-douban --save
-          npm install hexo-butterfly-extjs --save
+          npm install hexo-generator-feed  hexo-douban  hexo-adsense --save
+#          npm install hexo-butterfly-extjs --save
       - name: Build
         run: npm run build
       - name: Deploy
