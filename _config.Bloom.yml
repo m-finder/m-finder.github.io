@@ -15,7 +15,7 @@
 # ---- Profile / Intro ----
 profile:
   enabled: true
-  avatar: /images/avatar.jpeg
+  avatar: /source/images/avatar.jpeg
   gravatar_email: "yf-wu@qq.com"
   title: "M-finder"
   subtitle: "删繁就简，发现更多"
@@ -26,7 +26,7 @@ profile:
 # Enable categorized columns on homepage
 # Max 2 columns supported
 columns:
-  enabled: true
+  enabled: false
   layout: two-column           # single-column | two-column
   items:
     - name: Security           # Display name
