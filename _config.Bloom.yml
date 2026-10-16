@@ -15,8 +15,8 @@
 # ---- Profile / Intro ----
 profile:
   enabled: true
-  avatar: /source/images/avatar.jpeg
-  gravatar_email: "yf-wu@qq.com"
+  avatar: /images/avatar.jpeg
+  gravatar_email: ""
   title: "M-finder"
   subtitle: "删繁就简，发现更多"
   description: |
