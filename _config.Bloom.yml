@@ -2,18 +2,6 @@
 # Bloom Theme Configuration
 # ==========================================
 
-# ---- Navigation Menu ----
-nav: !!null
-
-nav:
-  首页: /
-  时间线: /archives/
-  标签: /tags/
-  分类: /categories/
-  友情链接: /link/
-  关于: /about/
-  RSS: /atom.xml
-
 # ---- Profile / Intro ----
 profile:
   enabled: true
@@ -28,22 +16,22 @@ profile:
 # Enable categorized columns on homepage
 # Max 2 columns supported
 columns:
-  enabled: false
+  enabled: true
   layout: two-column           # single-column | two-column
   items:
     - name: Security           # Display name
       category: Writeup       # Category slug
-      limit: 20                # Number of posts to show
+      limit: 50                # Number of posts to show
       show_date: true
     - name: Note
       category: Note
-      limit: 20
+      limit: 50
       show_date: true
 
 # Fallback when columns disabled
 default_list:
   title: "Recent Posts"
-  limit: 20
+  limit: 50
   show_date: true
 
 # ---- Search ----
@@ -55,6 +43,7 @@ search:
 # ---- Social Links ----
 social:
   github: "https://github.com/m-finder"
+  twitter: ""
   email: "mailto:yf-wu@qq.com"
   rss: /atom.xml
 

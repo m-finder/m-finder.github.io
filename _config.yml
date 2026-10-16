@@ -2,6 +2,16 @@
 ## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
 
+# ---- Navigation Menu ----
+nav:
+  首页: /
+  时间线: /archives/
+  标签: /tags/
+  分类: /categories/
+  友情链接: /link/
+  关于: /about/
+  RSS: /atom.xml
+
 # Site
 title: 'M-finder'
 subtitle: '删繁就简，发现更多'
