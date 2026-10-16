@@ -5,6 +5,9 @@ hexo.on('generateBefore', function () {
         "时间线": "/archives/",
         "标签": "/tags/",
         "分类": "/categories/",
+        "书单": "/books/",
+        "电影": "/movies/",
+        "游戏": "/games/",
         "友情链接": "/link/",
         "关于": "/about/",
         "RSS": "/atom.xml"

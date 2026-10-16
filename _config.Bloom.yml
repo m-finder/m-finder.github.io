@@ -19,8 +19,7 @@ profile:
   gravatar_email: ""
   title: "M-finder"
   subtitle: "删繁就简，发现更多"
-  description: |
-    Know it then hack it!
+  description: ""
 
 # ---- Homepage Columns (Core Feature) ----
 # Enable categorized columns on homepage
