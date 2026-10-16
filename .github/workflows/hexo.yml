@@ -1,16 +1,47 @@
 name: Hexo Deploy
 
-# 监听分支
 on:
   push:
     branches:
       - hexo
+  schedule:
+    # 每天北京时间 08:20，同步当天已生成的日报并部署。
+    # GitHub 只在默认分支执行 schedule；需将仓库默认分支设为 hexo。
+    - cron: "20 0 * * *"
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "指定要同步的日报日期（YYYY-MM-DD，留空为当天或最近一期）"
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: hexo-pages
+  cancel-in-progress: false
 
 jobs:
   pages:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Use Python 3.12
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Sync AI daily post
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: |
+          if [ -n "${{ inputs.date }}" ]; then
+            python scripts/sync_ai_daily.py --date "${{ inputs.date }}"
+          else
+            python scripts/sync_ai_daily.py
+          fi
       - name: Use Node.js 18.x
         uses: actions/setup-node@v3
         with:
@@ -44,3 +75,15 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
+      - name: Archive daily post
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: |
+          git config user.name "m-finder-daily-bot"
+          git config user.email "m-finder-daily-bot@users.noreply.github.com"
+          git add source/_posts/ai-daily-*.md
+          if git diff --staged --quiet; then
+            echo "没有新增日报文章"
+            exit 0
+          fi
+          git commit -m "chore: 同步 AI 日报"
+          git push
