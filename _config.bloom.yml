@@ -17,7 +17,7 @@ profile:
   enabled: true
   avatar: /images/avatar.jpeg
   gravatar_email: ""
-  #title: "Swing"
+  title: "M-finder"
   subtitle: "删繁就简，发现更多"
   description: |
     Know it then hack it!
