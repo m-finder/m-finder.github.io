@@ -94,7 +94,7 @@ highlight:
 
 # ---- Comments ----
 comments:
-  enabled: true
+  enabled: false
   provider: ""                 # disqus | utterances | giscus
   disqus:
     shortname: "swing"
