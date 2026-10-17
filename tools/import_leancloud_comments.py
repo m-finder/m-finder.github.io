@@ -306,15 +306,25 @@ query($owner: String!, $name: String!, $after: String) {
         id
         title
         category { id }
-        comments(first: 100) {
-          nodes {
-            id
-            body
-            replies(first: 100) { nodes { id body } }
-          }
-        }
       }
       pageInfo { hasNextPage endCursor }
+    }
+  }
+}
+"""
+
+DISCUSSION_COMMENTS_QUERY = """
+query($discussionId: ID!, $after: String) {
+  node(id: $discussionId) {
+    ... on Discussion {
+      comments(first: 100, after: $after) {
+        nodes {
+          id
+          body
+          replies(first: 100) { nodes { id body } }
+        }
+        pageInfo { hasNextPage endCursor }
+      }
     }
   }
 }
@@ -333,9 +343,22 @@ mutation($input: AddDiscussionCommentInput!) {
 """
 
 
-def existing_discussions(
-    token: str, repository: str, category_id: str
-) -> dict[str, dict[str, Any]]:
+def discussion_comments(token: str, discussion_id: str) -> dict[str, list[dict[str, Any]]]:
+    after: str | None = None
+    comments: list[dict[str, Any]] = []
+    while True:
+        data = graphql(token, DISCUSSION_COMMENTS_QUERY, {"discussionId": discussion_id, "after": after})
+        discussion = data.get("node")
+        if not discussion:
+            raise RuntimeError(f"Discussion {discussion_id} no longer exists.")
+        connection = discussion["comments"]
+        comments.extend(connection["nodes"])
+        if not connection["pageInfo"]["hasNextPage"]:
+            return {"nodes": comments}
+        after = connection["pageInfo"]["endCursor"]
+
+
+def existing_discussions(token: str, repository: str, category_id: str) -> dict[str, dict[str, Any]]:
     owner, name = repository.split("/", 1)
     after: str | None = None
     by_title: dict[str, dict[str, Any]] = {}
@@ -346,8 +369,12 @@ def existing_discussions(
             if discussion["category"]["id"] == category_id:
                 by_title[discussion["title"]] = discussion
         if not connection["pageInfo"]["hasNextPage"]:
-            return by_title
+            break
         after = connection["pageInfo"]["endCursor"]
+
+    for discussion in by_title.values():
+        discussion["comments"] = discussion_comments(token, discussion["id"])
+    return by_title
 
 
 def comment_id_markers(discussion: dict[str, Any]) -> dict[str, str]:
@@ -393,6 +420,22 @@ def import_comments(
         imported = comment_id_markers(discussion)
         by_legacy_id = {str(comment["objectId"]): comment for comment in comments}
 
+        def root_comment(comment: dict[str, Any]) -> dict[str, Any]:
+            current = comment
+            visited: set[str] = set()
+            while current.get("pid"):
+                current_id = str(current["objectId"])
+                if current_id in visited:
+                    raise RuntimeError(f"Reply cycle detected at comment {current_id}.")
+                visited.add(current_id)
+
+                parent_id = str(current["pid"])
+                parent = by_legacy_id.get(parent_id)
+                if not parent:
+                    raise RuntimeError(f"Missing parent {parent_id} for comment {current_id}.")
+                current = parent
+            return current
+
         def add_comment(comment: dict[str, Any]) -> str:
             nonlocal created_comments, skipped_comments
             legacy_id = str(comment["objectId"])
@@ -403,10 +446,7 @@ def import_comments(
             reply_to = None
             parent_id = str(comment.get("pid") or "")
             if parent_id:
-                parent = by_legacy_id.get(parent_id)
-                if not parent:
-                    raise RuntimeError(f"Missing parent {parent_id} for comment {legacy_id}.")
-                reply_to = add_comment(parent)
+                reply_to = add_comment(root_comment(comment))
 
             input_data: dict[str, str] = {
                 "discussionId": discussion["id"],
