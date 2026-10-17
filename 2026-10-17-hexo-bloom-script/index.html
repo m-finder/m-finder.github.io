@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="referrer" content="no-referrer">
+
+<title>hexo bloom 模板脚本式修改备忘-扩展评论和说说 | M-finder</title>
+
+
+<meta name="description" content="happy coding">
+
+
+<meta name="author" content="m-finder">
+
+
+<meta name="keywords" content="m-finder,php,laravel">
+
+
+<!-- Canonical -->
+<link rel="canonical" href="/2026-10-17-hexo-bloom-script/">
+
+<!-- Favicon -->
+<link rel="icon" href="/images/favicon.ico">
+
+<!-- RSS -->
+
+<link rel="alternate" type="application/rss+xml" title="M-finder" href="/atom.xml">
+
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo bloom 模板脚本式修改备忘-扩展评论和说说">
+<meta property="og:url" content="/2026-10-17-hexo-bloom-script/">
+<meta property="og:site_name" content="M-finder">
+
+<meta property="og:description" content="happy coding">
+
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="hexo bloom 模板脚本式修改备忘-扩展评论和说说">
+
+<meta name="twitter:description" content="happy coding">
+
+
+<!-- Theme Color -->
+<meta name="theme-color" content="#1d1f21">
+<meta name="msapplication-TileColor" content="#1d1f21">
+
+<!-- Stylesheets -->
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+<!-- Custom Layout Variables -->
+
+<style>
+:root {
+  --page-width: 60rem;
+  --content-width: 900px;
+  --mobile-padding: 12px;
+}
+</style>
+
+<!-- Analytics -->
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body class="theme-dark">
+  <div class="container">
+    <header class="header">
+  <div class="header-inner">
+    <div class="header-brand">
+      
+      <a href="/" class="site-title">
+        M-finder
+      </a>
+    </div>
+
+    <nav class="nav">
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <ul class="nav-menu" id="nav-menu">
+        
+          
+          
+            
+            <li class="nav-item">
+              <a href="/"
+                 class="nav-link"
+                 >
+                首页
+              </a>
+            </li>
+            
+              <li class="nav-divider">|</li>
+            
+          
+            
+            <li class="nav-item">
+              <a href="/categories/"
+                 class="nav-link"
+                 >
+                分类
+              </a>
+            </li>
+            
+              <li class="nav-divider">|</li>
+            
+          
+            
+            <li class="nav-item">
+              <a href="/tags/"
+                 class="nav-link"
+                 >
+                标签
+              </a>
+            </li>
+            
+              <li class="nav-divider">|</li>
+            
+          
+            
+            <li class="nav-item">
+              <a href="/archives/"
+                 class="nav-link"
+                 >
+                归档
+              </a>
+            </li>
+            
+              <li class="nav-divider">|</li>
+            
+          
+            
+            <li class="nav-item">
+              <a href="/shuo/"
+                 class="nav-link"
+                 >
+                说说
+              </a>
+            </li>
+            
+              <li class="nav-divider">|</li>
+            
+          
+            
+            <li class="nav-item">
+              <a href="/books/"
+                 class="nav-link"
+                 >
+                书单
+              </a>
+            </li>
+            
+              <li class="nav-divider">|</li>
+            
+          
+            
+            <li class="nav-item">
+              <a href="/movies/"
+                 class="nav-link"
+                 >
+                电影
+              </a>
+            </li>
+            
+              <li class="nav-divider">|</li>
+            
+          
+            
+            <li class="nav-item">
+              <a href="/games/"
+                 class="nav-link"
+                 >
+                游戏
+              </a>
+            </li>
+            
+              <li class="nav-divider">|</li>
+            
+          
+            
+            <li class="nav-item">
+              <a href="/link/"
+                 class="nav-link"
+                 >
+                友情链接
+              </a>
+            </li>
+            
+              <li class="nav-divider">|</li>
+            
+          
+            
+            <li class="nav-item">
+              <a href="/about/"
+                 class="nav-link"
+                 >
+                关于
+              </a>
+            </li>
+            
+              <li class="nav-divider">|</li>
+            
+          
+            
+            <li class="nav-item">
+              <a href="/atom.xml"
+                 class="nav-link"
+                 >
+                RSS
+              </a>
+            </li>
+            
+          
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main class="main">
+      
+        <div class="page-layout">
+          <article class="post">
+  <header class="post-header">
+  <h1 class="post-title">hexo bloom 模板脚本式修改备忘-扩展评论和说说</h1>
+
+  <div class="post-meta">
+    <span class="meta-item">
+      <svg viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11zM9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2z"/></svg>
+      <time datetime="2026-10-17">
+        2026-10-17
+      </time>
+    </span>
+
+    
+      <span class="meta-item">
+        <svg viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M21 10.12h-6.78l2.74-2.82c-2.73-2.7-7.15-2.8-9.88-.1-2.73 2.71-2.73 7.08 0 9.79s7.15 2.71 9.88 0C18.32 15.65 19 14.08 19 12.1h2c0 1.98-.88 4.55-2.64 6.29-3.51 3.48-9.21 3.48-12.72 0-3.5-3.47-3.53-9.11-.02-12.58s9.14-3.47 12.65 0L21 3v7.12z"/></svg>
+        <time datetime="2026-10-17">
+          更新于 2026-10-17
+        </time>
+      </span>
+    
+
+    
+      <span class="meta-item">
+        <svg viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/></svg>
+        
+          <a href="/categories/hexo/">hexo</a>
+        
+      </span>
+    
+  </div>
+</header>
+
+
+  
+
+  <div class="post-content">
+  <p>之前一直在用 <a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">butterfly</a> 模板, 但是挂谷歌广告的时候一直嫌我文字不够多, 挑来拣去看中了 <a target="_blank" rel="noopener" href="https://github.com/winmin/hexo-theme-Bloom">bloom</a>.</p>
+<p>模板很简约, 我很喜欢, 但在配置过程中发现一些问题:</p>
+<ol>
+<li><p>通过 <code>_config.Bloom.yml</code> 的配置形式部署菜单时, 无法覆盖默认菜单, 最后通过 script 覆盖了.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">hexo.on(&#x27;generateBefore&#x27;, function () &#123;</span><br><span class="line">    hexo.theme.config.nav = &#123;</span><br><span class="line">        &quot;首页&quot;: &quot;/&quot;,</span><br><span class="line">        &quot;分类&quot;: &quot;/categories/&quot;,</span><br><span class="line">        &quot;标签&quot;: &quot;/tags/&quot;,</span><br><span class="line">        &quot;归档&quot;: &quot;/archives/&quot;,</span><br><span class="line">        &quot;说说&quot;: &quot;/shuo/&quot;,</span><br><span class="line">        &quot;书单&quot;: &quot;/books/&quot;,</span><br><span class="line">        &quot;电影&quot;: &quot;/movies/&quot;,</span><br><span class="line">        &quot;游戏&quot;: &quot;/games/&quot;,</span><br><span class="line">        &quot;友情链接&quot;: &quot;/link/&quot;,</span><br><span class="line">        &quot;关于&quot;: &quot;/about/&quot;,</span><br><span class="line">        &quot;RSS&quot;: &quot;/atom.xml&quot;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li>
+<li><p>相册没了, bloom 没有对应的渲染器</p>
+</li>
+<li><p>关于和友情链接页面没有评论, 没有说说功能</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br></pre></td><td class="code"><pre><span class="line">&#x27;use strict&#x27;;</span><br><span class="line"></span><br><span class="line">const PAGE_COMMENTS_MARKER = &#x27;data-page-comments&#x27;;</span><br><span class="line">const SHUO_SOURCE = &#x27;shuo/index.md&#x27;;</span><br><span class="line">const GALLERY_INDEX_SOURCE = &#x27;gallery/index.md&#x27;;</span><br><span class="line">const GALLERY_WORLD_SOURCE = &#x27;gallery/world.md&#x27;;</span><br><span class="line"></span><br><span class="line">function escapeHtml(value) &#123;</span><br><span class="line">  return String(value || &#x27;&#x27;)</span><br><span class="line">    .replace(/&amp;/g, &#x27;&amp;amp;&#x27;)</span><br><span class="line">    .replace(/&lt;/g, &#x27;&amp;lt;&#x27;)</span><br><span class="line">    .replace(/&gt;/g, &#x27;&amp;gt;&#x27;)</span><br><span class="line">    .replace(/&quot;/g, &#x27;&amp;quot;&#x27;)</span><br><span class="line">    .replace(/&#x27;/g, &#x27;&amp;#39;&#x27;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function normaliseSource(source) &#123;</span><br><span class="line">  return String(source || &#x27;&#x27;).replace(/\\/g, &#x27;/&#x27;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function renderGiscus() &#123;</span><br><span class="line">  const comments = hexo.theme.config.comments || &#123;&#125;;</span><br><span class="line">  const giscus = comments.giscus || &#123;&#125;;</span><br><span class="line"></span><br><span class="line">  if (!comments.enabled || comments.provider !== &#x27;giscus&#x27; || !giscus.repo) &#123;</span><br><span class="line">    return &#x27;&#x27;;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  const language = Array.isArray(hexo.config.language)</span><br><span class="line">    ? hexo.config.language[0]</span><br><span class="line">    : hexo.config.language || &#x27;en&#x27;;</span><br><span class="line"></span><br><span class="line">  return [</span><br><span class="line">    &#x27;&lt;section class=&quot;comments-section&quot; data-page-comments&gt;&#x27;,</span><br><span class="line">    &#x27;  &lt;h3 class=&quot;comments-title&quot;&gt;评论&lt;/h3&gt;&#x27;,</span><br><span class="line">    &#x27;  &lt;script src=&quot;https://giscus.app/client.js&quot;&#x27;,</span><br><span class="line">    `          data-repo=&quot;$&#123;escapeHtml(giscus.repo)&#125;&quot;`,</span><br><span class="line">    `          data-repo-id=&quot;$&#123;escapeHtml(giscus.repo_id)&#125;&quot;`,</span><br><span class="line">    `          data-category=&quot;$&#123;escapeHtml(giscus.category)&#125;&quot;`,</span><br><span class="line">    `          data-category-id=&quot;$&#123;escapeHtml(giscus.category_id)&#125;&quot;`,</span><br><span class="line">    &#x27;          data-mapping=&quot;pathname&quot;&#x27;,</span><br><span class="line">    &#x27;          data-strict=&quot;0&quot;&#x27;,</span><br><span class="line">    &#x27;          data-reactions-enabled=&quot;1&quot;&#x27;,</span><br><span class="line">    &#x27;          data-emit-metadata=&quot;0&quot;&#x27;,</span><br><span class="line">    &#x27;          data-input-position=&quot;bottom&quot;&#x27;,</span><br><span class="line">    &#x27;          data-theme=&quot;dark&quot;&#x27;,</span><br><span class="line">    `          data-lang=&quot;$&#123;escapeHtml(language)&#125;&quot;`,</span><br><span class="line">    &#x27;          crossorigin=&quot;anonymous&quot;&#x27;,</span><br><span class="line">    &#x27;          async&gt;&#x27;,</span><br><span class="line">    &#x27;  &lt;/script&gt;&#x27;,</span><br><span class="line">    &#x27;&lt;/section&gt;&#x27;</span><br><span class="line">  ].join(&#x27;\n&#x27;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function sortableDate(value) &#123;</span><br><span class="line">  if (value instanceof Date) &#123;</span><br><span class="line">    return value.getTime();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  const timestamp = Date.parse(String(value || &#x27;&#x27;));</span><br><span class="line">  return Number.isNaN(timestamp) ? 0 : timestamp;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function formatDate(value) &#123;</span><br><span class="line">  if (value instanceof Date) &#123;</span><br><span class="line">    const pad = (number) =&gt; String(number).padStart(2, &#x27;0&#x27;);</span><br><span class="line">    return [</span><br><span class="line">      value.getUTCFullYear(),</span><br><span class="line">      pad(value.getUTCMonth() + 1),</span><br><span class="line">      pad(value.getUTCDate())</span><br><span class="line">    ].join(&#x27;-&#x27;) + &#x27; &#x27; + [pad(value.getUTCHours()), pad(value.getUTCMinutes())].join(&#x27;:&#x27;);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  return String(value || &#x27;&#x27;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function renderShuoContent(content) &#123;</span><br><span class="line">  try &#123;</span><br><span class="line">    return hexo.render.renderSync(&#123;</span><br><span class="line">      text: String(content || &#x27;&#x27;),</span><br><span class="line">      engine: &#x27;markdown&#x27;</span><br><span class="line">    &#125;).trim();</span><br><span class="line">  &#125; catch (error) &#123;</span><br><span class="line">    return &#x27;&lt;p&gt;&#x27; + escapeHtml(content).replace(/\n/g, &#x27;&lt;br&gt;&#x27;) + &#x27;&lt;/p&gt;&#x27;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function renderShuoshuo(entries) &#123;</span><br><span class="line">  const items = Array.isArray(entries) ? entries.slice() : [];</span><br><span class="line">  items.sort((left, right) =&gt; sortableDate(left.date) - sortableDate(right.date));</span><br><span class="line"></span><br><span class="line">  const timeline = items.map((item) =&gt; &#123;</span><br><span class="line">    const author = escapeHtml(item.author || hexo.config.author || &#x27;M-finder&#x27;);</span><br><span class="line">    const avatar = escapeHtml(item.avatar || &#x27;/images/avatar.jpeg&#x27;);</span><br><span class="line">    const date = escapeHtml(formatDate(item.date));</span><br><span class="line">    const content = renderShuoContent(item.content);</span><br><span class="line"></span><br><span class="line">    return [</span><br><span class="line">      &#x27;  &lt;li class=&quot;shuo-item&quot;&gt;&#x27;,</span><br><span class="line">      `    &lt;img class=&quot;shuo-avatar&quot; src=&quot;$&#123;avatar&#125;&quot; alt=&quot;$&#123;author&#125;&quot; loading=&quot;lazy&quot;&gt;`,</span><br><span class="line">      &#x27;    &lt;div class=&quot;shuo-entry&quot;&gt;&#x27;,</span><br><span class="line">      `      &lt;div class=&quot;shuo-meta&quot;&gt;&lt;strong&gt;$&#123;author&#125;&lt;/strong&gt;&lt;time&gt;$&#123;date&#125;&lt;/time&gt;&lt;/div&gt;`,</span><br><span class="line">      `      &lt;div class=&quot;shuo-content&quot;&gt;$&#123;content&#125;&lt;/div&gt;`,</span><br><span class="line">      &#x27;    &lt;/div&gt;&#x27;,</span><br><span class="line">      &#x27;  &lt;/li&gt;&#x27;</span><br><span class="line">    ].join(&#x27;\n&#x27;);</span><br><span class="line">  &#125;).join(&#x27;\n&#x27;);</span><br><span class="line"></span><br><span class="line">  return [</span><br><span class="line">    &#x27;&lt;section class=&quot;shuo-feed&quot; aria-label=&quot;说说&quot;&gt;&#x27;,</span><br><span class="line">    &#x27;  &lt;style&gt;&#x27;,</span><br><span class="line">    &#x27;    .shuo-timeline &#123; list-style: none; margin: 1.5rem 0 0; padding: 0; &#125;&#x27;,</span><br><span class="line">    &#x27;    .shuo-item &#123; border-left: 1px solid #3a4351; min-height: 3.5rem; padding: 0 0 1.75rem 2.75rem; position: relative; &#125;&#x27;,</span><br><span class="line">    &#x27;    .shuo-item:last-child &#123; border-left-color: transparent; padding-bottom: 0; &#125;&#x27;,</span><br><span class="line">    &#x27;    .shuo-avatar &#123; border-radius: 50%; height: 2rem; left: -1rem; object-fit: cover; position: absolute; top: 0; width: 2rem; &#125;&#x27;,</span><br><span class="line">    &#x27;    .shuo-meta &#123; align-items: baseline; display: flex; flex-wrap: wrap; gap: .5rem; line-height: 1.5; &#125;&#x27;,</span><br><span class="line">    &#x27;    .shuo-meta time &#123; color: #8c96a4; font-size: .85em; &#125;&#x27;,</span><br><span class="line">    &#x27;    .shuo-content &#123; margin-top: .35rem; &#125;&#x27;,</span><br><span class="line">    &#x27;    .shuo-content p &#123; margin: 0; &#125;&#x27;,</span><br><span class="line">    &#x27;  &lt;/style&gt;&#x27;,</span><br><span class="line">    &#x27;  &lt;ol class=&quot;shuo-timeline&quot;&gt;&#x27;,</span><br><span class="line">    timeline || &#x27;    &lt;li class=&quot;shuo-empty&quot;&gt;暂无说说。&lt;/li&gt;&#x27;,</span><br><span class="line">    &#x27;  &lt;/ol&gt;&#x27;,</span><br><span class="line">    &#x27;&lt;/section&gt;&#x27;</span><br><span class="line">  ].join(&#x27;\n&#x27;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function galleryStyles() &#123;</span><br><span class="line">  return [</span><br><span class="line">    &#x27;&lt;style&gt;&#x27;,</span><br><span class="line">    &#x27;  .gallery-albums, .gallery-grid &#123; display: grid; gap: 1rem; &#125;&#x27;,</span><br><span class="line">    &#x27;  .gallery-albums &#123; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); margin: 1.5rem 0; &#125;&#x27;,</span><br><span class="line">    &#x27;  .gallery-album &#123; border: 1px solid #3a4351; color: inherit; display: block; text-decoration: none; &#125;&#x27;,</span><br><span class="line">    &#x27;  .gallery-album:hover &#123; border-color: #7d8da1; &#125;&#x27;,</span><br><span class="line">    &#x27;  .gallery-album img &#123; aspect-ratio: 16 / 9; display: block; object-fit: cover; width: 100%; &#125;&#x27;,</span><br><span class="line">    &#x27;  .gallery-album-copy &#123; padding: .9rem 1rem 1rem; &#125;&#x27;,</span><br><span class="line">    &#x27;  .gallery-album-title &#123; font-size: 1.1rem; font-weight: 700; &#125;&#x27;,</span><br><span class="line">    &#x27;  .gallery-album-description &#123; color: #8c96a4; margin-top: .35rem; &#125;&#x27;,</span><br><span class="line">    &#x27;  .gallery-grid &#123; grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr)); margin: 1.5rem 0; &#125;&#x27;,</span><br><span class="line">    &#x27;  .gallery-item &#123; background: #151a21; display: block; overflow: hidden; &#125;&#x27;,</span><br><span class="line">    &#x27;  .gallery-item img &#123; aspect-ratio: 1 / 1; display: block; object-fit: cover; transition: transform .2s ease; width: 100%; &#125;&#x27;,</span><br><span class="line">    &#x27;  .gallery-item:hover img, .gallery-item:focus-visible img &#123; transform: scale(1.04); &#125;&#x27;,</span><br><span class="line">    &#x27;  .gallery-lightbox &#123; align-items: center; background: rgba(0, 0, 0, .9); border: 0; box-sizing: border-box; height: 100%; justify-content: center; max-height: none; max-width: none; padding: 1.5rem; width: 100%; &#125;&#x27;,</span><br><span class="line">    &#x27;  .gallery-lightbox[open] &#123; display: flex; &#125;&#x27;,</span><br><span class="line">    &#x27;  .gallery-lightbox::backdrop &#123; background: rgba(0, 0, 0, .9); &#125;&#x27;,</span><br><span class="line">    &#x27;  .gallery-lightbox img &#123; max-height: calc(100vh - 3rem); max-width: calc(100vw - 3rem); object-fit: contain; &#125;&#x27;,</span><br><span class="line">    &#x27;  .gallery-lightbox-close &#123; background: rgba(0, 0, 0, .7); border: 1px solid #aeb8c7; color: #fff; cursor: pointer; font-size: 1.5rem; height: 2.5rem; line-height: 1; position: fixed; right: 1rem; top: 1rem; width: 2.5rem; &#125;&#x27;,</span><br><span class="line">    &#x27;  @media (max-width: 480px) &#123; .gallery-grid &#123; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .5rem; &#125; &#125;&#x27;,</span><br><span class="line">    &#x27;&lt;/style&gt;&#x27;</span><br><span class="line">  ].join(&#x27;\n&#x27;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function renderGalleryIndex(albums) &#123;</span><br><span class="line">  const items = Array.isArray(albums) ? albums : [];</span><br><span class="line">  const cards = items.map((album) =&gt; &#123;</span><br><span class="line">    const title = escapeHtml(album.title || &#x27;未命名相册&#x27;);</span><br><span class="line">    const description = escapeHtml(album.description || &#x27;&#x27;);</span><br><span class="line">    const path = escapeHtml(album.path || &#x27;/gallery/&#x27;);</span><br><span class="line">    const cover = escapeHtml(album.cover || &#x27;/images/top.jpg&#x27;);</span><br><span class="line"></span><br><span class="line">    return [</span><br><span class="line">      `  &lt;a class=&quot;gallery-album&quot; href=&quot;$&#123;path&#125;&quot;&gt;`,</span><br><span class="line">      `    &lt;img src=&quot;$&#123;cover&#125;&quot; alt=&quot;$&#123;title&#125;&quot; loading=&quot;lazy&quot;&gt;`,</span><br><span class="line">      &#x27;    &lt;div class=&quot;gallery-album-copy&quot;&gt;&#x27;,</span><br><span class="line">      `      &lt;div class=&quot;gallery-album-title&quot;&gt;$&#123;title&#125;&lt;/div&gt;`,</span><br><span class="line">      description ? `      &lt;div class=&quot;gallery-album-description&quot;&gt;$&#123;description&#125;&lt;/div&gt;` : &#x27;&#x27;,</span><br><span class="line">      &#x27;    &lt;/div&gt;&#x27;,</span><br><span class="line">      &#x27;  &lt;/a&gt;&#x27;</span><br><span class="line">    ].filter(Boolean).join(&#x27;\n&#x27;);</span><br><span class="line">  &#125;).join(&#x27;\n&#x27;);</span><br><span class="line"></span><br><span class="line">  return [</span><br><span class="line">    galleryStyles(),</span><br><span class="line">    &#x27;&lt;section class=&quot;gallery-albums&quot; aria-label=&quot;相册&quot;&gt;&#x27;,</span><br><span class="line">    cards || &#x27;  &lt;p&gt;暂无相册。&lt;/p&gt;&#x27;,</span><br><span class="line">    &#x27;&lt;/section&gt;&#x27;</span><br><span class="line">  ].join(&#x27;\n&#x27;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function imageAttributes(tag) &#123;</span><br><span class="line">  const source = tag.match(/\bsrc=([&#x27;&quot;])(.*?)\1/i);</span><br><span class="line">  const alt = tag.match(/\balt=([&#x27;&quot;])(.*?)\1/i);</span><br><span class="line">  return &#123;</span><br><span class="line">    src: source ? source[2] : &#x27;&#x27;,</span><br><span class="line">    alt: alt ? alt[2] : &#x27;&#x27;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function renderGalleryWorld(content) &#123;</span><br><span class="line">  const images = String(content || &#x27;&#x27;).match(/&lt;img\b[^&gt;]*&gt;/gi) || [];</span><br><span class="line">  const items = images.map((tag, index) =&gt; &#123;</span><br><span class="line">    const image = imageAttributes(tag);</span><br><span class="line">    if (!image.src) &#123;</span><br><span class="line">      return &#x27;&#x27;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    const source = escapeHtml(image.src);</span><br><span class="line">    const alt = escapeHtml(image.alt || `相册图片 $&#123;index + 1&#125;`);</span><br><span class="line">    return [</span><br><span class="line">      `  &lt;a class=&quot;gallery-item&quot; href=&quot;$&#123;source&#125;&quot; data-gallery-lightbox&gt;`,</span><br><span class="line">      `    &lt;img src=&quot;$&#123;source&#125;&quot; alt=&quot;$&#123;alt&#125;&quot; loading=&quot;lazy&quot;&gt;`,</span><br><span class="line">      &#x27;  &lt;/a&gt;&#x27;</span><br><span class="line">    ].join(&#x27;\n&#x27;);</span><br><span class="line">  &#125;).filter(Boolean).join(&#x27;\n&#x27;);</span><br><span class="line"></span><br><span class="line">  return [</span><br><span class="line">    galleryStyles(),</span><br><span class="line">    &#x27;&lt;section class=&quot;gallery-grid&quot; aria-label=&quot;花花世界&quot;&gt;&#x27;,</span><br><span class="line">    items || &#x27;  &lt;p&gt;暂无图片。&lt;/p&gt;&#x27;,</span><br><span class="line">    &#x27;&lt;/section&gt;&#x27;,</span><br><span class="line">    &#x27;&lt;dialog class=&quot;gallery-lightbox&quot; data-gallery-dialog&gt;&#x27;,</span><br><span class="line">    &#x27;  &lt;button class=&quot;gallery-lightbox-close&quot; type=&quot;button&quot; data-gallery-close aria-label=&quot;关闭图片&quot;&gt;&amp;times;&lt;/button&gt;&#x27;,</span><br><span class="line">    &#x27;  &lt;img src=&quot;&quot; alt=&quot;&quot; data-gallery-dialog-image&gt;&#x27;,</span><br><span class="line">    &#x27;&lt;/dialog&gt;&#x27;,</span><br><span class="line">    &#x27;&lt;script&gt;&#x27;,</span><br><span class="line">    &#x27;  (() =&gt; &#123;&#x27;,</span><br><span class="line">    &#x27;    if (window.__galleryLightboxBound) return;&#x27;,</span><br><span class="line">    &#x27;    window.__galleryLightboxBound = true;&#x27;,</span><br><span class="line">    &#x27;    document.addEventListener(&quot;click&quot;, (event) =&gt; &#123;&#x27;,</span><br><span class="line">    &#x27;      const item = event.target.closest(&quot;[data-gallery-lightbox]&quot;);&#x27;,</span><br><span class="line">    &#x27;      if (item) &#123;&#x27;,</span><br><span class="line">    &#x27;        const dialog = document.querySelector(&quot;[data-gallery-dialog]&quot;);&#x27;,</span><br><span class="line">    &#x27;        const image = dialog &amp;&amp; dialog.querySelector(&quot;[data-gallery-dialog-image]&quot;);&#x27;,</span><br><span class="line">    &#x27;        if (!dialog || !image || typeof dialog.showModal !== &quot;function&quot;) return;&#x27;,</span><br><span class="line">    &#x27;        event.preventDefault();&#x27;,</span><br><span class="line">    &#x27;        image.src = item.href;&#x27;,</span><br><span class="line">    &#x27;        image.alt = item.querySelector(&quot;img&quot;).alt;&#x27;,</span><br><span class="line">    &#x27;        dialog.showModal();&#x27;,</span><br><span class="line">    &#x27;      &#125;&#x27;,</span><br><span class="line">    &#x27;      const closeButton = event.target.closest(&quot;[data-gallery-close]&quot;);&#x27;,</span><br><span class="line">    &#x27;      if (closeButton) closeButton.closest(&quot;dialog&quot;).close();&#x27;,</span><br><span class="line">    &#x27;    &#125;);&#x27;,</span><br><span class="line">    &#x27;  &#125;)();&#x27;,</span><br><span class="line">    &#x27;&lt;/script&gt;&#x27;</span><br><span class="line">  ].join(&#x27;\n&#x27;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">hexo.extend.filter.register(&#x27;after_post_render&#x27;, function (data) &#123;</span><br><span class="line">  const source = normaliseSource(data.source);</span><br><span class="line"></span><br><span class="line">  if (source === SHUO_SOURCE) &#123;</span><br><span class="line">    const siteData = hexo.locals.get(&#x27;data&#x27;) || &#123;&#125;;</span><br><span class="line">    data.content = renderShuoshuo(siteData.shuoshuo);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  if (source === GALLERY_INDEX_SOURCE) &#123;</span><br><span class="line">    const siteData = hexo.locals.get(&#x27;data&#x27;) || &#123;&#125;;</span><br><span class="line">    data.content = renderGalleryIndex(siteData.gallery &amp;&amp; siteData.gallery.albums);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  if (source === GALLERY_WORLD_SOURCE) &#123;</span><br><span class="line">    data.content = renderGalleryWorld(data.content);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  if (data.comments === true &amp;&amp; !source.startsWith(&#x27;_posts/&#x27;) &amp;&amp; !data.content.includes(PAGE_COMMENTS_MARKER)) &#123;</span><br><span class="line">    const giscus = renderGiscus();</span><br><span class="line">    if (giscus) &#123;</span><br><span class="line">      data.content += &#x27;\n&#x27; + giscus;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  return data;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>感谢 codex, 感谢 cc, 感谢 av, 我想要的都回来了.</p>
+
+</div>
+
+
+  <footer class="post-footer">
+  
+    <div class="post-categories">
+      <span class="meta-label">分类: </span>
+      
+        <a href="/categories/hexo/" class="category">hexo</a>
+      
+    </div>
+  
+  
+    <div class="post-tags">
+      <span class="meta-label">标签: </span>
+      
+        <a href="/tags/hexo/" class="tag">hexo</a>
+      
+        <a href="/tags/js/" class="tag">js</a>
+      
+    </div>
+  
+</footer>
+
+
+  
+<nav class="post-nav">
+  
+
+  
+    <div class="post-nav-item next">
+      <span class="post-nav-label">下一页 &rarr;</span>
+      <a href="/ai-daily-2026-10-17/" class="post-nav-title">
+        AI 日报 · 2026-10-17
+      </a>
+    </div>
+  
+</nav>
+
+
+
+  
+    <section class="comments-section">
+  <h3 class="comments-title">评论</h3>
+
+  
+
+  
+
+  
+    <script src="https://giscus.app/client.js"
+            data-repo="m-finder/m-finder.github.io"
+            data-repo-id="MDEwOlJlcG9zaXRvcnkxMjEzNzU5NTc="
+            data-category="Announcements"
+            data-category-id="DIC_kwDOBzwM1c4DIlfb"
+            data-mapping="pathname"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="bottom"
+            data-theme="dark"
+            data-lang="zh-CN"
+            crossorigin="anonymous"
+            async>
+    </script>
+  
+</section>
+
+  
+</article>
+
+        </div>
+      
+    </main>
+
+    <footer class="footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      
+      <span class="copyright">
+        &copy; 2016 - 2026 m-finder
+      </span>
+    </div>
+
+    <div class="footer-right">
+      
+        <span class="powered">
+          由 Hexo 驱动 <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>
+        </span>
+      
+      
+        <span class="theme-info">
+          主题 <a href="https://github.com/WinMin/hexo-theme-Bloom" target="_blank" rel="noopener">Bloom</a>
+        </span>
+      
+    </div>
+  </div>
+
+  
+    <div class="footer-social">
+      
+        <a href="https://github.com/m-finder" class="social-link" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+      
+      
+      
+      
+        <a href="mailto:yf-wu@qq.com" class="social-link" aria-label="Email">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </a>
+      
+      
+        <a href="/atom.xml" class="social-link" aria-label="RSS">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20C5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1z"/></svg>
+        </a>
+      
+    </div>
+  
+</footer>
+
+  </div>
+
+  <!-- Main Script -->
+
+<script src="/js/main.js"></script>
+
+
+<!-- Search -->
+
+
+<script src="/js/search.js"></script>
+
+
+
+<!-- Baidu Analytics -->
+
+
+</body>
+</html>

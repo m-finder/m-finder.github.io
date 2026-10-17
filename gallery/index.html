@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="referrer" content="no-referrer">
 
-<title>M-finder</title>
+<title>相册 | M-finder</title>
 
 
 <meta name="description" content="happy coding">
@@ -31,7 +31,7 @@
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="M-finder">
+<meta property="og:title" content="相册">
 <meta property="og:url" content="/gallery/index.html">
 <meta property="og:site_name" content="M-finder">
 
@@ -40,7 +40,7 @@
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="M-finder">
+<meta name="twitter:title" content="相册">
 
 <meta name="twitter:description" content="happy coding">
 
@@ -232,13 +232,39 @@
         <div class="page-layout">
           <article class="page">
   <header class="page-header">
-    <h1 class="page-title"></h1>
+    <h1 class="page-title">相册</h1>
   </header>
 
   <div class="page-content">
-    <div class="gallery-group-main">
-
-</div>
+    <style>
+  .gallery-albums, .gallery-grid { display: grid; gap: 1rem; }
+  .gallery-albums { grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); margin: 1.5rem 0; }
+  .gallery-album { border: 1px solid #3a4351; color: inherit; display: block; text-decoration: none; }
+  .gallery-album:hover { border-color: #7d8da1; }
+  .gallery-album img { aspect-ratio: 16 / 9; display: block; object-fit: cover; width: 100%; }
+  .gallery-album-copy { padding: .9rem 1rem 1rem; }
+  .gallery-album-title { font-size: 1.1rem; font-weight: 700; }
+  .gallery-album-description { color: #8c96a4; margin-top: .35rem; }
+  .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr)); margin: 1.5rem 0; }
+  .gallery-item { background: #151a21; display: block; overflow: hidden; }
+  .gallery-item img { aspect-ratio: 1 / 1; display: block; object-fit: cover; transition: transform .2s ease; width: 100%; }
+  .gallery-item:hover img, .gallery-item:focus-visible img { transform: scale(1.04); }
+  .gallery-lightbox { align-items: center; background: rgba(0, 0, 0, .9); border: 0; box-sizing: border-box; height: 100%; justify-content: center; max-height: none; max-width: none; padding: 1.5rem; width: 100%; }
+  .gallery-lightbox[open] { display: flex; }
+  .gallery-lightbox::backdrop { background: rgba(0, 0, 0, .9); }
+  .gallery-lightbox img { max-height: calc(100vh - 3rem); max-width: calc(100vw - 3rem); object-fit: contain; }
+  .gallery-lightbox-close { background: rgba(0, 0, 0, .7); border: 1px solid #aeb8c7; color: #fff; cursor: pointer; font-size: 1.5rem; height: 2.5rem; line-height: 1; position: fixed; right: 1rem; top: 1rem; width: 2.5rem; }
+  @media (max-width: 480px) { .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .5rem; } }
+</style>
+<section class="gallery-albums" aria-label="相册">
+  <a class="gallery-album" href="/gallery/world/">
+    <img src="/images/top.jpg" alt="花花世界" loading="lazy">
+    <div class="gallery-album-copy">
+      <div class="gallery-album-title">花花世界</div>
+      <div class="gallery-album-description">生活随拍</div>
+    </div>
+  </a>
+</section>
 <section class="comments-section" data-page-comments>
   <h3 class="comments-title">评论</h3>
   <script src="https://giscus.app/client.js"
