@@ -37,6 +37,12 @@ sitemap:
 baidusitemap:
   path: baidusitemap.xml
 
+# Local search index
+search:
+  path: search.xml
+  field: post
+  content: true
+
 # Directory
 source_dir: source
 public_dir: public

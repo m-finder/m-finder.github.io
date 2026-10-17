@@ -61,14 +61,9 @@ jobs:
           restore-keys: |
             ${{ runner.OS }}-npm-cache
       - name: Install Dependencies
-        run: | 
+        run: |
           npm install
-          npm install hexo-cli
-          npm update hexo --save
-          npm install hexo-deployer-git hexo-renderer-ejs hexo-renderer-stylus hexo-generator-searchdb --save
-          npm install hexo-asset-image  hexo-wordcount --save
-          npm install hexo-generator-feed  hexo-douban  hexo-adsense --save
-          npm install hexo-generator-sitemap hexo-generator-baidu-sitemap --save
+          npm install hexo-renderer-ejs hexo-renderer-stylus hexo-generator-search hexo-wordcount hexo-generator-feed hexo-douban hexo-generator-sitemap hexo-generator-baidu-sitemap
       - name: Build
         run: npm run build
       - name: Deploy
