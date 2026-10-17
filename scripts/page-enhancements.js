@@ -1,6 +1,7 @@
 'use strict';
 
 const PAGE_COMMENTS_MARKER = 'data-page-comments';
+const LINK_SOURCE = 'link/index.md';
 const SHUO_SOURCE = 'shuo/index.md';
 const GALLERY_INDEX_SOURCE = 'gallery/index.md';
 const GALLERY_WORLD_SOURCE = 'gallery/world.md';
@@ -49,6 +50,22 @@ function renderGiscus() {
     '          async>',
     '  </script>',
     '</section>'
+  ].join('\n');
+}
+
+function renderLinkCommentsPlacement() {
+  return [
+    '<script>',
+    '  document.addEventListener("DOMContentLoaded", () => {',
+    '    const page = document.querySelector(".links-page");',
+    '    const linksGrid = page && page.querySelector(".links-grid");',
+    '    const comments = page && page.querySelector("[data-page-comments]");',
+    '    if (!linksGrid || !comments) return;',
+    '    linksGrid.insertAdjacentElement("afterend", comments);',
+    '    const intro = page.querySelector(".links-intro");',
+    '    if (intro && !intro.children.length && !intro.textContent.trim()) intro.remove();',
+    '  });',
+    '</script>'
   ].join('\n');
 }
 
@@ -291,6 +308,9 @@ hexo.extend.filter.register('after_post_render', function (data) {
     const giscus = renderGiscus();
     if (giscus) {
       data.content += '\n' + giscus;
+      if (source === LINK_SOURCE) {
+        data.content += '\n' + renderLinkCommentsPlacement();
+      }
     }
   }
 

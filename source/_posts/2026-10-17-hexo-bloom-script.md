@@ -1,5 +1,5 @@
 ---
-title: hexo bloom 模板脚本式修改备忘-扩展评论和说说
+title: hexo bloom 模板脚本式修改备忘-扩展相册、评论和说说
 date: 2026-10-17 09:40:00
 tags:
 - hexo
@@ -29,9 +29,8 @@ hexo.on('generateBefore', function () {
     };
 })
 ```
-2. 相册没了, bloom 没有对应的渲染器
-
-3. 关于和友情链接页面没有评论, 没有说说功能
+2. 相册和说说没了, bloom 没有对应的渲染器
+3. 关于和友情链接页面没有评论
 ```
 'use strict';
 
@@ -298,4 +297,4 @@ hexo.extend.filter.register('after_post_render', function (data) {
 });
 ```
 
-感谢 codex, 感谢 cc, 感谢 av, 我想要的都回来了.
+再次感谢强大的 codex, 感谢 cc, 感谢 av, 我想要的都回来了.
