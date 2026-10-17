@@ -1,99 +1,197 @@
-- author: M-finder
-  avatar: https://m-finder.github.io/images/avatar.jpeg
-  date: 2026-02-26 15:58:00
-  content: |
-    惊闻 LeanCloud 明年要停止服务, 可惜了这么好用的工具, 也可惜了我的评论和说说...
-- author: M-finder
-  avatar: https://m-finder.github.io/images/avatar.jpeg
-  date: 2026-03-30 11:58:00
-  content: |
-    大哈也要生二胎了, 希望他生个儿子, 未来再生 8 个儿子.
-- author: M-finder
-  avatar: https://m-finder.github.io/images/avatar.jpeg
-  date: 2026-03-30 13:58:00
-  content: |
-    人生的一半是向往, 另一半是绝望.
-- author: M-finder
-  avatar: https://m-finder.github.io/images/avatar.jpeg
-  date: 2026-04-05 23:00:00
-  content: |
-    赵老师是有真东西的, 我通透了.
-- author: M-finder
-  avatar: https://m-finder.github.io/images/avatar.jpeg
-  date: 2026-04-07 15:40:00
-  content: |
-    黄金真贵, 得多攒点儿.
-- author: M-finder
-  avatar: https://m-finder.github.io/images/avatar.jpeg
-  date: 2026-04-07 15:40:00
-  content: |
-    刚才发现大哈家的老二跟老大小时候长一毛一样.
-- author: M-finder
-  avatar: https://m-finder.github.io/images/avatar.jpeg
-  date: 2026-04-13 16:00:00
-  content: |
-    鬼天气, 闷得有点透不过气.
-- author: M-finder
-  avatar: https://m-finder.github.io/images/avatar.jpeg
-  date: 2026-04-18 16:00:00
-  content: |
-    挺好的, 下次还来.
-- author: M-finder
-  avatar: https://m-finder.github.io/images/avatar.jpeg
-  date: 2026-05-28 16:00:00
-  content: |
-    豪掷百金, 让我的花花们都住上了大别墅, 慈祥的老父亲盼它们好.
-- author: M-finder
-  avatar: https://m-finder.github.io/images/avatar.jpeg
-  date: 2026-05-30 16:01:00
-  content: |
-    盘点一下, 现在家里有:
-    玉树 * 2, 乌木 * 1, 钱串 * 1, 长寿花 * n
-    栀子花 * 1, 百合 * 1, 绣球 * 1, 蝴蝶兰 * 1
-    绿宝树 * 1, 发财树 * 1, 鸭脚木 * 1
-    铜钱草 * 3, 青叶吊兰 * 1, 袖珍椰子 * 2, 春羽 * 1, 白掌 * 2
-- author: M-finder
-  avatar: https://m-finder.github.io/images/avatar.jpeg
-  date: 2026-05-30 16:00:00
-  content: |
-    易方达什么蓝筹精选给我挖的坑已经被纳指填了三分之一, 得劲儿.
-- author: M-finder
-  avatar: https://m-finder.github.io/images/avatar.jpeg
-  date: 2026-06-01 14:16:00
-  content: |
-    阿龙同学的小棉袄计划失败, 下一把看我的了😏.
-- author: M-finder
-  avatar: https://m-finder.github.io/images/avatar.jpeg
-  date: 2026-07-04 10:16:00
-  content: |
-    竹节秋海棠是真好养, 小鼻嘎也能开大花, 爱了.
-- author: M-finder
-  avatar: https://m-finder.github.io/images/avatar.jpeg
-  date: 2026-07-04 10:26:00
-  content: |
-    想起来昨天刷到易方达全球关门, 可喜可贺!!!!
-- author: M-finder
-  avatar: https://m-finder.github.io/images/avatar.jpeg
-  date: 2026-07-11 09:26:00
-  content: |
-    飞牛变得更好用以后, 我的日常就变成了找片, 下片, 看片 (我最近都在看些什么玩意儿😅)...
-- author: M-finder
-  avatar: https://m-finder.github.io/images/avatar.jpeg
-  date: 2026-07-11 09:26:01
-  content: |
-    小黄油美式全冰去水乃仙品🍻
-- author: M-finder
-  avatar: https://m-finder.github.io/images/avatar.jpeg
-  date: 2026-07-11 09:26:02
-  content: |
-    我宣布, 粉旗鱼秋海棠是我所有花花里第二好养的, 第一是铜钱草.
-- author: M-finder
-  avatar: https://m-finder.github.io/images/avatar.jpeg
-  date: 2026-07-11 09:26:03
-  content: |
-    大学生放假了, 重新续上了健身卡, 他喵的居然 20 也拉不动了.
-- author: M-finder
-  avatar: https://m-finder.github.io/images/avatar.jpeg
-  date: 2026-07-20 21:26:03
-  content: |
-    瘦 10 多斤了, 还需要继续努力🏋️.
+author: M-finder
+avatar: https://m-finder.github.io/images/avatar.jpeg
+entries:
+  - date: 2022-12-07 15:01:21
+    content: |
+      虽然哔哔点啥更好使，但是我还是只配了artitalk[liubixue]
+
+  - date: 2022-12-07 16:32:39
+    content: |
+      备案注销以后搞了个tg，结果发现也没啥好玩的[zhoumei]
+  - date: 2022-12-08 09:40:48
+    content: |
+      昨天找到一个稳定的iptv，可以在电脑上看新闻联播了[koubi]
+  - date: 2022-12-11 10:56:18
+    content: |
+      一个星期没做核酸了，舒服[touxiao]
+  - date: 2022-12-12 23:20:52
+    content: |
+      刚才搞了个rss，又舒服了[doge]
+  - date: 2022-12-15 16:30:08
+    content: |
+      为了周六能正常看阿凡达，刚才下去捅了个喉咙，虽然现在很多地方都不查核酸了，但是谁知道呢[yiwen]
+  - date: 2022-12-27 18:02:19
+    content: |
+      跟阿凡达不共戴天吧[baiyan]
+  - date: 2022-12-27 18:03:02
+    content: |
+      上周三开始躺到现在，明天再捅个鼻子看看[liulei]
+  - date: 2023-03-12 22:19:22
+    content: |
+      一眨眼又过去三个月了啊，过的真快
+  - date: 2023-07-31 09:25:14
+    content: |
+      最近周末净在家里看电影了
+  - date: 2023-07-31 09:26:19
+    content: |
+      同时也在沉迷 RPG MO，啊哈哈😝
+  - date: 2023-11-01 14:55:13
+    content: |
+      有点危了，烦[小红脸]
+  - date: 2024-04-19 08:11:20
+    content: |
+      早睡早起呀[太阳]
+  - date: 2024-07-29 17:43:32
+    content: |
+      刚才的暴雨好舒服，就是时间短了点儿[汗]
+  - date: 2024-09-19 23:26:09
+    content: |
+      四顾茫然不见天,春风催我又一年
+  - date: 2024-11-20 13:51:56
+    content: |
+      华强北给的快乐简单且粗暴[doge][doge]
+  - date: 2024-12-30 08:48:41
+    content: |
+      我的说说怎么突然回来了？？
+  - date: 2024-12-30 08:48:57
+    content: |
+      给大美丽换了俩灯，下了梯子两腿不停打闪闪，老同志依然有点恐高啊[汗][汗][汗]
+  - date: 2024-12-30 08:49:32
+    content: |
+      这两年的生活技能树点的有点快[doge]
+  - date: 2025-01-20 08:54:23
+    content: |
+      这几天是真特么累啊，垃圾系统硬上强度，还以为是被攻击了，谁能想到做个美甲都要0点起来抢号[小红脸]
+  - date: 2025-02-13 10:37:42
+    content: |
+      眼睛一闭，一睁，一年就过去了，ho～
+  - date: 2025-02-14 08:57:49
+    content: |
+      媳妇儿回来咯，开心～～[哈哈][哈哈][哈哈]
+  - date: 2025-02-25 15:36:09
+    content: |
+      我想回家哈口冰美式[乖]
+  - date: 2025-03-24 09:55:49
+    content: |
+      别再感冒了,求求了[乖][乖][乖]
+  - date: 2025-03-26 07:36:14
+    content: |
+      上班前躺沙发上刷刷手机看看花也是挺享受，可惜这几天太热，郁金香全都生仔了[汗]
+  - date: 2025-04-03 08:51:47
+    content: |
+      15块钱收获一盆巨型栀子花,快乐也是巨型的[哈哈][哈哈][哈哈]
+  - date: 2025-04-15 17:28:50
+    content: |
+      栀子花开始黄叶了,还生蚜虫,早上下单一瓶吡虫啉,希望有用[汗]
+  - date: 2025-04-25 08:47:44
+    content: |
+      life is okay, I am not okay.[不高兴]
+  - date: 2025-05-27 09:35:23
+    content: |
+      把栀子花养好的秘诀就是晚上坐水里泡一夜，第二天早上拿到窗口吹风晒太阳[胜利]
+  - date: 2025-06-06 14:31:36
+    content: |
+      鬼天气实在是让人不爽啊[汗]
+  - date: 2025-07-01 08:51:42
+    content: |
+      门口的槐花开了，在被雨打掉的同时我才发现它的存在[汗]
+  - date: 2025-07-11 18:21:10
+    content: |
+      对swift理解又加深了一丢丢
+  - date: 2025-11-26 09:51:06
+    content: |
+      得益于前几天大美丽跟我说她们闲的时候捡个毛毛虫玩了一下午，昨天晚上做梦梦了一夜的毛毛虫和扑棱蛾子，睡醒后巨累[不高兴][不高兴][不高兴]
+  - date: 2025-11-26 09:52:11
+    content: |
+      static-php-cli 什么时候能有个现象级的应用出来？或者我能用它搞点什么有意思的东西呢[委屈]
+  - date: 2025-12-03 20:39:51
+    content: |
+      5年可以改变很多，但似乎又什么都没改变
+  - date: 2025-12-12 09:41:35
+    content: |
+      今冬的第一场雪如约而至。
+  - date: 2025-12-16 10:31:00
+    content: |
+      今日解锁成就: 年龄+1
+  - date: 2026-01-09 11:06:42
+    content: |
+      练背能有效缓解垮脸[挖鼻]
+  - date: 2026-01-09 11:07:22
+    content: |
+      做梦都在哑铃划船🚣
+  - date: 2026-01-20 10:31:13
+    content: |
+      在大美丽的以身作则下, 昨天晚上第一次踏进了健身房, 虽然我很菜, 但是真的爽.[笑尿]
+  - date: 2026-01-27 08:59:34
+    content: |
+      鉴于.com域名越来越贵, 而我也只用到了一个邮箱, m-finder.com这个域名我就不要了[baiyan]
+  - date: 2026-02-13 16:08:44
+    content: |
+      载具碎片+0.7
+  - date: 2026-02-26 15:58:00
+    content: |
+      惊闻 LeanCloud 明年要停止服务, 可惜了这么好用的工具, 也可惜了我的评论和说说...
+  - date: 2026-03-30 11:58:00
+    content: |
+      大哈也要生二胎了, 希望他生个儿子, 未来再生 8 个儿子.
+  - date: 2026-03-30 13:58:00
+    content: |
+      人生的一半是向往, 另一半是绝望.
+  - date: 2026-04-05 23:00:00
+    content: |
+      赵老师是有真东西的, 我通透了.
+  - date: 2026-04-07 15:40:00
+    content: |
+      黄金真贵, 得多攒点儿.
+  - date: 2026-04-07 15:40:00
+    content: |
+      刚才发现大哈家的老二跟老大小时候长一毛一样.
+  - date: 2026-04-13 16:00:00
+    content: |
+      鬼天气, 闷得有点透不过气.
+  - date: 2026-04-18 16:00:00
+    content: |
+      挺好的, 下次还来.
+  - date: 2026-05-28 16:00:00
+    content: |
+      豪掷百金, 让我的花花们都住上了大别墅, 慈祥的老父亲盼它们好.
+  - date: 2026-05-30 16:00:00
+    content: |
+      易方达什么蓝筹精选给我挖的坑已经被纳指填了三分之一, 得劲儿.
+  - date: 2026-05-30 16:01:00
+    content: |
+      盘点一下, 现在家里有:
+      玉树 * 2, 乌木 * 1, 钱串 * 1, 长寿花 * n
+      栀子花 * 1, 百合 * 1, 绣球 * 1, 蝴蝶兰 * 1
+      绿宝树 * 1, 发财树 * 1, 鸭脚木 * 1
+      铜钱草 * 3, 青叶吊兰 * 1, 袖珍椰子 * 2, 春羽 * 1, 白掌 * 2
+  - date: 2026-06-01 14:16:00
+    content: |
+      阿龙同学的小棉袄计划失败, 下一把看我的了😏.
+  - date: 2026-07-04 10:16:00
+    content: |
+      竹节秋海棠是真好养, 小鼻嘎也能开大花, 爱了.
+  - date: 2026-07-04 10:26:00
+    content: |
+      想起来昨天刷到易方达全球关门, 可喜可贺!!!!
+  - date: 2026-07-11 09:26:00
+    content: |
+      飞牛变得更好用以后, 我的日常就变成了找片, 下片, 看片 (我最近都在看些什么玩意儿😅)...
+  - date: 2026-07-11 09:26:01
+    content: |
+      小黄油美式全冰去水乃仙品🍻
+  - date: 2026-07-11 09:26:02
+    content: |
+      我宣布, 粉旗鱼秋海棠是我所有花花里第二好养的, 第一是铜钱草.
+  - date: 2026-07-11 09:26:03
+    content: |
+      大学生放假了, 重新续上了健身卡, 他喵的居然 20 也拉不动了.
+  - date: 2026-07-20 21:26:03
+    content: |
+      瘦 10 多斤了, 还需要继续努力🏋️.
+  - date: 2026-10-17 10:03:03
+    content: |
+      借助 codex，把我 LeanCloud 里的说说迁回来了， 舒服.
+  - date: 2026-10-17 10:03:03
+    content: |
+      忘了说了，常去的健身房不知道因为啥，在暑假结束的前夕关门了，现在想撸铁我得去商场里的自助小馆，已经很多天没练了， 西巴哟.

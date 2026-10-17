@@ -3,14 +3,16 @@
 # ==========================================
 
 # ---- Navigation Menu ----
-#nav:
-#  首页: /
-#  时间线: /archives/
-#  标签: /tags/
-#  分类: /categories/
-#  友情链接: /link/
-#  关于: /about/
-#  RSS: /atom.xml
+nav:
+  首页: /
+  时间线: /archives/
+  标签: /tags/
+  分类: /categories/
+  说说: /shuo/
+  相册: /gallery/
+  友情链接: /link/
+  关于: /about/
+  RSS: /atom.xml
 
 # ---- Profile / Intro ----
 profile:

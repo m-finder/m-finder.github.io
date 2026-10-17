@@ -1,0 +1,5 @@
+albums:
+  - title: 花花世界
+    description: 生活随拍
+    path: /gallery/world/
+    cover: /images/top.jpg

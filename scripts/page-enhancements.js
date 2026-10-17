@@ -2,6 +2,8 @@
 
 const PAGE_COMMENTS_MARKER = 'data-page-comments';
 const SHUO_SOURCE = 'shuo/index.md';
+const GALLERY_INDEX_SOURCE = 'gallery/index.md';
+const GALLERY_WORLD_SOURCE = 'gallery/world.md';
 
 function escapeHtml(value) {
   return String(value || '')
@@ -83,13 +85,14 @@ function renderShuoContent(content) {
   }
 }
 
-function renderShuoshuo(entries) {
+function renderShuoshuo(entries, defaults) {
   const items = Array.isArray(entries) ? entries.slice() : [];
-  items.sort((left, right) => sortableDate(right.date) - sortableDate(left.date));
+  const settings = defaults || {};
+  items.sort((left, right) => sortableDate(left.date) - sortableDate(right.date));
 
   const timeline = items.map((item) => {
-    const author = escapeHtml(item.author || hexo.config.author || 'M-finder');
-    const avatar = escapeHtml(item.avatar || '/images/avatar.jpeg');
+    const author = escapeHtml(item.author || settings.author || hexo.config.author || 'M-finder');
+    const avatar = escapeHtml(item.avatar || settings.avatar || '/images/avatar.jpeg');
     const date = escapeHtml(formatDate(item.date));
     const content = renderShuoContent(item.content);
 
@@ -123,12 +126,133 @@ function renderShuoshuo(entries) {
   ].join('\n');
 }
 
+function galleryStyles() {
+  return [
+    '<style>',
+    '  .gallery-albums, .gallery-grid { display: grid; gap: 1rem; }',
+    '  .gallery-albums { grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); margin: 1.5rem 0; }',
+    '  .gallery-album { border: 1px solid #3a4351; color: inherit; display: block; text-decoration: none; }',
+    '  .gallery-album:hover { border-color: #7d8da1; }',
+    '  .gallery-album img { aspect-ratio: 16 / 9; display: block; object-fit: cover; width: 100%; }',
+    '  .gallery-album-copy { padding: .9rem 1rem 1rem; }',
+    '  .gallery-album-title { font-size: 1.1rem; font-weight: 700; }',
+    '  .gallery-album-description { color: #8c96a4; margin-top: .35rem; }',
+    '  .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr)); margin: 1.5rem 0; }',
+    '  .gallery-item { background: #151a21; display: block; overflow: hidden; }',
+    '  .gallery-item img { aspect-ratio: 1 / 1; display: block; object-fit: cover; transition: transform .2s ease; width: 100%; }',
+    '  .gallery-item:hover img, .gallery-item:focus-visible img { transform: scale(1.04); }',
+    '  .gallery-lightbox { align-items: center; background: rgba(0, 0, 0, .9); border: 0; box-sizing: border-box; height: 100%; justify-content: center; max-height: none; max-width: none; padding: 1.5rem; width: 100%; }',
+    '  .gallery-lightbox[open] { display: flex; }',
+    '  .gallery-lightbox::backdrop { background: rgba(0, 0, 0, .9); }',
+    '  .gallery-lightbox img { max-height: calc(100vh - 3rem); max-width: calc(100vw - 3rem); object-fit: contain; }',
+    '  .gallery-lightbox-close { background: rgba(0, 0, 0, .7); border: 1px solid #aeb8c7; color: #fff; cursor: pointer; font-size: 1.5rem; height: 2.5rem; line-height: 1; position: fixed; right: 1rem; top: 1rem; width: 2.5rem; }',
+    '  @media (max-width: 480px) { .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .5rem; } }',
+    '</style>'
+  ].join('\n');
+}
+
+function renderGalleryIndex(albums) {
+  const items = Array.isArray(albums) ? albums : [];
+  const cards = items.map((album) => {
+    const title = escapeHtml(album.title || '未命名相册');
+    const description = escapeHtml(album.description || '');
+    const path = escapeHtml(album.path || '/gallery/');
+    const cover = escapeHtml(album.cover || '/images/top.jpg');
+
+    return [
+      `  <a class="gallery-album" href="${path}">`,
+      `    <img src="${cover}" alt="${title}" loading="lazy">`,
+      '    <div class="gallery-album-copy">',
+      `      <div class="gallery-album-title">${title}</div>`,
+      description ? `      <div class="gallery-album-description">${description}</div>` : '',
+      '    </div>',
+      '  </a>'
+    ].filter(Boolean).join('\n');
+  }).join('\n');
+
+  return [
+    galleryStyles(),
+    '<section class="gallery-albums" aria-label="相册">',
+    cards || '  <p>暂无相册。</p>',
+    '</section>'
+  ].join('\n');
+}
+
+function imageAttributes(tag) {
+  const source = tag.match(/\bsrc=(['"])(.*?)\1/i);
+  const alt = tag.match(/\balt=(['"])(.*?)\1/i);
+  return {
+    src: source ? source[2] : '',
+    alt: alt ? alt[2] : ''
+  };
+}
+
+function renderGalleryWorld(content) {
+  const images = String(content || '').match(/<img\b[^>]*>/gi) || [];
+  const items = images.map((tag, index) => {
+    const image = imageAttributes(tag);
+    if (!image.src) {
+      return '';
+    }
+
+    const source = escapeHtml(image.src);
+    const alt = escapeHtml(image.alt || `相册图片 ${index + 1}`);
+    return [
+      `  <a class="gallery-item" href="${source}" data-gallery-lightbox>`,
+      `    <img src="${source}" alt="${alt}" loading="lazy">`,
+      '  </a>'
+    ].join('\n');
+  }).filter(Boolean).join('\n');
+
+  return [
+    galleryStyles(),
+    '<section class="gallery-grid" aria-label="花花世界">',
+    items || '  <p>暂无图片。</p>',
+    '</section>',
+    '<dialog class="gallery-lightbox" data-gallery-dialog>',
+    '  <button class="gallery-lightbox-close" type="button" data-gallery-close aria-label="关闭图片">&times;</button>',
+    '  <img src="" alt="" data-gallery-dialog-image>',
+    '</dialog>',
+    '<script>',
+    '  (() => {',
+    '    if (window.__galleryLightboxBound) return;',
+    '    window.__galleryLightboxBound = true;',
+    '    document.addEventListener("click", (event) => {',
+    '      const item = event.target.closest("[data-gallery-lightbox]");',
+    '      if (item) {',
+    '        const dialog = document.querySelector("[data-gallery-dialog]");',
+    '        const image = dialog && dialog.querySelector("[data-gallery-dialog-image]");',
+    '        if (!dialog || !image || typeof dialog.showModal !== "function") return;',
+    '        event.preventDefault();',
+    '        image.src = item.href;',
+    '        image.alt = item.querySelector("img").alt;',
+    '        dialog.showModal();',
+    '      }',
+    '      const closeButton = event.target.closest("[data-gallery-close]");',
+    '      if (closeButton) closeButton.closest("dialog").close();',
+    '    });',
+    '  })();',
+    '</script>'
+  ].join('\n');
+}
+
 hexo.extend.filter.register('after_post_render', function (data) {
   const source = normaliseSource(data.source);
 
   if (source === SHUO_SOURCE) {
     const siteData = hexo.locals.get('data') || {};
-    data.content = renderShuoshuo(siteData.shuoshuo);
+    const shuoshuo = siteData.shuoshuo || {};
+    const entries = Array.isArray(shuoshuo) ? shuoshuo : shuoshuo.entries;
+    data.content = renderShuoshuo(entries, shuoshuo);
+  }
+
+  if (source === GALLERY_INDEX_SOURCE) {
+    const siteData = hexo.locals.get('data') || {};
+    data.content = renderGalleryIndex(siteData.gallery && siteData.gallery.albums);
+  }
+
+  if (source === GALLERY_WORLD_SOURCE) {
+    data.content = renderGalleryWorld(data.content);
   }
 
   if (data.comments === true && !source.startsWith('_posts/') && !data.content.includes(PAGE_COMMENTS_MARKER)) {
