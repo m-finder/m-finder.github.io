@@ -1,5 +1,6 @@
 ---
 title: 花花世界
+permalink: /gallery/world/
 comments: true
 ---
 

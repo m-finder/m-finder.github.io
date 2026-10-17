@@ -88,7 +88,7 @@ function renderShuoContent(content) {
 function renderShuoshuo(entries, defaults) {
   const items = Array.isArray(entries) ? entries.slice() : [];
   const settings = defaults || {};
-  items.sort((left, right) => sortableDate(left.date) - sortableDate(right.date));
+  items.sort((left, right) => sortableDate(right.date) - sortableDate(left.date));
 
   const timeline = items.map((item) => {
     const author = escapeHtml(item.author || settings.author || hexo.config.author || 'M-finder');

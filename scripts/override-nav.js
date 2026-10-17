@@ -6,6 +6,7 @@ hexo.on('generateBefore', function () {
         "标签": "/tags/",
         "归档": "/archives/",
         "说说": "/shuo/",
+        "相册": "/gallery/",
         "书单": "/books/",
         "电影": "/movies/",
         "游戏": "/games/",
