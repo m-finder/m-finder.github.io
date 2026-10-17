@@ -266,6 +266,17 @@
           async>
   </script>
 </section>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const page = document.querySelector(".links-page");
+    const linksGrid = page && page.querySelector(".links-grid");
+    const comments = page && page.querySelector("[data-page-comments]");
+    if (!linksGrid || !comments) return;
+    linksGrid.insertAdjacentElement("afterend", comments);
+    const intro = page.querySelector(".links-intro");
+    if (intro && !intro.children.length && !intro.textContent.trim()) intro.remove();
+  });
+</script>
     </div>
   
 
