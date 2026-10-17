@@ -7,7 +7,7 @@ on:
   schedule:
     # 每天北京时间 08:20，同步当天已生成的日报并部署。
     # GitHub 只在默认分支执行 schedule；需将仓库默认分支设为 hexo。
-    - cron: "20 0 * * *"
+    - cron: "55 0 * * *"
   workflow_dispatch:
     inputs:
       date:
