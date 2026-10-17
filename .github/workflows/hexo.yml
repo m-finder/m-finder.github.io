@@ -5,7 +5,7 @@ on:
     branches:
       - hexo
   schedule:
-    # 每天北京时间 08:20，同步当天已生成的日报并部署。
+    # 每天北京时间 08:55，同步当天已生成的日报并部署。
     # GitHub 只在默认分支执行 schedule；需将仓库默认分支设为 hexo。
     - cron: "55 0 * * *"
   workflow_dispatch:
@@ -38,9 +38,9 @@ jobs:
         if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
         run: |
           if [ -n "${{ inputs.date }}" ]; then
-            python scripts/sync_ai_daily.py --date "${{ inputs.date }}"
+            python tools/sync_ai_daily.py --date "${{ inputs.date }}"
           else
-            python scripts/sync_ai_daily.py
+            python tools/sync_ai_daily.py
           fi
       - name: Use Node.js 18.x
         uses: actions/setup-node@v3
