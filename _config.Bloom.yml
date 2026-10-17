@@ -19,7 +19,7 @@ profile:
   gravatar_email: ""
   title: "M-finder"
   subtitle: "删繁就简，发现更多"
-  description: ""
+  description: "Happy Coding"
 
 # ---- Homepage Columns (Core Feature) ----
 # Enable categorized columns on homepage
@@ -39,7 +39,7 @@ columns:
 
 # Fallback when columns disabled
 default_list:
-  title: "Recent Posts"
+  title: "最近更新"
   limit: 50
   show_date: true
 
@@ -47,7 +47,7 @@ default_list:
 search:
   enabled: true
   path: search.xml
-  placeholder: "Search..."
+  placeholder: "搜索..."
 
 # ---- Social Links ----
 social:
@@ -96,7 +96,7 @@ comments:
   enabled: true
   provider: "giscus"                 # disqus | utterances | giscus
   disqus:
-    shortname: "swing"
+    shortname: "m-finder"
   utterances:
     repo: ""
     issue_term: pathname

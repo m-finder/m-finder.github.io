@@ -2,9 +2,10 @@
 hexo.on('generateBefore', function () {
     hexo.theme.config.nav = {
         "首页": "/",
-        "时间线": "/archives/",
-        "标签": "/tags/",
         "分类": "/categories/",
+        "标签": "/tags/",
+        "归档": "/archives/",
+        "说说": "/shuo/",
         "书单": "/books/",
         "电影": "/movies/",
         "游戏": "/games/",
