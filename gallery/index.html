@@ -265,7 +265,11 @@
   .gallery-lightbox[open] { display: flex; }
   .gallery-lightbox::backdrop { background: rgba(0, 0, 0, .9); }
   .gallery-lightbox img { max-height: calc(100vh - 3rem); max-width: calc(100vw - 3rem); object-fit: contain; }
-  .gallery-lightbox-close { background: rgba(0, 0, 0, .7); border: 1px solid #aeb8c7; color: #fff; cursor: pointer; font-size: 1.5rem; height: 2.5rem; line-height: 1; position: fixed; right: 1rem; top: 1rem; width: 2.5rem; }
+  .gallery-lightbox-close, .gallery-lightbox-nav { background: rgba(0, 0, 0, .7); border: 1px solid #aeb8c7; color: #fff; cursor: pointer; line-height: 1; position: fixed; }
+  .gallery-lightbox-close { font-size: 1.5rem; height: 2.5rem; right: 1rem; top: 1rem; width: 2.5rem; }
+  .gallery-lightbox-nav { font-size: 2.25rem; height: 3rem; top: calc(50% - 1.5rem); width: 3rem; }
+  .gallery-lightbox-prev { left: 1rem; }
+  .gallery-lightbox-next { right: 1rem; }
   @media (max-width: 480px) { .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .5rem; } }
 </style>
 <section class="gallery-albums" aria-label="相册">
