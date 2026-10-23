@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://m-finder.github.io/ai-daily-2026-10-23/</loc>
-    <lastmod>2026-10-23</lastmod>
-  </url>
-  <url>
     <loc>https://m-finder.github.io/draft/im-rebuild.html</loc>
     <lastmod>2026-10-23</lastmod>
   </url>
@@ -17,11 +13,11 @@
     <lastmod>2026-10-23</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.github.io/table-test/</loc>
+    <loc>https://m-finder.github.io/travis-ci-test/</loc>
     <lastmod>2026-10-23</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.github.io/travis-ci-test/</loc>
+    <loc>https://m-finder.github.io/table-test/</loc>
     <lastmod>2026-10-23</lastmod>
   </url>
   <url>
@@ -45,38 +41,6 @@
     <lastmod>2026-10-23</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.github.io/laravel-container/</loc>
-    <lastmod>2026-10-23</lastmod>
-  </url>
-  <url>
-    <loc>https://m-finder.github.io/laravel-events/</loc>
-    <lastmod>2026-10-23</lastmod>
-  </url>
-  <url>
-    <loc>https://m-finder.github.io/laravel-excel-import-bug/</loc>
-    <lastmod>2026-10-23</lastmod>
-  </url>
-  <url>
-    <loc>https://m-finder.github.io/laravel-life-cycle/</loc>
-    <lastmod>2026-10-23</lastmod>
-  </url>
-  <url>
-    <loc>https://m-finder.github.io/laravel-mix/</loc>
-    <lastmod>2026-10-23</lastmod>
-  </url>
-  <url>
-    <loc>https://m-finder.github.io/laravel-notes/</loc>
-    <lastmod>2026-10-23</lastmod>
-  </url>
-  <url>
-    <loc>https://m-finder.github.io/laravel-queues/</loc>
-    <lastmod>2026-10-23</lastmod>
-  </url>
-  <url>
-    <loc>https://m-finder.github.io/laravel-swoole-in-laradock/</loc>
-    <lastmod>2026-10-23</lastmod>
-  </url>
-  <url>
     <loc>https://m-finder.github.io/laravel-swoole-socket-in-laradock/</loc>
     <lastmod>2026-10-23</lastmod>
   </url>
@@ -85,11 +49,11 @@
     <lastmod>2026-10-23</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.github.io/laravel-vue/</loc>
+    <loc>https://m-finder.github.io/laravel-vue-svg/</loc>
     <lastmod>2026-10-23</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.github.io/laravel-vue-svg/</loc>
+    <loc>https://m-finder.github.io/laravel-vue/</loc>
     <lastmod>2026-10-23</lastmod>
   </url>
   <url>
@@ -133,11 +97,11 @@
     <lastmod>2026-10-23</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.github.io/openssl-pkey-get-private/</loc>
+    <loc>https://m-finder.github.io/php-zip-addfile/</loc>
     <lastmod>2026-10-23</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.github.io/php-zip-addfile/</loc>
+    <loc>https://m-finder.github.io/openssl-pkey-get-private/</loc>
     <lastmod>2026-10-23</lastmod>
   </url>
   <url>
@@ -145,15 +109,59 @@
     <lastmod>2026-10-23</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.github.io/design-pattern-object/</loc>
+    <loc>https://m-finder.github.io/keyboard/</loc>
     <lastmod>2026-10-23</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.github.io/design-pattern-observer/</loc>
+    <loc>https://m-finder.github.io/keras-mnist/</loc>
     <lastmod>2026-10-23</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.github.io/design-pattern-principles/</loc>
+    <loc>https://m-finder.github.io/laradock-php-5-6-connect-mysql/</loc>
+    <lastmod>2026-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://m-finder.github.io/laravel-5-4-bug/</loc>
+    <lastmod>2026-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://m-finder.github.io/laradock-xdebug/</loc>
+    <lastmod>2026-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://m-finder.github.io/laravel-broadcasting/</loc>
+    <lastmod>2026-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://m-finder.github.io/laravel-container/</loc>
+    <lastmod>2026-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://m-finder.github.io/laravel-events/</loc>
+    <lastmod>2026-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://m-finder.github.io/laravel-excel-import-bug/</loc>
+    <lastmod>2026-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://m-finder.github.io/laravel-life-cycle/</loc>
+    <lastmod>2026-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://m-finder.github.io/laravel-mix/</loc>
+    <lastmod>2026-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://m-finder.github.io/laravel-swoole-in-laradock/</loc>
+    <lastmod>2026-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://m-finder.github.io/laravel-notes/</loc>
+    <lastmod>2026-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://m-finder.github.io/laravel-queues/</loc>
     <lastmod>2026-10-23</lastmod>
   </url>
   <url>
@@ -177,11 +185,11 @@
     <lastmod>2026-10-23</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.github.io/design-pattern-template-method/</loc>
+    <loc>https://m-finder.github.io/design-pattern-strategy/</loc>
     <lastmod>2026-10-23</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.github.io/design-pattern-strategy/</loc>
+    <loc>https://m-finder.github.io/design-pattern-template-method/</loc>
     <lastmod>2026-10-23</lastmod>
   </url>
   <url>
@@ -189,11 +197,11 @@
     <lastmod>2026-10-23</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.github.io/design-pattern/</loc>
+    <loc>https://m-finder.github.io/distributed-system/</loc>
     <lastmod>2026-10-23</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.github.io/distributed-system/</loc>
+    <loc>https://m-finder.github.io/design-pattern/</loc>
     <lastmod>2026-10-23</lastmod>
   </url>
   <url>
@@ -241,27 +249,83 @@
     <lastmod>2026-10-23</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.github.io/keras-mnist/</loc>
+    <loc>https://m-finder.github.io/convnet-learn/</loc>
     <lastmod>2026-10-23</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.github.io/laradock-php-5-6-connect-mysql/</loc>
+    <loc>https://m-finder.github.io/design-pattern-adapter/</loc>
     <lastmod>2026-10-23</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.github.io/keyboard/</loc>
+    <loc>https://m-finder.github.io/design-pattern-bridge/</loc>
     <lastmod>2026-10-23</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.github.io/laradock-xdebug/</loc>
+    <loc>https://m-finder.github.io/design-pattern-builder/</loc>
     <lastmod>2026-10-23</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.github.io/laravel-5-4-bug/</loc>
+    <loc>https://m-finder.github.io/design-pattern-category/</loc>
     <lastmod>2026-10-23</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.github.io/laravel-broadcasting/</loc>
+    <loc>https://m-finder.github.io/design-pattern-composite/</loc>
+    <lastmod>2026-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://m-finder.github.io/design-pattern-command/</loc>
+    <lastmod>2026-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://m-finder.github.io/design-pattern-cor/</loc>
+    <lastmod>2026-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://m-finder.github.io/design-pattern-decorator/</loc>
+    <lastmod>2026-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://m-finder.github.io/design-pattern-facade/</loc>
+    <lastmod>2026-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://m-finder.github.io/design-pattern-di/</loc>
+    <lastmod>2026-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://m-finder.github.io/design-pattern-factory/</loc>
+    <lastmod>2026-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://m-finder.github.io/design-pattern-fi/</loc>
+    <lastmod>2026-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://m-finder.github.io/design-pattern-iterator/</loc>
+    <lastmod>2026-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://m-finder.github.io/design-pattern-mediator/</loc>
+    <lastmod>2026-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://m-finder.github.io/design-pattern-flyweight/</loc>
+    <lastmod>2026-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://m-finder.github.io/design-pattern-memento/</loc>
+    <lastmod>2026-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://m-finder.github.io/design-pattern-object/</loc>
+    <lastmod>2026-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://m-finder.github.io/design-pattern-observer/</loc>
+    <lastmod>2026-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://m-finder.github.io/design-pattern-principles/</loc>
     <lastmod>2026-10-23</lastmod>
   </url>
   <url>
@@ -281,11 +345,11 @@
     <lastmod>2026-10-23</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.github.io/2022-12-12-for-my-yadea/</loc>
+    <loc>https://m-finder.github.io/2022-to-do-list/</loc>
     <lastmod>2026-10-23</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.github.io/2022-to-do-list/</loc>
+    <loc>https://m-finder.github.io/2022-12-12-for-my-yadea/</loc>
     <lastmod>2026-10-23</lastmod>
   </url>
   <url>
@@ -297,11 +361,11 @@
     <lastmod>2026-10-23</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.github.io/2023-11-20-laravel-swoole-socket/</loc>
+    <loc>https://m-finder.github.io/2023-to-do-list/</loc>
     <lastmod>2026-10-23</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.github.io/2023-to-do-list/</loc>
+    <loc>https://m-finder.github.io/2023-11-20-laravel-swoole-socket/</loc>
     <lastmod>2026-10-23</lastmod>
   </url>
   <url>
@@ -369,15 +433,15 @@
     <lastmod>2026-10-23</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.github.io/2025-to-do-list/</loc>
-    <lastmod>2026-10-23</lastmod>
-  </url>
-  <url>
     <loc>https://m-finder.github.io/2025-12-10-fn-tailscale/</loc>
     <lastmod>2026-10-23</lastmod>
   </url>
   <url>
     <loc>https://m-finder.github.io/2026-07-21-one-day-in-26/</loc>
+    <lastmod>2026-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://m-finder.github.io/2025-to-do-list/</loc>
     <lastmod>2026-10-23</lastmod>
   </url>
   <url>
@@ -445,6 +509,10 @@
     <lastmod>2026-10-23</lastmod>
   </url>
   <url>
+    <loc>https://m-finder.github.io/ai-daily-2026-10-23/</loc>
+    <lastmod>2026-10-23</lastmod>
+  </url>
+  <url>
     <loc>https://m-finder.github.io/at-the-end-of-2022/</loc>
     <lastmod>2026-10-23</lastmod>
   </url>
@@ -454,74 +522,6 @@
   </url>
   <url>
     <loc>https://m-finder.github.io/centos-php74/</loc>
-    <lastmod>2026-10-23</lastmod>
-  </url>
-  <url>
-    <loc>https://m-finder.github.io/convnet-learn/</loc>
-    <lastmod>2026-10-23</lastmod>
-  </url>
-  <url>
-    <loc>https://m-finder.github.io/design-pattern-adapter/</loc>
-    <lastmod>2026-10-23</lastmod>
-  </url>
-  <url>
-    <loc>https://m-finder.github.io/design-pattern-bridge/</loc>
-    <lastmod>2026-10-23</lastmod>
-  </url>
-  <url>
-    <loc>https://m-finder.github.io/design-pattern-builder/</loc>
-    <lastmod>2026-10-23</lastmod>
-  </url>
-  <url>
-    <loc>https://m-finder.github.io/design-pattern-category/</loc>
-    <lastmod>2026-10-23</lastmod>
-  </url>
-  <url>
-    <loc>https://m-finder.github.io/design-pattern-command/</loc>
-    <lastmod>2026-10-23</lastmod>
-  </url>
-  <url>
-    <loc>https://m-finder.github.io/design-pattern-composite/</loc>
-    <lastmod>2026-10-23</lastmod>
-  </url>
-  <url>
-    <loc>https://m-finder.github.io/design-pattern-cor/</loc>
-    <lastmod>2026-10-23</lastmod>
-  </url>
-  <url>
-    <loc>https://m-finder.github.io/design-pattern-decorator/</loc>
-    <lastmod>2026-10-23</lastmod>
-  </url>
-  <url>
-    <loc>https://m-finder.github.io/design-pattern-di/</loc>
-    <lastmod>2026-10-23</lastmod>
-  </url>
-  <url>
-    <loc>https://m-finder.github.io/design-pattern-facade/</loc>
-    <lastmod>2026-10-23</lastmod>
-  </url>
-  <url>
-    <loc>https://m-finder.github.io/design-pattern-factory/</loc>
-    <lastmod>2026-10-23</lastmod>
-  </url>
-  <url>
-    <loc>https://m-finder.github.io/design-pattern-fi/</loc>
-    <lastmod>2026-10-23</lastmod>
-  </url>
-  <url>
-    <loc>https://m-finder.github.io/design-pattern-flyweight/</loc>
-    <lastmod>2026-10-23</lastmod>
-  </url>
-  <url>
-    <loc>https://m-finder.github.io/design-pattern-iterator/</loc>
-    <lastmod>2026-10-23</lastmod>
-  </url>
-  <url>
-    <loc>https://m-finder.github.io/design-pattern-mediator/</loc>
-    <lastmod>2026-10-23</lastmod>
-  </url>
-  <url>
-    <loc>https://m-finder.github.io/design-pattern-memento/</loc>
     <lastmod>2026-10-23</lastmod>
   </url>
 </urlset> 
