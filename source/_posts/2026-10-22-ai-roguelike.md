@@ -12,11 +12,10 @@ tags:
 ---
 
 最近用 AI 做了一个暗黑像素风的肉鸽小游戏，名字暂时叫「暗黑罗格」。
-
-试玩地址：
 ![](/images/roguelike.png)
 
-[https://m-finder.github.io/roguelike-demo/](https://m-finder.github.io/roguelike-demo/)
+试玩地址：
+[暗黑罗格](https://m-finder.github.io/roguelike-demo/)
 
 源码暂时不开源，主要是一个使用 `Cocos Creator 3.8.8 + TypeScript` 做的单场景地牢生存原型。
 
