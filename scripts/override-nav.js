@@ -2,7 +2,6 @@
 hexo.on('generateBefore', function () {
     hexo.theme.config.nav = {
         "首页": "/",
-        "分类": "/categories/",
         "标签": "/tags/",
         "归档": "/archives/",
         "说说": "/shuo/",
