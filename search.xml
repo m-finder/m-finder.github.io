@@ -495,7 +495,7 @@
       <link href="/2026-to-do-list/"/>
       <url>/2026-to-do-list/</url>
       
-        <content type="html"><![CDATA[<ul><li><input checked="" disabled="" type="checkbox"> 活着</li><li><input checked="" disabled="" type="checkbox"> 练背</li><li><input checked="" disabled="" type="checkbox"> 练肩</li><li><input checked="" disabled="" type="checkbox"> 练腿</li><li><input disabled="" type="checkbox"> 多搞点钱</li><li><input disabled="" type="checkbox"> 搞辆車 jū</li><li><input disabled="" type="checkbox"> 瘦到 130, 减掉10来斤了，还差点儿</li><li><input checked="" disabled="" type="checkbox"> 买五金</li><li><input disabled="" type="checkbox"> 拍婚纱</li></ul><p>深度使用 AI 编程的一年，但是用的越多心里的危机感就越重。</p><p>尤其是这几天看到有人逆向了 Adobe 全家桶，有人逆向了主机游戏到手机跟平板上。</p><p>软件工程或许是真的凉了。</p><p>开发者们的明天在哪里……</p>]]></content>
+        <content type="html"><![CDATA[<ul><li><input checked="" disabled="" type="checkbox"> 活着</li><li><input checked="" disabled="" type="checkbox"> 练背</li><li><input checked="" disabled="" type="checkbox"> 练肩</li><li><input checked="" disabled="" type="checkbox"> 练腿</li><li><input disabled="" type="checkbox"> <del>多搞点钱</del>，先好好活着吧。😄</li><li><input disabled="" type="checkbox"> 搞辆車 jū</li><li><input disabled="" type="checkbox"> 瘦到 130, 减掉10来斤了，还差点儿</li><li><input checked="" disabled="" type="checkbox"> 买五金</li><li><input disabled="" type="checkbox"> 拍婚纱</li></ul><p>深度使用 AI 编程的一年，但是用的越多心里的危机感就越重。</p><p>尤其是这几天看到有人逆向了 Adobe 全家桶，有人逆向了主机游戏到手机跟平板上。</p><p>软件工程或许是真的凉了。</p><p>开发者们的明天在哪里……</p>]]></content>
       
       
       <categories>
@@ -1172,31 +1172,6 @@
         <tags>
             
             <tag> 闲言赘语 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>书单</title>
-      <link href="/books/"/>
-      <url>/books/</url>
-      
-        <content type="html"><![CDATA[<ul><li><input checked="" disabled="" type="checkbox"> 龙族</li><li><input checked="" disabled="" type="checkbox"> 一句顶一万句</li><li><input checked="" disabled="" type="checkbox"> 血腥的盛唐</li><li><input checked="" disabled="" type="checkbox"> 1942:河南大饥荒</li><li><input checked="" disabled="" type="checkbox"> redis 入门指南第二版</li><li><input checked="" disabled="" type="checkbox"> 深入设计模式</li><li><input checked="" disabled="" type="checkbox"> 系统架构设计师教程</li><li><input checked="" disabled="" type="checkbox"> 宫女谈往录</li><li><input checked="" disabled="" type="checkbox"> 我的前半生</li><li><input checked="" disabled="" type="checkbox"> 法医宋慈</li><li><input checked="" disabled="" type="checkbox"> 白鹿原</li><li><input checked="" disabled="" type="checkbox"> 中国异闻录</li><li><input disabled="" type="checkbox"> 万历十五年</li><li><input checked="" disabled="" type="checkbox"> 叫魂：1768年中国妖术大恐慌</li><li><input checked="" disabled="" type="checkbox"> 现代管理信息系统</li><li><input checked="" disabled="" type="checkbox"> 沙海</li><li><input checked="" disabled="" type="checkbox"> 怒江之战</li><li><input checked="" disabled="" type="checkbox"> 蜗居</li><li><input disabled="" type="checkbox"> 地铁三部曲</li><li><input checked="" disabled="" type="checkbox"> 中国，少了一味药</li><li><input disabled="" type="checkbox"> 被讨厌的勇气</li><li><input checked="" disabled="" type="checkbox"> 十方异事录</li></ul><p><del>看看能不能把豆瓣书单拉过来……</del></p><p><del>难搞，折腾半天现在直接不会发布了😭</del></p><p>已重新配置部署脚本，现切换到豆瓣书单，以后不再更新。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 书单 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 书单 </tag>
             
         </tags>
       

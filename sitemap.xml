@@ -2,15 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://m-finder.github.io/ai-daily-2026-10-28/</loc>
-    
-    <lastmod>2026-10-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://m-finder.github.io/link/index.html</loc>
     
     <lastmod>2026-10-28</lastmod>
@@ -56,15 +47,6 @@
   </url>
   
   <url>
-    <loc>https://m-finder.github.io/gallery/index.html</loc>
-    
-    <lastmod>2026-10-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://m-finder.github.io/archives/index.html</loc>
     
     <lastmod>2026-10-28</lastmod>
@@ -83,7 +65,241 @@
   </url>
   
   <url>
+    <loc>https://m-finder.github.io/gallery/index.html</loc>
+    
+    <lastmod>2026-10-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.github.io/year-of-dog/</loc>
+    
+    <lastmod>2026-10-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://m-finder.github.io/about/index.html</loc>
+    
+    <lastmod>2026-10-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.github.io/money-to-house/</loc>
+    
+    <lastmod>2026-10-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.github.io/mweb-hexo-setting/</loc>
+    
+    <lastmod>2026-10-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.github.io/notes/</loc>
+    
+    <lastmod>2026-10-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.github.io/nothing-to-say/</loc>
+    
+    <lastmod>2026-10-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.github.io/my-hobbies/</loc>
+    
+    <lastmod>2026-10-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.github.io/openssl-pkey-get-private/</loc>
+    
+    <lastmod>2026-10-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.github.io/php-zip-addfile/</loc>
+    
+    <lastmod>2026-10-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.github.io/pjax/</loc>
+    
+    <lastmod>2026-10-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.github.io/python-out-of-memory/</loc>
+    
+    <lastmod>2026-10-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.github.io/redis-learning-1/</loc>
+    
+    <lastmod>2026-10-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.github.io/table-test/</loc>
+    
+    <lastmod>2026-10-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.github.io/travis-ci-test/</loc>
+    
+    <lastmod>2026-10-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.github.io/use-laravel-permission-can-tag-in-vue/</loc>
+    
+    <lastmod>2026-10-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.github.io/wsl-laradock/</loc>
+    
+    <lastmod>2026-10-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.github.io/web-tool/</loc>
+    
+    <lastmod>2026-10-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.github.io/wsl2-laradock/</loc>
+    
+    <lastmod>2026-10-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.github.io/laravel-life-cycle/</loc>
+    
+    <lastmod>2026-10-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.github.io/laravel-mix/</loc>
+    
+    <lastmod>2026-10-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.github.io/laravel-notes/</loc>
+    
+    <lastmod>2026-10-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.github.io/laravel-queues/</loc>
+    
+    <lastmod>2026-10-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.github.io/laravel-swoole-in-laradock/</loc>
+    
+    <lastmod>2026-10-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.github.io/laravel-testing/</loc>
+    
+    <lastmod>2026-10-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.github.io/laravel-swoole-socket-in-laradock/</loc>
+    
+    <lastmod>2026-10-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.github.io/laravel-vue-svg/</loc>
     
     <lastmod>2026-10-28</lastmod>
     
@@ -146,151 +362,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.github.io/money-to-house/</loc>
-    
-    <lastmod>2026-10-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.github.io/my-hobbies/</loc>
-    
-    <lastmod>2026-10-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.github.io/mweb-hexo-setting/</loc>
-    
-    <lastmod>2026-10-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.github.io/notes/</loc>
-    
-    <lastmod>2026-10-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.github.io/nothing-to-say/</loc>
-    
-    <lastmod>2026-10-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.github.io/openssl-pkey-get-private/</loc>
-    
-    <lastmod>2026-10-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.github.io/pjax/</loc>
-    
-    <lastmod>2026-10-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.github.io/php-zip-addfile/</loc>
-    
-    <lastmod>2026-10-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.github.io/python-out-of-memory/</loc>
-    
-    <lastmod>2026-10-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.github.io/redis-learning-1/</loc>
-    
-    <lastmod>2026-10-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.github.io/table-test/</loc>
-    
-    <lastmod>2026-10-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.github.io/travis-ci-test/</loc>
-    
-    <lastmod>2026-10-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.github.io/use-laravel-permission-can-tag-in-vue/</loc>
-    
-    <lastmod>2026-10-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.github.io/web-tool/</loc>
-    
-    <lastmod>2026-10-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.github.io/wsl-laradock/</loc>
-    
-    <lastmod>2026-10-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.github.io/wsl2-laradock/</loc>
-    
-    <lastmod>2026-10-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.github.io/year-of-dog/</loc>
+    <loc>https://m-finder.github.io/eat-more/</loc>
     
     <lastmod>2026-10-28</lastmod>
     
@@ -326,7 +398,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.github.io/hexo-new-pc/</loc>
+    <loc>https://m-finder.github.io/husky-is-getting-married/</loc>
     
     <lastmod>2026-10-28</lastmod>
     
@@ -335,7 +407,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.github.io/husky-is-getting-married/</loc>
+    <loc>https://m-finder.github.io/hexo-new-pc/</loc>
     
     <lastmod>2026-10-28</lastmod>
     
@@ -407,15 +479,6 @@
   </url>
   
   <url>
-    <loc>https://m-finder.github.io/laravel-container/</loc>
-    
-    <lastmod>2026-10-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://m-finder.github.io/laravel-events/</loc>
     
     <lastmod>2026-10-28</lastmod>
@@ -425,151 +488,16 @@
   </url>
   
   <url>
+    <loc>https://m-finder.github.io/laravel-container/</loc>
+    
+    <lastmod>2026-10-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://m-finder.github.io/laravel-excel-import-bug/</loc>
-    
-    <lastmod>2026-10-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.github.io/laravel-life-cycle/</loc>
-    
-    <lastmod>2026-10-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.github.io/laravel-mix/</loc>
-    
-    <lastmod>2026-10-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.github.io/laravel-notes/</loc>
-    
-    <lastmod>2026-10-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.github.io/laravel-queues/</loc>
-    
-    <lastmod>2026-10-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.github.io/laravel-swoole-socket-in-laradock/</loc>
-    
-    <lastmod>2026-10-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.github.io/laravel-swoole-in-laradock/</loc>
-    
-    <lastmod>2026-10-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.github.io/laravel-testing/</loc>
-    
-    <lastmod>2026-10-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.github.io/laravel-vue-svg/</loc>
-    
-    <lastmod>2026-10-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.github.io/design-pattern-di/</loc>
-    
-    <lastmod>2026-10-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.github.io/design-pattern-decorator/</loc>
-    
-    <lastmod>2026-10-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.github.io/design-pattern-facade/</loc>
-    
-    <lastmod>2026-10-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.github.io/design-pattern-factory/</loc>
-    
-    <lastmod>2026-10-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.github.io/design-pattern-fi/</loc>
-    
-    <lastmod>2026-10-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.github.io/design-pattern-flyweight/</loc>
-    
-    <lastmod>2026-10-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.github.io/design-pattern-iterator/</loc>
-    
-    <lastmod>2026-10-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.github.io/design-pattern-mediator/</loc>
     
     <lastmod>2026-10-28</lastmod>
     
@@ -677,7 +605,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.github.io/design-pattern/</loc>
+    <loc>https://m-finder.github.io/design-pattern-visitor/</loc>
     
     <lastmod>2026-10-28</lastmod>
     
@@ -686,7 +614,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.github.io/design-pattern-visitor/</loc>
+    <loc>https://m-finder.github.io/design-pattern/</loc>
     
     <lastmod>2026-10-28</lastmod>
     
@@ -740,78 +668,6 @@
   </url>
   
   <url>
-    <loc>https://m-finder.github.io/eat-more/</loc>
-    
-    <lastmod>2026-10-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.github.io/ai-daily-2026-10-20/</loc>
-    
-    <lastmod>2026-10-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.github.io/ai-daily-2026-10-21/</loc>
-    
-    <lastmod>2026-10-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.github.io/ai-daily-2026-10-22/</loc>
-    
-    <lastmod>2026-10-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.github.io/ai-daily-2026-10-24/</loc>
-    
-    <lastmod>2026-10-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.github.io/ai-daily-2026-10-25/</loc>
-    
-    <lastmod>2026-10-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.github.io/ai-daily-2026-10-23/</loc>
-    
-    <lastmod>2026-10-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.github.io/ai-daily-2026-10-26/</loc>
-    
-    <lastmod>2026-10-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://m-finder.github.io/ai-daily-2026-10-27/</loc>
     
     <lastmod>2026-10-28</lastmod>
@@ -830,7 +686,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.github.io/books/</loc>
+    <loc>https://m-finder.github.io/ai-daily-2026-10-28/</loc>
     
     <lastmod>2026-10-28</lastmod>
     
@@ -848,7 +704,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.github.io/design-pattern-adapter/</loc>
+    <loc>https://m-finder.github.io/convnet-learn/</loc>
     
     <lastmod>2026-10-28</lastmod>
     
@@ -857,7 +713,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.github.io/convnet-learn/</loc>
+    <loc>https://m-finder.github.io/design-pattern-adapter/</loc>
     
     <lastmod>2026-10-28</lastmod>
     
@@ -902,15 +758,6 @@
   </url>
   
   <url>
-    <loc>https://m-finder.github.io/design-pattern-cor/</loc>
-    
-    <lastmod>2026-10-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://m-finder.github.io/design-pattern-composite/</loc>
     
     <lastmod>2026-10-28</lastmod>
@@ -920,7 +767,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.github.io/2019-to-do-list/</loc>
+    <loc>https://m-finder.github.io/design-pattern-cor/</loc>
     
     <lastmod>2026-10-28</lastmod>
     
@@ -929,7 +776,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.github.io/2020-to-do-list/</loc>
+    <loc>https://m-finder.github.io/design-pattern-decorator/</loc>
     
     <lastmod>2026-10-28</lastmod>
     
@@ -938,7 +785,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.github.io/2021-to-do-list/</loc>
+    <loc>https://m-finder.github.io/design-pattern-di/</loc>
     
     <lastmod>2026-10-28</lastmod>
     
@@ -947,7 +794,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.github.io/2022-05-13/</loc>
+    <loc>https://m-finder.github.io/design-pattern-facade/</loc>
     
     <lastmod>2026-10-28</lastmod>
     
@@ -956,7 +803,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.github.io/2022-12-12-for-my-yadea/</loc>
+    <loc>https://m-finder.github.io/design-pattern-factory/</loc>
     
     <lastmod>2026-10-28</lastmod>
     
@@ -965,7 +812,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.github.io/2022-to-do-list/</loc>
+    <loc>https://m-finder.github.io/design-pattern-fi/</loc>
     
     <lastmod>2026-10-28</lastmod>
     
@@ -974,7 +821,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.github.io/2023-05-11-gm/</loc>
+    <loc>https://m-finder.github.io/design-pattern-flyweight/</loc>
     
     <lastmod>2026-10-28</lastmod>
     
@@ -983,7 +830,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.github.io/2023-09-23-swift/</loc>
+    <loc>https://m-finder.github.io/design-pattern-iterator/</loc>
     
     <lastmod>2026-10-28</lastmod>
     
@@ -992,7 +839,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.github.io/2023-11-20-laravel-swoole-socket/</loc>
+    <loc>https://m-finder.github.io/design-pattern-mediator/</loc>
     
     <lastmod>2026-10-28</lastmod>
     
@@ -1001,7 +848,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.github.io/2023-to-do-list/</loc>
+    <loc>https://m-finder.github.io/ai-daily-2026-10-20/</loc>
     
     <lastmod>2026-10-28</lastmod>
     
@@ -1010,7 +857,187 @@
   </url>
   
   <url>
-    <loc>https://m-finder.github.io/2024-02-25-review-base/</loc>
+    <loc>https://m-finder.github.io/ai-daily-2026-10-22/</loc>
+    
+    <lastmod>2026-10-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.github.io/ai-daily-2026-10-21/</loc>
+    
+    <lastmod>2026-10-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.github.io/ai-daily-2026-10-23/</loc>
+    
+    <lastmod>2026-10-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.github.io/ai-daily-2026-10-24/</loc>
+    
+    <lastmod>2026-10-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.github.io/ai-daily-2026-10-25/</loc>
+    
+    <lastmod>2026-10-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.github.io/ai-daily-2026-10-26/</loc>
+    
+    <lastmod>2026-10-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.github.io/2026-10-17-hexo-bloom-script/</loc>
+    
+    <lastmod>2026-10-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.github.io/2026-10-22-ai-roguelike/</loc>
+    
+    <lastmod>2026-10-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.github.io/2026-10-24-wu/</loc>
+    
+    <lastmod>2026-10-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.github.io/2026-to-do-list/</loc>
+    
+    <lastmod>2026-10-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.github.io/2026-10-26-to-be-a-scientist/</loc>
+    
+    <lastmod>2026-10-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.github.io/Docker-images/</loc>
+    
+    <lastmod>2026-10-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.github.io/Laravel-ftp/</loc>
+    
+    <lastmod>2026-10-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.github.io/Laravel-chunk/</loc>
+    
+    <lastmod>2026-10-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.github.io/Laravel-time-change/</loc>
+    
+    <lastmod>2026-10-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.github.io/Layim-contextmenu/</loc>
+    
+    <lastmod>2026-10-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.github.io/Layui-notes/</loc>
+    
+    <lastmod>2026-10-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.github.io/ai-daily-2026-10-16/</loc>
+    
+    <lastmod>2026-10-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.github.io/ai-daily-2026-10-17/</loc>
+    
+    <lastmod>2026-10-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.github.io/ai-daily-2026-10-18/</loc>
+    
+    <lastmod>2026-10-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.github.io/ai-daily-2026-10-19/</loc>
     
     <lastmod>2026-10-28</lastmod>
     
@@ -1028,7 +1055,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.github.io/2024-03-01-swoole-and-octane2/</loc>
+    <loc>https://m-finder.github.io/2024-02-29-review-http/</loc>
     
     <lastmod>2026-10-28</lastmod>
     
@@ -1037,7 +1064,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.github.io/2024-02-29-review-http/</loc>
+    <loc>https://m-finder.github.io/2024-03-01-swoole-and-octane2/</loc>
     
     <lastmod>2026-10-28</lastmod>
     
@@ -1073,7 +1100,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.github.io/2024-09-28-cmake-aseprite/</loc>
+    <loc>https://m-finder.github.io/2024-to-do-list/</loc>
     
     <lastmod>2026-10-28</lastmod>
     
@@ -1082,7 +1109,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.github.io/2024-to-do-list/</loc>
+    <loc>https://m-finder.github.io/2024-09-28-cmake-aseprite/</loc>
     
     <lastmod>2026-10-28</lastmod>
     
@@ -1181,7 +1208,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.github.io/2026-10-22-ai-roguelike/</loc>
+    <loc>https://m-finder.github.io/2019-to-do-list/</loc>
     
     <lastmod>2026-10-28</lastmod>
     
@@ -1190,7 +1217,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.github.io/2026-10-17-hexo-bloom-script/</loc>
+    <loc>https://m-finder.github.io/2020-to-do-list/</loc>
     
     <lastmod>2026-10-28</lastmod>
     
@@ -1199,7 +1226,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.github.io/2026-10-24-wu/</loc>
+    <loc>https://m-finder.github.io/2022-05-13/</loc>
     
     <lastmod>2026-10-28</lastmod>
     
@@ -1208,7 +1235,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.github.io/2026-10-26-to-be-a-scientist/</loc>
+    <loc>https://m-finder.github.io/2022-12-12-for-my-yadea/</loc>
     
     <lastmod>2026-10-28</lastmod>
     
@@ -1217,7 +1244,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.github.io/2026-to-do-list/</loc>
+    <loc>https://m-finder.github.io/2021-to-do-list/</loc>
     
     <lastmod>2026-10-28</lastmod>
     
@@ -1226,7 +1253,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.github.io/Docker-images/</loc>
+    <loc>https://m-finder.github.io/2022-to-do-list/</loc>
     
     <lastmod>2026-10-28</lastmod>
     
@@ -1235,7 +1262,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.github.io/Laravel-chunk/</loc>
+    <loc>https://m-finder.github.io/2023-05-11-gm/</loc>
     
     <lastmod>2026-10-28</lastmod>
     
@@ -1244,7 +1271,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.github.io/Laravel-ftp/</loc>
+    <loc>https://m-finder.github.io/2023-09-23-swift/</loc>
     
     <lastmod>2026-10-28</lastmod>
     
@@ -1253,7 +1280,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.github.io/Laravel-time-change/</loc>
+    <loc>https://m-finder.github.io/2023-11-20-laravel-swoole-socket/</loc>
     
     <lastmod>2026-10-28</lastmod>
     
@@ -1262,7 +1289,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.github.io/Layim-contextmenu/</loc>
+    <loc>https://m-finder.github.io/2023-to-do-list/</loc>
     
     <lastmod>2026-10-28</lastmod>
     
@@ -1271,43 +1298,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.github.io/Layui-notes/</loc>
-    
-    <lastmod>2026-10-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.github.io/ai-daily-2026-10-16/</loc>
-    
-    <lastmod>2026-10-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.github.io/ai-daily-2026-10-17/</loc>
-    
-    <lastmod>2026-10-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.github.io/ai-daily-2026-10-19/</loc>
-    
-    <lastmod>2026-10-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.github.io/ai-daily-2026-10-18/</loc>
+    <loc>https://m-finder.github.io/2024-02-25-review-base/</loc>
     
     <lastmod>2026-10-28</lastmod>
     
@@ -1381,6 +1372,20 @@
   </url>
   
   <url>
+    <loc>https://m-finder.github.io/tags/hexo/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.github.io/tags/js/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://m-finder.github.io/tags/AI/</loc>
     <lastmod>2026-10-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -1410,20 +1415,6 @@
   
   <url>
     <loc>https://m-finder.github.io/tags/%E8%82%89%E9%B8%BD/</loc>
-    <lastmod>2026-10-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.github.io/tags/hexo/</loc>
-    <lastmod>2026-10-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.github.io/tags/js/</loc>
     <lastmod>2026-10-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1465,20 +1456,6 @@
   </url>
   
   <url>
-    <loc>https://m-finder.github.io/tags/%E4%B9%A6%E5%8D%95/</loc>
-    <lastmod>2026-10-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
-    <lastmod>2026-10-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://m-finder.github.io/tags/keras/</loc>
     <lastmod>2026-10-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -1487,6 +1464,13 @@
   
   <url>
     <loc>https://m-finder.github.io/tags/python/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
     <lastmod>2026-10-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1580,13 +1564,6 @@
   
   <url>
     <loc>https://m-finder.github.io/categories/AI-%E6%97%A5%E6%8A%A5/</loc>
-    <lastmod>2026-10-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.github.io/categories/%E4%B9%A6%E5%8D%95/</loc>
     <lastmod>2026-10-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
