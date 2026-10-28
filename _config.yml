@@ -6,7 +6,18 @@
 title: 'M-finder'
 subtitle: '删繁就简，发现更多'
 description: 'happy coding'
-keywords: ['m-finder', 'php', 'laravel']
+keywords: [
+  'm-finder',
+  'M-finder技术博客',
+  'php',
+  'laravel',
+  'java',
+  'vue',
+  '全栈开发',
+  '技术分享',
+  'AI日报',
+  'AI使用',
+]
 author: 'm-finder'
 language: 'zh-CN'
 timezone: 'Asia/Shanghai'
