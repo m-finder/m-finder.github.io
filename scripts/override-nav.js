@@ -6,7 +6,6 @@ hexo.on('generateBefore', function () {
         "码不能停": "/categories/码不能停/",
         "AI日报": "/categories/AI-日报/",
         "项目": "/projects/",
-        "标签": "/tags/",
         "说说": "/shuo/",
         "相册": "/gallery/",
         "电影": "/movies/",

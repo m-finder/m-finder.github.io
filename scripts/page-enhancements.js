@@ -146,6 +146,7 @@ function renderShuoshuo(entries, defaults) {
 function galleryStyles() {
   return [
     '<style>',
+    '  .page-content .gallery-albums img, .page-content .gallery-grid img, .page-content .gallery-lightbox img { margin: 0; }',
     '  .gallery-albums, .gallery-grid { display: grid; gap: 1rem; }',
     '  .gallery-albums { grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); margin: 1.5rem 0; }',
     '  .gallery-album { border: 1px solid #3a4351; color: inherit; display: block; text-decoration: none; }',
