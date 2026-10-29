@@ -19,3 +19,12 @@ FancyTool 是一款使用 Swift 原生开发的 macOS 菜单栏工具，将实�
 
 - [在线试玩](https://m-finder.github.io/roguelike-demo/)
 - {% post_link 2026-10-22-ai-roguelike '开发记录：用 AI 做了一个暗黑肉鸽小游戏' %}
+
+## easy-verify-dy
+
+easy-verify-dy 是面向 Laravel 项目的抖音团购核销接口模块，通过 Composer 安装，方便在业务系统中接入抖音团购相关功能。
+模块涵盖 client-token 获取、二维码短链解析、验券准备、验券与撤销核销，支持券状态批量查询、订单查询和门店信息查询，也包含售后单查询、退款申请及审批等接口。
+适合需要接入抖音团购券核销和售后流程的项目，仓库内提供了配置方式与各接口的调用示例，便于查阅和集成。
+如需订制开发或拓展其他平台，可联系 [ email ](mailto:yf-wu@qq.com)
+
+- [源码与使用说明（GitHub）](https://github.com/m-finder/easy-verify-dy)
