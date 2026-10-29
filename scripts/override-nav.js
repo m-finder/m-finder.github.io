@@ -5,10 +5,6 @@ hexo.on('generateBefore', function () {
         "闲言赘语": "/categories/闲言赘语/",
         "码不能停": "/categories/码不能停/",
         "AI日报": "/categories/AI-日报/",
-        "项目": "/projects/",
-        "说说": "/shuo/",
-        "相册": "/gallery/",
-        "电影": "/movies/",
         "友情链接": "/link/",
         "关于": "/about/",
     };

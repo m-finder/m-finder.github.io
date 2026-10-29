@@ -23,6 +23,13 @@ categories:
 
 GitHub：[m-finder](https://github.com/m-finder)
 
+#### 更多逛逛
+
+- [项目](/projects/)：我的项目
+- [说说](/shuo/)：随手记下的碎碎念
+- [相册](/gallery/)：生活里的照片
+- [电影](/movies/)：我的观影记录
+
 <details>
 <summary>站点折腾记录（2016—至今）</summary>
 
