@@ -30,13 +30,13 @@ columns:
   enabled: true
   layout: two-column           # single-column | two-column
   items:
-    - name: 闲言赘语           # Display name
-      category: 闲言赘语       # Category slug
-      limit: 50                # Number of posts to show
-      show_date: true
     - name: 码不能停
       category: 码不能停
       limit: 50
+      show_date: true
+    - name: 闲言赘语           # Display name
+      category: 闲言赘语       # Category slug
+      limit: 50                # Number of posts to show
       show_date: true
 
 # Fallback when columns disabled
