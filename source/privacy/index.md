@@ -5,7 +5,7 @@ comments: false
 description: M-finder 博客的隐私政策
 ---
 
-最后更新：2026 年 10 月 22 日
+最后更新：2026 年 10 月 29 日
 
 欢迎访问 M-finder。本文说明本站在提供博客内容、评论和广告服务时，可能涉及哪些信息，以及你可以如何管理相关选择。
 
@@ -15,11 +15,11 @@ description: M-finder 博客的隐私政策
 
 如果你主动通过电子邮件联系本站，我会使用你提供的邮箱地址和邮件内容处理、回复你的来信。
 
-## Google 广告与 Cookie
+## 第三方广告
 
-本站使用 Google AdSense 广告代码。包括 Google 在内的第三方广告供应商及广告网络，可能在你的浏览器中放置或读取 Cookie，或使用网络信标、IP 地址及其他标识符，依据你此前访问本站或其他网站的情况展示和衡量广告。Google 及其合作伙伴可能使用广告 Cookie 提供个性化广告。
+本站通过 bauval.org 加载第三方广告脚本。加载广告时，你的浏览器会与该域名及广告服务涉及的第三方服务器通信。
 
-你可以通过 [Google 广告设置](https://adssettings.google.com/)管理或停用个性化广告，也可以通过 [AboutAds](https://www.aboutads.info/)了解部分第三方供应商提供的退出选择。有关 Google 如何使用合作伙伴网站的数据，请参阅 [Google 的说明](https://policies.google.com/technologies/partner-sites)；有关参与广告投放的第三方供应商，请参阅 [Google 认证供应商信息](https://support.google.com/adsense/answer/94149?hl=zh-Hans)。
+你可以通过浏览器设置管理第三方 Cookie 和站点权限。
 
 ## 评论与外部网站
 

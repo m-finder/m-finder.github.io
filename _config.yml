@@ -133,11 +133,6 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: Bloom
 
-# Google AdSense
-adsense:
-  enabled: true
-  client: ca-pub-3280933721783945
-
 # 豆瓣
 douban:
   id: 264738267
