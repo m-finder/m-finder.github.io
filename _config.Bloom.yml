@@ -86,7 +86,7 @@ post:
   show_wordcount: true
   show_readtime: true
   excerpt_link: "Read More"
-  toc: true
+  toc: false
 
 # ---- Code Highlight ----
 highlight:
