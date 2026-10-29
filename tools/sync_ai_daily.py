@@ -159,6 +159,11 @@ def main():
         print("同步 AIHOT 日报失败：%s" % error, file=sys.stderr)
         return 1
 
+    has_items = any(section.get("items") for section in report.get("sections") or [])
+    if not has_items and not report.get("flashes"):
+        print("%s 没有资讯条目或快讯，跳过生成日报" % report["date"])
+        return 0
+
     output = POSTS_DIR / ("ai-daily-%s.md" % report["date"])
     if output.exists():
         print("日报文章已存在，跳过：%s" % output)

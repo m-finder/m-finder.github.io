@@ -5,26 +5,26 @@ hexo.extend.injector.register(
   `<div class="site-ad" style="max-width:468px;margin:1.5rem auto;overflow-x:auto">
 <script>
   atOptions = {
-    'key' : '8a6c493d0b85b5ba88c07432066ad7a4',
+    'key' : 'c7ce4f61cfee771b3996c9978a6951cd',
     'format' : 'iframe',
     'height' : 60,
     'width' : 468,
     'params' : {}
   };
 </script>
-<script src="https://bauval.org/22/8a6c493d0b85b5ba88c07432066ad7a4"></script>
+<script src="https://bauval.org/22/c7ce4f61cfee771b3996c9978a6951cd"></script>
 </div>
 <div class="site-ad" style="max-width:728px;margin:1.5rem auto;overflow-x:auto">
 <script>
   atOptions = {
-    'key' : '769f89e33016cf0e9310812a40b97ce7',
+    'key' : '383b0f574d73ad1c61e2683de43f98e5',
     'format' : 'iframe',
     'height' : 90,
     'width' : 728,
     'params' : {}
   };
 </script>
-<script src="https://bauval.org/22/769f89e33016cf0e9310812a40b97ce7"></script>
+<script src="https://bauval.org/22/383b0f574d73ad1c61e2683de43f98e5"></script>
 </div>`,
   'default'
 );

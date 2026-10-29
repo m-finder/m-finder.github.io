@@ -27,15 +27,15 @@ profile:
 # Enable categorized columns on homepage
 # Max 2 columns supported
 columns:
-  enabled: false
+  enabled: true
   layout: two-column           # single-column | two-column
   items:
-    - name: Security           # Display name
-      category: Writeup       # Category slug
+    - name: 闲言赘语           # Display name
+      category: 闲言赘语       # Category slug
       limit: 50                # Number of posts to show
       show_date: true
-    - name: Note
-      category: Note
+    - name: 码不能停
+      category: 码不能停
       limit: 50
       show_date: true
 

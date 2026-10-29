@@ -6,10 +6,28 @@ tags:
 categories:
 ---
 
-90后大龄无为男青年，~~海贼粉~~，~~十个勤天粉~~，码渣。
+## 关于我
+
+* 基本介绍：90 后、全栈开发工程师
+* 技术与项目：Laravel、Swift 工具、小游戏、AI 编程
+* 生活兴趣：健身、游戏、绿植与日常记录
+* 写博客的初衷：靠文字记录美好生活
+
+## 关于这里
+
+这个博客从 2016 年写到现在，换过程序、主题和托管方式，留下来的还是记录的习惯。
+
+[码不能停](/categories/码不能停/) 是我的开发笔记和踩坑经历，[闲言赘语](/categories/闲言赘语/) 是我的生活与随想。
+写下来，方便以后翻，也希望刚好能帮到遇见同一个问题的人。
+
 仅以记录修行之旅。
 
-### 更新日志：
+GitHub：[m-finder](https://github.com/m-finder)
+
+<details>
+<summary>站点折腾记录（2016—至今）</summary>
+
+### 更新日志
 
 #### 2026-10-16
 * 因为 LeanCloud 停服，导出了所有说说和评论，最后借助 codex 迁了回来，稍微有点不完美
@@ -91,5 +109,7 @@ categories:
 #### 2016-06-09
 * M-finder博客前身 Pumpkin 博客上线，wordpress + forget 主题 diy 版
 * forget 主题地址 ： [forget](http://azfashao.com/forget3-0-2/)
+
+</details>
 
 ![码不能停](/about/index/码不能停.jpg)

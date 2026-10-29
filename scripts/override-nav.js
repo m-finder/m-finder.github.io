@@ -2,15 +2,15 @@
 hexo.on('generateBefore', function () {
     hexo.theme.config.nav = {
         "首页": "/",
+        "闲言赘语": "/categories/闲言赘语/",
+        "码不能停": "/categories/码不能停/",
+        "AI日报": "/categories/AI-日报/",
+        "项目": "/projects/",
         "标签": "/tags/",
-        "归档": "/archives/",
         "说说": "/shuo/",
         "相册": "/gallery/",
-        "书单": "/books/",
         "电影": "/movies/",
-        "游戏": "/games/",
         "友情链接": "/link/",
         "关于": "/about/",
-        "RSS": "/atom.xml"
     };
 })
