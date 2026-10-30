@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="referrer" content="no-referrer">
+
+<title>AI 日报 · 2026-10-30 | M-finder</title>
+
+
+<meta name="description" content="Mistral Large 4（Le Chonk）登陆 Hugging Face：1T 参数 MoE 多模态开源权重模型">
+
+
+<meta name="author" content="m-finder">
+
+
+<meta name="keywords" content="m-finder,M-finder技术博客,php,laravel,java,vue,全栈开发,技术分享,AI日报,AI使用">
+
+
+<!-- Canonical -->
+<link rel="canonical" href="/ai-daily-2026-10-30/">
+
+<!-- Favicon -->
+<link rel="icon" href="/images/favicon.ico">
+
+<!-- RSS -->
+
+<link rel="alternate" type="application/rss+xml" title="M-finder" href="/atom.xml">
+
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="AI 日报 · 2026-10-30">
+<meta property="og:url" content="/ai-daily-2026-10-30/">
+<meta property="og:site_name" content="M-finder">
+
+<meta property="og:description" content="Mistral Large 4（Le Chonk）登陆 Hugging Face：1T 参数 MoE 多模态开源权重模型">
+
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AI 日报 · 2026-10-30">
+
+<meta name="twitter:description" content="Mistral Large 4（Le Chonk）登陆 Hugging Face：1T 参数 MoE 多模态开源权重模型">
+
+
+<!-- Theme Color -->
+<meta name="theme-color" content="#1d1f21">
+<meta name="msapplication-TileColor" content="#1d1f21">
+
+<!-- Stylesheets -->
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+<!-- Custom Layout Variables -->
+
+<style>
+:root {
+  --page-width: 60rem;
+  --content-width: 900px;
+  --mobile-padding: 12px;
+}
+</style>
+
+<!-- Analytics -->
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body class="theme-dark">
+  <div class="container">
+    <header class="header">
+  <div class="header-inner">
+    <div class="header-brand">
+      
+      <a href="/" class="site-title">
+        M-finder
+      </a>
+    </div>
+
+    <nav class="nav">
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <ul class="nav-menu" id="nav-menu">
+        
+          
+          
+            
+            <li class="nav-item">
+              <a href="/"
+                 class="nav-link"
+                 >
+                首页
+              </a>
+            </li>
+            
+              <li class="nav-divider">|</li>
+            
+          
+            
+            <li class="nav-item">
+              <a href="/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"
+                 class="nav-link"
+                 >
+                码不能停
+              </a>
+            </li>
+            
+              <li class="nav-divider">|</li>
+            
+          
+            
+            <li class="nav-item">
+              <a href="/categories/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"
+                 class="nav-link"
+                 >
+                闲言赘语
+              </a>
+            </li>
+            
+              <li class="nav-divider">|</li>
+            
+          
+            
+            <li class="nav-item">
+              <a href="/categories/AI-%E6%97%A5%E6%8A%A5/"
+                 class="nav-link"
+                 >
+                AI日报
+              </a>
+            </li>
+            
+              <li class="nav-divider">|</li>
+            
+          
+            
+            <li class="nav-item">
+              <a href="/link/"
+                 class="nav-link"
+                 >
+                友情链接
+              </a>
+            </li>
+            
+              <li class="nav-divider">|</li>
+            
+          
+            
+            <li class="nav-item">
+              <a href="/about/"
+                 class="nav-link"
+                 >
+                关于
+              </a>
+            </li>
+            
+          
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main class="main">
+      
+        <div class="page-layout">
+          <article class="post">
+  <header class="post-header">
+  <h1 class="post-title">AI 日报 · 2026-10-30</h1>
+
+  <div class="post-meta">
+    <span class="meta-item">
+      <svg viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11zM9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2z"/></svg>
+      <time datetime="2026-10-30">
+        2026-10-30
+      </time>
+    </span>
+
+    
+      <span class="meta-item">
+        <svg viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M21 10.12h-6.78l2.74-2.82c-2.73-2.7-7.15-2.8-9.88-.1-2.73 2.71-2.73 7.08 0 9.79s7.15 2.71 9.88 0C18.32 15.65 19 14.08 19 12.1h2c0 1.98-.88 4.55-2.64 6.29-3.51 3.48-9.21 3.48-12.72 0-3.5-3.47-3.53-9.11-.02-12.58s9.14-3.47 12.65 0L21 3v7.12z"/></svg>
+        <time datetime="2026-10-30">
+          更新于 2026-10-30
+        </time>
+      </span>
+    
+
+    
+      <span class="meta-item">
+        <svg viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/></svg>
+        
+          <a href="/categories/AI-%E6%97%A5%E6%8A%A5/">AI 日报</a>
+        
+      </span>
+    
+  </div>
+</header>
+
+
+  
+
+  <div class="post-content">
+  <h2 id="今日头条"><a href="#今日头条" class="headerlink" title="今日头条"></a>今日头条</h2><p><strong>Mistral Large 4（Le Chonk）登陆 Hugging Face：1T 参数 MoE 多模态开源权重模型</strong></p>
+<p>Hugging Face 发布 Mistral Large 4（Le Chonk）的上线博客，模型为多模态多语言 MoE 架构，总参数约 1T、激活 49B、上下文窗口 1M token。</p>
+<h2 id="模型发布-更新"><a href="#模型发布-更新" class="headerlink" title="模型发布&#x2F;更新"></a>模型发布&#x2F;更新</h2><h3 id="1-Mistral-Large-4（Le-Chonk）登陆-Hugging-Face：1T-参数-MoE-多模态开源权重模型"><a href="#1-Mistral-Large-4（Le-Chonk）登陆-Hugging-Face：1T-参数-MoE-多模态开源权重模型" class="headerlink" title="1. Mistral Large 4（Le Chonk）登陆 Hugging Face：1T 参数 MoE 多模态开源权重模型"></a>1. Mistral Large 4（Le Chonk）登陆 Hugging Face：1T 参数 MoE 多模态开源权重模型</h3><p>来源：Hugging Face 官方团队博客</p>
+<p>Hugging Face 发布 Mistral Large 4（Le Chonk）的上线博客，模型为多模态多语言 MoE 架构，总参数约 1T、激活 49B、上下文窗口 1M token。</p>
+<p><a target="_blank" rel="noopener" href="https://huggingface.co/blog/mistral-large4">阅读原文</a></p>
+<h3 id="2-Pika-基于MiniMax-H3后训练并开源-Pika-H3-Flex-视频生成模型"><a href="#2-Pika-基于MiniMax-H3后训练并开源-Pika-H3-Flex-视频生成模型" class="headerlink" title="2. Pika 基于MiniMax H3后训练并开源 Pika H3 Flex 视频生成模型"></a>2. Pika 基于MiniMax H3后训练并开源 Pika H3 Flex 视频生成模型</h3><p>来源：X：卡兹克 (@Khazix0918)</p>
+<p>Pika Labs 在 MiniMax H3 上做后训练，推出并开源 Pika H3 Flex，采样步数从 50 步压缩到 6 步，生成时间大幅降低且质量有所提升。</p>
+<p><a target="_blank" rel="noopener" href="https://x.com/Khazix0918/status/2115898252004622617">阅读原文</a></p>
+<h2 id="产品发布-更新"><a href="#产品发布-更新" class="headerlink" title="产品发布&#x2F;更新"></a>产品发布&#x2F;更新</h2><h3 id="3-Codex-宣布即日起-Pro-及-Business-Premium-各档位用量上限翻倍"><a href="#3-Codex-宣布即日起-Pro-及-Business-Premium-各档位用量上限翻倍" class="headerlink" title="3. Codex 宣布即日起 Pro 及 Business Premium 各档位用量上限翻倍"></a>3. Codex 宣布即日起 Pro 及 Business Premium 各档位用量上限翻倍</h3><p>来源：X：Tibo (@thsottiaux)</p>
+<p>Tibo 宣布即日起将 Pro 100&#x2F;200&#x2F;500 档位与 Business Premium 的所有用量上限翻倍。Pro 200 的上限不会下调，Work 与 Codex 用量保持不变；dots 的扩展用量上限继续提供，且仍与默认用量分开计算，后续还会通过更好的模型和效率改进提升实际可用量。</p>
+<p><a target="_blank" rel="noopener" href="https://x.com/thsottiaux/status/2115850175868727621">阅读原文</a></p>
+<h3 id="4-Factory-发布-Droid-1-0，以程序化工具调用构建企业级-Agent-harness"><a href="#4-Factory-发布-Droid-1-0，以程序化工具调用构建企业级-Agent-harness" class="headerlink" title="4. Factory 发布 Droid 1.0，以程序化工具调用构建企业级 Agent harness"></a>4. Factory 发布 Droid 1.0，以程序化工具调用构建企业级 Agent harness</h3><p>来源：Factory 研究 &#x2F; 产品（RSS）</p>
+<p>Factory 发布 Droid 1.0，一个模型无关的 agent harness，主打程序化工具调用（PTC），模型通过编写 JavaScript 程序在沙箱中一次执行数百个工具调用。</p>
+<p><a target="_blank" rel="noopener" href="https://factory.com/news/frontier-harness">阅读原文</a></p>
+<h3 id="5-OpenRouter-重建默认路由算法：TTFT-降-16-9-、429-错误减少-67"><a href="#5-OpenRouter-重建默认路由算法：TTFT-降-16-9-、429-错误减少-67" class="headerlink" title="5. OpenRouter 重建默认路由算法：TTFT 降 16.9%、429 错误减少 67%"></a>5. OpenRouter 重建默认路由算法：TTFT 降 16.9%、429 错误减少 67%</h3><p>来源：OpenRouter：Announcements（RSS）</p>
+<p>OpenRouter 宣布重建默认 provider 路由算法，从只按价格排序改为按 Routing Cost 综合 effective price、TTFT、吞吐、错误率和输出质量选路。</p>
+<p><a target="_blank" rel="noopener" href="https://openrouter.ai/blog/announcements/how-we-rebuilt-provider-routing/">阅读原文</a></p>
+<h2 id="行业动态"><a href="#行业动态" class="headerlink" title="行业动态"></a>行业动态</h2><h3 id="6-纽约时报称中国情报人员瞄准英伟达-CEO-黄仁勋"><a href="#6-纽约时报称中国情报人员瞄准英伟达-CEO-黄仁勋" class="headerlink" title="6. 纽约时报称中国情报人员瞄准英伟达 CEO 黄仁勋"></a>6. 纽约时报称中国情报人员瞄准英伟达 CEO 黄仁勋</h3><p>来源：The Decoder：AI News（RSS）</p>
+<p>据《纽约时报》报道，美国情报机构认为英伟达 CEO 黄仁勋身边一名高管为中国提供情报，此人是新加坡数据中心运营商 Megaspeed 的 Alice Huang（黄乐）。</p>
+<p><a target="_blank" rel="noopener" href="https://the-decoder.com/chinese-spies-targeted-nvidia-ceo-jensen-huang-according-to-the-new-york-times/">阅读原文</a></p>
+<h3 id="7-Reddit-宣布转向以登录为主的体验，以应对-AI-搜索带来的流量下滑"><a href="#7-Reddit-宣布转向以登录为主的体验，以应对-AI-搜索带来的流量下滑" class="headerlink" title="7. Reddit 宣布转向以登录为主的体验，以应对 AI 搜索带来的流量下滑"></a>7. Reddit 宣布转向以登录为主的体验，以应对 AI 搜索带来的流量下滑</h3><p>来源：TechCrunch：AI（RSS）</p>
+<p>Reddit 在 Q3 财报中宣布将转向以登录为主的体验，以保护数据免受 AI 抓取并提升广告变现。10 月搜索流量平均每周减少超 100 万次引荐，Q3 全球日活为 1.303 亿，其中美国日活降至 5070 万，同比降 2%。Q3 收入同比增长 53% 至 8.95 亿美元，净利润 2.83 亿美元；该转变将先在美国以外市场测试，暂无全球上线时间表。</p>
+<p><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/10/29/as-search-traffic-dries-up-reddit-announces-its-shifting-to-a-logged-in-experience/">阅读原文</a></p>
+<h3 id="8-Google-三季度搜索增速不及预期，投资者担忧-AI-搜索变现拖累核心业务"><a href="#8-Google-三季度搜索增速不及预期，投资者担忧-AI-搜索变现拖累核心业务" class="headerlink" title="8. Google 三季度搜索增速不及预期，投资者担忧 AI 搜索变现拖累核心业务"></a>8. Google 三季度搜索增速不及预期，投资者担忧 AI 搜索变现拖累核心业务</h3><p>来源：The Decoder：AI News（RSS）</p>
+<p>Google 三季度搜索收入增长约 12%，低于分析师预期的 15%，市值一度缩水最多 10%。高管 Philipp Schindler 承认 AI mode 查询的强劲增长因变现率较低产生了影响，同时公司称搜索查询年增速达五年来最高，并计划在美国及国际市场扩大聊天机器人广告项目。</p>
+<p><a target="_blank" rel="noopener" href="https://the-decoder.com/googles-ai-search-problem-finally-shows-up-in-the-earnings-report-some-investors-believe/">阅读原文</a></p>
+<h3 id="9-404-Media-起底-Proton-内部-AI-转型之争：CEO-Andy-Yen-强推-AI-引发恐惧文化"><a href="#9-404-Media-起底-Proton-内部-AI-转型之争：CEO-Andy-Yen-强推-AI-引发恐惧文化" class="headerlink" title="9. 404 Media 起底 Proton 内部 AI 转型之争：CEO Andy Yen 强推 AI 引发恐惧文化"></a>9. 404 Media 起底 Proton 内部 AI 转型之争：CEO Andy Yen 强推 AI 引发恐惧文化</h3><p>来源：404 Media（RSS）</p>
+<p>404 Media 采访九名现任与离职 Proton 员工并查阅内部文件，报道 CEO Andy Yen 强推 AI 转型引发的内部冲突。10 月公司 90% 代码由 AI 编写，多使用 Anthropic 的 Claude；Yen 称今年是最后一年招聘工程师，并宣布将以可能决定去留的重新面试评估员工 AI 使用情况。</p>
+<p><a target="_blank" rel="noopener" href="https://www.404media.co/manifestos-fear-and-loser-thinking-inside-protons-ai-reckoning/">阅读原文</a></p>
+<h2 id="论文研究"><a href="#论文研究" class="headerlink" title="论文研究"></a>论文研究</h2><h3 id="10-OpenAI-详解如何检测前沿模型失准行为"><a href="#10-OpenAI-详解如何检测前沿模型失准行为" class="headerlink" title="10. OpenAI 详解如何检测前沿模型失准行为"></a>10. OpenAI 详解如何检测前沿模型失准行为</h3><p>来源：OpenAI：官网动态（RSS · 排除企业&#x2F;客户案例）</p>
+<p>OpenAI 发布长文，详解其针对前沿模型失准行为的多层监测系统，包括激活探针、基于模型的审查、调查智能体和自动化调查四层架构，并对 GPT‑6 Astra 及以上模型的全部 RL 运行、评估和内部 Codex 流量进行监测。</p>
+<p><a target="_blank" rel="noopener" href="https://openai.com/index/how-we-detect-frontier-model-misalignment">阅读原文</a></p>
+<h3 id="11-Trakkr-研究：追踪-1285-条-AI-引用统计的溯源路径"><a href="#11-Trakkr-研究：追踪-1285-条-AI-引用统计的溯源路径" class="headerlink" title="11. Trakkr 研究：追踪 1285 条 AI 引用统计的溯源路径"></a>11. Trakkr 研究：追踪 1285 条 AI 引用统计的溯源路径</h3><p>来源：Hacker News：AI 热帖</p>
+<p>Trakkr Research 向 ChatGPT、Perplexity、Gemini、Claude 和 Google AI Overviews 提出 200 个要求数字的问题，并追踪其中 1285 条统计的引用链路，结果只有 40% 到达说法一致的研究，8% 到达但数字或语境已变，40% 无法核查，11% 无处可溯。</p>
+<p><a target="_blank" rel="noopener" href="https://trakkr.ai/trakkr-research/zombie-stats">阅读原文</a></p>
+<h2 id="技巧与观点"><a href="#技巧与观点" class="headerlink" title="技巧与观点"></a>技巧与观点</h2><h3 id="12-OpenRouter-教程：用-LLM-从-PDF-中抽取表格"><a href="#12-OpenRouter-教程：用-LLM-从-PDF-中抽取表格" class="headerlink" title="12. OpenRouter 教程：用 LLM 从 PDF 中抽取表格"></a>12. OpenRouter 教程：用 LLM 从 PDF 中抽取表格</h3><p>来源：OpenRouter：Announcements（RSS）</p>
+<p>OpenRouter 发布教程，讲解如何把 PDF 以文件形式连同严格 JSON schema 发给能读文件的模型，让表格以带类型的行返回，括号亏损、千分位和脚注标记等清理都写进字段描述。</p>
+<p><a target="_blank" rel="noopener" href="https://openrouter.ai/blog/tutorials/extract-tables-from-pdf-llm/">阅读原文</a></p>
+<h2 id="快讯"><a href="#快讯" class="headerlink" title="快讯"></a>快讯</h2><h3 id="13-The-Verge-解读-Anthropic-S-1：约-8500-亿美元-compute-承诺押注递归自我改进"><a href="#13-The-Verge-解读-Anthropic-S-1：约-8500-亿美元-compute-承诺押注递归自我改进" class="headerlink" title="13. The Verge 解读 Anthropic S-1：约 8500 亿美元 compute 承诺押注递归自我改进"></a>13. The Verge 解读 Anthropic S-1：约 8500 亿美元 compute 承诺押注递归自我改进</h3><p>来源：The Verge：AI（RSS）</p>
+<p><a target="_blank" rel="noopener" href="https://www.theverge.com/ai-artificial-intelligence/1021476/anthropic-s-1-compute-recursive">阅读原文</a></p>
+<h3 id="14-OpenAI-更新-Model-Spec，围绕五项核心价值观重组模型行为准则"><a href="#14-OpenAI-更新-Model-Spec，围绕五项核心价值观重组模型行为准则" class="headerlink" title="14. OpenAI 更新 Model Spec，围绕五项核心价值观重组模型行为准则"></a>14. OpenAI 更新 Model Spec，围绕五项核心价值观重组模型行为准则</h3><p>来源：OpenAI：官网动态（RSS · 排除企业&#x2F;客户案例）</p>
+<p><a target="_blank" rel="noopener" href="https://openai.com/index/updated-model-spec">阅读原文</a></p>
+<h3 id="15-OpenMOSS-发布开源图像生成模型-MOSS-Image，主打长文本渲染与可编辑布局"><a href="#15-OpenMOSS-发布开源图像生成模型-MOSS-Image，主打长文本渲染与可编辑布局" class="headerlink" title="15. OpenMOSS 发布开源图像生成模型 MOSS-Image，主打长文本渲染与可编辑布局"></a>15. OpenMOSS 发布开源图像生成模型 MOSS-Image，主打长文本渲染与可编辑布局</h3><p>来源：OpenMOSS &#x2F; 复旦NLP &#x2F; 上海创智 &#x2F; MOSI（网页）</p>
+<p><a target="_blank" rel="noopener" href="https://openmoss.ai/blog/cn/moss-image/">阅读原文</a></p>
+<h3 id="16-Addy-Osmani-谈你可能对-Claude-过度提示了"><a href="#16-Addy-Osmani-谈你可能对-Claude-过度提示了" class="headerlink" title="16. Addy Osmani 谈你可能对 Claude 过度提示了"></a>16. Addy Osmani 谈你可能对 Claude 过度提示了</h3><p>来源：X：Addy Osmani (@addyosmani)</p>
+<p><a target="_blank" rel="noopener" href="https://x.com/addyosmani/status/2115688494865465370">阅读原文</a></p>
+<h3 id="17-Wiz-分析智能体攻击的七大指纹与发展趋势"><a href="#17-Wiz-分析智能体攻击的七大指纹与发展趋势" class="headerlink" title="17. Wiz 分析智能体攻击的七大指纹与发展趋势"></a>17. Wiz 分析智能体攻击的七大指纹与发展趋势</h3><p>来源：Wiz：Research（安全研究）</p>
+<p><a target="_blank" rel="noopener" href="https://www.wiz.io/blog/the-rise-of-agentic-attacks-what-they-look-like-and-where-theyre-headed">阅读原文</a></p>
+<h3 id="18-Gemini-新增文档、PDF、演示文稿和表格的直接生成、预览与编辑功能"><a href="#18-Gemini-新增文档、PDF、演示文稿和表格的直接生成、预览与编辑功能" class="headerlink" title="18. Gemini 新增文档、PDF、演示文稿和表格的直接生成、预览与编辑功能"></a>18. Gemini 新增文档、PDF、演示文稿和表格的直接生成、预览与编辑功能</h3><p>来源：X：Gemini (@GeminiApp)</p>
+<p><a target="_blank" rel="noopener" href="https://x.com/GeminiApp/status/2115845164824711247">阅读原文</a></p>
+<h3 id="19-腾讯混元发布-Hy-Nomas-技术报告并开源-Hy-Nomas-Bench"><a href="#19-腾讯混元发布-Hy-Nomas-技术报告并开源-Hy-Nomas-Bench" class="headerlink" title="19. 腾讯混元发布 Hy-Nomas 技术报告并开源 Hy-Nomas-Bench"></a>19. 腾讯混元发布 Hy-Nomas 技术报告并开源 Hy-Nomas-Bench</h3><p>来源：X：腾讯混元 (@TencentHunyuan)</p>
+<p><a target="_blank" rel="noopener" href="https://x.com/TencentHunyuan/status/2115851165904814283">阅读原文</a></p>
+<h3 id="20-Figma-讲解如何训练专用画布编辑模型"><a href="#20-Figma-讲解如何训练专用画布编辑模型" class="headerlink" title="20. Figma 讲解如何训练专用画布编辑模型"></a>20. Figma 讲解如何训练专用画布编辑模型</h3><p>来源：Figma AI &#x2F; Agent &#x2F; Make</p>
+<p><a target="_blank" rel="noopener" href="https://www.figma.com/blog/training-a-figma-fluent-editing-model/">阅读原文</a></p>
+<h3 id="21-Claude-Enterprise-正式上线智能报告、应用内调研与团队共享预算"><a href="#21-Claude-Enterprise-正式上线智能报告、应用内调研与团队共享预算" class="headerlink" title="21. Claude Enterprise 正式上线智能报告、应用内调研与团队共享预算"></a>21. Claude Enterprise 正式上线智能报告、应用内调研与团队共享预算</h3><p>来源：Claude：Blog（网页）</p>
+<p><a target="_blank" rel="noopener" href="https://claude.com/blog/smart-reports-surveys-pooled-budgets">阅读原文</a></p>
+<hr>
+<blockquote>
+<p>本文由 <a target="_blank" rel="noopener" href="https://aihot.news/daily/2026-10-30">AIHOT 日报</a> 自动整理；第三方内容版权归原作者所有。</p>
+</blockquote>
+
+</div>
+
+
+  <footer class="post-footer">
+  
+    <div class="post-categories">
+      <span class="meta-label">分类: </span>
+      
+        <a href="/categories/AI-%E6%97%A5%E6%8A%A5/" class="category">AI 日报</a>
+      
+    </div>
+  
+  
+    <div class="post-tags">
+      <span class="meta-label">标签: </span>
+      
+        <a href="/tags/AI/" class="tag">AI</a>
+      
+        <a href="/tags/AI-%E6%97%A5%E6%8A%A5/" class="tag">AI 日报</a>
+      
+        <a href="/tags/%E8%B5%84%E8%AE%AF/" class="tag">资讯</a>
+      
+    </div>
+  
+</footer>
+
+
+  
+<nav class="post-nav">
+  
+
+  
+    <div class="post-nav-item next">
+      <span class="post-nav-label">下一页 &rarr;</span>
+      <a href="/ai-daily-2026-10-29/" class="post-nav-title">
+        AI 日报 · 2026-10-29
+      </a>
+    </div>
+  
+</nav>
+
+
+
+  
+    <section class="comments-section">
+  <h3 class="comments-title">评论</h3>
+
+  
+
+  
+
+  
+    <script src="https://giscus.app/client.js"
+            data-repo="m-finder/m-finder.github.io"
+            data-repo-id="MDEwOlJlcG9zaXRvcnkxMjEzNzU5NTc="
+            data-category="Announcements"
+            data-category-id="DIC_kwDOBzwM1c4DIlfb"
+            data-mapping="pathname"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="bottom"
+            data-theme="dark"
+            data-lang="zh-CN"
+            crossorigin="anonymous"
+            async>
+    </script>
+  
+</section>
+
+  
+</article>
+
+        </div>
+      
+    </main>
+
+    <footer class="footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      
+      <span class="copyright">
+        &copy; 2016 - 2026 m-finder
+      </span>
+    </div>
+
+    <div class="footer-right">
+      
+        <span class="powered">
+          由 Hexo 驱动 <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>
+        </span>
+      
+      
+        <span class="theme-info">
+          主题 <a href="https://github.com/WinMin/hexo-theme-Bloom" target="_blank" rel="noopener">Bloom</a>
+        </span>
+      
+    <span class="footer-privacy"><a href="/privacy/">隐私政策</a></span><a href="https://www.foreverblog.cn/go.html" target="_blank" rel="noopener noreferrer" title="虫洞 · 随机访问十年之约成员博客"><img src="https://www.foreverblog.cn/assets/logo/wormhole_v2_light.webp" alt="十年之约虫洞" style="width:auto;height:32px;"></a></div>
+  </div>
+
+  
+    <div class="footer-social">
+      
+        <a href="https://github.com/m-finder" class="social-link" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+      
+      
+      
+      
+        <a href="mailto:yf-wu@qq.com" class="social-link" aria-label="Email">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </a>
+      
+      
+        <a href="/atom.xml" class="social-link" aria-label="RSS">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20C5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1z"/></svg>
+        </a>
+      
+    </div>
+  
+</footer>
+
+  </div>
+
+  <!-- Main Script -->
+
+<script src="/js/main.js"></script>
+
+
+<!-- Search -->
+
+
+<script src="/js/search.js"></script>
+
+
+
+<!-- Baidu Analytics -->
+
+
+<!-- hexo injector body_end start --><div class="site-ad" style="max-width:468px;margin:1.5rem auto;overflow-x:auto">
+<script>
+  atOptions = {
+    'key' : 'c7ce4f61cfee771b3996c9978a6951cd',
+    'format' : 'iframe',
+    'height' : 60,
+    'width' : 468,
+    'params' : {}
+  };
+</script>
+<script src="https://bauval.org/22/c7ce4f61cfee771b3996c9978a6951cd"></script>
+</div><!-- hexo injector body_end end --></body>
+</html>
