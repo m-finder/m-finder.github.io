@@ -15,7 +15,7 @@ tags:
 ![](/images/roguelike.png)
 
 试玩地址：
-[暗黑罗格](https://m-finder.github.io/roguelike-demo/)
+[暗黑罗格](http://roguelike.m-finder.top/)
 
 源码暂时不开源，主要是一个使用 `Cocos Creator 3.8.8 + TypeScript` 做的单场景地牢生存原型。
 
@@ -180,7 +180,7 @@ Cocos Creator 构建 Web Mobile
 
 试玩地址就是：
 
-[https://m-finder.github.io/roguelike-demo/](https://m-finder.github.io/roguelike-demo/)
+[http://roguelike.m-finder.top/](http://roguelike.m-finder.top/)
 
 ## 这次最大的心得
 
