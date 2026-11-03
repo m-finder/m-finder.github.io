@@ -24,6 +24,17 @@ FancyTool 是一款使用 Swift 原生开发的 macOS 菜单栏工具，将实�
 - [在线试玩](http://roguelike.m-finder.top/)
 - {% post_link 2026-10-22-ai-roguelike '开发记录：用 AI 做了一个暗黑肉鸽小游戏' %}
 
+## Giorgio IM
+
+Giorgio IM 是一套 Vue 3 + TypeScript 即时通讯组件及 Laravel 实时通讯方案。前端支持联系人、好友、群聊、AI 对话和客服模式；Laravel 后端处理消息、认证和管理接口，底层 WebSocket 服务负责推送及断线补收。在线 demo 使用模拟消息，完整链路可按后端仓库说明在本地运行。
+
+![Giorgio IM](/images/giorgio-im.png)
+
+- [在线演示](http://im.m-finder.top/)
+- [前端组件：Giorgio IM](https://github.com/m-finder/giorgio-im)
+- [Laravel 后端：Giorgio IM Socket](https://github.com/m-finder/giorgio-im-socket)
+- [WebSocket 服务：Giorgio Socket](https://github.com/m-finder/giorgio-socket)
+
 ## easy-verify-dy
 
 easy-verify-dy 是面向 Laravel 项目的抖音团购核销接口模块，通过 Composer 安装，方便在业务系统中接入抖音团购相关功能。

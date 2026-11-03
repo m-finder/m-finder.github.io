@@ -13,10 +13,10 @@ links:
     url: https://blog.aprilblank.top
     avatar: https://blog.aprilblank.top/img/icon.png
     description: 一个在大洛阳孤军奋战的程序猿
-  - name: linux.do
-    url: https://linux.do/
-    avatar: https://linux.do/uploads/default/optimized/4X/6/a/6/6a6affc7b1ce8140279e959d32671304db06d5ab_2_180x180.png
-    description: 来玩啊佬
+  - name: Giorgio-IM
+    url: https://im.m-finder.top/
+    avatar: https://m-finder.top/images/favicon.ico
+    description: giorgio im
   - name: Layui
     url: https://layui.dev/
     avatar: https://res.layui.dev/static/images/layui/logo.png
