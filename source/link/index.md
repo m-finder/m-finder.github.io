@@ -25,4 +25,8 @@ links:
     url: https://bryantchen.cc/
     avatar: https://m-finder.top/images/favicon.ico
     description: Bryant Chen
+  - name: SitesLink
+    url: https://siteslink.cn/
+    avatar: https://siteslink.cn/images/logo.png
+    description: 循着微光，探索未知的互联网。
 ---
