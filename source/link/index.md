@@ -29,4 +29,8 @@ links:
     url: https://siteslink.cn/
     avatar: https://siteslink.cn/images/logo.png
     description: 循着微光，探索未知的互联网。
+  - name: Glacier Diary
+    url: https://siteslink.cn/
+    avatar: https://siteslink.cn/images/logo.png
+    description: 在快速迭代的时代，做一块冷静的冰川。
 ---
