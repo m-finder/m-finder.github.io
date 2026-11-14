@@ -33,4 +33,8 @@ links:
     url: https://glacier.etuos.cn/
     avatar: https://glacier.etuos.cn/upload/avatar.png
     description: 在快速迭代的时代，做一块冷静的冰川。
+  - name: Aiixi Bear 數位後花園
+    url: https://www.aiixi.cc
+    avatar: https://www.aiixi.cc/img/blowfish_logo.webp
+    description: Aiixi Bear 數位後花園
 ---
