@@ -38,7 +38,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.top/categories/index.html</loc>
+    <loc>https://m-finder.top/archives/index.html</loc>
     
     <lastmod>2026-11-18</lastmod>
     
@@ -47,7 +47,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.top/archives/index.html</loc>
+    <loc>https://m-finder.top/categories/index.html</loc>
     
     <lastmod>2026-11-18</lastmod>
     
@@ -65,88 +65,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.top/redis-learning-1/</loc>
-    
-    <lastmod>2026-11-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.top/travis-ci-test/</loc>
-    
-    <lastmod>2026-11-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.top/use-laravel-permission-can-tag-in-vue/</loc>
-    
-    <lastmod>2026-11-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.top/wsl-laradock/</loc>
-    
-    <lastmod>2026-11-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.top/web-tool/</loc>
-    
-    <lastmod>2026-11-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.top/wsl2-laradock/</loc>
-    
-    <lastmod>2026-11-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.top/year-of-dog/</loc>
-    
-    <lastmod>2026-11-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://m-finder.top/about/index.html</loc>
-    
-    <lastmod>2026-11-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.top/laravel-swoole-in-laradock/</loc>
-    
-    <lastmod>2026-11-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.top/laravel-swoole-socket-in-laradock/</loc>
     
     <lastmod>2026-11-18</lastmod>
     
@@ -308,7 +227,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.top/distributed-system/</loc>
+    <loc>https://m-finder.top/redis-learning-1/</loc>
     
     <lastmod>2026-11-18</lastmod>
     
@@ -317,7 +236,52 @@
   </url>
   
   <url>
-    <loc>https://m-finder.top/docker-container-connect-localhost/</loc>
+    <loc>https://m-finder.top/travis-ci-test/</loc>
+    
+    <lastmod>2026-11-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.top/use-laravel-permission-can-tag-in-vue/</loc>
+    
+    <lastmod>2026-11-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.top/web-tool/</loc>
+    
+    <lastmod>2026-11-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.top/wsl-laradock/</loc>
+    
+    <lastmod>2026-11-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.top/wsl2-laradock/</loc>
+    
+    <lastmod>2026-11-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.top/year-of-dog/</loc>
     
     <lastmod>2026-11-18</lastmod>
     
@@ -479,6 +443,60 @@
   </url>
   
   <url>
+    <loc>https://m-finder.top/laravel-swoole-in-laradock/</loc>
+    
+    <lastmod>2026-11-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.top/laravel-swoole-socket-in-laradock/</loc>
+    
+    <lastmod>2026-11-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.top/design-pattern-adapter/</loc>
+    
+    <lastmod>2026-11-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.top/design-pattern-bridge/</loc>
+    
+    <lastmod>2026-11-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.top/design-pattern-builder/</loc>
+    
+    <lastmod>2026-11-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.top/design-pattern-category/</loc>
+    
+    <lastmod>2026-11-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://m-finder.top/design-pattern-command/</loc>
     
     <lastmod>2026-11-18</lastmod>
@@ -560,7 +578,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.top/design-pattern-mediator/</loc>
+    <loc>https://m-finder.top/design-pattern-iterator/</loc>
     
     <lastmod>2026-11-18</lastmod>
     
@@ -569,7 +587,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.top/design-pattern-iterator/</loc>
+    <loc>https://m-finder.top/design-pattern-mediator/</loc>
     
     <lastmod>2026-11-18</lastmod>
     
@@ -587,7 +605,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.top/design-pattern-object/</loc>
+    <loc>https://m-finder.top/design-pattern-observer/</loc>
     
     <lastmod>2026-11-18</lastmod>
     
@@ -596,7 +614,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.top/design-pattern-observer/</loc>
+    <loc>https://m-finder.top/design-pattern-object/</loc>
     
     <lastmod>2026-11-18</lastmod>
     
@@ -687,6 +705,51 @@
   
   <url>
     <loc>https://m-finder.top/design-pattern/</loc>
+    
+    <lastmod>2026-11-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.top/distributed-system/</loc>
+    
+    <lastmod>2026-11-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.top/docker-container-connect-localhost/</loc>
+    
+    <lastmod>2026-11-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.top/ai-daily-2026-11-02/</loc>
+    
+    <lastmod>2026-11-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.top/ai-daily-2026-11-03/</loc>
+    
+    <lastmod>2026-11-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.top/ai-daily-2026-11-04/</loc>
     
     <lastmod>2026-11-18</lastmod>
     
@@ -839,34 +902,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.top/design-pattern-adapter/</loc>
-    
-    <lastmod>2026-11-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.top/design-pattern-bridge/</loc>
-    
-    <lastmod>2026-11-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.top/design-pattern-category/</loc>
-    
-    <lastmod>2026-11-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.top/design-pattern-builder/</loc>
+    <loc>https://m-finder.top/ai-daily-2026-10-23/</loc>
     
     <lastmod>2026-11-18</lastmod>
     
@@ -876,15 +912,6 @@
   
   <url>
     <loc>https://m-finder.top/ai-daily-2026-10-24/</loc>
-    
-    <lastmod>2026-11-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.top/ai-daily-2026-10-23/</loc>
     
     <lastmod>2026-11-18</lastmod>
     
@@ -956,61 +983,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.top/ai-daily-2026-11-02/</loc>
-    
-    <lastmod>2026-11-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.top/ai-daily-2026-11-03/</loc>
-    
-    <lastmod>2026-11-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.top/ai-daily-2026-11-04/</loc>
-    
-    <lastmod>2026-11-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.top/Laravel-time-change/</loc>
-    
-    <lastmod>2026-11-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.top/Layim-contextmenu/</loc>
-    
-    <lastmod>2026-11-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://m-finder.top/ai-daily-2026-10-16/</loc>
-    
-    <lastmod>2026-11-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://m-finder.top/Layui-notes/</loc>
     
     <lastmod>2026-11-18</lastmod>
     
@@ -1028,7 +1001,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.top/ai-daily-2026-10-18/</loc>
+    <loc>https://m-finder.top/ai-daily-2026-10-19/</loc>
     
     <lastmod>2026-11-18</lastmod>
     
@@ -1037,7 +1010,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.top/ai-daily-2026-10-19/</loc>
+    <loc>https://m-finder.top/ai-daily-2026-10-18/</loc>
     
     <lastmod>2026-11-18</lastmod>
     
@@ -1065,6 +1038,15 @@
   
   <url>
     <loc>https://m-finder.top/ai-daily-2026-10-22/</loc>
+    
+    <lastmod>2026-11-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.top/2019-to-do-list/</loc>
     
     <lastmod>2026-11-18</lastmod>
     
@@ -1172,7 +1154,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.top/2024-03-01-swoole-and-octane2/</loc>
+    <loc>https://m-finder.top/2024-02-29-review-http/</loc>
     
     <lastmod>2026-11-18</lastmod>
     
@@ -1181,7 +1163,7 @@
   </url>
   
   <url>
-    <loc>https://m-finder.top/2024-02-29-review-http/</loc>
+    <loc>https://m-finder.top/2024-03-01-swoole-and-octane2/</loc>
     
     <lastmod>2026-11-18</lastmod>
     
@@ -1361,15 +1343,6 @@
   </url>
   
   <url>
-    <loc>https://m-finder.top/2026-11-03-im/</loc>
-    
-    <lastmod>2026-11-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://m-finder.top/2026-to-do-list/</loc>
     
     <lastmod>2026-11-18</lastmod>
@@ -1397,6 +1370,15 @@
   </url>
   
   <url>
+    <loc>https://m-finder.top/2026-11-03-im/</loc>
+    
+    <lastmod>2026-11-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://m-finder.top/Laravel-ftp/</loc>
     
     <lastmod>2026-11-18</lastmod>
@@ -1406,7 +1388,25 @@
   </url>
   
   <url>
-    <loc>https://m-finder.top/2019-to-do-list/</loc>
+    <loc>https://m-finder.top/Laravel-time-change/</loc>
+    
+    <lastmod>2026-11-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.top/Layim-contextmenu/</loc>
+    
+    <lastmod>2026-11-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://m-finder.top/Layui-notes/</loc>
     
     <lastmod>2026-11-18</lastmod>
     
