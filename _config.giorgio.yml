@@ -1,0 +1,45 @@
+menu:
+  首页: /
+  文章:
+    分类: /categories/
+    标签: /tags/
+    归档: /archives/
+  更多:
+    项目: /projects/
+    说说: /shuo/
+    相册: /gallery/
+    读书: /books/
+    电影: /movies/
+    游戏: /games/
+  友情链接: /link/
+  关于: /about/
+comments:
+  enable: true
+  repo: m-finder/m-finder.github.io
+  repo_id: MDEwOlJlcG9zaXRvcnkxMjEzNzU5NTc=
+  category: Announcements
+  category_id: DIC_kwDOBzwM1c4DIlfb
+social:
+  GitHub: https://github.com/m-finder
+  邮箱: mailto:yf-wu@qq.com
+home:
+  limit: 50
+  categories:
+    - name: 码不能停
+      limit: 50
+    - name: 闲言赘语
+      limit: 50
+ads:
+  google:
+    enable: false
+    client: ''
+    slots:
+      home: ''
+      post: ''
+      page: ''
+  original:
+    enable: true
+    key: c7ce4f61cfee771b3996c9978a6951cd
+    src: https://bauval.org/22/c7ce4f61cfee771b3996c9978a6951cd
+    width: 468
+    height: 60

@@ -131,13 +131,13 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: Bloom
+theme: giorgio
 
 # 豆瓣
 douban:
   id: 264738267
   builtin: true
-  dynamic: true
+  dynamic: false
   item_per_page: 10
   meta_max_line: 4
   book:

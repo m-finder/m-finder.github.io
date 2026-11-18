@@ -46,13 +46,12 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "18"
-      # 主题文件夹，如果你的主题不是 git submodule 可以不配置
       - name: Checkout theme repo
         uses: actions/checkout@v3
         with:
-          repository: winmin/hexo-theme-Bloom
+          repository: m-finder/hexo-theme-giorgio
           ref: main
-          path: themes/Bloom
+          path: themes/giorgio
       - name: Cache NPM dependencies
         uses: actions/cache@v3
         with:
@@ -63,7 +62,7 @@ jobs:
       - name: Install Dependencies
         run: |
           npm install
-          npm install hexo-renderer-ejs hexo-renderer-stylus hexo-generator-search hexo-wordcount hexo-generator-feed hexo-douban hexo-generator-sitemap hexo-generator-baidu-sitemap
+          npm install hexo-renderer-ejs hexo-generator-feed hexo-douban hexo-generator-sitemap hexo-generator-baidu-sitemap
       - name: Build
         run: npm run build
       - name: Deploy
