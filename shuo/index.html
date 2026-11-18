@@ -1,791 +1,163 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+<!doctype html>
+<html lang="zh-CN" data-mode="auto">
 <head>
   <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="referrer" content="no-referrer">
-
-<title>说说 | M-finder</title>
-
-
-<meta name="description" content="happy coding">
-
-
-<meta name="author" content="m-finder">
-
-
-<meta name="keywords" content="m-finder,M-finder技术博客,php,laravel,java,vue,全栈开发,技术分享,AI日报,AI使用">
-
-
-<!-- Canonical -->
-<link rel="canonical" href="/shuo/index.html">
-
-<!-- Favicon -->
-<link rel="icon" href="/images/favicon.ico">
-
-<!-- RSS -->
-
-<link rel="alternate" type="application/rss+xml" title="M-finder" href="/atom.xml">
-
-
-<!-- Open Graph -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="说说">
-<meta property="og:url" content="/shuo/index.html">
-<meta property="og:site_name" content="M-finder">
-
-<meta property="og:description" content="happy coding">
-
-
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="说说">
-
-<meta name="twitter:description" content="happy coding">
-
-
-<!-- Theme Color -->
-<meta name="theme-color" content="#1d1f21">
-<meta name="msapplication-TileColor" content="#1d1f21">
-
-<!-- Stylesheets -->
-
-<link rel="stylesheet" href="/css/style.css">
-
-
-<!-- Custom Layout Variables -->
-
-<style>
-:root {
-  --page-width: 60rem;
-  --content-width: 900px;
-  --mobile-padding: 12px;
-}
-</style>
-
-<!-- Analytics -->
-
-
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="happy coding">
+  <title>说说 · M-finder</title>
+  <link rel="icon" href="/images/favicon.ico">
+  <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+  <link rel="stylesheet" href="/css/giorgio.css">
+  
+  <script>try{let m=localStorage.getItem('giorgio-mode');if(m==='light'||m==='dark')document.documentElement.dataset.mode=m}catch(e){}</script>
 <meta name="generator" content="Hexo 7.3.0"></head>
-<body class="theme-dark">
-  <div class="container">
-    <header class="header">
-  <div class="header-inner">
-    <div class="header-brand">
+<body class="glow-enabled">
+<canvas class="background-dots" aria-hidden="true"></canvas>
+<div class="cursor-glow" aria-hidden="true"></div>
+<header class="site-header">
+  <div class="header-inner wrap">
+    <a class="brand" href="/" aria-label="M-finder 首页"><span>M-finder</span></a>
+    <button class="mobile-menu-toggle icon-button" type="button" aria-label="打开导航" aria-expanded="false" aria-controls="site-nav"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <nav id="site-nav" class="site-nav" aria-label="主导航">
       
-      <a href="/" class="site-title">
-        M-finder
-      </a>
-    </div>
-
-    <nav class="nav">
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
-        <span class="nav-toggle-bar"></span>
-        <span class="nav-toggle-bar"></span>
-        <span class="nav-toggle-bar"></span>
-      </button>
-
-      <ul class="nav-menu" id="nav-menu">
         
-          
-          
-            
-            <li class="nav-item">
-              <a href="/"
-                 class="nav-link"
-                 >
-                首页
-              </a>
-            </li>
-            
-              <li class="nav-divider">|</li>
-            
-          
-            
-            <li class="nav-item">
-              <a href="/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"
-                 class="nav-link"
-                 >
-                码不能停
-              </a>
-            </li>
-            
-              <li class="nav-divider">|</li>
-            
-          
-            
-            <li class="nav-item">
-              <a href="/categories/%E9%97%B2%E8%A8%80%E8%B5%98%E8%AF%AD/"
-                 class="nav-link"
-                 >
-                闲言赘语
-              </a>
-            </li>
-            
-              <li class="nav-divider">|</li>
-            
-          
-            
-            <li class="nav-item">
-              <a href="/categories/AI-%E6%97%A5%E6%8A%A5/"
-                 class="nav-link"
-                 >
-                AI日报
-              </a>
-            </li>
-            
-              <li class="nav-divider">|</li>
-            
-          
-            
-            <li class="nav-item">
-              <a href="/link/"
-                 class="nav-link"
-                 >
-                友情链接
-              </a>
-            </li>
-            
-              <li class="nav-divider">|</li>
-            
-          
-            
-            <li class="nav-item">
-              <a href="/about/"
-                 class="nav-link"
-                 >
-                关于
-              </a>
-            </li>
-            
-          
+          <a class="nav-link" href="/">首页</a>
         
-      </ul>
+      
+        
+          <div class="nav-group">
+            <button class="nav-link nav-group-toggle" type="button" aria-expanded="false">文章<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg></button>
+            <div class="nav-submenu">
+              <a href="/categories/">分类</a><a href="/tags/">标签</a><a href="/archives/">归档</a>
+            </div>
+          </div>
+        
+      
+        
+          <div class="nav-group">
+            <button class="nav-link nav-group-toggle" type="button" aria-expanded="false">更多<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg></button>
+            <div class="nav-submenu">
+              <a href="/projects/">项目</a><a href="/shuo/">说说</a><a href="/gallery/">相册</a><a href="/books/">读书</a><a href="/movies/">电影</a><a href="/games/">游戏</a><a href="/link/">友情链接</a><a href="/about/">关于</a>
+            </div>
+          </div>
+        
+      
+        
+          <a class="nav-link" href="/link/">友情链接</a>
+        
+      
+        
+          <a class="nav-link" href="/about/">关于</a>
+        
+      
     </nav>
+    <button id="theme-toggle" class="icon-button theme-toggle" type="button" aria-label="切换背景明暗" title="切换背景明暗"><svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.3A8.5 8.5 0 0 1 9.7 3.5 8.5 8.5 0 1 0 20.5 14.3Z"/></svg></button>
   </div>
 </header>
 
+<main class="wrap inner-main page-main"><header class="page-heading"><h1>说说</h1></header>
 
-    <main class="main">
-      
-        <div class="page-layout">
-          <article class="page">
-  <header class="page-header">
-    <h1 class="page-title">说说</h1>
-  </header>
 
-  <div class="page-content">
-    <section class="shuo-feed" aria-label="说说">
-  <style>
-    .shuo-timeline { list-style: none; margin: 1.5rem 0 0; padding: 0; }
-    .shuo-item { border-left: 1px solid #3a4351; min-height: 3.5rem; padding: 0 0 1.75rem 2.75rem; position: relative; }
-    .shuo-item:last-child { border-left-color: transparent; padding-bottom: 0; }
-    .shuo-avatar { border-radius: 50%; height: 2rem; left: -1rem; object-fit: cover; position: absolute; top: 0; width: 2rem; }
-    .shuo-meta { align-items: baseline; display: flex; flex-wrap: wrap; gap: .5rem; line-height: 1.5; }
-    .shuo-meta time { color: #8c96a4; font-size: .85em; }
-    .shuo-content { margin-top: .35rem; }
-    .shuo-content p { margin: 0; }
-  </style>
-  <ol class="shuo-timeline">
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2026-11-03 17:18</time></div>
-      <div class="shuo-content"><p>大美丽生日给她换了手机，我生日大美丽给我买了相机，芜湖～ 感谢我宝。</p>
-<p>等会儿去东站跟大哈碰头，一起参加伟哥的婚礼，祝他也生上 8 个儿子。</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2026-10-28 15:03</time></div>
-      <div class="shuo-content"><p>好烦躁啊怎么办……</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2026-10-26 10:15</time></div>
-      <div class="shuo-content"><p>为啥最近频繁更新博客呢？因为觉得大AI时代，坚持手搓是一个文艺中登该有的素养。</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2026-10-24 23:15</time></div>
-      <div class="shuo-content"><p>跟大哈畅聊了一下，毕业十年，我俩生活方式的区别：<br>他在洛阳，夫妻双方共同努力，攒下首付，现在开始分币没有。<br>我在上海，每月支付房租+房贷，一如既往分币没有。<br>总结：买房容易分币没有。😭</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2026-10-24 07:15</time></div>
-      <div class="shuo-content"><p>晚上大哈要来我家暂住一晚，喊了伟哥跟他媳妇儿过来一起吃饭，吃点儿啥去呢？<br>要不就继续火锅鸡，好吃不贵。<br>再来几升企鹅家的小啤酒。<br>🍺</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2026-10-24 07:15</time></div>
-      <div class="shuo-content"><p>等了快一个月的18pm终于到了，好在没让人失望，不是冷白屏，过几天等我臭宝把14寄回，我就也是岛民了。</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2026-10-21 09:15</time></div>
-      <div class="shuo-content"><p>静待12月的到来。</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2026-10-19 20:45</time></div>
-      <div class="shuo-content"><p>感谢赵老师维护了世界和平，促进了家庭和睦。</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2026-10-17 10:13</time></div>
-      <div class="shuo-content"><p>瑞幸牌冰豆浆-小黄油风味，好喝不烧心.🍻</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2026-10-17 10:03</time></div>
-      <div class="shuo-content"><p>借助 codex,把我 LeanCloud 里的说说迁回来了, 舒服.</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2026-10-17 10:03</time></div>
-      <div class="shuo-content"><p>忘了说了,常去的健身房不知道因为啥,在暑假结束的前夕关门了,现在想撸铁我得去商场里的自助小馆,已经很多天没练了, 西巴哟.</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2026-07-20 21:26</time></div>
-      <div class="shuo-content"><p>瘦 10 多斤了, 还需要继续努力🏋️.</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2026-07-11 09:26</time></div>
-      <div class="shuo-content"><p>大学生放假了, 重新续上了健身卡, 他喵的居然 20 也拉不动了.</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2026-07-11 09:26</time></div>
-      <div class="shuo-content"><p>我宣布, 粉旗鱼秋海棠是我所有花花里第二好养的, 第一是铜钱草.</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2026-07-11 09:26</time></div>
-      <div class="shuo-content"><p>小黄油美式全冰去水乃仙品🍻</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2026-07-11 09:26</time></div>
-      <div class="shuo-content"><p>飞牛变得更好用以后, 我的日常就变成了找片, 下片, 看片 (我最近都在看些什么玩意儿😅)…</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2026-07-04 10:16</time></div>
-      <div class="shuo-content"><p>竹节秋海棠是真好养, 小鼻嘎也能开大花, 爱了.</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2026-06-01 14:16</time></div>
-      <div class="shuo-content"><p>阿龙同学的小棉袄计划失败, 下一把看我的了😏.</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2026-05-30 16:01</time></div>
-      <div class="shuo-content"><p>盘点一下, 现在家里有:<br>玉树 * 2, 乌木 * 1, 钱串 * 1, 长寿花 * n<br>栀子花 * 1, 百合 * 1, 绣球 * 1, 蝴蝶兰 * 1<br>绿宝树 * 1, 发财树 * 1, 鸭脚木 * 1<br>铜钱草 * 3, 青叶吊兰 * 1, 袖珍椰子 * 2, 春羽 * 1, 白掌 * 2</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2026-05-30 16:00</time></div>
-      <div class="shuo-content"><p>易方达什么蓝筹精选给我挖的坑已经被纳指填了三分之一, 得劲儿.</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2026-05-28 16:00</time></div>
-      <div class="shuo-content"><p>豪掷百金, 让我的花花们都住上了大别墅, 慈祥的老父亲盼它们好.</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2026-04-18 16:00</time></div>
-      <div class="shuo-content"><p>去越南浪了一周, 挺好的, 下次还来.</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2026-04-13 16:00</time></div>
-      <div class="shuo-content"><p>鬼天气, 闷得有点透不过气.</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2026-04-07 15:40</time></div>
-      <div class="shuo-content"><p>黄金真贵, 得多攒点儿.</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2026-04-07 15:40</time></div>
-      <div class="shuo-content"><p>刚才发现大哈家的老二跟老大小时候长一毛一样.</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2026-04-05 23:00</time></div>
-      <div class="shuo-content"><p>赵老师是有真东西的, 我通透了.</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2026-03-30 13:58</time></div>
-      <div class="shuo-content"><p>人生的一半是向往, 另一半是绝望.</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2026-03-30 11:58</time></div>
-      <div class="shuo-content"><p>大哈也要生二胎了, 希望他生个儿子, 未来再生 8 个儿子.</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2026-02-26 15:58</time></div>
-      <div class="shuo-content"><p>惊闻 LeanCloud 明年要停止服务, 可惜了这么好用的工具, 也可惜了我的评论和说说…</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2026-02-13 16:08</time></div>
-      <div class="shuo-content"><p>载具碎片 +0.7</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2026-01-27 08:59</time></div>
-      <div class="shuo-content"><p>鉴于.com 域名越来越贵, 而我也只用到了一个邮箱, m-finder.com 这个域名我就不要了</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2026-01-20 10:31</time></div>
-      <div class="shuo-content"><p>在大美丽的以身作则下, 昨天晚上第一次踏进了健身房, 虽然我很菜, 但是真的爽.</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2026-01-09 11:07</time></div>
-      <div class="shuo-content"><p>做梦都在哑铃划船🚣</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2026-01-09 11:06</time></div>
-      <div class="shuo-content"><p>练背能有效缓解垮脸[挖鼻]</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2025-12-16 10:31</time></div>
-      <div class="shuo-content"><p>今日解锁成就: 年龄+1</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2025-12-12 09:41</time></div>
-      <div class="shuo-content"><p>今冬的第一场雪如约而至。</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2025-12-03 20:39</time></div>
-      <div class="shuo-content"><p>5年可以改变很多,但似乎又什么都没改变</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2025-11-26 09:52</time></div>
-      <div class="shuo-content"><p>static-php-cli 什么时候能有个现象级的应用出来？或者我能用它搞点什么有意思的东西呢</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2025-11-26 09:51</time></div>
-      <div class="shuo-content"><p>得益于前几天大美丽跟我说她们闲的时候捡个毛毛虫玩了一下午, 昨天晚上做梦梦了一夜的毛毛虫和扑棱蛾子, 睡醒后巨累</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2025-07-11 18:21</time></div>
-      <div class="shuo-content"><p>对swift理解又加深了一丢丢</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2025-07-01 08:51</time></div>
-      <div class="shuo-content"><p>门口的槐花开了, 在被雨打掉的同时我才发现它的存在</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2025-06-06 14:31</time></div>
-      <div class="shuo-content"><p>鬼天气实在是让人不爽啊</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2025-05-27 09:35</time></div>
-      <div class="shuo-content"><p>把栀子花养好的秘诀就是晚上坐水里泡一夜, 第二天早上拿到窗口吹风晒太阳</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2025-04-25 08:47</time></div>
-      <div class="shuo-content"><p>life is okay, I am not okay.</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2025-04-15 17:28</time></div>
-      <div class="shuo-content"><p>栀子花开始黄叶了, 还生蚜虫, 早上下单一瓶吡虫啉, 希望有用</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2025-04-03 08:51</time></div>
-      <div class="shuo-content"><p>15块钱收获一盆巨型栀子花, 快乐也是巨型的</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2025-03-26 07:36</time></div>
-      <div class="shuo-content"><p>上班前躺沙发上刷刷手机看看花也是挺享受, 可惜这几天太热, 郁金香全都生仔了</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2025-03-24 09:55</time></div>
-      <div class="shuo-content"><p>别再感冒了, 求求了</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2025-02-25 15:36</time></div>
-      <div class="shuo-content"><p>我想回家哈口冰美式</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2025-02-14 08:57</time></div>
-      <div class="shuo-content"><p>媳妇儿回来咯, 开心～～</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2025-02-13 10:37</time></div>
-      <div class="shuo-content"><p>眼睛一闭,一睁, 一年就过去了, ho～</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2025-01-20 08:54</time></div>
-      <div class="shuo-content"><p>这几天是真特么累啊, 垃圾系统硬上强度, 还以为是被攻击了, 谁能想到做个美甲都要 0 点起来抢号</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2024-12-30 08:49</time></div>
-      <div class="shuo-content"><p>这两年的生活技能树点的有点快</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2024-12-30 08:48</time></div>
-      <div class="shuo-content"><p>给大美丽换了俩灯,下了梯子两腿不停打闪闪, 老同志依然有点恐高啊</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2024-12-30 08:48</time></div>
-      <div class="shuo-content"><p>我的说说怎么突然回来了？？</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2024-11-20 13:51</time></div>
-      <div class="shuo-content"><p>华强北给的快乐简单且粗暴（我说的是投影仪）</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2024-09-19 23:26</time></div>
-      <div class="shuo-content"><p>四顾茫然不见天, 春风催我又一年</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2024-07-29 17:43</time></div>
-      <div class="shuo-content"><p>刚才的暴雨好舒服, 就是时间短了点儿</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2024-04-19 08:11</time></div>
-      <div class="shuo-content"><p>早睡早起呀[太阳]</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2023-11-01 14:55</time></div>
-      <div class="shuo-content"><p>有点危了, 烦</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2023-07-31 09:26</time></div>
-      <div class="shuo-content"><p>同时也在沉迷 RPG MO, 啊哈哈😝</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2023-07-31 09:25</time></div>
-      <div class="shuo-content"><p>最近周末净在家里看电影了</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2023-03-12 22:19</time></div>
-      <div class="shuo-content"><p>一眨眼又过去三个月了啊, 过的真快</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2022-12-27 18:03</time></div>
-      <div class="shuo-content"><p>上周三开始躺到现在, 明天再捅个鼻子看看</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2022-12-27 18:02</time></div>
-      <div class="shuo-content"><p>跟阿凡达不共戴天吧</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2022-12-15 16:30</time></div>
-      <div class="shuo-content"><p>为了周六能正常看阿凡达, 刚才下去捅了个喉咙, 虽然现在很多地方都不查核酸了, 但是谁知道呢</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2022-12-12 23:20</time></div>
-      <div class="shuo-content"><p>刚才搞了个 rss, 又舒服了</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2022-12-11 10:56</time></div>
-      <div class="shuo-content"><p>一个星期没做核酸了, 舒服</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2022-12-08 09:40</time></div>
-      <div class="shuo-content"><p>昨天找到一个稳定的 iptv, 可以在电脑上看新闻联播了</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2022-12-07 16:32</time></div>
-      <div class="shuo-content"><p>备案注销以后搞了个 tg, 结果发现也没啥好玩的</p></div>
-    </div>
-  </li>
-  <li class="shuo-item">
-    <img class="shuo-avatar" src="https://m-finder.github.io/images/avatar.jpeg" alt="M-finder" loading="lazy">
-    <div class="shuo-entry">
-      <div class="shuo-meta"><strong>M-finder</strong><time>2022-12-07 15:01</time></div>
-      <div class="shuo-content"><p>虽然哔哔点啥更好使, 但是我还是只配了artitalk</p></div>
-    </div>
-  </li>
-  </ol>
-</section>
-<section class="comments-section" data-page-comments>
-  <h3 class="comments-title">评论</h3>
-  <script src="https://giscus.app/client.js"
-          data-repo="m-finder/m-finder.github.io"
-          data-repo-id="MDEwOlJlcG9zaXRvcnkxMjEzNzU5NTc="
-          data-category="Announcements"
-          data-category-id="DIC_kwDOBzwM1c4DIlfb"
-          data-mapping="pathname"
-          data-strict="0"
-          data-reactions-enabled="1"
-          data-emit-metadata="0"
-          data-input-position="bottom"
-          data-theme="dark"
-          data-lang="zh-CN"
-          crossorigin="anonymous"
-          async>
-  </script>
-</section>
-  </div>
-</article>
 
-        </div>
-      
-    </main>
 
-    <footer class="footer">
-  <div class="footer-content">
-    <div class="footer-left">
-      
-      <span class="copyright">
-        &copy; 2016 - 2026 m-finder
-      </span>
-    </div>
 
-    <div class="footer-right">
-      
-        <span class="powered">
-          由 Hexo 驱动 <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>
-        </span>
-      
-      
-        <span class="theme-info">
-          主题 <a href="https://github.com/WinMin/hexo-theme-Bloom" target="_blank" rel="noopener">Bloom</a>
-        </span>
-      
-    <span class="footer-privacy"><a href="/privacy/">隐私政策</a></span><a href="https://www.foreverblog.cn/go.html" target="_blank" rel="noopener noreferrer" title="虫洞 · 随机访问十年之约成员博客"><img src="https://www.foreverblog.cn/assets/logo/wormhole_v2_light.webp" alt="十年之约虫洞" style="width:auto;height:32px;"></a></div>
-  </div>
 
-  
-    <div class="footer-social">
-      
-        <a href="https://github.com/m-finder" class="social-link" target="_blank" rel="noopener" aria-label="GitHub">
-          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-        </a>
-      
-      
-      
-      
-        <a href="mailto:yf-wu@qq.com" class="social-link" aria-label="Email">
-          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-        </a>
-      
-      
-        <a href="/atom.xml" class="social-link" aria-label="RSS">
-          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20C5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1z"/></svg>
-        </a>
-      
-    </div>
-  
+  <div class="shuo-list"><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2026-11-03T17:18:00">2026-11-03 17:18</time></div><div class="prose"><p>大美丽生日给她换了手机，我生日大美丽给我买了相机，芜湖～ 感谢我宝。</p>
+<p>等会儿去东站跟大哈碰头，一起参加伟哥的婚礼，祝他也生上 8 个儿子。</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2026-10-28T15:03:00">2026-10-28 15:03</time></div><div class="prose"><p>好烦躁啊怎么办……</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2026-10-26T10:15:00">2026-10-26 10:15</time></div><div class="prose"><p>为啥最近频繁更新博客呢？因为觉得大AI时代，坚持手搓是一个文艺中登该有的素养。</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2026-10-24T23:15:00">2026-10-24 23:15</time></div><div class="prose"><p>跟大哈畅聊了一下，毕业十年，我俩生活方式的区别：<br>他在洛阳，夫妻双方共同努力，攒下首付，现在开始分币没有。<br>我在上海，每月支付房租+房贷，一如既往分币没有。<br>总结：买房容易分币没有。😭</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2026-10-24T07:15:10">2026-10-24 07:15</time></div><div class="prose"><p>晚上大哈要来我家暂住一晚，喊了伟哥跟他媳妇儿过来一起吃饭，吃点儿啥去呢？<br>要不就继续火锅鸡，好吃不贵。<br>再来几升企鹅家的小啤酒。<br>🍺</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2026-10-24T07:15:00">2026-10-24 07:15</time></div><div class="prose"><p>等了快一个月的18pm终于到了，好在没让人失望，不是冷白屏，过几天等我臭宝把14寄回，我就也是岛民了。</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2026-10-21T09:15:00">2026-10-21 09:15</time></div><div class="prose"><p>静待12月的到来。</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2026-10-19T20:45:00">2026-10-19 20:45</time></div><div class="prose"><p>感谢赵老师维护了世界和平，促进了家庭和睦。</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2026-10-17T10:13:03">2026-10-17 10:13</time></div><div class="prose"><p>瑞幸牌冰豆浆-小黄油风味，好喝不烧心.🍻</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2026-10-17T10:03:03">2026-10-17 10:03</time></div><div class="prose"><p>忘了说了,常去的健身房不知道因为啥,在暑假结束的前夕关门了,现在想撸铁我得去商场里的自助小馆,已经很多天没练了, 西巴哟.</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2026-10-17T10:03:03">2026-10-17 10:03</time></div><div class="prose"><p>借助 codex,把我 LeanCloud 里的说说迁回来了, 舒服.</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2026-07-20T21:26:03">2026-07-20 21:26</time></div><div class="prose"><p>瘦 10 多斤了, 还需要继续努力🏋️.</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2026-07-11T09:26:03">2026-07-11 09:26</time></div><div class="prose"><p>大学生放假了, 重新续上了健身卡, 他喵的居然 20 也拉不动了.</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2026-07-11T09:26:02">2026-07-11 09:26</time></div><div class="prose"><p>我宣布, 粉旗鱼秋海棠是我所有花花里第二好养的, 第一是铜钱草.</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2026-07-11T09:26:01">2026-07-11 09:26</time></div><div class="prose"><p>小黄油美式全冰去水乃仙品🍻</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2026-07-11T09:26:00">2026-07-11 09:26</time></div><div class="prose"><p>飞牛变得更好用以后, 我的日常就变成了找片, 下片, 看片 (我最近都在看些什么玩意儿😅)…</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2026-07-04T10:16:00">2026-07-04 10:16</time></div><div class="prose"><p>竹节秋海棠是真好养, 小鼻嘎也能开大花, 爱了.</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2026-06-01T14:16:00">2026-06-01 14:16</time></div><div class="prose"><p>阿龙同学的小棉袄计划失败, 下一把看我的了😏.</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2026-05-30T16:01:00">2026-05-30 16:01</time></div><div class="prose"><p>盘点一下, 现在家里有:<br>玉树 * 2, 乌木 * 1, 钱串 * 1, 长寿花 * n<br>栀子花 * 1, 百合 * 1, 绣球 * 1, 蝴蝶兰 * 1<br>绿宝树 * 1, 发财树 * 1, 鸭脚木 * 1<br>铜钱草 * 3, 青叶吊兰 * 1, 袖珍椰子 * 2, 春羽 * 1, 白掌 * 2</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2026-05-30T16:00:00">2026-05-30 16:00</time></div><div class="prose"><p>易方达什么蓝筹精选给我挖的坑已经被纳指填了三分之一, 得劲儿.</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2026-05-28T16:00:00">2026-05-28 16:00</time></div><div class="prose"><p>豪掷百金, 让我的花花们都住上了大别墅, 慈祥的老父亲盼它们好.</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2026-04-18T16:00:00">2026-04-18 16:00</time></div><div class="prose"><p>去越南浪了一周, 挺好的, 下次还来.</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2026-04-13T16:00:00">2026-04-13 16:00</time></div><div class="prose"><p>鬼天气, 闷得有点透不过气.</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2026-04-07T15:40:00">2026-04-07 15:40</time></div><div class="prose"><p>刚才发现大哈家的老二跟老大小时候长一毛一样.</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2026-04-07T15:40:00">2026-04-07 15:40</time></div><div class="prose"><p>黄金真贵, 得多攒点儿.</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2026-04-05T23:00:00">2026-04-05 23:00</time></div><div class="prose"><p>赵老师是有真东西的, 我通透了.</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2026-03-30T13:58:00">2026-03-30 13:58</time></div><div class="prose"><p>人生的一半是向往, 另一半是绝望.</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2026-03-30T11:58:00">2026-03-30 11:58</time></div><div class="prose"><p>大哈也要生二胎了, 希望他生个儿子, 未来再生 8 个儿子.</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2026-02-26T15:58:00">2026-02-26 15:58</time></div><div class="prose"><p>惊闻 LeanCloud 明年要停止服务, 可惜了这么好用的工具, 也可惜了我的评论和说说…</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2026-02-13T16:08:44">2026-02-13 16:08</time></div><div class="prose"><p>载具碎片 +0.7</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2026-01-27T08:59:34">2026-01-27 08:59</time></div><div class="prose"><p>鉴于.com 域名越来越贵, 而我也只用到了一个邮箱, m-finder.com 这个域名我就不要了</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2026-01-20T10:31:13">2026-01-20 10:31</time></div><div class="prose"><p>在大美丽的以身作则下, 昨天晚上第一次踏进了健身房, 虽然我很菜, 但是真的爽.</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2026-01-09T11:07:22">2026-01-09 11:07</time></div><div class="prose"><p>做梦都在哑铃划船🚣</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2026-01-09T11:06:42">2026-01-09 11:06</time></div><div class="prose"><p>练背能有效缓解垮脸[挖鼻]</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2025-12-16T10:31:00">2025-12-16 10:31</time></div><div class="prose"><p>今日解锁成就: 年龄+1</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2025-12-12T09:41:35">2025-12-12 09:41</time></div><div class="prose"><p>今冬的第一场雪如约而至。</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2025-12-03T20:39:51">2025-12-03 20:39</time></div><div class="prose"><p>5年可以改变很多,但似乎又什么都没改变</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2025-11-26T09:52:11">2025-11-26 09:52</time></div><div class="prose"><p>static-php-cli 什么时候能有个现象级的应用出来？或者我能用它搞点什么有意思的东西呢</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2025-11-26T09:51:06">2025-11-26 09:51</time></div><div class="prose"><p>得益于前几天大美丽跟我说她们闲的时候捡个毛毛虫玩了一下午, 昨天晚上做梦梦了一夜的毛毛虫和扑棱蛾子, 睡醒后巨累</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2025-07-11T18:21:10">2025-07-11 18:21</time></div><div class="prose"><p>对swift理解又加深了一丢丢</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2025-07-01T08:51:42">2025-07-01 08:51</time></div><div class="prose"><p>门口的槐花开了, 在被雨打掉的同时我才发现它的存在</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2025-06-06T14:31:36">2025-06-06 14:31</time></div><div class="prose"><p>鬼天气实在是让人不爽啊</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2025-05-27T09:35:23">2025-05-27 09:35</time></div><div class="prose"><p>把栀子花养好的秘诀就是晚上坐水里泡一夜, 第二天早上拿到窗口吹风晒太阳</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2025-04-25T08:47:44">2025-04-25 08:47</time></div><div class="prose"><p>life is okay, I am not okay.</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2025-04-15T17:28:50">2025-04-15 17:28</time></div><div class="prose"><p>栀子花开始黄叶了, 还生蚜虫, 早上下单一瓶吡虫啉, 希望有用</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2025-04-03T08:51:47">2025-04-03 08:51</time></div><div class="prose"><p>15块钱收获一盆巨型栀子花, 快乐也是巨型的</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2025-03-26T07:36:14">2025-03-26 07:36</time></div><div class="prose"><p>上班前躺沙发上刷刷手机看看花也是挺享受, 可惜这几天太热, 郁金香全都生仔了</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2025-03-24T09:55:49">2025-03-24 09:55</time></div><div class="prose"><p>别再感冒了, 求求了</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2025-02-25T15:36:09">2025-02-25 15:36</time></div><div class="prose"><p>我想回家哈口冰美式</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2025-02-14T08:57:49">2025-02-14 08:57</time></div><div class="prose"><p>媳妇儿回来咯, 开心～～</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2025-02-13T10:37:42">2025-02-13 10:37</time></div><div class="prose"><p>眼睛一闭,一睁, 一年就过去了, ho～</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2025-01-20T08:54:23">2025-01-20 08:54</time></div><div class="prose"><p>这几天是真特么累啊, 垃圾系统硬上强度, 还以为是被攻击了, 谁能想到做个美甲都要 0 点起来抢号</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2024-12-30T08:49:32">2024-12-30 08:49</time></div><div class="prose"><p>这两年的生活技能树点的有点快</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2024-12-30T08:48:57">2024-12-30 08:48</time></div><div class="prose"><p>给大美丽换了俩灯,下了梯子两腿不停打闪闪, 老同志依然有点恐高啊</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2024-12-30T08:48:41">2024-12-30 08:48</time></div><div class="prose"><p>我的说说怎么突然回来了？？</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2024-11-20T13:51:56">2024-11-20 13:51</time></div><div class="prose"><p>华强北给的快乐简单且粗暴（我说的是投影仪）</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2024-09-19T23:26:09">2024-09-19 23:26</time></div><div class="prose"><p>四顾茫然不见天, 春风催我又一年</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2024-07-29T17:43:32">2024-07-29 17:43</time></div><div class="prose"><p>刚才的暴雨好舒服, 就是时间短了点儿</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2024-04-19T08:11:20">2024-04-19 08:11</time></div><div class="prose"><p>早睡早起呀[太阳]</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2023-11-01T14:55:13">2023-11-01 14:55</time></div><div class="prose"><p>有点危了, 烦</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2023-07-31T09:26:19">2023-07-31 09:26</time></div><div class="prose"><p>同时也在沉迷 RPG MO, 啊哈哈😝</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2023-07-31T09:25:14">2023-07-31 09:25</time></div><div class="prose"><p>最近周末净在家里看电影了</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2023-03-12T22:19:22">2023-03-12 22:19</time></div><div class="prose"><p>一眨眼又过去三个月了啊, 过的真快</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2022-12-27T18:03:02">2022-12-27 18:03</time></div><div class="prose"><p>上周三开始躺到现在, 明天再捅个鼻子看看</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2022-12-27T18:02:19">2022-12-27 18:02</time></div><div class="prose"><p>跟阿凡达不共戴天吧</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2022-12-15T16:30:08">2022-12-15 16:30</time></div><div class="prose"><p>为了周六能正常看阿凡达, 刚才下去捅了个喉咙, 虽然现在很多地方都不查核酸了, 但是谁知道呢</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2022-12-12T23:20:52">2022-12-12 23:20</time></div><div class="prose"><p>刚才搞了个 rss, 又舒服了</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2022-12-11T10:56:18">2022-12-11 10:56</time></div><div class="prose"><p>一个星期没做核酸了, 舒服</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2022-12-08T09:40:48">2022-12-08 09:40</time></div><div class="prose"><p>昨天找到一个稳定的 iptv, 可以在电脑上看新闻联播了</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2022-12-07T16:32:39">2022-12-07 16:32</time></div><div class="prose"><p>备案注销以后搞了个 tg, 结果发现也没啥好玩的</p>
+</div></article><article class="shuo-card"><div class="shuo-meta"><img src="https://m-finder.github.io/images/avatar.jpeg" alt="" loading="lazy"><strong>M-finder</strong><time datetime="2022-12-07T15:01:21">2022-12-07 15:01</time></div><div class="prose"><p>虽然哔哔点啥更好使, 但是我还是只配了artitalk</p>
+</div></article></div>
+
+
+
+
+</main>
+<div class="wormhole-centered">
+
+<a class="wormhole-link" href="https://www.foreverblog.cn/go.html" target="_blank" rel="noopener noreferrer" title="十年之约虫洞"><img class="wormhole-image wormhole-image--light" src="https://www.foreverblog.cn/assets/logo/wormhole_v2_dark.webp" alt="十年之约虫洞" loading="lazy"><img class="wormhole-image wormhole-image--dark" src="https://www.foreverblog.cn/assets/logo/wormhole_v2_light.webp" alt="" loading="lazy" aria-hidden="true"></a>
+
+</div>
+
+
+<div class="site-ad original-ad" aria-label="广告"><script>var atOptions = {key: "c7ce4f61cfee771b3996c9978a6951cd", format: 'iframe', height: 60, width: 468, params: {}};</script><script src="https://bauval.org/22/c7ce4f61cfee771b3996c9978a6951cd" async></script></div>
+
+
+<footer class="site-footer wrap">
+  <div>© 2016–2026 m-finder</div>
+  <div class="footer-links"><a href="/privacy/">隐私政策</a><a href="/atom.xml">RSS ↗</a></div>
 </footer>
-
-  </div>
-
-  <!-- Main Script -->
-
-<script src="/js/main.js"></script>
-
-
-<!-- Search -->
-
-
-<script src="/js/search.js"></script>
-
-
-
-<!-- Baidu Analytics -->
-
-
-<!-- hexo injector body_end start --><div class="site-ad" style="max-width:468px;margin:1.5rem auto;overflow-x:auto">
-<script>
-  atOptions = {
-    'key' : 'c7ce4f61cfee771b3996c9978a6951cd',
-    'format' : 'iframe',
-    'height' : 60,
-    'width' : 468,
-    'params' : {}
-  };
-</script>
-<script src="https://bauval.org/22/c7ce4f61cfee771b3996c9978a6951cd"></script>
-</div><!-- hexo injector body_end end --></body>
+<button id="back-to-top" class="back-to-top" type="button" aria-label="返回顶部" title="返回顶部"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 14 6-6 6 6"/></svg></button>
+<dialog id="lightbox" class="lightbox" aria-label="查看图片"><button type="button" class="lightbox-close" aria-label="关闭"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button><button type="button" class="lightbox-prev" aria-label="上一张"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg></button><img alt=""><button type="button" class="lightbox-next" aria-label="下一张"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button></dialog>
+<script src="/js/giorgio.js" defer></script>
+</body>
 </html>
+
