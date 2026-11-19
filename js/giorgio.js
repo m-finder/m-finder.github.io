@@ -2,6 +2,23 @@
   const root = document.documentElement;
   const toggle = document.getElementById('theme-toggle');
   const media = window.matchMedia('(prefers-color-scheme: dark)');
+  const swatches = Array.from(document.querySelectorAll('.particle-swatch'));
+  const validColor = value => /^#[0-9a-f]{6}$/i.test(value || '');
+  let particleColors = [34, 168, 121, 120, 214, 160];
+  function selectParticle(name) {
+    const swatch = swatches.find(item => item.dataset.particleName === name) || swatches[0];
+    if (!swatch || !validColor(swatch.dataset.particleFrom) || !validColor(swatch.dataset.particleTo)) return;
+    particleColors = [swatch.dataset.particleFrom, swatch.dataset.particleTo].flatMap(color => [1, 3, 5].map(index => parseInt(color.slice(index, index + 2), 16)));
+    swatches.forEach(item => item.setAttribute('aria-pressed', String(item === swatch)));
+    window.dispatchEvent(new Event('giorgio-particle-change'));
+  }
+  let savedParticle;
+  try { savedParticle = localStorage.getItem('giorgio-particle'); } catch (_) {}
+  selectParticle(savedParticle || root.dataset.particleDefault);
+  swatches.forEach(swatch => swatch.addEventListener('click', () => {
+    selectParticle(swatch.dataset.particleName);
+    try { localStorage.setItem('giorgio-particle', swatch.dataset.particleName); } catch (_) {}
+  }));
   const currentMode = () => root.dataset.mode === 'auto' ? (media.matches ? 'dark' : 'light') : root.dataset.mode;
   function syncTheme() {
     toggle.querySelector('.theme-icon').innerHTML = currentMode() === 'dark' ? '<circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/>' : '<path d="M20.5 14.3A8.5 8.5 0 0 1 9.7 3.5 8.5 8.5 0 1 0 20.5 14.3Z"/>';
@@ -75,7 +92,6 @@
       const spacing = 11;
       const shift = motion.matches ? 0 : scrollPosition * 0.18;
       const dark = currentMode() === 'dark';
-      const color = dark ? '148, 179, 190' : '103, 151, 191';
       const left = Math.max(0, Math.floor((pointerX - radius) / spacing) * spacing);
       const right = Math.min(width, pointerX + radius);
       const top = Math.max(0, Math.floor((pointerY - radius) / spacing) * spacing);
@@ -86,6 +102,8 @@
           if (distance >= radius) continue;
           const fade = Math.pow(1 - distance / radius, 1.6);
           const wave = 0.78 + 0.22 * Math.sin(x * 0.03 + y * 0.018 + shift * 0.012);
+          const blend = Math.max(0, Math.min(1, (x - pointerX + radius) / (radius * 2)));
+          const color = [0, 1, 2].map(index => Math.round(particleColors[index] * (1 - blend) + particleColors[index + 3] * blend)).join(',');
           context.fillStyle = `rgba(${color},${(fade * wave * (dark ? 0.16 : 0.20)).toFixed(3)})`;
           context.beginPath();
           context.arc(x, y, 1.15, 0, Math.PI * 2);
@@ -112,6 +130,7 @@
       if (!motion.matches) scheduleDots();
     }, { passive: true });
     media.addEventListener('change', scheduleDots);
+    window.addEventListener('giorgio-particle-change', scheduleDots);
     motion.addEventListener('change', scheduleDots);
     toggle.addEventListener('click', scheduleDots);
     resizeDots();
