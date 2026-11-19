@@ -2,8 +2,6 @@
 title: 关于
 date: 2018-02-14 13:11:41
 comments: true
-tags:
-categories:
 ---
 
 代码只有 0 和 1，但人生不是。
@@ -15,7 +13,8 @@ categories:
 
 #### 关于这里
 
-这个博客从 2016 年写到现在，换过程序、主题和托管方式，生命不休，折腾不止。
+这个博客从 2016 年写到现在，换过程序、主题和托管方式，留下来的是记录的习惯。
+生命不休，折腾不止。
 
 仅以记录修行之旅。
 
@@ -27,7 +26,9 @@ GitHub：[m-finder](https://github.com/m-finder)
 #### 更新日志
 
 #### 2026-11-18
-* 嫌主题改着不方便，自己搓了一个 [hexo-theme-giorgio](https://github.com/m-finder/hexo-theme-giorgio)
+* 嫌别人的主题改着不方便，自己又搓了一个。
+* 我为什么要说又？
+* [hexo-theme-giorgio](https://github.com/m-finder/hexo-theme-giorgio)
 
 #### 2026-10-16
 * 因为 LeanCloud 停服，导出了所有说说和评论，最后借助 codex 迁了回来，稍微有点不完美
