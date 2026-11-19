@@ -18,7 +18,12 @@ FancyTool 是一款使用 Swift 原生开发的 macOS 菜单栏工具，包含�
 
 ## Giorgio IM
 
-Giorgio IM 是一套 Vue 3 + TypeScript 即时通讯组件及 Laravel 实时通讯方案。前端支持联系人、好友、群聊、AI 对话和客服模式；Laravel 后端处理消息、认证和管理接口，底层 WebSocket 服务负责推送及断线补收。在线 demo 使用模拟消息，完整链路可按后端仓库说明在本地运行。
+Giorgio IM 是一套 Vue 3 + TypeScript 即时通讯组件及 Laravel 实时通讯方案。
+> 另有 React 方案也已上线，欢迎体验。
+
+前端支持联系人、好友、群聊、AI 对话和客服模式；
+Laravel 后端处理消息、认证和管理接口，底层 WebSocket 服务负责推送及断线补收。
+在线 demo 使用模拟消息，完整链路可按后端仓库说明在本地运行。
 
 ![Giorgio IM](/images/giorgio-im.png)
 

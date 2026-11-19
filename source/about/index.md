@@ -15,7 +15,6 @@ comments: true
 
 这个博客从 2016 年写到现在，换过程序、主题和托管方式，留下来的是记录的习惯。
 生命不休，折腾不止。
-
 仅以记录修行之旅。
 
 GitHub：[m-finder](https://github.com/m-finder)
