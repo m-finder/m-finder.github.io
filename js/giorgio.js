@@ -260,7 +260,9 @@
   const lightbox = document.getElementById('lightbox');
   if (gallery && lightbox) {
     const images = Array.from(gallery.querySelectorAll('img'));
-    images.forEach(image => {
+    images.forEach((image, index) => {
+      image.loading = index < 4 ? 'eager' : 'lazy';
+      image.decoding = 'async';
       if (!image.closest('a')) {
         const link = document.createElement('a');
         link.href = image.currentSrc || image.src;
@@ -271,7 +273,7 @@
     let current = 0;
     const display = index => {
       current = (index + images.length) % images.length;
-      lightbox.querySelector('img').src = images[current].currentSrc || images[current].src;
+      lightbox.querySelector('img').src = images[current].closest('a')?.href || images[current].currentSrc || images[current].src;
       lightbox.querySelector('img').alt = images[current].alt || `相册图片 ${current + 1}`;
     };
     gallery.addEventListener('click', event => {
