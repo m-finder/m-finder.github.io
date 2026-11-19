@@ -104,7 +104,7 @@
           const wave = 0.78 + 0.22 * Math.sin(x * 0.03 + y * 0.018 + shift * 0.012);
           const blend = Math.max(0, Math.min(1, (x - pointerX + radius) / (radius * 2)));
           const color = [0, 1, 2].map(index => Math.round(particleColors[index] * (1 - blend) + particleColors[index + 3] * blend)).join(',');
-          context.fillStyle = `rgba(${color},${(fade * wave * (dark ? 0.16 : 0.20)).toFixed(3)})`;
+          context.fillStyle = `rgba(${color},${(fade * wave * (dark ? 0.27 : 0.32)).toFixed(3)})`;
           context.beginPath();
           context.arc(x, y, 1.15, 0, Math.PI * 2);
           context.fill();
