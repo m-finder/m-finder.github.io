@@ -24,6 +24,10 @@
       link: https://www.aiixi.cc
       avatar: https://www.aiixi.cc/img/blowfish_logo.webp
       descr: Aiixi Bear 數位後花園
+    - name: 花墨
+      link: https://flowersink.com
+      avatar: https://api.flowersink.com/img/logo.png
+      descr: 好耶！是再花猫猫头ฅ•ω•ฅ
 - class_name: 实用工具
   class_desc: 工具在手，烦恼全走
   link_list:

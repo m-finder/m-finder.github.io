@@ -9,7 +9,7 @@ comments: false
 
 FancyTool 是一款使用 Swift 原生开发的 macOS 菜单栏工具，资源占用极低。
 
-功能包含
+功能包含:
 * 动态图标
 * 炫彩签名
 * 屏幕圆角
