@@ -9,6 +9,8 @@
     const swatch = swatches.find(item => item.dataset.particleName === name) || swatches[0];
     if (!swatch || !validColor(swatch.dataset.particleFrom) || !validColor(swatch.dataset.particleTo)) return;
     particleColors = [swatch.dataset.particleFrom, swatch.dataset.particleTo].flatMap(color => [1, 3, 5].map(index => parseInt(color.slice(index, index + 2), 16)));
+    root.style.setProperty('--header-line-from', swatch.dataset.particleFrom);
+    root.style.setProperty('--header-line-to', swatch.dataset.particleTo);
     swatches.forEach(item => item.setAttribute('aria-pressed', String(item === swatch)));
     window.dispatchEvent(new Event('giorgio-particle-change'));
   }
@@ -59,6 +61,12 @@
   });
 
   const backToTop = document.getElementById('back-to-top');
+  const header = document.querySelector('.site-header');
+  if (header) {
+    const syncHeader = () => header.classList.toggle('is-scrolled', window.scrollY > 8);
+    window.addEventListener('scroll', syncHeader, { passive: true });
+    syncHeader();
+  }
   if (backToTop) {
     const syncBackToTop = () => backToTop.classList.toggle('is-visible', window.scrollY > 400);
     window.addEventListener('scroll', syncBackToTop, { passive: true });
