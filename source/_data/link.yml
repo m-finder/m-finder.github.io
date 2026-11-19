@@ -1,22 +1,17 @@
-- class_name: 友情链接
-  class_desc: 网络一线牵，珍惜这段缘
+- class_name: 老友记
+  class_desc: 时光牵一线，难得是旧伴
   link_list:
     - name: Alon
       link: https://alon.wang/
       avatar: https://alon-image-1305333140.cos.ap-shanghai.myqcloud.com/lsky/1/2024/03/13/65f16d0adb94f.png
       descr: 后青春期的诗
-    - name: D-107
-      link: http://d-107.github.io/
-      avatar: https://m-finder.alon.wang/images/avatar.jpeg
-      descr: 3wly 项目开发组自留地
     - name: AprilBlank
       link: https://www.cnblogs.com/AprilBlank
       avatar: https://m-finder.alon.wang/images/avatar.jpeg
       descr: 一个在大洛阳孤军奋战的程序猿
-    - name: Giorgio-IM
-      link: https://im.m-finder.top/
-      avatar: https://m-finder.top/images/favicon.ico
-      descr: giorgio im
+- class_name: 友情链接
+  class_desc: 网络一线牵，珍惜这段缘
+  link_list:
     - name: SitesLink
       link: https://siteslink.cn/
       avatar: https://siteslink.cn/images/logo.png
@@ -29,14 +24,17 @@
       link: https://www.aiixi.cc
       avatar: https://www.aiixi.cc/img/blowfish_logo.webp
       descr: Aiixi Bear 數位後花園
-
 - class_name: 实用工具
   class_desc: 工具在手，烦恼全走
   link_list:
-    - name: 永久免费日历订阅
-      link: https://kyzsalist.cn/appleics/
-      avatar: https://m-finder.alon.wang/images/avatar.jpeg
-      descr: 苹果日历增强
+    - name: FancyTool
+      link: https://github.com/m-finder/FancyTool/releases
+      avatar: https://raw.githubusercontent.com/m-finder/FancyToolApp/main/doc/icon.png
+      descr: 站长开发的集骚气与实用于一体的多合一 mac 菜单栏小应用。
+    - name: Giorgio-IM
+      link: https://im.m-finder.top/
+      avatar: https://m-finder.top/images/favicon.ico
+      descr: 站长开发的 IM 插件以及配套的 socket 服务
     - name: ASCII 艺术字生成
       link: https://tool.cccyun.cc/ascii_art
       avatar: https://m-finder.alon.wang/images/avatar.jpeg
