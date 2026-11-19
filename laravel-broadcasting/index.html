@@ -12,7 +12,7 @@
   <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
   <link rel="stylesheet" href="/css/giorgio.css">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3280933721783945" crossorigin="anonymous"></script>
-  <script>try{let m=localStorage.getItem('giorgio-mode');if(m==='light'||m==='dark')document.documentElement.dataset.mode=m}catch(e){}</script>
+  <script>try{let m=localStorage.getItem('giorgio-mode');if(m==='light'||m==='dark')document.documentElement.dataset.mode=m;let p=localStorage.getItem('giorgio-particle')||document.documentElement.dataset.particleDefault;let c=[{"name":"green","label":"绿色","from":"#22a879","to":"#78d6a0"},{"name":"blue","label":"蓝色","from":"#2468d8","to":"#8ab4f8"},{"name":"purple","label":"紫色","from":"#8537ed","to":"#ca88fa"},{"name":"orange","label":"橙色","from":"#f15a14","to":"#ffbd6a"},{"name":"red","label":"红色","from":"#dc2737","to":"#ff8390"}].find(x=>x.name===p);if(c&&/^#[0-9a-f]{6}$/i.test(c.from)&&/^#[0-9a-f]{6}$/i.test(c.to)){document.documentElement.style.setProperty('--header-line-from',c.from);document.documentElement.style.setProperty('--header-line-to',c.to)}}catch(e){}</script>
 <meta name="generator" content="Hexo 7.3.0"></head>
 <body class="glow-enabled">
 <canvas class="background-dots" aria-hidden="true"></canvas>
@@ -116,7 +116,7 @@
   <div class="footer-links"><a href="/privacy/">隐私政策</a><a href="/atom.xml">RSS ↗</a></div>
 </footer>
 <button id="back-to-top" class="back-to-top" type="button" aria-label="返回顶部" title="返回顶部"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 14 6-6 6 6"/></svg></button>
-<dialog id="lightbox" class="lightbox" aria-label="查看图片"><button type="button" class="lightbox-close" aria-label="关闭"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button><button type="button" class="lightbox-prev" aria-label="上一张"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg></button><img alt=""><button type="button" class="lightbox-next" aria-label="下一张"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button></dialog>
+<dialog id="lightbox" class="lightbox" aria-label="查看图片"><button type="button" class="lightbox-close" aria-label="关闭"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button><button type="button" class="lightbox-prev" aria-label="上一张"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg></button><span class="lightbox-status" role="status" aria-live="polite">图片加载中…</span><img alt=""><button type="button" class="lightbox-next" aria-label="下一张"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button></dialog>
 <script src="/js/giorgio.js" defer></script>
 </body>
 </html>

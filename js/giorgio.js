@@ -271,10 +271,24 @@
       }
     });
     let current = 0;
+    const preview = lightbox.querySelector('img');
+    const status = lightbox.querySelector('.lightbox-status');
+    preview.addEventListener('load', () => {
+      lightbox.classList.remove('is-loading', 'is-error');
+      status.textContent = '';
+    });
+    preview.addEventListener('error', () => {
+      lightbox.classList.remove('is-loading');
+      lightbox.classList.add('is-error');
+      status.textContent = '图片加载失败';
+    });
     const display = index => {
       current = (index + images.length) % images.length;
-      lightbox.querySelector('img').src = images[current].closest('a')?.href || images[current].currentSrc || images[current].src;
-      lightbox.querySelector('img').alt = images[current].alt || `相册图片 ${current + 1}`;
+      lightbox.classList.remove('is-error');
+      lightbox.classList.add('is-loading');
+      status.textContent = '图片加载中…';
+      preview.src = images[current].closest('a')?.href || images[current].currentSrc || images[current].src;
+      preview.alt = images[current].alt || `相册图片 ${current + 1}`;
     };
     gallery.addEventListener('click', event => {
       const image = event.target.closest('img');
