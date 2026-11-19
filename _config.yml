@@ -137,7 +137,7 @@ theme: giorgio
 douban:
   id: 264738267
   builtin: true
-  dynamic: false
+  dynamic: true
   item_per_page: 10
   meta_max_line: 4
   book:
