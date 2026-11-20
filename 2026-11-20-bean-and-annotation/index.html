@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="zh-CN" data-mode="auto" data-particle-default="green">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  
+  <meta name="description" content="对于 Bean 和 Service、Component、Controller 等注解的理解 · 上一篇分析 Autowired 和 Resource 的区别时提到了一个概念，也就是他们俩都是用来注入 Bean 的，那么什么是 Bean ？和常见的 Service 、 Comp · m-finder、M-finder技术博客、php、laravel、java、vue、全栈开发、技术分享、AI日报、AI使用、码不能停、java">
+  <meta name="keywords" content="对于 Bean 和 Service、Component、Controller 等注解的理解, m-finder, M-finder技术博客, php, laravel, java, vue, 全栈开发, 技术分享, AI日报, AI使用, 码不能停">
+  <title>对于 Bean 和 Service、Component、Controller 等注解的理解 · M-finder</title>
+  <link rel="icon" href="/images/favicon.ico">
+  <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+  <link rel="stylesheet" href="/css/giorgio.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3280933721783945" crossorigin="anonymous"></script>
+  <script>try{let m=localStorage.getItem('giorgio-mode');if(m==='light'||m==='dark')document.documentElement.dataset.mode=m;let p=localStorage.getItem('giorgio-particle')||document.documentElement.dataset.particleDefault;let c=[{"name":"green","label":"绿色","from":"#22a879","to":"#78d6a0"},{"name":"blue","label":"蓝色","from":"#2468d8","to":"#8ab4f8"},{"name":"purple","label":"紫色","from":"#8537ed","to":"#ca88fa"},{"name":"orange","label":"橙色","from":"#f15a14","to":"#ffbd6a"},{"name":"red","label":"红色","from":"#dc2737","to":"#ff8390"},{"name":"cyan","label":"青色","from":"#11a6b5","to":"#8de0e5"},{"name":"yellow","label":"黄色","from":"#d69a17","to":"#f5d77f"}].find(x=>x.name===p);if(c&&/^#[0-9a-f]{6}$/i.test(c.from)&&/^#[0-9a-f]{6}$/i.test(c.to)){document.documentElement.style.setProperty('--header-line-from',c.from);document.documentElement.style.setProperty('--header-line-to',c.to)}}catch(e){}</script>
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body class="glow-enabled">
+<canvas class="background-dots" aria-hidden="true"></canvas>
+<div class="cursor-glow" aria-hidden="true"></div>
+<header class="site-header">
+  <span id="page-progress" class="page-progress" aria-hidden="true"></span>
+  <div class="header-inner wrap">
+    <a class="brand" href="/" aria-label="M-finder 首页"><span>M-finder</span></a>
+    <button class="mobile-menu-toggle icon-button" type="button" aria-label="打开导航" aria-expanded="false" aria-controls="site-nav"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <nav id="site-nav" class="site-nav" aria-label="主导航">
+      
+        
+          <a class="nav-link" href="/">首页</a>
+        
+      
+        
+          
+          <div class="nav-group is-current">
+            <button class="nav-link nav-group-toggle is-active" type="button">文章<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg></button>
+            <div class="nav-submenu">
+              <a class="" href="/categories/">分类</a><a class="" href="/tags/">标签</a><a class="" href="/archives/">归档</a>
+            </div>
+          </div>
+        
+      
+        
+          
+          <div class="nav-group">
+            <button class="nav-link nav-group-toggle" type="button">更多<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg></button>
+            <div class="nav-submenu">
+              <a class="" href="/projects/">项目</a><a class="" href="/shuo/">说说</a><a class="" href="/gallery/">相册</a><a class="" href="/books/">读书</a><a class="" href="/movies/">电影</a><a class="" href="/games/">游戏</a>
+            </div>
+          </div>
+        
+      
+        
+          <a class="nav-link" href="/link/">友情链接</a>
+        
+      
+        
+          <a class="nav-link" href="/about/">关于</a>
+        
+      
+    </nav>
+    <button id="theme-toggle" class="icon-button theme-toggle" type="button" aria-label="切换背景明暗" title="切换背景明暗"><svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.3A8.5 8.5 0 0 1 9.7 3.5 8.5 8.5 0 1 0 20.5 14.3Z"/></svg></button>
+  </div>
+</header>
+<main class="wrap article-main"><article><header class="article-header"><a class="back-link" href="/archives/">← 返回上一页</a><div class="article-meta"><time datetime="2026-11-20T02:25:00.000Z">2026 年 11 月 20 日</time><span>·</span><span><a href="/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/">码不能停</a> / <a href="/categories/java/">java</a></span></div><h1>对于 Bean 和 Service、Component、Controller 等注解的理解</h1></header><div class="prose"><p>上一篇分析 <code>Autowired</code> 和 <code>Resource</code> 的区别时提到了一个概念，也就是他们俩都是用来注入 <code>Bean</code> 的，那么什么是 <code>Bean</code> ？和常见的 <code>Service</code>、<code>Component</code> 和 <code>Controller</code> 等注解又有什么关系呢？</p>
+<h2 id="一、Bean"><a href="#一、Bean" class="headerlink" title="一、Bean"></a>一、Bean</h2><h3 id="1-1-什么是-Bean"><a href="#1-1-什么是-Bean" class="headerlink" title="1.1 什么是 Bean"></a>1.1 什么是 Bean</h3><p><strong>Bean 是由 Spring IoC 容器创建、组装并管理生命周期的对象。</strong></p>
+<p>它不是一个特殊的类，而是一种身份——只要对象交给了 Spring 容器管理，它就是 Bean。两者的区别不在对象本身，而在”谁负责创建和销毁它”。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 传统方式：对象由你的代码创建、组装、销毁</span></span><br><span class="line"><span class="type">var</span> <span class="variable">service</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">UserService</span>();</span><br><span class="line"><span class="type">var</span> <span class="variable">dao</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">UserDao</span>();</span><br><span class="line">service.setDao(dao);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Spring 方式：声明后由容器接管</span></span><br><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="type">UserService</span> <span class="title function_">service</span><span class="params">(UserDao dao)</span> &#123;</span><br><span class="line">    <span class="comment">// 依赖由容器注入</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">UserService</span>(dao);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-2-IoC-与-DI"><a href="#1-2-IoC-与-DI" class="headerlink" title="1.2 IoC 与 DI"></a>1.2 IoC 与 DI</h3><ul>
+<li><strong>IoC（控制反转）</strong>：创建对象的控制权从你的代码转移到容器。你不再写 <code>new</code>，而是声明”我需要什么”。</li>
+<li><strong>DI（依赖注入）</strong>：容器把依赖对象自动送进来。IoC 是思想，DI 是它的具体实现。</li>
+</ul>
+<h3 id="1-3-Bean-从哪里来"><a href="#1-3-Bean-从哪里来" class="headerlink" title="1.3 Bean 从哪里来"></a>1.3 Bean 从哪里来</h3><table>
+<thead>
+<tr>
+<th>方式</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>@Component</code> &#x2F; <code>@Service</code> &#x2F; <code>@Repository</code> &#x2F; <code>@Controller</code></td>
+<td>自己写的类，组件扫描时自动注册</td>
+</tr>
+<tr>
+<td><code>@Bean</code> 注解方法</td>
+<td>第三方库的类，或需要自定义构造逻辑</td>
+</tr>
+<tr>
+<td>XML <code>&lt;bean&gt;</code></td>
+<td>遗留项目</td>
+</tr>
+</tbody></table>
+<h3 id="1-4-Bean-的生命周期"><a href="#1-4-Bean-的生命周期" class="headerlink" title="1.4 Bean 的生命周期"></a>1.4 Bean 的生命周期</h3><p>容器接管了对象从创建到销毁的全过程：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">flowchart LR</span><br><span class="line">    A[&quot;实例化&quot;] --&gt; B[&quot;属性注入&quot;] --&gt; C[&quot;初始化&lt;br/&gt;@PostConstruct&quot;] --&gt; D[&quot;就绪使用&quot;] --&gt; E[&quot;销毁&lt;br/&gt;@PreDestroy&quot;]</span><br></pre></td></tr></table></figure>
+
+<p>这一点有实际价值：线程池等资源对象声明为 Bean 后，<code>initialize()</code> 由容器在初始化阶段自动调用，应用关闭时也会按序销毁——这就是优雅停机的基础。</p>
+<hr>
+<h2 id="二、Bean-与-Service：不是同一个维度"><a href="#二、Bean-与-Service：不是同一个维度" class="headerlink" title="二、Bean 与 Service：不是同一个维度"></a>二、Bean 与 Service：不是同一个维度</h2><h3 id="2-1-核心区别"><a href="#2-1-核心区别" class="headerlink" title="2.1 核心区别"></a>2.1 核心区别</h3><table>
+<thead>
+<tr>
+<th>维度</th>
+<th>Bean</th>
+<th>Service</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>回答的问题</td>
+<td>对象<strong>归谁管</strong></td>
+<td>对象<strong>负责什么</strong></td>
+</tr>
+<tr>
+<td>本质</td>
+<td>Spring 容器管理的对象，是一种身份</td>
+<td>分层架构中业务逻辑层的组件，是一种角色</td>
+</tr>
+<tr>
+<td>所属体系</td>
+<td>IoC 容器的概念</td>
+<td>三层&#x2F;多层架构模式的概念</td>
+</tr>
+<tr>
+<td>关系</td>
+<td>大概念</td>
+<td>Service 一定是 Bean，Bean 不一定是 Service</td>
+</tr>
+</tbody></table>
+<h3 id="2-2-包含关系"><a href="#2-2-包含关系" class="headerlink" title="2.2 包含关系"></a>2.2 包含关系</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">graph TD</span><br><span class="line">    Bean[&quot;Spring Bean&lt;br/&gt;容器管理的所有对象&quot;]</span><br><span class="line">    Bean --&gt; Svc[&quot;@Service&lt;br/&gt;业务逻辑层&quot;]</span><br><span class="line">    Bean --&gt; Ctl[&quot;@Controller&lt;br/&gt;Web 请求入口&quot;]</span><br><span class="line">    Bean --&gt; Repo[&quot;@Repository&lt;br/&gt;数据访问层&quot;]</span><br><span class="line">    Bean --&gt; Comp[&quot;@Component&lt;br/&gt;通用组件&quot;]</span><br><span class="line">    Bean --&gt; BM[&quot;@Bean 方法&lt;br/&gt;第三方对象 / 自定义配置&quot;]</span><br></pre></td></tr></table></figure>
+
+<p>以线程池配置为例，可以直观看到两种身份的差别：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 是 Bean，但不是 Service</span></span><br><span class="line"><span class="meta">@Bean(&quot;bizExecutor&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="type">ThreadPoolTaskExecutor</span> <span class="title function_">bizExecutor</span><span class="params">()</span> &#123; ... &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 既是 Bean，也是 Service</span></span><br><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">OrderService</span> &#123;</span><br><span class="line">    <span class="meta">@Resource</span> <span class="keyword">private</span> ThreadPoolTaskExecutor bizExecutor;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="三、Component-与-Service：功能等价，语义有别"><a href="#三、Component-与-Service：功能等价，语义有别" class="headerlink" title="三、Component 与 Service：功能等价，语义有别"></a>三、Component 与 Service：功能等价，语义有别</h2><h3 id="3-1-源码关系"><a href="#3-1-源码关系" class="headerlink" title="3.1 源码关系"></a>3.1 源码关系</h3><p><code>@Service</code> 的源码上标注了 <code>@Component</code>，也就是说它是 <code>@Component</code> 的特化：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">graph TD</span><br><span class="line">    Comp[&quot;@Component&lt;br/&gt;根注解 · 通用组件&quot;]</span><br><span class="line">    Comp --&gt;|派生| Svc[&quot;@Service&lt;br/&gt;业务逻辑层&quot;]</span><br><span class="line">    Comp --&gt;|派生| Repo[&quot;@Repository&lt;br/&gt;数据访问层&quot;]</span><br><span class="line">    Comp --&gt;|派生| Ctl[&quot;@Controller / @RestController&lt;br/&gt;Web 请求入口&quot;]</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-2-逐项对比"><a href="#3-2-逐项对比" class="headerlink" title="3.2 逐项对比"></a>3.2 逐项对比</h3><table>
+<thead>
+<tr>
+<th>维度</th>
+<th>@Component</th>
+<th>@Service</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>源码关系</td>
+<td>根注解</td>
+<td>标注了 <code>@Component</code>，是其特化</td>
+</tr>
+<tr>
+<td>组件扫描</td>
+<td>会被扫描注册为 Bean</td>
+<td>同样会被扫描注册为 Bean</td>
+</tr>
+<tr>
+<td>语义</td>
+<td>通用组件，无特定含义</td>
+<td>明确表示”业务逻辑层”</td>
+</tr>
+<tr>
+<td>框架附加行为</td>
+<td>无</td>
+<td>无</td>
+</tr>
+<tr>
+<td>典型用途</td>
+<td>工具类、配置类、无法归类的组件</td>
+<td>Service 层的业务服务类</td>
+</tr>
+</tbody></table>
+<p><strong>关键事实</strong>：就这两个注解而言，Spring 对它们的处理<strong>完全一样</strong>——没有功能增强、没有生命周期差异、没有注入行为差异。把 <code>@Service</code> 换成 <code>@Component</code>，程序运行效果完全相同。</p>
+<h3 id="3-3-既然等价，为什么还要区分"><a href="#3-3-既然等价，为什么还要区分" class="headerlink" title="3.3 既然等价，为什么还要区分"></a>3.3 既然等价，为什么还要区分</h3><p>价值全在语义表达和工程约定上：</p>
+<ol>
+<li><strong>可读性</strong>：看到 <code>@Service</code> 立刻知道这是业务层入口；看到 <code>@Component</code> 知道这是通用组件，不承载业务流程。</li>
+<li><strong>架构约束</strong>：团队可以约定”Controller 只能依赖 Service，Service 才能依赖 Repository”，通过注解快速识别层级，防止分层被破坏。</li>
+<li><strong>AOP 切点</strong>：虽然 <code>@Service</code> 本身无增强，但项目中常以它作为切点表达式，统一给业务层加事务、日志或权限拦截。</li>
+</ol>
+<h3 id="3-4-使用建议"><a href="#3-4-使用建议" class="headerlink" title="3.4 使用建议"></a>3.4 使用建议</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 业务逻辑层：编排流程、调用多个 Repository</span></span><br><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">OrderService</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">OrderVO</span> <span class="title function_">create</span><span class="params">(OrderCmd cmd)</span> &#123; ... &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 通用组件：不属于任何业务分层</span></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">SnowflakeIdWorker</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">long</span> <span class="title function_">nextId</span><span class="params">()</span> &#123; ... &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 第三方库对象：无法修改源码加注解</span></span><br><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="keyword">public</span> <span class="type">ThreadPoolTaskExecutor</span> <span class="title function_">bizExecutor</span><span class="params">()</span> &#123; ... &#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>判断规则</strong>：这个类是业务层服务吗？是 → <code>@Service</code>；不是但需由 Spring 管理 → <code>@Component</code>；外部类需纳入容器 → <code>@Bean</code> 方法。</p>
+<h3 id="3-5-与另外两个注解的对照"><a href="#3-5-与另外两个注解的对照" class="headerlink" title="3.5 与另外两个注解的对照"></a>3.5 与另外两个注解的对照</h3><ul>
+<li>**<code>@Repository</code>**：有真实增强——持久化异常自动转换为 <code>DataAccessException</code> 体系。</li>
+<li>**<code>@Controller</code> &#x2F; <code>@RestController</code>**：有真实增强——被 Spring MVC 识别并处理请求映射。</li>
+<li>**<code>@Service</code> &#x2F; <code>@Component</code>**：都没有框架级增强，纯粹靠语义区分。</li>
+</ul>
+<hr>
+<h2 id="四、建立完整的理解框架"><a href="#四、建立完整的理解框架" class="headerlink" title="四、建立完整的理解框架"></a>四、建立完整的理解框架</h2><h3 id="4-1-注解的三层作用"><a href="#4-1-注解的三层作用" class="headerlink" title="4.1 注解的三层作用"></a>4.1 注解的三层作用</h3><p>前面讨论过的所有注解，可以归到三个层次：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">flowchart TD</span><br><span class="line">    subgraph L1[&quot;注册层：声明谁成为 Bean&quot;]</span><br><span class="line">        A1[&quot;@Component / @Bean&quot;]</span><br><span class="line">    end</span><br><span class="line">    subgraph L2[&quot;增强层：给 Bean 叠加横切能力&quot;]</span><br><span class="line">        A2[&quot;@Transactional / @Async / @Cacheable&quot;]</span><br><span class="line">    end</span><br><span class="line">    subgraph L3[&quot;角色层：标记领域角色&quot;]</span><br><span class="line">        A3[&quot;@Service / @Controller / @Repository&quot;]</span><br><span class="line">    end</span><br><span class="line">    A1 --&gt; B[&quot;Bean · 容器管理的对象&quot;]</span><br><span class="line">    A2 --&gt; B</span><br><span class="line">    A3 --&gt; B</span><br><span class="line">    B --&gt; C1[&quot;依赖注入&quot;]</span><br><span class="line">    B --&gt; C2[&quot;生命周期管理&quot;]</span><br><span class="line">    B --&gt; C3[&quot;AOP 代理增强&quot;]</span><br><span class="line">    B --&gt; C4[&quot;框架回调集成&quot;]</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>注册层</strong>：把对象交给容器，成为 Bean（<code>@Component</code>、<code>@Bean</code>）。</li>
+<li><strong>增强层</strong>：给 Bean 叠加能力（<code>@Transactional</code> 事务、<code>@Async</code> 异步、<code>@Cacheable</code> 缓存、<code>@Validated</code> 校验）。</li>
+<li><strong>角色层</strong>：标记领域角色并接入框架机制（<code>@Controller</code> 接 MVC、<code>@Repository</code> 接数据访问异常体系）。</li>
+</ul>
+<h3 id="4-2-容器的价值不止于注入"><a href="#4-2-容器的价值不止于注入" class="headerlink" title="4.2 容器的价值不止于注入"></a>4.2 容器的价值不止于注入</h3><p>一种常见的理解是”这些注解最终都是为了注入使用”。这个说法<strong>过于狭窄</strong>。反例很直接：</p>
+<ul>
+<li><code>@Controller</code> 的方法由 Spring MVC <strong>直接回调</strong>处理 HTTP 请求，它不需要被注入到别处；</li>
+<li><code>@Scheduled</code> 定时任务由调度器<strong>直接触发</strong>；</li>
+<li><code>@EventListener</code> 由事件机制<strong>直接推送</strong>消息。</li>
+</ul>
+<p>这些 Bean 的价值在于”容器在恰当时机调用我”，而非”被别人注入”。</p>
+<h2 id="五、实践建议与记忆方法"><a href="#五、实践建议与记忆方法" class="headerlink" title="五、实践建议与记忆方法"></a>五、实践建议与记忆方法</h2><h3 id="5-1-注解选择速查"><a href="#5-1-注解选择速查" class="headerlink" title="5.1 注解选择速查"></a>5.1 注解选择速查</h3><table>
+<thead>
+<tr>
+<th>场景</th>
+<th>推荐注解</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>业务逻辑服务类</td>
+<td><code>@Service</code></td>
+</tr>
+<tr>
+<td>Web 请求入口</td>
+<td><code>@Controller</code> &#x2F; <code>@RestController</code></td>
+</tr>
+<tr>
+<td>数据访问层</td>
+<td><code>@Repository</code> &#x2F; <code>@Mapper</code></td>
+</tr>
+<tr>
+<td>工具类、通用组件</td>
+<td><code>@Component</code></td>
+</tr>
+<tr>
+<td>第三方库对象、需自定义构造</td>
+<td><code>@Bean</code> 方法</td>
+</tr>
+<tr>
+<td>声明式事务</td>
+<td><code>@Transactional</code></td>
+</tr>
+<tr>
+<td>异步执行</td>
+<td><code>@Async</code></td>
+</tr>
+</tbody></table>
+<h3 id="5-2-记忆方法"><a href="#5-2-记忆方法" class="headerlink" title="5.2 记忆方法"></a>5.2 记忆方法</h3><blockquote>
+<p>**Bean 是”户口”**——是否在 Spring 容器登记，决定对象能否被注入、被管理生命周期。</p>
+<p>**Service 是”职业”**——在分层架构中承担什么职责，决定这个对象该放在哪一层。</p>
+<p>一个人有户口不代表是老师；有教师资格证的人一定有户口。两个维度互不替代。</p>
+</blockquote>
+<h3 id="5-3-回到工程场景"><a href="#5-3-回到工程场景" class="headerlink" title="5.3 回到工程场景"></a>5.3 回到工程场景</h3><p><code>ThreadPoolTaskExecutor</code> 就是这套体系的典型应用：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 注册层：声明为 Bean</span></span><br><span class="line"><span class="meta">@Bean(&quot;bizExecutor&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="type">ThreadPoolTaskExecutor</span> <span class="title function_">bizExecutor</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">ThreadPoolTaskExecutor</span> <span class="variable">executor</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ThreadPoolTaskExecutor</span>();</span><br><span class="line">    <span class="comment">// 有界队列，避免 maxPoolSize 失效</span></span><br><span class="line">    executor.setQueueCapacity(<span class="number">200</span>);</span><br><span class="line">    executor.setThreadNamePrefix(<span class="string">&quot;biz-async-&quot;</span>);</span><br><span class="line">    executor.initialize();</span><br><span class="line">    <span class="keyword">return</span> executor;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ReportService</span> &#123;</span><br><span class="line">    <span class="meta">@Async(&quot;bizExecutor&quot;)</span>                  <span class="comment">// 增强层：叠加异步能力</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">void</span> <span class="title function_">generateReport</span><span class="params">(Long id)</span> &#123; ... &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>一个 Bean，同时承载了<strong>注册声明</strong>（<code>@Bean</code>）、<strong>能力增强</strong>（<code>@Async</code>）和<strong>角色标记</strong>（<code>@Service</code>）三个维度的信息。理解注解体系，本质就是理解这三件事如何组合。</p>
+<hr>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>Bean 回答”归谁管”，Service&#x2F;Controller 回答”负责什么”，<code>@Transactional</code>&#x2F;<code>@Async</code> 回答”叠加什么能力”。</p>
+<p>把这三个问题分开问，注解体系就不再是一堆需要死记硬背的符号，而是一套有清晰分工的协作机制。</p>
+</div><div class="article-tags"><a href="/tags/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/"># 码不能停</a><a href="/tags/java/"># java</a></div></article>
+
+
+
+<section class="comments" aria-label="评论"><h2>留下想法</h2><script src="https://giscus.app/client.js" data-repo="m-finder/m-finder.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkxMjEzNzU5NTc=" data-category="Announcements" data-category-id="DIC_kwDOBzwM1c4DIlfb" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="zh-CN" crossorigin="anonymous" async></script></section>
+
+</main>
+<div class="wormhole-centered">
+
+<a class="wormhole-link" href="https://www.foreverblog.cn/go.html" target="_blank" rel="noopener noreferrer" title="十年之约虫洞"><img class="wormhole-image wormhole-image--light" src="https://www.foreverblog.cn/assets/logo/wormhole_v2_dark.webp" alt="十年之约虫洞" loading="lazy"><img class="wormhole-image wormhole-image--dark" src="https://www.foreverblog.cn/assets/logo/wormhole_v2_light.webp" alt="" loading="lazy" aria-hidden="true"></a>
+
+
+<div class="particle-palette" role="group" aria-label="背景颗粒颜色"><button class="particle-swatch" type="button" data-particle-name="green" data-particle-from="#22a879" data-particle-to="#78d6a0" style="--swatch-from:#22a879;--swatch-to:#78d6a0" aria-label="绿色" title="绿色" aria-pressed="false"></button><button class="particle-swatch" type="button" data-particle-name="blue" data-particle-from="#2468d8" data-particle-to="#8ab4f8" style="--swatch-from:#2468d8;--swatch-to:#8ab4f8" aria-label="蓝色" title="蓝色" aria-pressed="false"></button><button class="particle-swatch" type="button" data-particle-name="purple" data-particle-from="#8537ed" data-particle-to="#ca88fa" style="--swatch-from:#8537ed;--swatch-to:#ca88fa" aria-label="紫色" title="紫色" aria-pressed="false"></button><button class="particle-swatch" type="button" data-particle-name="orange" data-particle-from="#f15a14" data-particle-to="#ffbd6a" style="--swatch-from:#f15a14;--swatch-to:#ffbd6a" aria-label="橙色" title="橙色" aria-pressed="false"></button><button class="particle-swatch" type="button" data-particle-name="red" data-particle-from="#dc2737" data-particle-to="#ff8390" style="--swatch-from:#dc2737;--swatch-to:#ff8390" aria-label="红色" title="红色" aria-pressed="false"></button><button class="particle-swatch" type="button" data-particle-name="cyan" data-particle-from="#11a6b5" data-particle-to="#8de0e5" style="--swatch-from:#11a6b5;--swatch-to:#8de0e5" aria-label="青色" title="青色" aria-pressed="false"></button><button class="particle-swatch" type="button" data-particle-name="yellow" data-particle-from="#d69a17" data-particle-to="#f5d77f" style="--swatch-from:#d69a17;--swatch-to:#f5d77f" aria-label="黄色" title="黄色" aria-pressed="false"></button></div>
+</div>
+
+
+<div class="site-ad original-ad" aria-label="广告"><script>var atOptions = {key: "c7ce4f61cfee771b3996c9978a6951cd", format: 'iframe', height: 60, width: 468, params: {}};</script><script src="https://bauval.org/22/c7ce4f61cfee771b3996c9978a6951cd" async></script></div>
+
+
+<footer class="site-footer wrap">
+  <div>© 2016–2026 m-finder</div>
+  <div class="footer-links"><a href="/privacy/">隐私政策</a><a href="/atom.xml">RSS ↗</a></div>
+</footer>
+<button id="back-to-top" class="back-to-top" type="button" aria-label="返回顶部" title="返回顶部"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 14 6-6 6 6"/></svg></button>
+<dialog id="lightbox" class="lightbox" aria-label="查看图片"><button type="button" class="lightbox-close" aria-label="关闭"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button><button type="button" class="lightbox-prev" aria-label="上一张"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg></button><span class="lightbox-status" role="status" aria-live="polite">图片加载中…</span><img alt=""><button type="button" class="lightbox-next" aria-label="下一张"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button></dialog>
+<script src="/js/giorgio.js" defer></script>
+</body>
+</html>
+
