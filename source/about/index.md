@@ -20,7 +20,6 @@ comments: true
 
 <details>
 <summary>
-
 > 前几年测完紫老头我还觉得不太准，没想到几年后的今天更紫了...
 > --26.11.20
 </summary>
