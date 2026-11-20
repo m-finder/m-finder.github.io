@@ -16,9 +16,14 @@ comments: true
 * 受家庭熏陶，从小入坑绿植养护，时常发愁花的摆放
 
 ![](/about/index/INTJ.png)
-![](/about/index/INTJ-A.png)
+
 > 前几年测完紫老头我还觉得不太准，没想到几年后的今天更紫了...
 > --26.11.20
+
+<details>
+<summary>详情</summary>
+![](/about/index/INTJ-A.png)
+</details>
 
 #### 关于这里
 
