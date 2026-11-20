@@ -22,7 +22,9 @@ comments: true
 
 <details>
 <summary>详情</summary>
+
 ![](/about/index/INTJ-A.png)
+
 </details>
 
 #### 关于这里
