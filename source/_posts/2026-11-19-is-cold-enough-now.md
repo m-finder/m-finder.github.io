@@ -7,7 +7,6 @@ tags:
 - 闲言赘语
 ---
 
-![](/images/sun-light.jpg)
 
 ##### 一
 
@@ -75,5 +74,6 @@ tags:
 
 即便我总是吃完就跑，不怎么跟他们聊天。
 
+![](/images/sun-light.jpg)
 
 
