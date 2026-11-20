@@ -60,7 +60,7 @@
     <button id="theme-toggle" class="icon-button theme-toggle" type="button" aria-label="切换背景明暗" title="切换背景明暗"><svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.3A8.5 8.5 0 0 1 9.7 3.5 8.5 8.5 0 1 0 20.5 14.3Z"/></svg></button>
   </div>
 </header>
-<main class="wrap article-main"><article><header class="article-header"><a class="back-link" href="/archives/">← 返回上一页</a><div class="article-meta"><time datetime="2021-03-25T12:30:00.000Z">2021 年 03 月 25 日</time><span>·</span><span><a href="/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/">码不能停</a> / <a href="/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/php/">php</a></span></div><h1>php ziparchive addfile return false</h1></header><div class="prose"><p>有个文件，存储了两条准备用于给文件重命名的字符串和文件路径的数据，每行一条，名称和字符串以 <code>,</code> 间隔。</p>
+<main class="wrap article-main"><article><header class="article-header"><a class="back-link" href="/archives/">← 返回上一页</a><div class="article-meta"><time datetime="2021-03-25T12:30:00.000Z">2021 年 03 月 25 日</time><span>·</span><span><a href="/categories/%E7%A0%81%E4%B8%8D%E8%83%BD%E5%81%9C/">码不能停</a> / <a href="/categories/php/">php</a></span></div><h1>php ziparchive addfile return false</h1></header><div class="prose"><p>有个文件，存储了两条准备用于给文件重命名的字符串和文件路径的数据，每行一条，名称和字符串以 <code>,</code> 间隔。</p>
 <p>然后问题来了，通过读文件取出数据，然后获取文件路径并打包时，<code>ZipArchive</code> 的 <code>addFile</code> 总会有一个 <code>false</code>。</p>
 <p>折腾半天，最后发现还是因为粗心大意，没过滤行尾的换行符……</p>
 <p>一声叹息，掏出小本本默默记上一笔。</p>
