@@ -15,8 +15,8 @@ comments: true
 * 对像素风游戏毫无抵抗力
 * 受家庭熏陶，从小入坑绿植养护，时常发愁花的摆放
 
-[](/images/INTJ.png)
-[](/images/INTJ-A.png)
+[](/about/index/INTJ.png)
+[](/about/index/INTJ-A.png)
 > 前进年测完紫老头我还觉得不太准，没想到几年后的今天更紫了...
 
 #### 关于这里
