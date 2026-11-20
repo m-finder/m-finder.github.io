@@ -18,7 +18,7 @@ comments: true
 ![](/about/index/INTJ.png)
 ![](/about/index/INTJ-A.png)
 > 前几年测完紫老头我还觉得不太准，没想到几年后的今天更紫了...
->               --26.1.20
+>               --26.11.20
 
 #### 关于这里
 
