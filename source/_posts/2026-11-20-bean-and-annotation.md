@@ -1,6 +1,6 @@
 ---
 title: 对于 Bean 和 Service、Component、Controller 等注解的理解
-date: 2026-11-20 10:25:00
+date: 2026-11-20 10:25:01
 tags:
 - 码不能停
 - java
