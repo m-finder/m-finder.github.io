@@ -6,8 +6,8 @@ tags:
 - laravel
 - php
 categories:
-- 码不能停
-- php
+- [码不能停]
+- [php]
 ---
 
 做了一个基于 Swoole 的 WebSocket 扩展包，可以用来做实时状态推送，或者自定义消息处理实现 im，有需要的可以看看: [ [giorgio-socket] ](https://github.com/m-finder/giorgio-socket)

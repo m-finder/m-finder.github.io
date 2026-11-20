@@ -2,8 +2,8 @@
 title: centos php7.4 安装记录
 date: 2021-05-11 21:22:13
 categories:
-- 码不能停
-- php
+- [码不能停]
+- [php]
 tags:
 - php
 ---

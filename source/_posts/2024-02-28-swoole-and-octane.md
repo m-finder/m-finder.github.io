@@ -5,8 +5,8 @@ tags:
 - 码不能停
 - php
 categories:
-- 码不能停
-- php
+- [码不能停]
+- [php]
 ---
 
 之前在工作中使用 Laravel Octane 的 concurrently 处理并发时，发现在队列和定时任务中不会触发并发效果。经过分析，作了如下猜测：队列定时任务都属于一个独立的进程，与 Octane 服务无关，而 Octane conturrently 恰恰需要在 Octane 环境下才能运行。

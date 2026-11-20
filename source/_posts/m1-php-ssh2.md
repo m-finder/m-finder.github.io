@@ -2,8 +2,8 @@
 title: mac m1 下安装 php7.4 ssh2 扩展
 date: 2021-05-19 21:22:13
 categories:
-- 码不能停
-- php
+- [码不能停]
+- [php]
 tags:
 - php
 ---

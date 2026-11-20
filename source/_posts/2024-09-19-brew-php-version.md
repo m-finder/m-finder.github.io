@@ -2,8 +2,8 @@
 title: Mac 用 Brew 安装旧版本 PHP
 date: 2024-09-19 23:41:13
 categories:
-- 码不能停
-- php
+- [码不能停]
+- [php]
 tags:
 - 码不能停
 - php
