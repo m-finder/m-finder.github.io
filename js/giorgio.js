@@ -252,14 +252,17 @@
     }, { signal: pageSignal });
   }
 
-  const gallery = document.querySelector('.gallery-content');
+  const gallery = document.querySelector('.gallery-content, .article-main article .prose');
   const lightbox = document.getElementById('lightbox');
   if (gallery && lightbox) {
+    const isGallery = gallery.classList.contains('gallery-content');
     const images = Array.from(gallery.querySelectorAll('img'));
     images.forEach((image, index) => {
-      image.loading = index < 4 ? 'eager' : 'lazy';
-      image.decoding = 'async';
-      if (!image.closest('a')) {
+      if (isGallery) {
+        image.loading = index < 4 ? 'eager' : 'lazy';
+        image.decoding = 'async';
+      }
+      if (isGallery && !image.closest('a')) {
         const link = document.createElement('a');
         link.href = image.currentSrc || image.src;
         image.parentNode.insertBefore(link, image);
@@ -283,7 +286,7 @@
       lightbox.classList.remove('is-error');
       lightbox.classList.add('is-loading');
       status.textContent = '图片加载中…';
-      preview.src = images[current].closest('a')?.href || images[current].currentSrc || images[current].src;
+      preview.src = isGallery ? (images[current].closest('a')?.href || images[current].currentSrc || images[current].src) : (images[current].currentSrc || images[current].src);
       preview.alt = images[current].alt || `相册图片 ${current + 1}`;
     };
     gallery.addEventListener('click', event => {
