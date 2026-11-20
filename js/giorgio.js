@@ -126,24 +126,8 @@
     mobileToggle.setAttribute('aria-expanded', String(open));
     mobileToggle.setAttribute('aria-label', open ? '关闭导航' : '打开导航');
   });
-  document.querySelectorAll('.nav-group-toggle').forEach(button => {
-    button.addEventListener('click', () => {
-      const group = button.closest('.nav-group');
-      group.classList.remove('is-navigated');
-      const open = group.classList.toggle('is-open');
-      button.setAttribute('aria-expanded', String(open));
-      document.querySelectorAll('.nav-group').forEach(other => {
-        if (other !== group) { other.classList.remove('is-open'); other.querySelector('button').setAttribute('aria-expanded', 'false'); }
-      });
-    });
-  });
   document.querySelectorAll('.nav-group').forEach(group => {
     group.addEventListener('pointerleave', () => group.classList.remove('is-navigated'));
-  });
-  document.addEventListener('click', event => {
-    if (!event.target.closest('.nav-group')) document.querySelectorAll('.nav-group').forEach(group => {
-      group.classList.remove('is-open'); group.querySelector('button').setAttribute('aria-expanded', 'false');
-    });
   });
 
   const glow = document.querySelector('.cursor-glow');
@@ -395,9 +379,7 @@
       const nextGroups = next.querySelectorAll('#site-nav .nav-group');
       document.querySelectorAll('#site-nav .nav-group').forEach((group, index) => {
         group.classList.toggle('is-current', !!nextGroups[index]?.classList.contains('is-current'));
-        group.classList.remove('is-open');
         group.classList.add('is-navigated');
-        group.querySelector('button')?.setAttribute('aria-expanded', 'false');
       });
       if (document.activeElement?.closest('#site-nav')) document.activeElement.blur();
       menu.classList.remove('is-open');
