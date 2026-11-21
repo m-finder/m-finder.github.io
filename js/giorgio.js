@@ -310,15 +310,19 @@
   const doubanLoading = document.querySelector('[data-douban-loading]');
   if (doubanLoading) {
     const main = doubanLoading.closest('main');
+    const isReady = () => {
+      const container = main.querySelector('#idouban');
+      return container ? container.childElementCount > 0 : !!main.querySelector('.hexo-douban-item');
+    };
     let timeout;
     const observer = new MutationObserver(() => {
-      if (!main.querySelector('.hexo-douban-item')) return;
+      if (!isReady()) return;
       doubanLoading.remove();
       observer.disconnect();
       clearTimeout(timeout);
     });
     observer.observe(main, { childList: true, subtree: true });
-    if (main.querySelector('.hexo-douban-item')) {
+    if (isReady()) {
       doubanLoading.remove();
       observer.disconnect();
     } else {
