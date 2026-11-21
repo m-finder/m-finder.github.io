@@ -299,6 +299,7 @@
     lightbox.querySelector('.lightbox-close').addEventListener('click', () => lightbox.close(), { signal: pageSignal });
     lightbox.querySelector('.lightbox-prev').addEventListener('click', () => display(current - 1), { signal: pageSignal });
     lightbox.querySelector('.lightbox-next').addEventListener('click', () => display(current + 1), { signal: pageSignal });
+    lightbox.addEventListener('selectstart', event => event.preventDefault(), { signal: pageSignal });
     lightbox.addEventListener('click', event => { if (event.target === lightbox) lightbox.close(); }, { signal: pageSignal });
     document.addEventListener('keydown', event => {
       if (!lightbox.open) return;
@@ -306,17 +307,43 @@
       if (event.key === 'ArrowRight') display(current + 1);
     }, { signal: pageSignal });
   }
+  const doubanLoading = document.querySelector('[data-douban-loading]');
+  if (doubanLoading) {
+    const main = doubanLoading.closest('main');
+    let timeout;
+    const observer = new MutationObserver(() => {
+      if (!main.querySelector('.hexo-douban-item')) return;
+      doubanLoading.remove();
+      observer.disconnect();
+      clearTimeout(timeout);
+    });
+    observer.observe(main, { childList: true, subtree: true });
+    if (main.querySelector('.hexo-douban-item')) {
+      doubanLoading.remove();
+      observer.disconnect();
+    } else {
+      timeout = setTimeout(() => {
+        doubanLoading.classList.add('is-error');
+        doubanLoading.querySelector('.douban-loading-label').textContent = '豆瓣数据暂时无法加载，请刷新重试';
+      }, 15000);
+    }
+    pageSignal.addEventListener('abort', () => { observer.disconnect(); clearTimeout(timeout); }, { once: true });
+  }
   }
   initPage();
+  root.classList.remove('page-loading');
 
   const progress = document.getElementById('page-progress');
   let navigationController;
   let progressTimer;
+  let loaderTimer;
   let navigationId = 0;
   history.scrollRestoration = 'manual';
   history.replaceState({ scrollX: window.scrollX, scrollY: window.scrollY }, '', location.href);
   function startProgress() {
     if (!progress) return;
+    clearTimeout(loaderTimer);
+    loaderTimer = setTimeout(() => root.classList.add('page-loading'), 180);
     clearInterval(progressTimer);
     progress.classList.remove('is-done');
     progress.classList.add('is-loading');
@@ -329,6 +356,8 @@
   }
   function finishProgress() {
     if (!progress) return;
+    clearTimeout(loaderTimer);
+    root.classList.remove('page-loading');
     clearInterval(progressTimer);
     progress.style.transform = 'scaleX(1)';
     progress.classList.add('is-done');
