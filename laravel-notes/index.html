@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="color-scheme" content="light dark">
   
-  <meta name="description" content="laravel 使用笔记 · m-finder、M-finder技术博客、php、laravel、java、vue、全栈开发、技术分享、AI日报、AI使用、php、laravel">
+  <meta name="description" content="laravel 使用笔记 · m-finder、M-finder技术博客、php、laravel、java、vue、全栈开发、技术分享、AI日报、AI使用、laravel、php">
   <meta name="keywords" content="laravel 使用笔记, m-finder, M-finder技术博客, php, laravel, java, vue, 全栈开发, 技术分享, AI日报, AI使用">
   <title>laravel 使用笔记 · M-finder</title>
   <link rel="icon" href="/images/favicon.ico">
@@ -107,7 +107,7 @@
 <h3 id="自定义404页面"><a href="#自定义404页面" class="headerlink" title="自定义404页面"></a>自定义404页面</h3><p>在 app\Exceptions文件夹下的Hander中有个render方法，改造一下：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">public function render($request, Exception $exception)&#123;</span><br><span class="line"></span><br><span class="line">    if ($exception instanceof ModelNotFoundException) &#123;</span><br><span class="line">        $exception = new NotFoundHttpException($exception-&gt;getMessage(), $exception);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    if ( ! config(&#x27;app.debug&#x27;)) &#123;</span><br><span class="line">        return response()-&gt;view(&#x27;errors.500&#x27;, [], 500);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return parent::render($request, $exception);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>然后在views文件夹新建error文件夹和对应错误代码的blade文件。</p>
-</div><div class="article-tags"><a href="/tags/php/"># php</a><a href="/tags/laravel/"># laravel</a></div></article>
+</div><div class="article-tags"><a href="/tags/laravel/"># laravel</a><a href="/tags/php/"># php</a></div></article>
 
 
 

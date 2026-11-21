@@ -1,7 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://m-finder.top/travis-ci-test/</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://m-finder.top/use-laravel-permission-can-tag-in-vue/</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://m-finder.top/web-tool/</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://m-finder.top/wsl-laradock/</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://m-finder.top/wsl2-laradock/</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
     <loc>https://m-finder.top/year-of-dog/</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://m-finder.top/laravel-life-cycle/</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://m-finder.top/laravel-mix/</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://m-finder.top/laravel-notes/</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://m-finder.top/laravel-queues/</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://m-finder.top/laravel-swoole-in-laradock/</loc>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
@@ -81,23 +121,43 @@
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.top/travis-ci-test/</loc>
+    <loc>https://m-finder.top/design-pattern-prototype/</loc>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.top/use-laravel-permission-can-tag-in-vue/</loc>
+    <loc>https://m-finder.top/design-pattern-proxy/</loc>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.top/web-tool/</loc>
+    <loc>https://m-finder.top/design-pattern-registry/</loc>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.top/wsl-laradock/</loc>
+    <loc>https://m-finder.top/design-pattern-singleton/</loc>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.top/wsl2-laradock/</loc>
+    <loc>https://m-finder.top/design-pattern-state/</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://m-finder.top/design-pattern-strategy/</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://m-finder.top/design-pattern-template-method/</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://m-finder.top/design-pattern-visitor/</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://m-finder.top/design-pattern/</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://m-finder.top/distributed-system/</loc>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
@@ -157,23 +217,31 @@
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.top/laravel-life-cycle/</loc>
+    <loc>https://m-finder.top/ai-daily-2026-11-20/</loc>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.top/laravel-mix/</loc>
+    <loc>https://m-finder.top/ai-daily-2026-11-21/</loc>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.top/laravel-notes/</loc>
+    <loc>https://m-finder.top/at-the-end-of-2022/</loc>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.top/laravel-queues/</loc>
+    <loc>https://m-finder.top/centos-php74/</loc>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.top/laravel-swoole-in-laradock/</loc>
+    <loc>https://m-finder.top/convnet-learn/</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://m-finder.top/design-pattern-adapter/</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://m-finder.top/design-pattern-bridge/</loc>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
@@ -245,43 +313,23 @@
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.top/design-pattern-prototype/</loc>
+    <loc>https://m-finder.top/ai-daily-2026-11-04/</loc>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.top/design-pattern-proxy/</loc>
+    <loc>https://m-finder.top/ai-daily-2026-11-05/</loc>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.top/design-pattern-registry/</loc>
+    <loc>https://m-finder.top/ai-daily-2026-11-06/</loc>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.top/design-pattern-singleton/</loc>
+    <loc>https://m-finder.top/ai-daily-2026-11-07/</loc>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.top/design-pattern-state/</loc>
-    <lastmod>2026-11-21</lastmod>
-  </url>
-  <url>
-    <loc>https://m-finder.top/design-pattern-strategy/</loc>
-    <lastmod>2026-11-21</lastmod>
-  </url>
-  <url>
-    <loc>https://m-finder.top/design-pattern-template-method/</loc>
-    <lastmod>2026-11-21</lastmod>
-  </url>
-  <url>
-    <loc>https://m-finder.top/design-pattern-visitor/</loc>
-    <lastmod>2026-11-21</lastmod>
-  </url>
-  <url>
-    <loc>https://m-finder.top/design-pattern/</loc>
-    <lastmod>2026-11-21</lastmod>
-  </url>
-  <url>
-    <loc>https://m-finder.top/distributed-system/</loc>
+    <loc>https://m-finder.top/ai-daily-2026-11-08/</loc>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
@@ -289,11 +337,11 @@
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.top/ai-daily-2026-11-11/</loc>
+    <loc>https://m-finder.top/ai-daily-2026-11-10/</loc>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.top/ai-daily-2026-11-10/</loc>
+    <loc>https://m-finder.top/ai-daily-2026-11-11/</loc>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
@@ -325,31 +373,15 @@
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.top/ai-daily-2026-11-20/</loc>
+    <loc>https://m-finder.top/ai-daily-2026-10-22/</loc>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.top/ai-daily-2026-11-21/</loc>
+    <loc>https://m-finder.top/ai-daily-2026-10-23/</loc>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.top/at-the-end-of-2022/</loc>
-    <lastmod>2026-11-21</lastmod>
-  </url>
-  <url>
-    <loc>https://m-finder.top/centos-php74/</loc>
-    <lastmod>2026-11-21</lastmod>
-  </url>
-  <url>
-    <loc>https://m-finder.top/convnet-learn/</loc>
-    <lastmod>2026-11-21</lastmod>
-  </url>
-  <url>
-    <loc>https://m-finder.top/design-pattern-adapter/</loc>
-    <lastmod>2026-11-21</lastmod>
-  </url>
-  <url>
-    <loc>https://m-finder.top/design-pattern-bridge/</loc>
+    <loc>https://m-finder.top/ai-daily-2026-10-24/</loc>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
@@ -369,11 +401,11 @@
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.top/ai-daily-2026-10-31/</loc>
+    <loc>https://m-finder.top/ai-daily-2026-10-30/</loc>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.top/ai-daily-2026-10-30/</loc>
+    <loc>https://m-finder.top/ai-daily-2026-10-31/</loc>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
@@ -389,23 +421,43 @@
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.top/ai-daily-2026-11-04/</loc>
+    <loc>https://m-finder.top/2026-11-20-bean-and-annotation/</loc>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.top/ai-daily-2026-11-05/</loc>
+    <loc>https://m-finder.top/2026-to-do-list/</loc>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.top/ai-daily-2026-11-06/</loc>
+    <loc>https://m-finder.top/Docker-images/</loc>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.top/ai-daily-2026-11-07/</loc>
+    <loc>https://m-finder.top/Laravel-chunk/</loc>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.top/ai-daily-2026-11-08/</loc>
+    <loc>https://m-finder.top/Laravel-ftp/</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://m-finder.top/Laravel-time-change/</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://m-finder.top/Layim-contextmenu/</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://m-finder.top/Layui-notes/</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://m-finder.top/ai-daily-2026-10-16/</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://m-finder.top/ai-daily-2026-10-17/</loc>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
@@ -422,70 +474,6 @@
   </url>
   <url>
     <loc>https://m-finder.top/ai-daily-2026-10-21/</loc>
-    <lastmod>2026-11-21</lastmod>
-  </url>
-  <url>
-    <loc>https://m-finder.top/ai-daily-2026-10-22/</loc>
-    <lastmod>2026-11-21</lastmod>
-  </url>
-  <url>
-    <loc>https://m-finder.top/ai-daily-2026-10-23/</loc>
-    <lastmod>2026-11-21</lastmod>
-  </url>
-  <url>
-    <loc>https://m-finder.top/ai-daily-2026-10-24/</loc>
-    <lastmod>2026-11-21</lastmod>
-  </url>
-  <url>
-    <loc>https://m-finder.top/2019-to-do-list/</loc>
-    <lastmod>2026-11-21</lastmod>
-  </url>
-  <url>
-    <loc>https://m-finder.top/2020-to-do-list/</loc>
-    <lastmod>2026-11-21</lastmod>
-  </url>
-  <url>
-    <loc>https://m-finder.top/2021-to-do-list/</loc>
-    <lastmod>2026-11-21</lastmod>
-  </url>
-  <url>
-    <loc>https://m-finder.top/2022-05-13/</loc>
-    <lastmod>2026-11-21</lastmod>
-  </url>
-  <url>
-    <loc>https://m-finder.top/2022-12-12-for-my-yadea/</loc>
-    <lastmod>2026-11-21</lastmod>
-  </url>
-  <url>
-    <loc>https://m-finder.top/2022-to-do-list/</loc>
-    <lastmod>2026-11-21</lastmod>
-  </url>
-  <url>
-    <loc>https://m-finder.top/2023-05-11-gm/</loc>
-    <lastmod>2026-11-21</lastmod>
-  </url>
-  <url>
-    <loc>https://m-finder.top/2023-to-do-list/</loc>
-    <lastmod>2026-11-21</lastmod>
-  </url>
-  <url>
-    <loc>https://m-finder.top/2023-11-20-laravel-swoole-socket/</loc>
-    <lastmod>2026-11-21</lastmod>
-  </url>
-  <url>
-    <loc>https://m-finder.top/2023-09-23-swift/</loc>
-    <lastmod>2026-11-21</lastmod>
-  </url>
-  <url>
-    <loc>https://m-finder.top/2024-02-25-review-base/</loc>
-    <lastmod>2026-11-21</lastmod>
-  </url>
-  <url>
-    <loc>https://m-finder.top/2024-02-28-swoole-and-octane/</loc>
-    <lastmod>2026-11-21</lastmod>
-  </url>
-  <url>
-    <loc>https://m-finder.top/2024-02-29-review-http/</loc>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
@@ -581,43 +569,55 @@
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.top/2026-11-20-bean-and-annotation/</loc>
+    <loc>https://m-finder.top/2019-to-do-list/</loc>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.top/2026-to-do-list/</loc>
+    <loc>https://m-finder.top/2020-to-do-list/</loc>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.top/Docker-images/</loc>
+    <loc>https://m-finder.top/2021-to-do-list/</loc>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.top/Laravel-chunk/</loc>
+    <loc>https://m-finder.top/2022-05-13/</loc>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.top/Laravel-ftp/</loc>
+    <loc>https://m-finder.top/2022-12-12-for-my-yadea/</loc>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.top/Laravel-time-change/</loc>
+    <loc>https://m-finder.top/2022-to-do-list/</loc>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.top/Layim-contextmenu/</loc>
+    <loc>https://m-finder.top/2023-09-23-swift/</loc>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.top/Layui-notes/</loc>
+    <loc>https://m-finder.top/2023-11-20-laravel-swoole-socket/</loc>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.top/ai-daily-2026-10-16/</loc>
+    <loc>https://m-finder.top/2023-05-11-gm/</loc>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://m-finder.top/ai-daily-2026-10-17/</loc>
+    <loc>https://m-finder.top/2023-to-do-list/</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://m-finder.top/2024-02-25-review-base/</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://m-finder.top/2024-02-28-swoole-and-octane/</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://m-finder.top/2024-02-29-review-http/</loc>
     <lastmod>2026-11-21</lastmod>
   </url>
 </urlset> 
