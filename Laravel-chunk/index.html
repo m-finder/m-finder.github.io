@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="color-scheme" content="light dark">
   
-  <meta name="description" content="Laravel使用chunk自更新有误的原因 · Laravel 的 chunk 在查询大量数据时非常好用，但是在用某个字段做为检索条件，并且在程序内部有更新这个字段的时候，就会有一部分数据丢失。 原因是这样的，比如有7条数据，每 · m-finder、M-finder技术博客、php、laravel、java、vue、全栈开发、技术分享、AI日报、AI使用、laravel、php">
+  <meta name="description" content="Laravel使用chunk自更新有误的原因 · Laravel 的 chunk 在查询大量数据时非常好用，但是在用某个字段做为检索条件，并且在程序内部有更新这个字段的时候，就会有一部分数据丢失。 原因是这样的，比如有7条数据，每 · m-finder、M-finder技术博客、php、laravel、java、vue、全栈开发、技术分享、AI日报、AI使用、php、laravel">
   <meta name="keywords" content="Laravel使用chunk自更新有误的原因, m-finder, M-finder技术博客, php, laravel, java, vue, 全栈开发, 技术分享, AI日报, AI使用">
   <title>Laravel使用chunk自更新有误的原因 · M-finder</title>
   <link rel="icon" href="/images/favicon.ico">
@@ -65,7 +65,7 @@
 <p>原因是这样的，比如有7条数据，每次取2条，那么这7条数据就会被分为2，2，2，1这样几块，第一次调用时，取得第一页，也就是第一个2的数据块，更新完后再取数据，原来的第二页就变成了第一页，但是这时候取的还是第二页，所以这时候取的是第三个数据块，到了第三次调用的时候，原来的第二页变成了第一页，原来的第四页变成了第二页，第三页就变成了空的，所以第三页就什么都取不到了。</p>
 <p>解决方法：<br>可以使用 laravel 的游标 cursor()</p>
 <p><img src="/images/chunk.png" alt="图"></p>
-</div><div class="article-tags"><a href="/tags/laravel/"># laravel</a><a href="/tags/php/"># php</a></div></article>
+</div><div class="article-tags"><a href="/tags/php/"># php</a><a href="/tags/laravel/"># laravel</a></div></article>
 
 
 

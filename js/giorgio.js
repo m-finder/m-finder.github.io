@@ -444,6 +444,7 @@
     if (!link || link.closest('.gallery-content, .google-ad, .original-ad') || link.hasAttribute('download') || (link.target && link.target !== '_self')) return;
     const url = new URL(link.href, location.href);
     if (!['http:', 'https:'].includes(url.protocol) || url.origin !== location.origin) return;
+    if (/^\/(books|movies|games)\/(?:index\.html)?$/.test(url.pathname)) return;
     if (/\.[^/]+$/.test(url.pathname) && !/\.html?$/i.test(url.pathname)) return;
     if (url.pathname === location.pathname && url.search === location.search) return;
     event.preventDefault();
