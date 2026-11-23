@@ -1,5 +1,5 @@
 ---
-title: 摄影学习
+title: 光影探索
 permalink: /gallery/composition/
 comments: true
 ---
