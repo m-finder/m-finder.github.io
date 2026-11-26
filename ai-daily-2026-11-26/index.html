@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="zh-CN" data-mode="auto" data-particle-default="green">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  
+  <meta name="description" content="AI 日报 · 2026-11-26 · Anthropic 复盘 Messages API 从 Python 迁移到 Rust 的校验方法 · m-finder、M-finder技术博客、php、laravel、java、vue、全栈开发、技术分享、AI日报、AI使用、AI、AI 日报、资讯">
+  <meta name="keywords" content="AI 日报 · 2026-11-26, m-finder, M-finder技术博客, php, laravel, java, vue, 全栈开发, 技术分享, AI日报, AI使用, AI, AI 日报, 资讯">
+  <title>AI 日报 · 2026-11-26 · M-finder</title>
+  <link rel="icon" href="/images/favicon.ico">
+  <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+  <link rel="stylesheet" href="/css/giorgio.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3280933721783945" crossorigin="anonymous"></script>
+  <script>document.documentElement.classList.add('page-loading');window.addEventListener('load',()=>document.documentElement.classList.remove('page-loading'),{once:true});try{let m=localStorage.getItem('giorgio-mode');if(m==='light'||m==='dark')document.documentElement.dataset.mode=m;let p=localStorage.getItem('giorgio-particle')||document.documentElement.dataset.particleDefault;let c=[{"name":"green","label":"绿色","from":"#22a879","to":"#78d6a0"},{"name":"blue","label":"蓝色","from":"#2468d8","to":"#8ab4f8"},{"name":"purple","label":"紫色","from":"#8537ed","to":"#ca88fa"},{"name":"orange","label":"橙色","from":"#f15a14","to":"#ffbd6a"},{"name":"red","label":"红色","from":"#dc2737","to":"#ff8390"},{"name":"cyan","label":"青色","from":"#11a6b5","to":"#8de0e5"},{"name":"yellow","label":"黄色","from":"#d69a17","to":"#f5d77f"}].find(x=>x.name===p);if(c&&/^#[0-9a-f]{6}$/i.test(c.from)&&/^#[0-9a-f]{6}$/i.test(c.to)){document.documentElement.style.setProperty('--header-line-from',c.from);document.documentElement.style.setProperty('--header-line-to',c.to)}}catch(e){}</script>
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body class="glow-enabled">
+<div class="page-loader" role="status" aria-label="页面加载中"><span class="page-loader-orbit" aria-hidden="true"><i></i><i></i><i></i></span><span>正在加载页面…</span></div>
+<canvas class="background-dots" aria-hidden="true"></canvas>
+<div class="cursor-glow" aria-hidden="true"></div>
+<header class="site-header">
+  <span id="page-progress" class="page-progress" aria-hidden="true"></span>
+  <div class="header-inner wrap">
+    <a class="brand" href="/" aria-label="M-finder 首页"><span>M-finder</span></a>
+    <button class="mobile-menu-toggle icon-button" type="button" aria-label="打开导航" aria-expanded="false" aria-controls="site-nav"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <nav id="site-nav" class="site-nav" aria-label="主导航">
+      
+        
+          <a class="nav-link" href="/">首页</a>
+        
+      
+        
+          
+          <div class="nav-group is-current">
+            <button class="nav-link nav-group-toggle is-active" type="button">文章<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg></button>
+            <div class="nav-submenu">
+              <a class="" href="/categories/">分类</a><a class="" href="/tags/">标签</a><a class="" href="/archives/">归档</a>
+            </div>
+          </div>
+        
+      
+        
+          
+          <div class="nav-group">
+            <button class="nav-link nav-group-toggle" type="button">更多<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg></button>
+            <div class="nav-submenu">
+              <a class="" href="/projects/">项目</a><a class="" href="/shuo/">说说</a><a class="" href="/gallery/">相册</a><a class="" href="/books/">读书</a><a class="" href="/movies/">电影</a><a class="" href="/games/">游戏</a>
+            </div>
+          </div>
+        
+      
+        
+          <a class="nav-link" href="/link/">友情链接</a>
+        
+      
+        
+          <a class="nav-link" href="/about/">关于</a>
+        
+      
+    </nav>
+    <button id="theme-toggle" class="icon-button theme-toggle" type="button" aria-label="切换背景明暗" title="切换背景明暗"><svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.3A8.5 8.5 0 0 1 9.7 3.5 8.5 8.5 0 1 0 20.5 14.3Z"/></svg></button>
+  </div>
+</header>
+<main class="wrap article-main"><article><header class="article-header"><a class="back-link" href="/archives/">← 返回上一页</a><div class="article-meta"><time datetime="2026-11-26T00:00:00.000Z">2026 年 11 月 26 日</time><span>·</span><span><a href="/categories/AI-%E6%97%A5%E6%8A%A5/">AI 日报</a></span></div><h1>AI 日报 · 2026-11-26</h1><p>Anthropic 复盘 Messages API 从 Python 迁移到 Rust 的校验方法</p></header><div class="prose"><h2 id="今日头条"><a href="#今日头条" class="headerlink" title="今日头条"></a>今日头条</h2><p><strong>Anthropic 复盘 Messages API 从 Python 迁移到 Rust 的校验方法</strong></p>
+<p>Anthropic 介绍如何将 Messages API 从 Python 迁移到 Rust，并把生产系统本身当作校验器。该 API 流量从 2024 年初到 2026 年秋增长约 1800 倍，迁移后每请求 CPU 降低约 70%，首 token 中位时间缩短约 20%，且未停服或冻结功能开发。</p>
+<h2 id="模型发布-更新"><a href="#模型发布-更新" class="headerlink" title="模型发布&#x2F;更新"></a>模型发布&#x2F;更新</h2><h3 id="1-Sand-ai-发布-480B-视频模型-MAGI-2，作者实测称质量接近-Seedance-2-3-水准且价格仅为其-1-10"><a href="#1-Sand-ai-发布-480B-视频模型-MAGI-2，作者实测称质量接近-Seedance-2-3-水准且价格仅为其-1-10" class="headerlink" title="1. Sand.ai 发布 480B 视频模型 MAGI-2，作者实测称质量接近 Seedance 2.3 水准且价格仅为其 1&#x2F;10"></a>1. Sand.ai 发布 480B 视频模型 MAGI-2，作者实测称质量接近 Seedance 2.3 水准且价格仅为其 1&#x2F;10</h3><p>来源：公众号：数字生命卡兹克</p>
+<p>Sand.ai 凌晨发布 480B 全模态视频模型 MAGI-2，作者实测后认为其质量达到 Seedance 2.3 左右水准，1080P 下每秒 0.5 元、价格约为 Seedance 2.5 的 1&#x2F;10。</p>
+<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/JkZM9s6tC_Wz5MKeYcccxw">阅读原文</a></p>
+<h2 id="产品发布-更新"><a href="#产品发布-更新" class="headerlink" title="产品发布&#x2F;更新"></a>产品发布&#x2F;更新</h2><h3 id="2-腾讯开源模型-Hy4-Flash-上线-Fireworks-serverless"><a href="#2-腾讯开源模型-Hy4-Flash-上线-Fireworks-serverless" class="headerlink" title="2. 腾讯开源模型 Hy4 Flash 上线 Fireworks serverless"></a>2. 腾讯开源模型 Hy4 Flash 上线 Fireworks serverless</h3><p>来源：Fireworks AI（网页）</p>
+<p>腾讯新开源模型 Hy4 Flash 现已在 Fireworks serverless 上可用。该模型为 MoE 架构，总参数约 220B、每 token 激活约 12B，1M token 上下文窗口（Fireworks 上线时为 512K），支持文本和图像输入，面向文档处理、研究、办公和 Agent 工作流。</p>
+<p><a target="_blank" rel="noopener" href="https://fireworks.ai/blog/hy4-flash-on-fireworks/">阅读原文</a></p>
+<h3 id="3-千问APP免费开放千问Go打电话服务，经授权可代打电话和定时来电"><a href="#3-千问APP免费开放千问Go打电话服务，经授权可代打电话和定时来电" class="headerlink" title="3. 千问APP免费开放千问Go打电话服务，经授权可代打电话和定时来电"></a>3. 千问APP免费开放千问Go打电话服务，经授权可代打电话和定时来电</h3><p>来源：公众号：千问APP（阿里）</p>
+<p>千问APP宣布千问Go打电话服务免费开放，用户告知打给谁、要办什么事并经授权后，AI可代为拨打电话、沟通需求。文中示例包括定时提醒朋友带饮料、定时来电叫醒起床、代订包间或询问快递等场景，并邀请用户在评论区分享想安排的任务。</p>
+<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/jZumD5cprhI7bgmOI7mUEw">阅读原文</a></p>
+<h3 id="4-Pydantic-AI-发布终端编码智能体-Pax-与-Harness-beta，迈向-1-0"><a href="#4-Pydantic-AI-发布终端编码智能体-Pax-与-Harness-beta，迈向-1-0" class="headerlink" title="4. Pydantic AI 发布终端编码智能体 Pax 与 Harness beta，迈向 1.0"></a>4. Pydantic AI 发布终端编码智能体 Pax 与 Harness beta，迈向 1.0</h3><p>来源：Pydantic AI 官方文章</p>
+<p>Pydantic AI 发布终端编码智能体 Pax（pydantic-ai-pax），基于 Harness SDK，全部功能以插件形式组织，可 &#x2F;plugins 开关 coder、sandbox、mcp、Logfire 观测等，并支持 –agent 换成代码库里任意 Pydantic AI Agent。</p>
+<p><a target="_blank" rel="noopener" href="https://pydantic.dev/articles/pax-harness-beta">阅读原文</a></p>
+<h3 id="5-OpenClaw-2026-11-10-发布，新增-Deep-Research、Knowledge-记忆系统与-Browser-handoff"><a href="#5-OpenClaw-2026-11-10-发布，新增-Deep-Research、Knowledge-记忆系统与-Browser-handoff" class="headerlink" title="5. OpenClaw 2026.11.10 发布，新增 Deep Research、Knowledge 记忆系统与 Browser handoff"></a>5. OpenClaw 2026.11.10 发布，新增 Deep Research、Knowledge 记忆系统与 Browser handoff</h3><p>来源：X：OpenClaw (@openclaw)</p>
+<p>OpenClaw 发布 2026.11.10 版本，新增聊天内 Deep Research、新的 OpenClaw 记忆系统 Knowledge，以及 Browser handoff 功能。本次版本包含 7,671 个 PR、349 位贡献者，完整说明见 <a target="_blank" rel="noopener" href="https://docs.openclaw.ai/releases/2026.11.10%E3%80%82">https://docs.openclaw.ai/releases/2026.11.10。</a></p>
+<p><a target="_blank" rel="noopener" href="https://x.com/openclaw/status/2125591827600531554">阅读原文</a></p>
+<h2 id="行业动态"><a href="#行业动态" class="headerlink" title="行业动态"></a>行业动态</h2><h3 id="6-42-州总检察长介入-Character-AI-破产程序，反对拍卖用户私密聊天记录"><a href="#6-42-州总检察长介入-Character-AI-破产程序，反对拍卖用户私密聊天记录" class="headerlink" title="6. 42 州总检察长介入 Character.AI 破产程序，反对拍卖用户私密聊天记录"></a>6. 42 州总检察长介入 Character.AI 破产程序，反对拍卖用户私密聊天记录</h3><p>来源：TechCrunch：AI（RSS）</p>
+<p>42 州总检察长介入 Character.AI 的破产程序，试图阻止其拍卖用户私密聊天数据。相关声明称数据集包含超过 2100 万美国账户的聊天记录，其中逾 210 万属于未成年人，还涉及 IP 地址等信息；目前唯一披露的匿名竞拍方为 2026 年 11 月 13 日在特拉华州注册的 Smirks and Pangs Acquisition LLC，拍卖定于 12 月 1 日。</p>
+<p><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/11/25/state-ags-fight-character-ais-plan-to-auction-off-users-private-chats/">阅读原文</a></p>
+<h3 id="7-黄仁勋回归后-Nvidia-仍面临-Megaspeed-芯片出口合规调查"><a href="#7-黄仁勋回归后-Nvidia-仍面临-Megaspeed-芯片出口合规调查" class="headerlink" title="7. 黄仁勋回归后 Nvidia 仍面临 Megaspeed 芯片出口合规调查"></a>7. 黄仁勋回归后 Nvidia 仍面临 Megaspeed 芯片出口合规调查</h3><p>来源：TechCrunch：AI（RSS）</p>
+<p>TechCrunch 分析指出，黄仁勋回归 Nvidia CEO 后，公司仍面临多方对其 GPU 出口合规问题的调查。新加坡数据中心运营商 Megaspeed 被指违反美国出口管制，将先进 GPU 转运至中国。美国司法部于 2024 年启动调查，新加坡方面于 2025 年展开类似调查，加州总检察长办公室及美国证券交易委员会也关注 Nvidia 的相关披露。Nvidia 表示将停止向中国销售许可芯片，并计划设立首席合规官及董事会出口管制委员会。</p>
+<p><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/11/25/the-questions-jensen-huang-and-nvidia-will-still-have-to-answer-about-megaspeed/">阅读原文</a></p>
+<h2 id="论文研究"><a href="#论文研究" class="headerlink" title="论文研究"></a>论文研究</h2><h3 id="8-矩阵乘法指数被证明精确为-9-4"><a href="#8-矩阵乘法指数被证明精确为-9-4" class="headerlink" title="8. 矩阵乘法指数被证明精确为 9&#x2F;4"></a>8. 矩阵乘法指数被证明精确为 9&#x2F;4</h3><p>来源：X：Greg Brockman (@gdb)</p>
+<p>Greg Brockman 转发 OpenAI 的 Sebastien Bubeck 消息：在 10 月 6 日发布给出矩阵乘法指数 9&#x2F;4 新上界后，模型继续工作于下界并宣布 9&#x2F;4 是紧的，下界此前毫无已知结果。Bubeck 称这是他从未想过有生之年能看到的结果，并指出根据 Yin Tat Lee 等人的旧结果，这也意味着线性规划可在 n^{9&#x2F;4} 时间内求解。</p>
+<p><a target="_blank" rel="noopener" href="https://x.com/gdb/status/2125418102049628201">阅读原文</a></p>
+<h3 id="9-MIT-与-Microsoft-论文：GitHub-Copilot-使初级软件工程师招聘下降约-40"><a href="#9-MIT-与-Microsoft-论文：GitHub-Copilot-使初级软件工程师招聘下降约-40" class="headerlink" title="9. MIT 与 Microsoft 论文：GitHub Copilot 使初级软件工程师招聘下降约 40%"></a>9. MIT 与 Microsoft 论文：GitHub Copilot 使初级软件工程师招聘下降约 40%</h3><p>来源：X：Rohan Paul (@rohanpaul_ai)</p>
+<p>MIT 和 Microsoft 的新论文《AI-Assisted Programming and Labor Demand》利用 5,414 家跨国公司（覆盖 38% 美国程序员）的 GitHub 合同审查时点构造自然实验，估计 Copilot 采用对劳动力需求的影响。</p>
+<p><a target="_blank" rel="noopener" href="https://x.com/rohanpaul_ai/status/2125461932111229203">阅读原文</a></p>
+<h3 id="10-Mantic-与-Thinking-Machines-训练可扩展预测智能体，成本降-15-倍"><a href="#10-Mantic-与-Thinking-Machines-训练可扩展预测智能体，成本降-15-倍" class="headerlink" title="10. Mantic 与 Thinking Machines 训练可扩展预测智能体，成本降 15 倍"></a>10. Mantic 与 Thinking Machines 训练可扩展预测智能体，成本降 15 倍</h3><p>来源：Thinking Machines Lab：News（网页）</p>
+<p>Mantic 与 Thinking Machines 在 Tinker 上对 Inkling 2 Small 做后训练，得到一个端到端完成研究与预测的预测智能体，其准确度接近 Fable 5.2 (medium)，单次预测成本降低 15 倍。</p>
+<p><a target="_blank" rel="noopener" href="https://thinkingmachines.ai/news/training-a-scalable-forecasting-agent/">阅读原文</a></p>
+<h2 id="技巧与观点"><a href="#技巧与观点" class="headerlink" title="技巧与观点"></a>技巧与观点</h2><h3 id="11-Anthropic-复盘-Messages-API-从-Python-迁移到-Rust-的校验方法"><a href="#11-Anthropic-复盘-Messages-API-从-Python-迁移到-Rust-的校验方法" class="headerlink" title="11. Anthropic 复盘 Messages API 从 Python 迁移到 Rust 的校验方法"></a>11. Anthropic 复盘 Messages API 从 Python 迁移到 Rust 的校验方法</h3><p>来源：Anthropic：Research（发表成果 · 网页）</p>
+<p>Anthropic 介绍如何将 Messages API 从 Python 迁移到 Rust，并把生产系统本身当作校验器。该 API 流量从 2024 年初到 2026 年秋增长约 1800 倍，迁移后每请求 CPU 降低约 70%，首 token 中位时间缩短约 20%，且未停服或冻结功能开发。</p>
+<p><a target="_blank" rel="noopener" href="https://www.anthropic.com/research/migrating-api-to-rust">阅读原文</a></p>
+<h3 id="12-上下文漂移如何影响你的-AI-Agent：470-项实验与一个免费的-MCP-解法"><a href="#12-上下文漂移如何影响你的-AI-Agent：470-项实验与一个免费的-MCP-解法" class="headerlink" title="12. 上下文漂移如何影响你的 AI Agent：470 项实验与一个免费的 MCP 解法"></a>12. 上下文漂移如何影响你的 AI Agent：470 项实验与一个免费的 MCP 解法</h3><p>来源：Google AI：DEV 作者专属（RSS）</p>
+<p>Google AI 开发者 Patrick Kelly 通过 470 个任务实测区分 context rot 与 context drift，在 Gemini 3.8 Flash 和 Gemini Pro 的沙盒中发现：模型在 73% 的运行中内部察觉文件冲突，但 0% 会主动告知用户，95%-100% 的情况下任务级 skill 文件会覆盖 AGENTS.md 的严格规则。</p>
+<p><a target="_blank" rel="noopener" href="https://dev.to/googleai/how-context-drift-impacts-your-ai-agents-1iph">阅读原文</a></p>
+<h2 id="快讯"><a href="#快讯" class="headerlink" title="快讯"></a>快讯</h2><h3 id="13-Claude-Code-团队发布实用指南讲解-Claude-Ship-的-PR-审查与守护用法"><a href="#13-Claude-Code-团队发布实用指南讲解-Claude-Ship-的-PR-审查与守护用法" class="headerlink" title="13. Claude Code 团队发布实用指南讲解 Claude Ship 的 PR 审查与守护用法"></a>13. Claude Code 团队发布实用指南讲解 Claude Ship 的 PR 审查与守护用法</h3><p>来源：X：Addy Osmani (@addyosmani)</p>
+<p><a target="_blank" rel="noopener" href="https://x.com/addyosmani/status/2125492213903978917">阅读原文</a></p>
+<h3 id="14-METR-解读-OpenAI-预训练损失加速：2026-年初以来下降速度约为此前-7-倍"><a href="#14-METR-解读-OpenAI-预训练损失加速：2026-年初以来下降速度约为此前-7-倍" class="headerlink" title="14. METR 解读 OpenAI 预训练损失加速：2026 年初以来下降速度约为此前 7 倍"></a>14. METR 解读 OpenAI 预训练损失加速：2026 年初以来下降速度约为此前 7 倍</h3><p>来源：METR：Blog（网页）</p>
+<p><a target="_blank" rel="noopener" href="https://metr.org/blog/2026-11-24-interpreting-a-recent-acceleration-in-pretraining-loss/">阅读原文</a></p>
+<h3 id="15-面壁智能等发布-EVIL-基准，测出-GPT-4o-等模型在违法场景下安全率不足"><a href="#15-面壁智能等发布-EVIL-基准，测出-GPT-4o-等模型在违法场景下安全率不足" class="headerlink" title="15. 面壁智能等发布 EVIL 基准，测出 GPT-4o 等模型在违法场景下安全率不足"></a>15. 面壁智能等发布 EVIL 基准，测出 GPT-4o 等模型在违法场景下安全率不足</h3><p>来源：X：面壁智能 OpenBMB (@OpenBMB)</p>
+<p><a target="_blank" rel="noopener" href="https://x.com/OpenBMB/status/2125575267217531181">阅读原文</a></p>
+<h3 id="16-Meta-个人智能体-Muse-登陆-Instagram"><a href="#16-Meta-个人智能体-Muse-登陆-Instagram" class="headerlink" title="16. Meta 个人智能体 Muse 登陆 Instagram"></a>16. Meta 个人智能体 Muse 登陆 Instagram</h3><p>来源：X：Muse（Meta 个人智能体官方号） (@Muse)</p>
+<p><a target="_blank" rel="noopener" href="https://x.com/Muse/status/2125284171417637002">阅读原文</a></p>
+<hr>
+<blockquote>
+<p>本文由 <a target="_blank" rel="noopener" href="https://aihot.news/daily/2026-11-26">AIHOT 日报</a> 自动整理；第三方内容版权归原作者所有。</p>
+</blockquote>
+</div><div class="article-tags"><a href="/tags/AI/"># AI</a><a href="/tags/AI-%E6%97%A5%E6%8A%A5/"># AI 日报</a><a href="/tags/%E8%B5%84%E8%AE%AF/"># 资讯</a></div></article>
+
+
+
+<section class="comments" aria-label="评论"><h2>留下想法</h2><script src="https://giscus.app/client.js" data-repo="m-finder/m-finder.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkxMjEzNzU5NTc=" data-category="Announcements" data-category-id="DIC_kwDOBzwM1c4DIlfb" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="zh-CN" crossorigin="anonymous" async></script></section>
+
+</main>
+<div class="wormhole-centered">
+
+<a class="wormhole-link" href="https://www.foreverblog.cn/go.html" target="_blank" rel="noopener noreferrer" title="十年之约虫洞"><img class="wormhole-image wormhole-image--light" src="https://www.foreverblog.cn/assets/logo/wormhole_v2_dark.webp" alt="十年之约虫洞" loading="lazy"><img class="wormhole-image wormhole-image--dark" src="https://www.foreverblog.cn/assets/logo/wormhole_v2_light.webp" alt="" loading="lazy" aria-hidden="true"></a>
+
+
+<div class="particle-palette" role="group" aria-label="背景颗粒颜色"><button class="particle-swatch" type="button" data-particle-name="green" data-particle-from="#22a879" data-particle-to="#78d6a0" style="--swatch-from:#22a879;--swatch-to:#78d6a0" aria-label="绿色" title="绿色" aria-pressed="false"></button><button class="particle-swatch" type="button" data-particle-name="blue" data-particle-from="#2468d8" data-particle-to="#8ab4f8" style="--swatch-from:#2468d8;--swatch-to:#8ab4f8" aria-label="蓝色" title="蓝色" aria-pressed="false"></button><button class="particle-swatch" type="button" data-particle-name="purple" data-particle-from="#8537ed" data-particle-to="#ca88fa" style="--swatch-from:#8537ed;--swatch-to:#ca88fa" aria-label="紫色" title="紫色" aria-pressed="false"></button><button class="particle-swatch" type="button" data-particle-name="orange" data-particle-from="#f15a14" data-particle-to="#ffbd6a" style="--swatch-from:#f15a14;--swatch-to:#ffbd6a" aria-label="橙色" title="橙色" aria-pressed="false"></button><button class="particle-swatch" type="button" data-particle-name="red" data-particle-from="#dc2737" data-particle-to="#ff8390" style="--swatch-from:#dc2737;--swatch-to:#ff8390" aria-label="红色" title="红色" aria-pressed="false"></button><button class="particle-swatch" type="button" data-particle-name="cyan" data-particle-from="#11a6b5" data-particle-to="#8de0e5" style="--swatch-from:#11a6b5;--swatch-to:#8de0e5" aria-label="青色" title="青色" aria-pressed="false"></button><button class="particle-swatch" type="button" data-particle-name="yellow" data-particle-from="#d69a17" data-particle-to="#f5d77f" style="--swatch-from:#d69a17;--swatch-to:#f5d77f" aria-label="黄色" title="黄色" aria-pressed="false"></button></div>
+</div>
+
+
+<div class="site-ad original-ad" aria-label="广告"><script>var atOptions = {key: "c7ce4f61cfee771b3996c9978a6951cd", format: 'iframe', height: 60, width: 468, params: {}};</script><script src="https://bauval.org/22/c7ce4f61cfee771b3996c9978a6951cd" async></script></div>
+
+
+<footer class="site-footer wrap">
+  <div>© 2016–2026 m-finder</div>
+  <div class="footer-links"><a href="/privacy/">隐私政策</a><a href="/atom.xml">RSS ↗</a></div>
+</footer>
+<button id="back-to-top" class="back-to-top" type="button" aria-label="返回顶部" title="返回顶部"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 14 6-6 6 6"/></svg></button>
+<dialog id="lightbox" class="lightbox" aria-label="查看图片"><button type="button" class="lightbox-close" aria-label="关闭"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button><button type="button" class="lightbox-prev" aria-label="上一张"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg></button><span class="lightbox-status" role="status" aria-live="polite">图片加载中…</span><div class="lightbox-image"><img alt="" draggable="false"><div class="lightbox-info" aria-live="polite" hidden></div></div><button type="button" class="lightbox-next" aria-label="下一张"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button></dialog>
+<script src="/js/giorgio.js" defer></script>
+</body>
+</html>
+

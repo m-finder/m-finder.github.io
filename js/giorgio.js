@@ -257,6 +257,7 @@
   const lightbox = document.getElementById('lightbox');
   if (gallery && lightbox) {
     const isGallery = gallery.classList.contains('gallery-content');
+    lightbox.classList.toggle('is-zoomable', isGallery);
     const images = Array.from(gallery.querySelectorAll('img'));
     images.forEach((image, index) => {
       if (isGallery) {
@@ -272,6 +273,7 @@
     });
     let current = 0;
     let previewVersion = 0;
+    let scale = 1, offsetX = 0, offsetY = 0;
     const metadataCache = new Map();
     const preview = lightbox.querySelector('img');
     const status = lightbox.querySelector('.lightbox-status');
@@ -323,6 +325,9 @@
     const display = index => {
       current = (index + images.length) % images.length;
       previewVersion++;
+      scale = 1;
+      offsetX = offsetY = 0;
+      preview.style.transform = '';
       info.hidden = true;
       info.replaceChildren();
       lightbox.classList.remove('is-error');
@@ -341,6 +346,21 @@
     lightbox.querySelector('.lightbox-close').addEventListener('click', () => lightbox.close(), { signal: pageSignal });
     lightbox.querySelector('.lightbox-prev').addEventListener('click', () => display(current - 1), { signal: pageSignal });
     lightbox.querySelector('.lightbox-next').addEventListener('click', () => display(current + 1), { signal: pageSignal });
+    if (isGallery) lightbox.addEventListener('wheel', event => {
+      if (event.target.closest('button, .lightbox-info')) return;
+      event.preventDefault();
+      if (!preview.complete || !preview.naturalWidth || !event.deltaY) return;
+      const delta = event.deltaY * (event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? lightbox.clientHeight : 1);
+      const nextScale = Math.min(5, Math.max(.25, scale * Math.exp(-Math.max(-100, Math.min(100, delta)) * .002)));
+      const bounds = preview.getBoundingClientRect();
+      const ratio = nextScale / scale;
+      const maxX = Math.max(0, preview.offsetWidth * (nextScale - 1) / 2);
+      const maxY = Math.max(0, preview.offsetHeight * (nextScale - 1) / 2);
+      offsetX = Math.max(-maxX, Math.min(maxX, offsetX - (event.clientX - bounds.left - bounds.width / 2) * (ratio - 1)));
+      offsetY = Math.max(-maxY, Math.min(maxY, offsetY - (event.clientY - bounds.top - bounds.height / 2) * (ratio - 1)));
+      scale = nextScale;
+      preview.style.transform = `translate(${offsetX}px, ${offsetY}px) scale(${scale})`;
+    }, { passive: false, signal: pageSignal });
     lightbox.addEventListener('selectstart', event => event.preventDefault(), { signal: pageSignal });
     lightbox.addEventListener('click', event => { if (event.target === lightbox) lightbox.close(); }, { signal: pageSignal });
     document.addEventListener('keydown', event => {
