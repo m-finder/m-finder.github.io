@@ -1,4 +1,5 @@
 (() => {
+  const photoMetadataUrl = new URL('vendor/exifr-lite-7.1.3.js', document.currentScript.src).href;
   const root = document.documentElement;
   const toggle = document.getElementById('theme-toggle');
   const media = window.matchMedia('(prefers-color-scheme: dark)');
@@ -270,11 +271,49 @@
       }
     });
     let current = 0;
+    let previewVersion = 0;
+    const metadataCache = new Map();
     const preview = lightbox.querySelector('img');
     const status = lightbox.querySelector('.lightbox-status');
+    const info = lightbox.querySelector('.lightbox-info');
+    const updateInfo = async () => {
+      if (!isGallery) return;
+      const version = previewVersion;
+      const image = images[current];
+      const url = new URL(preview.src);
+      let filename = url.pathname.split('/').pop();
+      try { filename = decodeURIComponent(filename); } catch (_) {}
+      const details = [image.title || image.alt || image.closest('a')?.title || filename, `${preview.naturalWidth} × ${preview.naturalHeight}`];
+      const renderInfo = () => {
+        info.replaceChildren(...details.filter(Boolean).map(text => {
+          const item = document.createElement('span');
+          item.textContent = text;
+          return item;
+        }));
+        info.hidden = false;
+      };
+      renderInfo();
+      if (!/\.(jpe?g|heic|heif)$/i.test(url.pathname)) return;
+      if (!metadataCache.has(url.href)) {
+        metadataCache.set(url.href, import(photoMetadataUrl)
+          .then(exifr => exifr.parse(url.href, { gps: false, xmp: false, reviveValues: false }))
+          .catch(() => null));
+      }
+      const metadata = await metadataCache.get(url.href);
+      if (!metadata || version !== previewVersion || pageSignal.aborted) return;
+      const date = metadata.DateTimeOriginal || metadata.CreateDate;
+      if (date) details.push(String(date).replace(/^(\d{4}):(\d{2}):(\d{2})/, '$1-$2-$3'));
+      if (metadata.Model || metadata.Make) details.push(metadata.Model || metadata.Make);
+      if (metadata.FocalLength) details.push(`${Number(metadata.FocalLength.toFixed(1))} mm`);
+      if (metadata.FNumber) details.push(`f/${Number(metadata.FNumber.toFixed(1))}`);
+      if (metadata.ExposureTime > 0) details.push(metadata.ExposureTime < 1 ? `1/${Math.round(1 / metadata.ExposureTime)} s` : `${metadata.ExposureTime} s`);
+      if (metadata.ISO) details.push(`ISO ${metadata.ISO}`);
+      renderInfo();
+    };
     preview.addEventListener('load', () => {
       lightbox.classList.remove('is-loading', 'is-error');
       status.textContent = '';
+      updateInfo();
     }, { signal: pageSignal });
     preview.addEventListener('error', () => {
       lightbox.classList.remove('is-loading');
@@ -283,6 +322,9 @@
     }, { signal: pageSignal });
     const display = index => {
       current = (index + images.length) % images.length;
+      previewVersion++;
+      info.hidden = true;
+      info.replaceChildren();
       lightbox.classList.remove('is-error');
       lightbox.classList.add('is-loading');
       status.textContent = '图片加载中…';
