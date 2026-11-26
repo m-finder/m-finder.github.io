@@ -3,7 +3,7 @@ albums:
     description: 生活随拍
     path: /gallery/world/
     cover: /gallery/world/thumbs/top.webp
-  - title: 光影探索
-    description: 小白纯瞎拍
+  - title: 随手拍
+    description: 我想学拍照
     path: /gallery/composition/
     cover: /gallery/world/thumbs/top.webp
