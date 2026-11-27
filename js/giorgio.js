@@ -274,10 +274,27 @@
     let current = 0;
     let previewVersion = 0;
     let scale = 1, offsetX = 0, offsetY = 0;
+    let drag = null;
     const metadataCache = new Map();
     const preview = lightbox.querySelector('img');
     const status = lightbox.querySelector('.lightbox-status');
     const info = lightbox.querySelector('.lightbox-info');
+    const stopDragging = () => {
+      if (!drag) return;
+      const pointerId = drag.pointerId;
+      drag = null;
+      lightbox.classList.remove('is-dragging');
+      if (preview.hasPointerCapture(pointerId)) preview.releasePointerCapture(pointerId);
+    };
+    const updateTransform = () => {
+      const maxX = Math.max(0, preview.offsetWidth * (scale - 1) / 2);
+      const maxY = Math.max(0, preview.offsetHeight * (scale - 1) / 2);
+      offsetX = Math.max(-maxX, Math.min(maxX, offsetX));
+      offsetY = Math.max(-maxY, Math.min(maxY, offsetY));
+      preview.style.transform = `translate(${offsetX}px, ${offsetY}px) scale(${scale})`;
+      lightbox.classList.toggle('is-zoomed', scale > 1);
+      if (scale <= 1) stopDragging();
+    };
     const updateInfo = async () => {
       if (!isGallery) return;
       const version = previewVersion;
@@ -325,6 +342,8 @@
     const display = index => {
       current = (index + images.length) % images.length;
       previewVersion++;
+      stopDragging();
+      lightbox.classList.remove('is-zoomed');
       scale = 1;
       offsetX = offsetY = 0;
       preview.style.transform = '';
@@ -354,13 +373,35 @@
       const nextScale = Math.min(5, Math.max(.25, scale * Math.exp(-Math.max(-100, Math.min(100, delta)) * .002)));
       const bounds = preview.getBoundingClientRect();
       const ratio = nextScale / scale;
-      const maxX = Math.max(0, preview.offsetWidth * (nextScale - 1) / 2);
-      const maxY = Math.max(0, preview.offsetHeight * (nextScale - 1) / 2);
-      offsetX = Math.max(-maxX, Math.min(maxX, offsetX - (event.clientX - bounds.left - bounds.width / 2) * (ratio - 1)));
-      offsetY = Math.max(-maxY, Math.min(maxY, offsetY - (event.clientY - bounds.top - bounds.height / 2) * (ratio - 1)));
+      offsetX -= (event.clientX - bounds.left - bounds.width / 2) * (ratio - 1);
+      offsetY -= (event.clientY - bounds.top - bounds.height / 2) * (ratio - 1);
       scale = nextScale;
-      preview.style.transform = `translate(${offsetX}px, ${offsetY}px) scale(${scale})`;
+      updateTransform();
     }, { passive: false, signal: pageSignal });
+    if (isGallery) {
+      preview.addEventListener('pointerdown', event => {
+        if (event.button !== 0 || !event.isPrimary || scale <= 1) return;
+        event.preventDefault();
+        drag = { pointerId: event.pointerId, x: event.clientX, y: event.clientY };
+        preview.setPointerCapture(event.pointerId);
+        lightbox.classList.add('is-dragging');
+      }, { signal: pageSignal });
+      preview.addEventListener('pointermove', event => {
+        if (!drag || event.pointerId !== drag.pointerId) return;
+        offsetX += event.clientX - drag.x;
+        offsetY += event.clientY - drag.y;
+        drag.x = event.clientX;
+        drag.y = event.clientY;
+        updateTransform();
+      }, { signal: pageSignal });
+      ['pointerup', 'pointercancel', 'lostpointercapture'].forEach(type => {
+        preview.addEventListener(type, event => {
+          if (drag?.pointerId === event.pointerId) stopDragging();
+        }, { signal: pageSignal });
+      });
+      lightbox.addEventListener('close', stopDragging, { signal: pageSignal });
+      pageSignal.addEventListener('abort', stopDragging, { once: true });
+    }
     lightbox.addEventListener('selectstart', event => event.preventDefault(), { signal: pageSignal });
     lightbox.addEventListener('click', event => { if (event.target === lightbox) lightbox.close(); }, { signal: pageSignal });
     document.addEventListener('keydown', event => {
