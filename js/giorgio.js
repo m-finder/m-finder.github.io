@@ -274,9 +274,11 @@
     let current = 0;
     let previewVersion = 0;
     let scale = 1, offsetX = 0, offsetY = 0;
+    let baseWidth = 0, baseHeight = 0;
     let drag = null;
     const metadataCache = new Map();
     const preview = lightbox.querySelector('img');
+    const previewFrame = preview.parentElement;
     const status = lightbox.querySelector('.lightbox-status');
     const info = lightbox.querySelector('.lightbox-info');
     const stopDragging = () => {
@@ -286,12 +288,28 @@
       lightbox.classList.remove('is-dragging');
       if (preview.hasPointerCapture(pointerId)) preview.releasePointerCapture(pointerId);
     };
+    const resetPreviewSize = () => {
+      baseWidth = baseHeight = 0;
+      previewFrame.style.width = previewFrame.style.height = '';
+      ['width', 'height', 'max-width', 'max-height', 'transform'].forEach(property => preview.style.removeProperty(property));
+    };
     const updateTransform = () => {
-      const maxX = Math.max(0, preview.offsetWidth * (scale - 1) / 2);
-      const maxY = Math.max(0, preview.offsetHeight * (scale - 1) / 2);
+      if (!baseWidth) {
+        const bounds = preview.getBoundingClientRect();
+        baseWidth = bounds.width;
+        baseHeight = bounds.height;
+        previewFrame.style.width = `${baseWidth}px`;
+        previewFrame.style.height = `${baseHeight}px`;
+      }
+      const width = baseWidth * scale, height = baseHeight * scale;
+      const maxX = Math.max(0, (width - baseWidth) / 2);
+      const maxY = Math.max(0, (height - baseHeight) / 2);
       offsetX = Math.max(-maxX, Math.min(maxX, offsetX));
       offsetY = Math.max(-maxY, Math.min(maxY, offsetY));
-      preview.style.transform = `translate(${offsetX}px, ${offsetY}px) scale(${scale})`;
+      preview.style.maxWidth = preview.style.maxHeight = 'none';
+      preview.style.width = `${width}px`;
+      preview.style.height = `${height}px`;
+      preview.style.transform = `translate(${offsetX - (width - baseWidth) / 2}px, ${offsetY - (height - baseHeight) / 2}px)`;
       lightbox.classList.toggle('is-zoomed', scale > 1);
       if (scale <= 1) stopDragging();
     };
@@ -346,7 +364,7 @@
       lightbox.classList.remove('is-zoomed');
       scale = 1;
       offsetX = offsetY = 0;
-      preview.style.transform = '';
+      resetPreviewSize();
       info.hidden = true;
       info.replaceChildren();
       lightbox.classList.remove('is-error');
@@ -379,6 +397,11 @@
       updateTransform();
     }, { passive: false, signal: pageSignal });
     if (isGallery) {
+      window.addEventListener('resize', () => {
+        if (!lightbox.open || !baseWidth) return;
+        resetPreviewSize();
+        updateTransform();
+      }, { signal: pageSignal });
       preview.addEventListener('pointerdown', event => {
         if (event.button !== 0 || !event.isPrimary || scale <= 1) return;
         event.preventDefault();
